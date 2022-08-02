@@ -1,0 +1,94 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/sq53ifr3qw2kmdsiw2l0nw8vdap5y1zx-setuptools-setup-hook",
+            "digest": {
+                "sha256": "f2ee51eec9b8ac50545ca4c1a209b08f6022c037efca60feaa43288cf5fef075"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildCommand": "mkdir -p $out/nix-support\ncp /nix/store/kq6f68zbnp6hg1xz8ig07l85dswypy7c-setuptools-build-hook.sh $out/nix-support/setup-hook\nprintWords   \u003e $out/nix-support/propagated-build-inputs\nsubstituteAll /nix/store/kq6f68zbnp6hg1xz8ig07l85dswypy7c-setuptools-build-hook.sh $out/nix-support/setup-hook\n",
+                "buildInputs": "",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "name": "setuptools-setup-hook",
+                "nativeBuildInputs": "",
+                "out": "/nix/store/sq53ifr3qw2kmdsiw2l0nw8vdap5y1zx-setuptools-setup-hook",
+                "outputs": "out",
+                "passAsFile": "buildCommand",
+                "patches": "",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "pythonInterpreter": "/nix/store/wnrc4daqbd6v5ifqlxsj75ky8556zy0p-python3-3.9.12/bin/python3.9",
+                "pythonSitePackages": "lib/python3.9/site-packages",
+                "setuppy": "/nix/store/fscd8f71wmpwphcmi5mx8qnif2402x9m-run_setup.py",
+                "stdenv": "/nix/store/lmj98vlk5h0v1x5gzslxjnaj4m58dwxm-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/fscd8f71wmpwphcmi5mx8qnif2402x9m-run_setup.py",
+                "digest": {
+                    "sha256": "439c35dc09c8c2e812fd9ab6ec2ee5b6cdb21474da8363195babd01dce586415"
+                }
+            },
+            {
+                "uri": "file:///nix/store/kq6f68zbnp6hg1xz8ig07l85dswypy7c-setuptools-build-hook.sh",
+                "digest": {
+                    "sha256": "c405f23ad3a854c3d1818c42aca5e1b14ba96a0ad57e210e9942267ee38af928"
+                }
+            },
+            {
+                "uri": "file:///nix/store/3ga8qx6a74j26sy0yyvnqnxp6mva1b1z-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "f9bc13b9bdaa3cce0106294eeec282b55ca6f4f2d0b2d11e04685a22f7cb5170"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/vdgkm605ayapf245hc17239qfpvivxfy-python3-3.9.12.drv",
+                "digest": {
+                    "sha256": "6684eb57aec053d7baf339e95827a8b7670f5709da588ab2576f58eb3be31ea6"
+                }
+            }
+        ]
+    }
+}

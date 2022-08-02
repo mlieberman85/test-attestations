@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/jrxmi74200w7l24h0a6i99h2ck3f4r7m-make-4.3.tar.gz.drv",
+            "digest": {
+                "sha256": "1af187fe539e4a78db94c2902f720984514c50fadc8c58c90f6df62a92417f22"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/rdrb9ygp0naf6zil2lsqmbf1c6n40d8g-make-4.3.tar.gz",
+                "digest": {
+                    "sha256": "f19c0c5bff7d406dc09c3ac2296a237ee42465bcb2372a8548c5f3a06c27ce6f"
+                }
+            }
+        ]
+    }
+}

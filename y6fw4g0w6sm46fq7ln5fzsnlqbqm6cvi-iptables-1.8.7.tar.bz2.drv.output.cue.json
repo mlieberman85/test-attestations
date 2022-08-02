@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/y6fw4g0w6sm46fq7ln5fzsnlqbqm6cvi-iptables-1.8.7.tar.bz2.drv",
+            "digest": {
+                "sha256": "aab2b9343f52fee60b73f86c4cb82cddfef712ec62b3726205ea3b94d21ba57a"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/53m4x7xsyjks5w5rrslnfpm1x78d1w95-iptables-1.8.7.tar.bz2",
+                "digest": {
+                    "sha256": "3f6d4d4808d4a716c777ac912880f409b12235c7a2c0f2458ce8b43ab360bcba"
+                }
+            }
+        ]
+    }
+}

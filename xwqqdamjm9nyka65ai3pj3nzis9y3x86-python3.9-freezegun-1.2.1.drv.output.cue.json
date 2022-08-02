@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/xwqqdamjm9nyka65ai3pj3nzis9y3x86-python3.9-freezegun-1.2.1.drv",
+            "digest": {
+                "sha256": "665c24dd43c9ff84db008579d29c939fcb3980ebac5f75482d7d7cba09f3d996"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/lm6dzmk67mhq9mdiwbj1ljd2s3f1a4d0-python3.9-freezegun-1.2.1",
+                "digest": {
+                    "sha256": "0d5cf621430daa6cfd310345d2ed1fdf99bf375f7aadbade0f008785888a9e76"
+                }
+            }
+        ]
+    }
+}

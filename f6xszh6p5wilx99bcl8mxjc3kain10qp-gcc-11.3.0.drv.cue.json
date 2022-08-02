@@ -1,0 +1,199 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/ck3jkdhlvqznybcq4s4s3hp2qyqp5kkm-gcc-11.3.0",
+            "digest": {
+                "sha256": "859f2d0fa9e90d8becaef9ba696e11f51d206cbbfaf0acb4a29cb70ac2ff194e"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/481a51f0r73sgfz5dalc565qd0bkj5sv-builder.sh"
+                ]
+            },
+            "environment": {
+                "CPATH": "/nix/store/38ryqbjx5i1hir1a3sfk4za1yq5fbkpd-zlib-1.2.12-dev/include",
+                "EXTRA_FLAGS_FOR_TARGET": "",
+                "EXTRA_LDFLAGS_FOR_TARGET": "",
+                "LIBRARY_PATH": "/nix/store/r90cncsaa519pwqpijg7ii4rkcmwjn6h-zlib-1.2.12/lib",
+                "NIX_HARDENING_ENABLE": "fortify stackprotector pic strictoverflow relro bindnow",
+                "NIX_LDFLAGS": "",
+                "NIX_NO_SELF_RPATH": "1",
+                "buildFlags": "bootstrap",
+                "buildInputs": "/nix/store/g9k1z3b750zzyhlrda5088hrk4965b2l-gmp-with-cxx-6.2.1-dev /nix/store/hffd2yd4lgk4z3iy5v2dr2xgdx3bc94k-mpfr-4.1.0-dev /nix/store/ahlxyimq3h9c7v8yqnndzz8yni9aqmgf-libmpc-1.2.1 /nix/store/m0vif06f5bssp4f553r6ia5rwjkssq6q-libelf-0.8.13 /nix/store/2xa4a7m22gfk07f41mg7g7zrw3hah6rl-binutils-wrapper-2.38 /nix/store/ral836qr8gjwiwxf65vxw6nmb35pavdd-isl-0.20 /nix/store/38ryqbjx5i1hir1a3sfk4za1yq5fbkpd-zlib-1.2.12-dev",
+                "builder": "/nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash",
+                "configureFlags": "--with-gmp-include=/nix/store/g9k1z3b750zzyhlrda5088hrk4965b2l-gmp-with-cxx-6.2.1-dev/include --with-gmp-lib=/nix/store/9j2afv9p3dpvz46w70cr12mx9mgz535f-gmp-with-cxx-6.2.1/lib --with-mpfr-include=/nix/store/hffd2yd4lgk4z3iy5v2dr2xgdx3bc94k-mpfr-4.1.0-dev/include --with-mpfr-lib=/nix/store/qzq1svrf3j0z23l0jr2m3gjw36yafqg3-mpfr-4.1.0/lib --with-mpc=/nix/store/ahlxyimq3h9c7v8yqnndzz8yni9aqmgf-libmpc-1.2.1 --with-libelf=/nix/store/m0vif06f5bssp4f553r6ia5rwjkssq6q-libelf-0.8.13 --with-native-system-header-dir=/nix/store/hd3j5xfvffs4vaa74l1har94q10fpnm5-glibc-2.34-210-dev/include --program-prefix= --enable-lto --disable-libstdcxx-pch --without-included-gettext --with-system-zlib --enable-static --enable-languages=c,c++ --disable-multilib --enable-plugin --with-isl=/nix/store/ral836qr8gjwiwxf65vxw6nmb35pavdd-isl-0.20 --with-specs=%{!fno-common:%{!fcommon:-fcommon}} --build=x86_64-unknown-linux-gnu --host=x86_64-unknown-linux-gnu --target=x86_64-unknown-linux-gnu",
+                "configurePlatforms": "build host target",
+                "crossMingw": "",
+                "crossStageStatic": "",
+                "depsBuildBuild": "/nix/store/4g09m1rwmifjdvcxa4zd418bbsxdyl6b-bootstrap-stage3-gcc-wrapper-",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "/nix/store/2xa4a7m22gfk07f41mg7g7zrw3hah6rl-binutils-wrapper-2.38 /nix/store/s1dsj16dncj1cxhvxq4fpdy6flhy4b6f-patchelf-0.14.5",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "dontDisableStatic": "1",
+                "dontStrip": "",
+                "enableMultilib": "",
+                "enableParallelBuilding": "1",
+                "enableParallelChecking": "1",
+                "enableShared": "1",
+                "hardeningDisable": "format pie",
+                "info": "/nix/store/50n7zq1vl63qhbp68cr2fwfh6jpm80vz-gcc-11.3.0-info",
+                "installTargets": "install-strip",
+                "is64bit": "1",
+                "lib": "/nix/store/gka59hya7l7qp26s0rydcgq8hj0d7v7k-gcc-11.3.0-lib",
+                "libc_dev": "/nix/store/hd3j5xfvffs4vaa74l1har94q10fpnm5-glibc-2.34-210-dev",
+                "man": "/nix/store/p0xr48gxh1c3dkccrcr3fdkkzv7bhwgd-gcc-11.3.0-man",
+                "name": "gcc-11.3.0",
+                "nativeBuildInputs": "/nix/store/10q3qyy2qqvdycliynasdw9vbzxcbmvm-texinfo-6.8 /nix/store/0jncx1rxdrd2mjvb7zy5mx7525qj2wmn-which-2.21 /nix/store/bwmdwrkrmflp1jny62a7wgbgymiwnsmn-gettext-0.21 /nix/store/nwd35shggdjdbb5xgx8dhbcjnmx23706-perl-5.34.1",
+                "noSysDirs": "1",
+                "out": "/nix/store/ck3jkdhlvqznybcq4s4s3hp2qyqp5kkm-gcc-11.3.0",
+                "outputs": "out man info lib",
+                "patches": "/nix/store/pz03lhak99nzyyni72m14zsjzfjvqvr8-no-sys-dirs.patch",
+                "pname": "gcc",
+                "postPatch": "configureScripts=$(find . -name configure)\nfor configureScript in $configureScripts; do\n  patchShebangs $configureScript\ndone\necho \"fixing the \\`GLIBC_DYNAMIC_LINKER', \\`UCLIBC_DYNAMIC_LINKER', and \\`MUSL_DYNAMIC_LINKER' macros...\"\n          for header in \"gcc/config/\"*-gnu.h \"gcc/config/\"*\"/\"*.h\n          do\n            grep -q _DYNAMIC_LINKER \"$header\" || continue\n            echo \"  fixing \\`$header'...\"\n            sed -i \"$header\" \\\n                -e 's|define[[:blank:]]*\\([UCG]\\+\\)LIBC_DYNAMIC_LINKER\\([0-9]*\\)[[:blank:]]\"\\([^\\\"]\\+\\)\"$|define \\1LIBC_DYNAMIC_LINKER\\2 \"/nix/store/bvy2z17rzlvkx2sj7fy99ajm853yv898-glibc-2.34-210\\3\"|g' \\\n                -e 's|define[[:blank:]]*MUSL_DYNAMIC_LINKER\\([0-9]*\\)[[:blank:]]\"\\([^\\\"]\\+\\)\"$|define MUSL_DYNAMIC_LINKER\\1 \"/nix/store/bvy2z17rzlvkx2sj7fy99ajm853yv898-glibc-2.34-210\\2\"|g'\n          done\n",
+                "preConfigure": "",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "setOutputFlags": "",
+                "src": "/nix/store/lask01x6hyji5sd06f6yc9nz3rxcf2ia-gcc-11.3.0.tar.xz",
+                "staticCompiler": "",
+                "stdenv": "/nix/store/9zsyvv4fp7hj9jd11dimj0lxy74pv6m4-bootstrap-stage3-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "11.3.0"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/481a51f0r73sgfz5dalc565qd0bkj5sv-builder.sh",
+                "digest": {
+                    "sha256": "0c2bf2f2fc06f6c8856ce9cab6d8d247b819a6ae5f81e0cd9927f5563001dbc3"
+                }
+            },
+            {
+                "uri": "file:///nix/store/pz03lhak99nzyyni72m14zsjzfjvqvr8-no-sys-dirs.patch",
+                "digest": {
+                    "sha256": "3e9626ac3277f6bae93df0a4f166d62b129164e756ce69a46e62163050706944"
+                }
+            },
+            {
+                "uri": "file:///nix/store/0a9xb5myvanmjbwi3nys9clpcji49kpd-mpfr-4.1.0.drv",
+                "digest": {
+                    "sha256": "698bc5af0e815c7b23a3bebc802d5a7918c62c5ca93952f3c2ab3aa8883ecf57"
+                }
+            },
+            {
+                "uri": "file:///nix/store/0an08m4a4yfrga5sy929526rq35af6y8-isl-0.20.drv",
+                "digest": {
+                    "sha256": "10598194bc11052b5913ad4b00155af0a045f96d778ddc0e31fec15b740167c4"
+                }
+            },
+            {
+                "uri": "file:///nix/store/0zhkga32apid60mm7nh92z2970im5837-bootstrap-tools.drv",
+                "digest": {
+                    "sha256": "f91ccdc44b609d5a97b27804be2daa58b61d51b82caa7e9e765db4ad4180098a"
+                }
+            },
+            {
+                "uri": "file:///nix/store/4ps3shhk3a83nxw82pirrp84kjza42qr-zlib-1.2.12.drv",
+                "digest": {
+                    "sha256": "f1c161051f72552716fdcba6f78370a3f93dab26e28779bbb0002f809c502534"
+                }
+            },
+            {
+                "uri": "file:///nix/store/bmcvg04baasbcxx24449qm8k63248g2y-libmpc-1.2.1.drv",
+                "digest": {
+                    "sha256": "8e32cda8cf2b4d6bb890c890527652da110e7e23e73001c13da915e712881ad8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/c8c0nvjjib7w8wd833pyynpwsrfnnpv9-gmp-with-cxx-6.2.1.drv",
+                "digest": {
+                    "sha256": "67c5c885c37d8abc62faae9af17f1e9efaa42a2d966acd87b17d4c539c6ffa4f"
+                }
+            },
+            {
+                "uri": "file:///nix/store/f5qhpix26la3hi87z96fvcv11dj5cdpm-bootstrap-stage3-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "7d7584971c870ee114dfc4fa772287e316b9de662a9a99784f96380215448c9a"
+                }
+            },
+            {
+                "uri": "file:///nix/store/gp49lkiabq8dnx0ix9pam80n1p93p6q6-gcc-11.3.0.tar.xz.drv",
+                "digest": {
+                    "sha256": "85ec7f9182f3a9c291fffb2e0b061d255ed87df787db5188ae6fb78e62120b44"
+                }
+            },
+            {
+                "uri": "file:///nix/store/hg2z8inkf698llb0dqbrbzbawals9zps-which-2.21.drv",
+                "digest": {
+                    "sha256": "5747a5795c12148a2fb900a629f3cc045a90b8546fca1322c477a2e5ae641c5e"
+                }
+            },
+            {
+                "uri": "file:///nix/store/k529q8rr17ki21zlyq440gh61039n0qw-texinfo-6.8.drv",
+                "digest": {
+                    "sha256": "8a16877d06a5622581392bda3e3e448693b5d1ff8a501678c4149d1edc6560f4"
+                }
+            },
+            {
+                "uri": "file:///nix/store/p79bzzbzmbc6x6qq36xh1pfg8mll791z-binutils-wrapper-2.38.drv",
+                "digest": {
+                    "sha256": "047d737568ff38fae0535bfa194aa49f90ad1ca62b066fb0d6f54584fa27d498"
+                }
+            },
+            {
+                "uri": "file:///nix/store/qzqv7h1dawzyxy361i4ml6307mgxk6kv-perl-5.34.1.drv",
+                "digest": {
+                    "sha256": "b761478df955663544c8c5cff482bcb1a997516b62e88a0854f1e251c5833b09"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ra40fnjajddf7vd0h8ssp2j99n2d3k75-gettext-0.21.drv",
+                "digest": {
+                    "sha256": "8d2de9fdbc4955a81f7eccbeebd6bacca598ba1ebb5a17eefcc0ffe6a993f47c"
+                }
+            },
+            {
+                "uri": "file:///nix/store/slh6i99w5w5vppjcxi6ksxh56yw87xq6-glibc-2.34-210.drv",
+                "digest": {
+                    "sha256": "e77e6d503666f4a073d742a97b9a1ecb2ce20311289fec458e531677d7ac7fdb"
+                }
+            },
+            {
+                "uri": "file:///nix/store/wfz0xbc6m18bkphns9rwvndkhfaw5gxw-libelf-0.8.13.drv",
+                "digest": {
+                    "sha256": "bd0b69081d0de84117235d235584e1dc8600773f629f85779a3bf5a8783ed8d9"
+                }
+            },
+            {
+                "uri": "file:///nix/store/wq1118wfwp1ks507sk1ag3s9aq8s7a61-bootstrap-stage3-gcc-wrapper-.drv",
+                "digest": {
+                    "sha256": "88ac253f4ec991bb5754956b9f73c719009880682131685ed5bfd8537867fc17"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ya7mg21ryf419c5c5vj18da19krpvkh1-patchelf-0.14.5.drv",
+                "digest": {
+                    "sha256": "bc6229839c6ce0b76810975701a3de21eb526708005a8f3ee195a8c89d37e84f"
+                }
+            }
+        ]
+    }
+}

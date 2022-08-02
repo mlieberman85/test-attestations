@@ -1,0 +1,80 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/i4af3sravx7dlxnmr3j0qnl9mc60qsl3-go-1.16-linux-amd64-bootstrap",
+            "digest": {
+                "sha256": "5f448be03283c0cd2ba4443efce3c8d04bca7f22e3d1ecd7c922102945d330b6"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "dontStrip": "",
+                "installPhase": "runHook preInstall\nmkdir -p $out/share/go $out/bin\nmv bin/* $out/bin\ncp -r . $out/share/go\npatchelf \\\n  --set-interpreter $(cat $NIX_CC/nix-support/dynamic-linker) \\\n  $out/bin/go\n\nrunHook postInstall\n",
+                "name": "go-1.16-linux-amd64-bootstrap",
+                "nativeBuildInputs": "",
+                "out": "/nix/store/i4af3sravx7dlxnmr3j0qnl9mc60qsl3-go-1.16-linux-amd64-bootstrap",
+                "outputs": "out",
+                "patches": "",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/xb8wn138lciw9yjgvwwfsw215ybyr638-go1.16.linux-amd64.tar.gz",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/0rr98lcjb6pa7pgvm4vp339rm0ik24gp-go1.16.linux-amd64.tar.gz.drv",
+                "digest": {
+                    "sha256": "e8d9aaf0e884efbb2e66c4b70d889c604f31e5bc48e308dcfba6142e19b82c05"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/d79idc01n6sh3qzh79qaml40qqpmiyd3-perl5.26-regex-fixes.patch.drv",
+            "digest": {
+                "sha256": "281df9a3e608c94062f608ccfd624a7a2e5aba97ef69d6923d5286cb96671a20"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/yz7lfxkmlccsaq8pp2lgbv7cfg5krspp-perl5.26-regex-fixes.patch",
+                "digest": {
+                    "sha256": "2efb69bcadf1bb026ebe69943f529bdc1a7a0fbd4d9634b9c3f44b9035fa1446"
+                }
+            }
+        ]
+    }
+}

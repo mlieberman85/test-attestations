@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/vyzl03hlv7j8nirbb3wm0lzza9zfkm9z-gnu-efi-3.0.11.tar.bz2.drv",
+            "digest": {
+                "sha256": "50cb38a4014d88c1c50808cb84c7dfa865d833bd1825568faa54a5954286af76"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/qhcln45hfkggnqxjkj5azkx91vll6288-gnu-efi-3.0.11.tar.bz2",
+                "digest": {
+                    "sha256": "cccc1e18842d119ac94cadc4f734b664b6d74ea1d168ae7cf23731b04121eedd"
+                }
+            }
+        ]
+    }
+}

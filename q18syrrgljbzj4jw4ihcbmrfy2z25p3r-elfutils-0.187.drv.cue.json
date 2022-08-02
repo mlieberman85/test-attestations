@@ -1,0 +1,170 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/by1wb48dls6azqif5si5g7szm3xq3bfh-elfutils-0.187",
+            "digest": {
+                "sha256": "6f5fa66ac249f891535329fda29e387c6dfb0e3973a5384323d073c2e1c03920"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "bin": "/nix/store/nv14hgwbly6hgh4hviq9gghd30xr9c4j-elfutils-0.187-bin",
+                "buildInputs": "/nix/store/38ryqbjx5i1hir1a3sfk4za1yq5fbkpd-zlib-1.2.12-dev /nix/store/jw0n8hhbwfqi7f67gh2nzsx22idfaapj-zstd-1.5.2-dev /nix/store/dfb6xjxpn6dm47n2skban07hjad57gx0-bzip2-1.0.6.0.2-dev /nix/store/kr4khs45v461g4m20v2d9v1dcxl52mks-xz-5.2.5-dev",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "--program-prefix=eu- --enable-deterministic-archives --disable-libdebuginfod --disable-debuginfod",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "dev": "/nix/store/f8ghi48xqgkxp844j5ckwpnkwilkbm47-elfutils-0.187-dev",
+                "doCheck": "1",
+                "doInstallCheck": "1",
+                "enableParallelBuilding": "1",
+                "enableParallelChecking": "1",
+                "man": "/nix/store/7msxhhq41srqmdlv464ryrc6q4c4pm8c-elfutils-0.187-man",
+                "name": "elfutils-0.187",
+                "nativeBuildInputs": "/nix/store/b3lh7rgzizg9r1wl6mnyqy9fy7zyhfxf-gnum4-1.4.19 /nix/store/sl630spd1c59jdb5wicj0pb4qf37gy8g-bison-3.8.2 /nix/store/24w1xck3h95vi3l5qx2zm4d8rwpy8am0-flex-2.6.4 /nix/store/vh0c05rc71vmbbicfrksjsvaj3qk92ak-gettext-0.21 /nix/store/dfb6xjxpn6dm47n2skban07hjad57gx0-bzip2-1.0.6.0.2-dev",
+                "out": "/nix/store/by1wb48dls6azqif5si5g7szm3xq3bfh-elfutils-0.187",
+                "outputs": "bin dev out man",
+                "patches": "/nix/store/wq91spyrsd6c1aqfvm453w9qn9mga79c-debug-info-from-env.patch /nix/store/9lfh9b2b5x2wxscq0kw4k1m61p8yqn9w-fix-aarch64_fregs.patch /nix/store/vg5dsxxj9ayfgn35x0d04sdih8035rr4-musl-asm-ptrace-h.patch /nix/store/hi3j97v910lh9rfr44j9bckj56rm03gd-musl-macros.patch /nix/store/n0q1n3zcig79inm4jbl175pnpsm5axgf-musl-strndupa.patch",
+                "pname": "elfutils",
+                "postPatch": "patchShebangs tests/*.sh\n",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "/nix/store/856sqgq0nlmkssx1y10ymyns52bwr8cg-hook",
+                "src": "/nix/store/p6nlw7ca9abc15akqpm4gyizsrg9ckgr-elfutils-0.187.tar.bz2",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "0.187"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/wq91spyrsd6c1aqfvm453w9qn9mga79c-debug-info-from-env.patch",
+                "digest": {
+                    "sha256": "df06da9ce0387d9146f7e6897fb9b09ebdc5655dcee560177ea5b02b70c56614"
+                }
+            },
+            {
+                "uri": "file:///nix/store/16ikjxrb3ssnpqzg982km9imrrvsixc2-musl-asm-ptrace-h.patch.drv",
+                "digest": {
+                    "sha256": "d785463eb89c6ccf6fa5bc9128e7a603ba84bfa27013d823af71c9b3f85f398f"
+                }
+            },
+            {
+                "uri": "file:///nix/store/1akw12hj3bb71awp14k0czi331dp66kl-fix-aarch64_fregs.patch.drv",
+                "digest": {
+                    "sha256": "4d878eb3c13e56498190c63c8a1dd4fb33fecc14f28260f5ebaae9b915777811"
+                }
+            },
+            {
+                "uri": "file:///nix/store/2gbjgzr7b80dq0laix8952cr5n9mxhs2-gnum4-1.4.19.drv",
+                "digest": {
+                    "sha256": "4d2cae1b88da2b9c7a1c942cc96e7f8a258a9ce342502a5e83e79c1926c2e188"
+                }
+            },
+            {
+                "uri": "file:///nix/store/4ps3shhk3a83nxw82pirrp84kjza42qr-zlib-1.2.12.drv",
+                "digest": {
+                    "sha256": "f1c161051f72552716fdcba6f78370a3f93dab26e28779bbb0002f809c502534"
+                }
+            },
+            {
+                "uri": "file:///nix/store/8vrndrblm5la36rzmbb2p7yyzp96431b-gettext-0.21.drv",
+                "digest": {
+                    "sha256": "0588a7500c6bc213d8667504ee8473358707f15b32decff365eb237f8f0ff25e"
+                }
+            },
+            {
+                "uri": "file:///nix/store/a16gbn08izc3qa6yfrn6w3zvkqbmxg5z-zstd-1.5.2.drv",
+                "digest": {
+                    "sha256": "b37dfaf75fdd614ebb3fd36f8f17b9947a89ab94f696592e50b8a522b95b90fe"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ag40qr4if2n6nypjc9zzcdvksh0aw79v-musl-macros.patch.drv",
+                "digest": {
+                    "sha256": "54d7855976d8712b20edac80b0be78c60dbc389eaf5facd170707bceab3c0eb9"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/f7pd672msda6cgg9kmzmbg1hghghxaz6-flex-2.6.4.drv",
+                "digest": {
+                    "sha256": "05ff8b10bc22aee839b288a3fec3b3b4b847bff6e7e2174735975d9dcd6624c2"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ic70qagv77gjbgci607i973xggv33931-bison-3.8.2.drv",
+                "digest": {
+                    "sha256": "86fac9c212c0643fde73b22ecf7c46f683936fd6711594c780cb0cea60b779ff"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ji7q7hhnd3z0kykq6p510jsy1lba5hsr-bzip2-1.0.6.0.2.drv",
+                "digest": {
+                    "sha256": "3f23c409d12ffdc6d3491e64111e6641ba30364649cbdcef8d4aff1c780e46d6"
+                }
+            },
+            {
+                "uri": "file:///nix/store/m6myrsd5dxf4j1y2cvb16q44q2ldslm5-xz-5.2.5.drv",
+                "digest": {
+                    "sha256": "1cface54b543e279b3f8594e8a222057d996c31ec363efcd89013973f25d9911"
+                }
+            },
+            {
+                "uri": "file:///nix/store/r4p1jfacpis4bg0syqmv0ihsmy517irb-elfutils-0.187.tar.bz2.drv",
+                "digest": {
+                    "sha256": "e7cf81436de398c726e0aa94080460ab7571b98e818d34de7d3f9f3b215f708c"
+                }
+            },
+            {
+                "uri": "file:///nix/store/v0qwvxgr4pna5vqf909x6a886c74yihh-hook.drv",
+                "digest": {
+                    "sha256": "acec214e3595f8708db41f099646ad03143db71c9daa60b63c89178419a5b858"
+                }
+            },
+            {
+                "uri": "file:///nix/store/vzjr7fdc9s848w2n0v8chpd9l6c26s3d-musl-strndupa.patch.drv",
+                "digest": {
+                    "sha256": "e5b59ba55dc58fd8ca9ff4bdf781f06e867e63d1232252e4a002f53e843ebce6"
+                }
+            }
+        ]
+    }
+}

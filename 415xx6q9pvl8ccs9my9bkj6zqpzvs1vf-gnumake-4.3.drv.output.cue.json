@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/415xx6q9pvl8ccs9my9bkj6zqpzvs1vf-gnumake-4.3.drv",
+            "digest": {
+                "sha256": "217edad157a2591ec819f192017b3c11931816c1de8d0f9b79b5db29d9b6f9b5"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/pi4miqrq2gpcs8qs9wp6vcsm4i6j514b-gnumake-4.3",
+                "digest": {
+                    "sha256": "33c9acbe55cc3f81560e9668a5e363cdddb929bcd3c296d4f4f4a4e6f45ed25b"
+                }
+            }
+        ]
+    }
+}

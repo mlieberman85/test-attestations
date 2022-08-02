@@ -1,0 +1,199 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/77zhkxs682cwqy9m0x1lp4ikasdm689n-python3-minimal-3.9.12",
+            "digest": {
+                "sha256": "1eb60436cf3f2eef1f6a17bdc54edf80fd5dc6a4ed3f9310d298dd324d9196ac"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "CPPFLAGS": "-I/nix/store/biwbln1daqfs3snksrk5nk5037nfn9mn-zlib-1.2.12-dev/include -I/nix/store/36qhkrxpi5hnkr2g1vf7mz87dicxp7qw-bzip2-1.0.6.0.2-dev/include -I/nix/store/dq5na8g82wr1cly336wna5ppy1glils7-expat-2.4.8-dev/include -I/nix/store/6rmclg8fwpip8mjaf31zpa5pwvsysa78-xz-5.2.5-dev/include -I/nix/store/g44rihs1l20ry311dnh6rm9qkz1hgx1v-libffi-3.4.2-dev/include",
+                "LDFLAGS": "-L/nix/store/wsx4qn549qf6704zz4w09vjld7pqsrqj-zlib-1.2.12/lib -L/nix/store/nn1m5l9dqsc4rc556z0wgc02y4cfkn22-bzip2-1.0.6.0.2/lib -L/nix/store/1czvd0g6fnym4s2i2435wqmy48w3v3gr-expat-2.4.8/lib -L/nix/store/js41qss5r9gkcwzhbjb7cf78vlbbq69h-xz-5.2.5/lib -L/nix/store/kww58pmfpy03yj58ijrb18vi758l6rqp-libffi-3.4.2/lib",
+                "LIBS": "-lcrypt",
+                "NIX_LDFLAGS": "-lgcc_s",
+                "PYTHONHASHSEED": "0",
+                "buildInputs": "/nix/store/biwbln1daqfs3snksrk5nk5037nfn9mn-zlib-1.2.12-dev /nix/store/36qhkrxpi5hnkr2g1vf7mz87dicxp7qw-bzip2-1.0.6.0.2-dev /nix/store/dq5na8g82wr1cly336wna5ppy1glils7-expat-2.4.8-dev /nix/store/6rmclg8fwpip8mjaf31zpa5pwvsysa78-xz-5.2.5-dev /nix/store/g44rihs1l20ry311dnh6rm9qkz1hgx1v-libffi-3.4.2-dev",
+                "builder": "/nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash",
+                "configureFlags": "--without-ensurepip --with-system-expat --with-system-ffi --enable-shared ac_cv_func_lchmod=no",
+                "debug": "/nix/store/zsbkklyv2kyfki4wz3ldz0yvq2xf6knj-python3-minimal-3.9.12-debug",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "disallowedReferences": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "enableParallelBuilding": "1",
+                "enableParallelChecking": "1",
+                "name": "python3-minimal-3.9.12",
+                "nativeBuildInputs": "/nix/store/zjngfrvcprndncqp8zy8m2lcyrrl7mjg-hook /nix/store/irxlgs008fq2wvvbpyq3nafr6shmwk3v-pkg-config-wrapper-0.29.2 /nix/store/i3d3yq70rg8r9hvlzwgd805isv4a63m7-autoconf-archive-2021.02.19 /nix/store/igv7anz5xbyhqm6k2ihknbxxd5f6886n-nuke-references /nix/store/ikmqczy0y20n04a2b8qfflzwihv8139g-separate-debug-info.sh",
+                "out": "/nix/store/77zhkxs682cwqy9m0x1lp4ikasdm689n-python3-minimal-3.9.12",
+                "outputs": "out debug",
+                "patches": "/nix/store/p4qar37zn2892m83b2lkp8fw5dsjkzxy-no-ldconfig.patch /nix/store/r112dk8w7zvdjipki58ch00m825li7fq-virtualenv-permissions.patch /nix/store/dkb2rjyj7lwmvsn4zzwx85kx8r61nk9w-darwin-libutil.patch /nix/store/cv1ynpzvjjr0s72jkbblbzz3ymr87lpi-0001-On-all-posix-systems-not-just-Darwin-set-LDSHARED-if.patch /nix/store/57kclla9vza2n87xgwg1ap54d20cz6lb-fix-finding-headers-when-cross-compiling.patch",
+                "pname": "python3-minimal",
+                "postFixup": "cat \u003c\u003c \"EOF\" \u003e\u003e \"$out/nix-support/setup-hook\"\nsysconfigdataHook() {\n  if [ \"$1\" = '/1rz4g4znpzjwh1xymhjpm42vipw92pr73vdgl6xs1hycac8kf2n9' ]; then\n    export _PYTHON_HOST_PLATFORM='linux-x86_64'\n    export _PYTHON_SYSCONFIGDATA_NAME='_sysconfigdata__linux_x86_64-linux-gnu'\n  fi\n}\n\naddEnvHooks \"$hostOffset\" sysconfigdataHook\n\nEOF\n",
+                "postInstall": "# needed for some packages, especially packages that backport functionality\n# to 2.x from 3.x\nfor item in $out/lib/python3.9/test/*; do\n  if [[ \"$item\" != */test_support.py*\n     \u0026\u0026 \"$item\" != */test/support\n     \u0026\u0026 \"$item\" != */test/libregrtest\n     \u0026\u0026 \"$item\" != */test/regrtest.py* ]]; then\n    rm -rf \"$item\"\n  else\n    echo $item\n  fi\ndone\ntouch $out/lib/python3.9/test/__init__.py\n\nln -s \"$out/include/python3.9m\" \"$out/include/python3.9\"\n\n# Determinism: Windows installers were not deterministic.\n# We're also not interested in building Windows installers.\nfind \"$out\" -name 'wininst*.exe' | xargs -r rm -f\n\n# Use Python3 as default python\nln -s \"$out/bin/idle3\" \"$out/bin/idle\"\nln -s \"$out/bin/pydoc3\" \"$out/bin/pydoc\"\nln -s \"$out/bin/python3\" \"$out/bin/python\"\nln -s \"$out/bin/python3-config\" \"$out/bin/python-config\"\nln -s \"$out/lib/pkgconfig/python3.pc\" \"$out/lib/pkgconfig/python.pc\"\n\n# Get rid of retained dependencies on -dev packages, and remove\n# some $TMPDIR references to improve binary reproducibility.\n# Note that the .pyc file of _sysconfigdata.py should be regenerated!\nfor i in $out/lib/python3.9/_sysconfigdata*.py $out/lib/python3.9/config-39*/Makefile; do\n   sed -i $i -e \"s|$TMPDIR|/no-such-path|g\"\ndone\n\n# Further get rid of references. https://github.com/NixOS/nixpkgs/issues/51668\nfind $out/lib/python*/config-* -type f -print -exec nuke-refs -e /1rz4g4znpzjwh1xymhjpm42vipw92pr73vdgl6xs1hycac8kf2n9 '{}' +\nfind $out/lib -name '_sysconfigdata*.py*' -print -exec nuke-refs -e /1rz4g4znpzjwh1xymhjpm42vipw92pr73vdgl6xs1hycac8kf2n9 '{}' +\n\n# Make the sysconfigdata module accessible on PYTHONPATH\n# This allows build Python to import host Python's sysconfigdata\nmkdir -p \"$out/lib/python3.9/site-packages\"\nln -s \"$out/lib/python3.9/\"_sysconfigdata*.py \"$out/lib/python3.9/site-packages/\"\n\n# debug info can't be separated from a static library and would otherwise be\n# left in place by a separateDebugInfo build. force its removal here to save\n# space in output.\n$STRIP -S $out/lib/python3.9/config-*/libpython*.a || true\nrm -R $out/bin/python*-config $out/lib/python*/config-*\n# Strip IDLE (and turtledemo, which uses it)\nrm -R $out/bin/idle* $out/lib/python*/{idlelib,turtledemo}\nrm -R $out/lib/python*/tkinter\n# Strip tests\nrm -R $out/lib/python*/test $out/lib/python*/**/test{,s}\n# Determinism: deterministic bytecode\n# First we delete all old bytecode.\nfind $out -type d -name __pycache__ -print0 | xargs -0 -I {} rm -rf \"{}\"\n# *strip* shebang from libpython gdb script - it should be dual-syntax and\n# interpretable by whatever python the gdb in question is using, which may\n# not even match the major version of this python. doing this after the\n# bytecode compilations for the same reason - we don't want bytecode generated.\nmkdir -p $out/share/gdb\nsed '/^#!/d' Tools/gdb/libpython.py \u003e $out/share/gdb/libpython.py\n",
+                "postPatch": "substituteInPlace Lib/subprocess.py \\\n  --replace \"'/bin/sh'\" \"'/nix/store/s0yqllb7xpax21dcx53w7sybs97rgkx8-bash-5.1-p16/bin/sh'\"\n",
+                "preConfigure": "for i in /usr /sw /opt /pkg; do\t# improve purity\n  substituteInPlace ./setup.py --replace $i /no-such-path\ndone\nexport CFLAGS_NODIST=\"-fno-semantic-interposition\"\n",
+                "preFixup": "",
+                "prePatch": "",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "separateDebugInfo": "1",
+                "setupHook": "/nix/store/n0n27ymfdv1ai8f5jljn2kgqybapix9v-python-setup-hook.sh",
+                "src": "/nix/store/sq7ixd6drzcng98s0d0kxbh0gsmmy6yi-Python-3.9.12.tar.xz",
+                "stdenv": "/nix/store/00ryhc0rgjvcaigxans5ph4q3j8jm6c6-bootstrap-stage2-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "3.9.12"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/57kclla9vza2n87xgwg1ap54d20cz6lb-fix-finding-headers-when-cross-compiling.patch",
+                "digest": {
+                    "sha256": "f085b790993026e4380257e43f6048cf36bb4c0a9ac5626f76cca8e418be2ca0"
+                }
+            },
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/cv1ynpzvjjr0s72jkbblbzz3ymr87lpi-0001-On-all-posix-systems-not-just-Darwin-set-LDSHARED-if.patch",
+                "digest": {
+                    "sha256": "ef1a62bbd1f2917e86b13177f70c51b375c33661183d6f09dce7bbf5bd709deb"
+                }
+            },
+            {
+                "uri": "file:///nix/store/dkb2rjyj7lwmvsn4zzwx85kx8r61nk9w-darwin-libutil.patch",
+                "digest": {
+                    "sha256": "a1d192ad73e89c8cce0077fd85639bc5abd67436d3d1c227e1920e2a47f90a8b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ikmqczy0y20n04a2b8qfflzwihv8139g-separate-debug-info.sh",
+                "digest": {
+                    "sha256": "6a9bffeef698bb4db776df8fdaaf2a4766c65c1a468204b9ae425eeaa4e961c7"
+                }
+            },
+            {
+                "uri": "file:///nix/store/p4qar37zn2892m83b2lkp8fw5dsjkzxy-no-ldconfig.patch",
+                "digest": {
+                    "sha256": "1c286c57d00d3975f40a88892637d34623e2a2cc2cda350b0d8e9c53f36bd28b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/r112dk8w7zvdjipki58ch00m825li7fq-virtualenv-permissions.patch",
+                "digest": {
+                    "sha256": "df311aa0583b855abde08137e6ad814a290469b7e5c9318e4ce240d750284a0d"
+                }
+            },
+            {
+                "uri": "file:///nix/store/0zhkga32apid60mm7nh92z2970im5837-bootstrap-tools.drv",
+                "digest": {
+                    "sha256": "f91ccdc44b609d5a97b27804be2daa58b61d51b82caa7e9e765db4ad4180098a"
+                }
+            },
+            {
+                "uri": "file:///nix/store/1bqzn0vhkv7a5jqwg5vpm9gw85l43cn7-bzip2-1.0.6.0.2.drv",
+                "digest": {
+                    "sha256": "7875c46854b64f0e1ecd947de33a026b96da5402586cedfe41e81a1d78c30fbc"
+                }
+            },
+            {
+                "uri": "file:///nix/store/2qklysz0hj51z8fq5qsj152c2crnghhg-bootstrap-stage2-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "847747fb7f255141ddd9ed26c9cbf707bf272d147ef5104268a8fd5c51c090af"
+                }
+            },
+            {
+                "uri": "file:///nix/store/7sb7lpj88c9qbzfh2l2p22f6385cmyp9-autoconf-archive-2021.02.19.drv",
+                "digest": {
+                    "sha256": "2aa7da9ef325ee8383edc30fc4ebcb4987a759eb49dd44f09a362a71a168dc52"
+                }
+            },
+            {
+                "uri": "file:///nix/store/80hn1psd1pahychg2amnj4bz74pxpl65-expat-2.4.8.drv",
+                "digest": {
+                    "sha256": "34123cd7e48abf236ec17829d6f689da4476d08c669f29c7091dbd55d3a65b93"
+                }
+            },
+            {
+                "uri": "file:///nix/store/9swzdnz5ppnkg41w6zc1mdpcqlzqxswr-zlib-1.2.12.drv",
+                "digest": {
+                    "sha256": "93a34e9a8f25ea65e14c510da3cf166d399a66cc546a97da6dca0bfe6c1da267"
+                }
+            },
+            {
+                "uri": "file:///nix/store/d7jzz250i06qxqk889wxj24brkhbrk75-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "d3e93f6dfe3746f28301eeb33a60474d18baed8799241262ee9fe9abace1e1a2"
+                }
+            },
+            {
+                "uri": "file:///nix/store/d7svzl6jg4wn25ici2rvgzkc7zqnfwg8-nuke-references.drv",
+                "digest": {
+                    "sha256": "95575bb91318da58e0c604b592dbdf25bf23cc1534ece18039db67d37181a677"
+                }
+            },
+            {
+                "uri": "file:///nix/store/drg2i86zgrsxz1rfq7c62m8n06nsyssl-Python-3.9.12.tar.xz.drv",
+                "digest": {
+                    "sha256": "c71fb217709ffde998e2c9c6b549df99906bc143a53486f53d42590f0bf214b6"
+                }
+            },
+            {
+                "uri": "file:///nix/store/gg2zf103v8jc1p5lqfqyi7v7l3727gh6-libffi-3.4.2.drv",
+                "digest": {
+                    "sha256": "e941df023af1f434e92d92756073afee78f1bed9df78e2d8a6269b70398c2dfb"
+                }
+            },
+            {
+                "uri": "file:///nix/store/i6f0dyxss311ns72agyyzpi5jhkbm349-hook.drv",
+                "digest": {
+                    "sha256": "85b0aa0b03d58597b58fee5c332fb5e4c42a8975474997c71dbfc58ecc9ce188"
+                }
+            },
+            {
+                "uri": "file:///nix/store/lldlrykclfm03wn4s974bxzh6zngnncv-python-setup-hook.sh.drv",
+                "digest": {
+                    "sha256": "fbb30d5a0bde5ed46f033cbc0a8bd70c2ed0ccd8d823713dbd3f7ef99c4a41f2"
+                }
+            },
+            {
+                "uri": "file:///nix/store/nc2dm0sq3niwhj3dy7nfr29p467qrc9j-xz-5.2.5.drv",
+                "digest": {
+                    "sha256": "ea35f11e97285209c9465ae04f9cbc2e94cb2a448810ace4abd41c5c5f7c1560"
+                }
+            },
+            {
+                "uri": "file:///nix/store/qi9vz8j6xp1k1n4jqa91ma88289q9bx6-pkg-config-wrapper-0.29.2.drv",
+                "digest": {
+                    "sha256": "384d88232bbdc7dc25f3c95278415f658ad9c813955fef12e7dbd185a9e412e3"
+                }
+            }
+        ]
+    }
+}

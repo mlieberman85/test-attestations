@@ -1,0 +1,128 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/kp7q4fawyrcw4ccr9387dg2i7ffz7zrr-python3.9-bootstrapped-pip-22.0.4",
+            "digest": {
+                "sha256": "54d4324801e711e2c2b5c5a606fcfa646785d28e22288b02be72210618d88fb6"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "/nix/store/wnrc4daqbd6v5ifqlxsj75ky8556zy0p-python3-3.9.12",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "dontBuild": "1",
+                "dontUsePipInstall": "1",
+                "dontUseSetuptoolsBuild": "1",
+                "installPhase": "export SETUPTOOLS_INSTALL_WINDOWS_SPECIFIC_FILES=0\n# Give folders a known name\nmv pip* pip\nmv setuptools* setuptools\nmv wheel* wheel\n# Set up PYTHONPATH. The above folders need to be on PYTHONPATH\n# $out is where we are installing to and takes precedence\nexport PYTHONPATH=\"$out/lib/python3.9/site-packages:$(pwd)/pip/src:$(pwd)/setuptools:$(pwd)/setuptools/pkg_resources:$(pwd)/wheel:$PYTHONPATH\"\n\necho \"Building setuptools wheel...\"\npushd setuptools\nrm pyproject.toml\n/nix/store/wnrc4daqbd6v5ifqlxsj75ky8556zy0p-python3-3.9.12/bin/python3.9 -m pip install --no-build-isolation --no-index --prefix=$out  --ignore-installed --no-dependencies --no-cache .\npopd\n\necho \"Building wheel wheel...\"\npushd wheel\n/nix/store/wnrc4daqbd6v5ifqlxsj75ky8556zy0p-python3-3.9.12/bin/python3.9 -m pip install --no-build-isolation --no-index --prefix=$out  --ignore-installed --no-dependencies --no-cache .\npopd\n\necho \"Building pip wheel...\"\npushd pip\n/nix/store/wnrc4daqbd6v5ifqlxsj75ky8556zy0p-python3-3.9.12/bin/python3.9 -m pip install --no-build-isolation --no-index --prefix=$out  --ignore-installed --no-dependencies --no-cache .\npopd\n",
+                "name": "python3.9-bootstrapped-pip-22.0.4",
+                "nativeBuildInputs": "/nix/store/h0gk57azya21q6acdl6g5m3qrkfn2f3s-hook /nix/store/j9k6xf477871ydqxwzyicqzp1drrfirg-unzip-6.0",
+                "out": "/nix/store/kp7q4fawyrcw4ccr9387dg2i7ffz7zrr-python3.9-bootstrapped-pip-22.0.4",
+                "outputs": "out",
+                "patches": "",
+                "pname": "pip",
+                "postPatch": "mkdir -p $out/bin\n",
+                "propagatedBuildInputs": "/nix/store/j44b5akh6m7n87c1aj4ssih4ixvnym2i-pip-install-hook /nix/store/sq53ifr3qw2kmdsiw2l0nw8vdap5y1zx-setuptools-setup-hook",
+                "propagatedNativeBuildInputs": "",
+                "sourceRoot": ".",
+                "srcs": "/nix/store/3dki8ikais8yg1npyrznzd39vpg66d79-wheel-0.37.1-source /nix/store/ry8d2lgffkbf4dn7rqv4snlcxakgrm15-pip-22.0.4-source /nix/store/lybib13dmqa686dd6i1fykigg0im1z0x-setuptools-61.2.0-sdist.tar.gz",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "22.0.4"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/2mvacyna7jrdqsbdjzvn50z0qxabkmxv-setuptools-61.2.0-sdist.tar.gz.drv",
+                "digest": {
+                    "sha256": "6ffa172b35e38d26c3929189023acd58f0a4cbf4ed0359b395a4e3a65fa5c663"
+                }
+            },
+            {
+                "uri": "file:///nix/store/3kqhm9jnf9y5xnqq7lpi72n77988i3w3-pip-22.0.4-source.drv",
+                "digest": {
+                    "sha256": "d4117fb3e6ee7b1056bba47bef92c4f15b1a708497b4b399ebe543c988c07e20"
+                }
+            },
+            {
+                "uri": "file:///nix/store/6n6rwkjyzhdn56b8f9ggzmkp902lbi6d-pip-install-hook.drv",
+                "digest": {
+                    "sha256": "a5e2f2c91e7a72f7be11a8d7805db2bbb66f0ed79042d8abd2ab43066cf801fc"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/i0yr1bacwckxg615rh11935ni79ymhmq-hook.drv",
+                "digest": {
+                    "sha256": "4a8785edbf8cb2dd72f43e6a676b71a1f12bdd277509d74f837e6b8a05ccd57d"
+                }
+            },
+            {
+                "uri": "file:///nix/store/j91kg5ci5j6zkyl3b782gzkypyfsdxm6-wheel-0.37.1-source.drv",
+                "digest": {
+                    "sha256": "3a4657a3a6ef7523f74d82b5c2116c670b44d220adad7422edf945ce8ee5720f"
+                }
+            },
+            {
+                "uri": "file:///nix/store/kgvj21apv851a2plkkwz282wyh0lq4ww-unzip-6.0.drv",
+                "digest": {
+                    "sha256": "91dde6ee7992a3a30816f32aa974fd1a47551b9901b71eb58cdd000112c58e7e"
+                }
+            },
+            {
+                "uri": "file:///nix/store/qimmc8y70v15bc1sczv49cxvwa6hxwqh-setuptools-setup-hook.drv",
+                "digest": {
+                    "sha256": "8b368d95745d7dd8655e779b1a7565c58e0da2a72e1b44edf1372220258d15dd"
+                }
+            },
+            {
+                "uri": "file:///nix/store/vdgkm605ayapf245hc17239qfpvivxfy-python3-3.9.12.drv",
+                "digest": {
+                    "sha256": "6684eb57aec053d7baf339e95827a8b7670f5709da588ab2576f58eb3be31ea6"
+                }
+            }
+        ]
+    }
+}

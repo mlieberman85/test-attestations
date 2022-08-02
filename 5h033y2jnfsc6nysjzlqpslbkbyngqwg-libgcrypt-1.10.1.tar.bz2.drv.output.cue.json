@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/5h033y2jnfsc6nysjzlqpslbkbyngqwg-libgcrypt-1.10.1.tar.bz2.drv",
+            "digest": {
+                "sha256": "0197f9ac0e63b8a39b5e7a238ca6185ba57be34307de8eb414361e0bd570ceb1"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/kai03kiwdn2pvysykbg1wp0iigxa3j1x-libgcrypt-1.10.1.tar.bz2",
+                "digest": {
+                    "sha256": "353c64ec0bc6281248b40c8f477936fa776a4e25de741004adab4dffc4ccbe51"
+                }
+            }
+        ]
+    }
+}

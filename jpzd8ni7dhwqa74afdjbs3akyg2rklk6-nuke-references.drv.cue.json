@@ -1,0 +1,91 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/48n5jpbj2mw6qb8akmr82xrx8r4xbabr-nuke-references",
+            "digest": {
+                "sha256": "fb692ace2fd9977f852a5c8e8d8a54c18665da19b4af625ad1c375dc9044b735"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "dontBuild": "1",
+                "dontConfigure": "1",
+                "dontUnpack": "1",
+                "installPhase": "mkdir -p $out/bin\nsubstituteAll /nix/store/9m54l1bi5814x9cqznwlga7yfs5ipi6h-nuke-refs.sh $out/bin/nuke-refs\nchmod a+x $out/bin/nuke-refs\n",
+                "name": "nuke-references",
+                "nativeBuildInputs": "",
+                "out": "/nix/store/48n5jpbj2mw6qb8akmr82xrx8r4xbabr-nuke-references",
+                "outputs": "out",
+                "patches": "",
+                "perl": "/nix/store/c34zmy26gc58bn7qbf4md2yh8vp133n6-perl-5.34.1",
+                "postFixup": "",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "shell": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "stdenv": "/nix/store/lmj98vlk5h0v1x5gzslxjnaj4m58dwxm-stdenv-linux",
+                "storeDir": "/nix/store",
+                "strictDeps": "",
+                "system": "x86_64-linux"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/9m54l1bi5814x9cqznwlga7yfs5ipi6h-nuke-refs.sh",
+                "digest": {
+                    "sha256": "9a345ba09f35d235f7fca6304602345118b5410692cee2bf33db9c316fe18389"
+                }
+            },
+            {
+                "uri": "file:///nix/store/3ga8qx6a74j26sy0yyvnqnxp6mva1b1z-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "f9bc13b9bdaa3cce0106294eeec282b55ca6f4f2d0b2d11e04685a22f7cb5170"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/jkn79jy5p1cdh953rsmnpadxk15jaili-perl-5.34.1.drv",
+                "digest": {
+                    "sha256": "87f4f98f9a11a87515771dacc6dcd294d640778e146d6119ee09b07f955a654e"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/9rj9gjx5dqqv3xi4zb6w288kmj8ki961-python3.9-python-dateutil-2.8.2.drv",
+            "digest": {
+                "sha256": "2cae05b42a347f97195ffc1644a16d66e3e5e0b0a0f0d12423000cee14ffbb38"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/y2hqp42dr7c0269vx23f3pxlpkfj56cp-python3.9-python-dateutil-2.8.2",
+                "digest": {
+                    "sha256": "92cd00c341605b99f483b5794efb50d3e031ca93b723f4174871f0fe3b02987c"
+                }
+            }
+        ]
+    }
+}

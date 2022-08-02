@@ -1,0 +1,39 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/gmaq49vzfrkvr714y4fhfxv100ijihin-automake-1.16.5.tar.xz",
+            "digest": {
+                "sha256": "ec6676cd3a0d8dd7fbdc8b45bdfea72c40ac54aef51d11c6a036b8b1cbee12f6"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://builtin:fetchurl"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {
+                "builder": "builtin:fetchurl",
+                "executable": "",
+                "impureEnvVars": "http_proxy https_proxy ftp_proxy all_proxy no_proxy",
+                "name": "automake-1.16.5.tar.xz",
+                "out": "/nix/store/gmaq49vzfrkvr714y4fhfxv100ijihin-automake-1.16.5.tar.xz",
+                "outputHash": "0sdl32qxdy7m06iggmkkvf7j520rmmgbsjzbm7fgnxwxdp6mh7gh",
+                "outputHashAlgo": "sha256",
+                "outputHashMode": "flat",
+                "preferLocalBuild": "1",
+                "system": "builtin",
+                "unpack": "",
+                "url": "https://ftpmirror.gnu.org/automake/automake-1.16.5.tar.xz",
+                "urls": "https://ftpmirror.gnu.org/automake/automake-1.16.5.tar.xz"
+            }
+        },
+        "materials": []
+    }
+}

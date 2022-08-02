@@ -1,0 +1,93 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/5khbqx9653sak9wf385zf7vqi89qniz2-libpcap-1.10.1",
+            "digest": {
+                "sha256": "bac36b628f84c9ff22d7c4d234d4d2be6ec12166b80146436433c87c73b75bd9"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "--with-pcap=linux ac_cv_linux_vers=2",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "name": "libpcap-1.10.1",
+                "nativeBuildInputs": "/nix/store/24w1xck3h95vi3l5qx2zm4d8rwpy8am0-flex-2.6.4 /nix/store/sl630spd1c59jdb5wicj0pb4qf37gy8g-bison-3.8.2",
+                "out": "/nix/store/5khbqx9653sak9wf385zf7vqi89qniz2-libpcap-1.10.1",
+                "outputs": "out",
+                "patches": "",
+                "pname": "libpcap",
+                "postInstall": "if [ \"$dontDisableStatic\" -ne \"1\" ]; then\n  rm -f $out/lib/libpcap.a\nfi\n",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/0wjmm7vxzn66pim4ckd3wfs8k978p41b-libpcap-1.10.1.tar.gz",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "1.10.1"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/7llqs0355fc9fdjf7kalwcwynrkrjanw-libpcap-1.10.1.tar.gz.drv",
+                "digest": {
+                    "sha256": "4b86cd6f189f8d67473586bd73568e3ecf860b47e2d5fffe53904f821ae90340"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/f7pd672msda6cgg9kmzmbg1hghghxaz6-flex-2.6.4.drv",
+                "digest": {
+                    "sha256": "05ff8b10bc22aee839b288a3fec3b3b4b847bff6e7e2174735975d9dcd6624c2"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ic70qagv77gjbgci607i973xggv33931-bison-3.8.2.drv",
+                "digest": {
+                    "sha256": "86fac9c212c0643fde73b22ecf7c46f683936fd6711594c780cb0cea60b779ff"
+                }
+            }
+        ]
+    }
+}

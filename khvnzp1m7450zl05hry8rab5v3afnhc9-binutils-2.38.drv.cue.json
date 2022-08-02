@@ -1,0 +1,151 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/3fqi6nigj8dkbvjnw8y4dy59gkq8vsj4-binutils-2.38",
+            "digest": {
+                "sha256": "5b5e864010d3acef5250cda189d8c01dbcec6c073a52af48dfc3041a3ff0174d"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "NIX_CFLAGS_COMPILE": "-static-libgcc",
+                "NIX_HARDENING_ENABLE": "fortify stackprotector pic strictoverflow relro bindnow",
+                "buildInputs": "/nix/store/38ryqbjx5i1hir1a3sfk4za1yq5fbkpd-zlib-1.2.12-dev /nix/store/bwmdwrkrmflp1jny62a7wgbgymiwnsmn-gettext-0.21",
+                "builder": "/nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash",
+                "configureFlags": "--enable-64-bit-bfd --with-system-zlib --enable-deterministic-archives --disable-werror --enable-fix-loongson2f-nop --enable-new-dtags --program-prefix= --enable-gold --enable-plugins --enable-shared --disable-static --build=x86_64-unknown-linux-gnu --host=x86_64-unknown-linux-gnu --target=x86_64-unknown-linux-gnu",
+                "configurePlatforms": "build host target",
+                "depsBuildBuild": "/nix/store/d6jixv2bcy0kfl3sxz4p7x0rmyyidb1q-bootstrap-stage4-gcc-wrapper-11.3.0",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "1",
+                "enableParallelBuilding": "1",
+                "enableParallelChecking": "1",
+                "hardeningDisable": "format pie",
+                "info": "/nix/store/wq3iyz4lcplpah0dalnjw7gxx8d7d4lw-binutils-2.38-info",
+                "man": "/nix/store/r5arv29n72sjx7dg5vr7v1m905v860hj-binutils-2.38-man",
+                "name": "binutils-2.38",
+                "nativeBuildInputs": "/nix/store/nrgh9xgmglj6a2rrqzasw8f7mrbz27vv-bison-3.8.2 /nix/store/nwd35shggdjdbb5xgx8dhbcjnmx23706-perl-5.34.1 /nix/store/10q3qyy2qqvdycliynasdw9vbzxcbmvm-texinfo-6.8",
+                "noSysDirs": "1",
+                "out": "/nix/store/3fqi6nigj8dkbvjnw8y4dy59gkq8vsj4-binutils-2.38",
+                "outputs": "out info man",
+                "patches": "/nix/store/sqbhaaayam0xw3a3164ks1vvbrdhl9vq-deterministic.patch /nix/store/0df8rz15sp4ai6md99q5qy9lf0srji5z-0001-Revert-libtool.m4-fix-nm-BSD-flag-detection.patch /nix/store/lgniihp1bk6mkd5nn9y5ikfim2ignr52-0001-libtool.m4-update-macos-version-detection-block.patch /nix/store/pa83jbilxjpv5d4f62l3as4wg2fri7r7-always-search-rpath.patch",
+                "pname": "binutils",
+                "postFixup": "",
+                "preConfigure": "# Clear the default library search path.\nif test \"$noSysDirs\" = \"1\"; then\n    echo 'NATIVE_LIB_DIRS=' \u003e\u003e ld/configure.tgt\nfi\n\n# Use symlinks instead of hard links to save space (\"strip\" in the\n# fixup phase strips each hard link separately).\nfor i in binutils/Makefile.in gas/Makefile.in ld/Makefile.in gold/Makefile.in; do\n    sed -i \"$i\" -e 's|ln |ln -s |'\ndone\n",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/7pi1c8n0sl1b8sy8cjv2sxwppawwgndk-binutils-2.38.tar.bz2",
+                "stdenv": "/nix/store/mhhmr6r7852384nmlpplxm23la0l68cs-bootstrap-stage4-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "2.38"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/0df8rz15sp4ai6md99q5qy9lf0srji5z-0001-Revert-libtool.m4-fix-nm-BSD-flag-detection.patch",
+                "digest": {
+                    "sha256": "0e9a720f13451c6d4503c074e4a631d5f225438befdeb8b22f17a75d1888d941"
+                }
+            },
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/lgniihp1bk6mkd5nn9y5ikfim2ignr52-0001-libtool.m4-update-macos-version-detection-block.patch",
+                "digest": {
+                    "sha256": "ea42a0f883d6731bfc3af6480cb0bc8604a751b66493cecd1cd26afed818af19"
+                }
+            },
+            {
+                "uri": "file:///nix/store/pa83jbilxjpv5d4f62l3as4wg2fri7r7-always-search-rpath.patch",
+                "digest": {
+                    "sha256": "f919af90faeaed47dee6ad7630f6d29aaf21333f40a7f0039c29c2bf6d5b8bf4"
+                }
+            },
+            {
+                "uri": "file:///nix/store/sqbhaaayam0xw3a3164ks1vvbrdhl9vq-deterministic.patch",
+                "digest": {
+                    "sha256": "d6a294885b42cbe1be9df25d7cb3974d466c56cc3a6bcd1d9fdad01629dfaff6"
+                }
+            },
+            {
+                "uri": "file:///nix/store/0zhkga32apid60mm7nh92z2970im5837-bootstrap-tools.drv",
+                "digest": {
+                    "sha256": "f91ccdc44b609d5a97b27804be2daa58b61d51b82caa7e9e765db4ad4180098a"
+                }
+            },
+            {
+                "uri": "file:///nix/store/4ps3shhk3a83nxw82pirrp84kjza42qr-zlib-1.2.12.drv",
+                "digest": {
+                    "sha256": "f1c161051f72552716fdcba6f78370a3f93dab26e28779bbb0002f809c502534"
+                }
+            },
+            {
+                "uri": "file:///nix/store/57y2zhgvwaf7rlc7rdr4xbdqq4yk4f69-bison-3.8.2.drv",
+                "digest": {
+                    "sha256": "963415c7db1e0185adf81585350e29bde4a6025da336106fc0ea86b6d7eae043"
+                }
+            },
+            {
+                "uri": "file:///nix/store/5n7j0l13pmshd0ibl1is5yq4cx3yfgrk-bootstrap-stage4-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "8e185e061d88ebd2426602e337b5fcbf1def9e959c2ede344c2c5c662836b0b1"
+                }
+            },
+            {
+                "uri": "file:///nix/store/is6j9vdyz6fanhrj5fva1hqmfywf0fh5-binutils-2.38.tar.bz2.drv",
+                "digest": {
+                    "sha256": "dcb70c28ecdb812ef30811efb60cfcf1216ca3c824e865d210bb1ec868849ce3"
+                }
+            },
+            {
+                "uri": "file:///nix/store/k529q8rr17ki21zlyq440gh61039n0qw-texinfo-6.8.drv",
+                "digest": {
+                    "sha256": "8a16877d06a5622581392bda3e3e448693b5d1ff8a501678c4149d1edc6560f4"
+                }
+            },
+            {
+                "uri": "file:///nix/store/qzqv7h1dawzyxy361i4ml6307mgxk6kv-perl-5.34.1.drv",
+                "digest": {
+                    "sha256": "b761478df955663544c8c5cff482bcb1a997516b62e88a0854f1e251c5833b09"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ra40fnjajddf7vd0h8ssp2j99n2d3k75-gettext-0.21.drv",
+                "digest": {
+                    "sha256": "8d2de9fdbc4955a81f7eccbeebd6bacca598ba1ebb5a17eefcc0ffe6a993f47c"
+                }
+            },
+            {
+                "uri": "file:///nix/store/xgihrryljj46a0krzhp653my18y7r3w4-bootstrap-stage4-gcc-wrapper-11.3.0.drv",
+                "digest": {
+                    "sha256": "a448ded016a0be74140757e56efbd07bbb5fc1f2b6ed4c7c9571ac7a62c6b9b7"
+                }
+            }
+        ]
+    }
+}

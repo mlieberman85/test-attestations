@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/3yar2pnvz7ll79z3jlzx09qnhrsi7zj5-automake-1.16.5.tar.xz.drv",
+            "digest": {
+                "sha256": "29e645f4eb950753d40215d5812e05c7a4473cdb1c570ecd5df0c174c0e7723e"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/gmaq49vzfrkvr714y4fhfxv100ijihin-automake-1.16.5.tar.xz",
+                "digest": {
+                    "sha256": "ec6676cd3a0d8dd7fbdc8b45bdfea72c40ac54aef51d11c6a036b8b1cbee12f6"
+                }
+            }
+        ]
+    }
+}

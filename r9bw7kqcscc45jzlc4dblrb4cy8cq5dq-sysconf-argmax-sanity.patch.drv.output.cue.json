@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/r9bw7kqcscc45jzlc4dblrb4cy8cq5dq-sysconf-argmax-sanity.patch.drv",
+            "digest": {
+                "sha256": "ddddee432d31826d7d3442806a4f7744bc77ce824bb68ed9300a6af5d5956069"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/cgc2j7m9l7wmfx42ily5qlh0fcx483f3-sysconf-argmax-sanity.patch",
+                "digest": {
+                    "sha256": "5b50fd611428d6c92aedd724e29f5b451f0a44075230871fc7e5e9a9f1192340"
+                }
+            }
+        ]
+    }
+}

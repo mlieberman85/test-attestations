@@ -1,0 +1,39 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/vxyc444hi903a4bc2n0ii6ykwjbp624c-expat-2.4.8.tar.xz",
+            "digest": {
+                "sha256": "aa6fe29d15e69daeb12ca2ff836d5248cc03adb9836ac4fbcd3d013b1d1bd897"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://builtin:fetchurl"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {
+                "builder": "builtin:fetchurl",
+                "executable": "",
+                "impureEnvVars": "http_proxy https_proxy ftp_proxy all_proxy no_proxy",
+                "name": "expat-2.4.8.tar.xz",
+                "out": "/nix/store/vxyc444hi903a4bc2n0ii6ykwjbp624c-expat-2.4.8.tar.xz",
+                "outputHash": "sha256-95uPkEt0nj4NIK/q3s+CScVbLjLU67CJrjeN9HncryU=",
+                "outputHashAlgo": "sha256",
+                "outputHashMode": "flat",
+                "preferLocalBuild": "1",
+                "system": "builtin",
+                "unpack": "",
+                "url": "https://github.com/libexpat/libexpat/releases/download/R_2_4_8/expat-2.4.8.tar.xz",
+                "urls": "https://github.com/libexpat/libexpat/releases/download/R_2_4_8/expat-2.4.8.tar.xz"
+            }
+        },
+        "materials": []
+    }
+}

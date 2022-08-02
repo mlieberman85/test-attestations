@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/f8ghqfpcz0x834chn86p8w35p4c6mfns-cracklib-words-2.9.7.gz.drv",
+            "digest": {
+                "sha256": "1028da678fdbf8d0f963b4d75ce4cfedf5b558ee9b7aa5c40aa8e9462b409a44"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/gx790ffsz8rnwhnnax4h75f344a4ddih-cracklib-words-2.9.7.gz",
+                "digest": {
+                    "sha256": "b426777cfe39f2ceb087932813f1b74b409d845bab956d7bda36e77d49086256"
+                }
+            }
+        ]
+    }
+}

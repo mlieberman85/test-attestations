@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/xir6rxfd3wnq4lw8j3zksfkri490nzxp-gawk-5.1.1.tar.xz.drv",
+            "digest": {
+                "sha256": "9b98bd2836fd8431ccf3bb5dd2d956c1d18f9b85bf09cbd9248b8ad2e7ab95d1"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/n96s4cryw417jh2y7h01wdvm24pmkw2p-gawk-5.1.1.tar.xz",
+                "digest": {
+                    "sha256": "5f28bf7198465f53177827fa73a0723e4ea8ea7b7bf1bda02280013ed2efbf74"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,85 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/b2m05nssz8vgk1qza5722fn2svq99i87-tcl-package-hook",
+            "digest": {
+                "sha256": "ee697a6f370b6d8f7664b0b76baf951e831d7791d58f1ce76cc1191e7a962b41"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildCommand": "mkdir -p $out/nix-support\ncp /nix/store/g4c3jbhc8ag6db5py0xk2sicfy0hrpmw-tcl-package-hook.sh $out/nix-support/setup-hook\nprintWords /nix/store/h0gk57azya21q6acdl6g5m3qrkfn2f3s-hook \u003e $out/nix-support/propagated-build-inputs\n",
+                "buildInputs": "",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "name": "tcl-package-hook",
+                "nativeBuildInputs": "",
+                "out": "/nix/store/b2m05nssz8vgk1qza5722fn2svq99i87-tcl-package-hook",
+                "outputs": "out",
+                "passAsFile": "buildCommand",
+                "patches": "",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "stdenv": "/nix/store/lmj98vlk5h0v1x5gzslxjnaj4m58dwxm-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/g4c3jbhc8ag6db5py0xk2sicfy0hrpmw-tcl-package-hook.sh",
+                "digest": {
+                    "sha256": "74a6dbd8a8ae05854f84df293bac85a92aadbace4722b48c8a75ee1258c584cc"
+                }
+            },
+            {
+                "uri": "file:///nix/store/3ga8qx6a74j26sy0yyvnqnxp6mva1b1z-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "f9bc13b9bdaa3cce0106294eeec282b55ca6f4f2d0b2d11e04685a22f7cb5170"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/i0yr1bacwckxg615rh11935ni79ymhmq-hook.drv",
+                "digest": {
+                    "sha256": "4a8785edbf8cb2dd72f43e6a676b71a1f12bdd277509d74f837e6b8a05ccd57d"
+                }
+            }
+        ]
+    }
+}

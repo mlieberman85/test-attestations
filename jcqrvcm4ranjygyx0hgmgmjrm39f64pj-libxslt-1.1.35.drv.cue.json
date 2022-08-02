@@ -1,0 +1,122 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/b59aqwi1qr6qb7srd8nmi5i4r9wcmxxw-libxslt-1.1.35",
+            "digest": {
+                "sha256": "0c6f2dffb699e9df17f83f6553ccb85b0a14c958d4c23d8005c20a32b9e1625b"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "bin": "/nix/store/0in3r4sysr60by67bpcgn9m1r7fgchk1-libxslt-1.1.35-bin",
+                "buildInputs": "/nix/store/kbrqn86jqy4m2fy2hnh04bpf62jrrsyj-libxml2-2.9.14-dev /nix/store/ds7a86mq3522fpjay82dbd3x0zf1a0yi-libxml2-2.9.14-py /nix/store/wnrc4daqbd6v5ifqlxsj75ky8556zy0p-python3-3.9.12 /nix/store/xfbflasrprwi6gavla92mn3b7s28g879-ncurses-6.3-dev",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "--without-debug --without-mem-debug --without-debugger --with-python=/nix/store/wnrc4daqbd6v5ifqlxsj75ky8556zy0p-python3-3.9.12 --without-crypto",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "dev": "/nix/store/n2l7za4zq4vndbrfnwm9gbcqkfwm945y-libxslt-1.1.35-dev",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "doc": "/nix/store/q5q3p199vdbvqg8wdippk8vbxcp3hpsw-libxslt-1.1.35-doc",
+                "man": "/nix/store/2a39d1ngmh7w369gbrj7m3y3j3ajbq17-libxslt-1.1.35-man",
+                "name": "libxslt-1.1.35",
+                "nativeBuildInputs": "/nix/store/prn4gvr4ljmrwnnm508i7m7qh7nfh7gz-pkg-config-wrapper-0.29.2 /nix/store/35fvnsr5k0lwvpvp8dcl457vmc8cahib-hook",
+                "out": "/nix/store/b59aqwi1qr6qb7srd8nmi5i4r9wcmxxw-libxslt-1.1.35",
+                "outputs": "bin dev out man doc py",
+                "patches": "",
+                "pname": "libxslt",
+                "postFixup": "moveToOutput bin/xslt-config \"$dev\"\nmoveToOutput lib/xsltConf.sh \"$dev\"\nmoveToOutput share/man/man1 \"$bin\"\nmkdir -p $py/nix-support\necho /nix/store/ds7a86mq3522fpjay82dbd3x0zf1a0yi-libxml2-2.9.14-py \u003e\u003e $py/nix-support/propagated-build-inputs\nmoveToOutput python3.9 \"$py\"\n",
+                "propagatedBuildInputs": "/nix/store/nfcvgq92vp0787lhqcdrvszp80wl3jp2-hook",
+                "propagatedNativeBuildInputs": "",
+                "py": "/nix/store/fhy12ccs20k6f647f4m7z3wi1ijn9ryn-libxslt-1.1.35-py",
+                "src": "/nix/store/wm0hs32qs4yn175bp96y49cdr679993s-libxslt-1.1.35.tar.xz",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "1.1.35"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/1v1lazzb2r2cg7a0vxv705jxyc8hidpn-pkg-config-wrapper-0.29.2.drv",
+                "digest": {
+                    "sha256": "d1c8e17a6c2ddf6900b817119c22f726a3a39af2ac395821e95d915fde3d9734"
+                }
+            },
+            {
+                "uri": "file:///nix/store/2by8zqkgh21hci91i31nnjp1gs0x6r3y-libxml2-2.9.14.drv",
+                "digest": {
+                    "sha256": "a038c857127ec4dbe6829cb0aeb1b7dbd0491c5c0932024209b1f84293b5e264"
+                }
+            },
+            {
+                "uri": "file:///nix/store/48xaf1r444393spc8vmz5gn1l5i5bimy-hook.drv",
+                "digest": {
+                    "sha256": "5b00f716663f81a1092e2d629c38c9bb6a1a4a3277dc08b26ad76e8b5b3359de"
+                }
+            },
+            {
+                "uri": "file:///nix/store/4wm2f4p4kpcknw2p9pv69gl9700h8zdq-libxslt-1.1.35.tar.xz.drv",
+                "digest": {
+                    "sha256": "6f37ddf4e9dc12069eecd81051150416bbe906649b29cbf8ccdd0d27f07eda8a"
+                }
+            },
+            {
+                "uri": "file:///nix/store/5k1sfc5qmzb93addcjxxnqcd5bpf2wlz-hook.drv",
+                "digest": {
+                    "sha256": "e2b0f8b1570352fccde979f3d8e4b70c5bbc8cce6a08b1f7fbfbafbf4b702445"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/l5y6ghs0kpvyrbsg99v56h1phd4lvpas-ncurses-6.3.drv",
+                "digest": {
+                    "sha256": "b04aaac5b9f13913712c318b35890248423d5cc4f96dbcd2df42d14210295a1d"
+                }
+            },
+            {
+                "uri": "file:///nix/store/vdgkm605ayapf245hc17239qfpvivxfy-python3-3.9.12.drv",
+                "digest": {
+                    "sha256": "6684eb57aec053d7baf339e95827a8b7670f5709da588ab2576f58eb3be31ea6"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/7v5qq2srh4wfrcfayacdngczqlf7fmg3-Babel-2.10.1.tar.gz.drv",
+            "digest": {
+                "sha256": "a5dde0dd4ab30439a707608df582e866baa16cb85d00c525664301adba911ba6"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/1s8qjwvqh4z73r0rsmvwzhqb0inscbmm-Babel-2.10.1.tar.gz",
+                "digest": {
+                    "sha256": "ff12462f31f074dd04765009449aa35d78fc252a4c8e5fc69dcfa71613c2809c"
+                }
+            }
+        ]
+    }
+}

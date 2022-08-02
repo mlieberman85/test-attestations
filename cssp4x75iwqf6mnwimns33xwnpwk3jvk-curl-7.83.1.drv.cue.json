@@ -1,0 +1,171 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/x2zhf8q1ih9xg72wikg367wzi2vrxlcl-curl-7.83.1",
+            "digest": {
+                "sha256": "0a1f6c0463c51480ef57e0b6a0820ae70558cb54f29f837ffbb9e8345e22aca1"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "CXX": "c++",
+                "CXXCPP": "c++ -E",
+                "bin": "/nix/store/0q5f1vysmr6m6q44jp7jvf97b9h8nrm6-curl-7.83.1-bin",
+                "buildInputs": "",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "--disable-manual --disable-ares --disable-ldap --disable-ldaps --with-ca-fallback --without-nghttp3 --without-ngtcp2 --without-librtmp --with-zstd --with-brotli=/nix/store/mi6mzff4yrdd81gxn96gclwhg04zmyfs-brotli-1.0.9-dev --without-gnutls --with-libidn2=/nix/store/jipraw9gzhyrf8k6j8bnhmr12kxs8gns-libidn2-2.3.2-dev --with-openssl=/nix/store/6na02j2cznbkwlis5h9837d96jlf4j5p-openssl-1.1.1o-dev --with-libssh2=/nix/store/bs64lxd0v4s3fd9lvsx6wzlhbw1328bs-libssh2-1.10.0-dev --without-wolfssl --with-gssapi=/nix/store/40p15kjhirx2yadszvc4v60vrvg114jb-libkrb5-1.19.3-dev",
+                "debug": "/nix/store/n66d6z8hqy7i806z8ykwa0vclhfyqawn-curl-7.83.1-debug",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "dev": "/nix/store/kxyz4sl8hna586np50zg0zv3v7ah0pv2-curl-7.83.1-dev",
+                "devdoc": "/nix/store/cs0w34gdxdbdkfd0c8zz6pyfhdr99akv-curl-7.83.1-devdoc",
+                "doCheck": "1",
+                "doInstallCheck": "",
+                "enableParallelBuilding": "1",
+                "enableParallelChecking": "1",
+                "man": "/nix/store/vs3pbnahxgh0gxrbz8gd934kcw2335dh-curl-7.83.1-man",
+                "name": "curl-7.83.1",
+                "nativeBuildInputs": "/nix/store/prn4gvr4ljmrwnnm508i7m7qh7nfh7gz-pkg-config-wrapper-0.29.2 /nix/store/c34zmy26gc58bn7qbf4md2yh8vp133n6-perl-5.34.1 /nix/store/ikmqczy0y20n04a2b8qfflzwihv8139g-separate-debug-info.sh",
+                "out": "/nix/store/x2zhf8q1ih9xg72wikg367wzi2vrxlcl-curl-7.83.1",
+                "outputs": "bin dev out man devdoc debug",
+                "patches": "/nix/store/gdqnvkbp6nnrvww108adb7nvjgrpdxzb-7.79.1-darwin-no-systemconfiguration.patch /nix/store/12ifkgi01pxy7cy5chndmwy73kacgd0m-7.83.1-quiche-support-ca-fallback.patch",
+                "pname": "curl",
+                "postInstall": "moveToOutput bin/curl-config \"$dev\"\n\n# Install completions\nmake -C scripts install\nsed '/^dependency_libs/s|/nix/store/bs64lxd0v4s3fd9lvsx6wzlhbw1328bs-libssh2-1.10.0-dev|/nix/store/qmfsvmb3l2wrpja77qign4vs22glriyi-libssh2-1.10.0|' -i \"$out\"/lib/*.la\n",
+                "preCheck": "patchShebangs tests/\n",
+                "preConfigure": "sed -e 's|/usr/bin|/no-such-path|g' -i.bak configure\nrm src/tool_hugehelp.c\n",
+                "propagatedBuildInputs": "/nix/store/mi6mzff4yrdd81gxn96gclwhg04zmyfs-brotli-1.0.9-dev /nix/store/40p15kjhirx2yadszvc4v60vrvg114jb-libkrb5-1.19.3-dev /nix/store/qrkqvsg9rm0bnjvn544ldfr1gwq03m51-nghttp2-1.47.0-dev /nix/store/jipraw9gzhyrf8k6j8bnhmr12kxs8gns-libidn2-2.3.2-dev /nix/store/6na02j2cznbkwlis5h9837d96jlf4j5p-openssl-1.1.1o-dev /nix/store/bs64lxd0v4s3fd9lvsx6wzlhbw1328bs-libssh2-1.10.0-dev /nix/store/38ryqbjx5i1hir1a3sfk4za1yq5fbkpd-zlib-1.2.12-dev /nix/store/jw0n8hhbwfqi7f67gh2nzsx22idfaapj-zstd-1.5.2-dev",
+                "propagatedNativeBuildInputs": "",
+                "separateDebugInfo": "1",
+                "src": "/nix/store/a2qkjmdx9rmmnmiy8gdiaihc605niink-curl-7.83.1.tar.bz2",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "1",
+                "system": "x86_64-linux",
+                "version": "7.83.1"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/12ifkgi01pxy7cy5chndmwy73kacgd0m-7.83.1-quiche-support-ca-fallback.patch",
+                "digest": {
+                    "sha256": "a056e0b7a455d1f96b42aa1bb91697674e2e3705fa7d4234745f03ca06796c28"
+                }
+            },
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/gdqnvkbp6nnrvww108adb7nvjgrpdxzb-7.79.1-darwin-no-systemconfiguration.patch",
+                "digest": {
+                    "sha256": "0bfc4840d22ddc0c021faaf56083f4f1f55ee09b623f7ab372c27ffa136c2956"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ikmqczy0y20n04a2b8qfflzwihv8139g-separate-debug-info.sh",
+                "digest": {
+                    "sha256": "6a9bffeef698bb4db776df8fdaaf2a4766c65c1a468204b9ae425eeaa4e961c7"
+                }
+            },
+            {
+                "uri": "file:///nix/store/1v1lazzb2r2cg7a0vxv705jxyc8hidpn-pkg-config-wrapper-0.29.2.drv",
+                "digest": {
+                    "sha256": "d1c8e17a6c2ddf6900b817119c22f726a3a39af2ac395821e95d915fde3d9734"
+                }
+            },
+            {
+                "uri": "file:///nix/store/4ps3shhk3a83nxw82pirrp84kjza42qr-zlib-1.2.12.drv",
+                "digest": {
+                    "sha256": "f1c161051f72552716fdcba6f78370a3f93dab26e28779bbb0002f809c502534"
+                }
+            },
+            {
+                "uri": "file:///nix/store/6j9yh41lpmdpcviqkchirpbgjdcj0783-libidn2-2.3.2.drv",
+                "digest": {
+                    "sha256": "2f0df7fb6558be26ec4058d5d85ed5c07ceb4d1dd86c91e9337f989d5884d419"
+                }
+            },
+            {
+                "uri": "file:///nix/store/a16gbn08izc3qa6yfrn6w3zvkqbmxg5z-zstd-1.5.2.drv",
+                "digest": {
+                    "sha256": "b37dfaf75fdd614ebb3fd36f8f17b9947a89ab94f696592e50b8a522b95b90fe"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/cd44h08a0mbg07qwpih5zd31nikks2f7-openssl-1.1.1o.drv",
+                "digest": {
+                    "sha256": "acdeaa5cdbfb13fd590a628dc0b6a07ee25c464bedec941bac90715cacc33c2e"
+                }
+            },
+            {
+                "uri": "file:///nix/store/cvzh6lrybpxlbn7mivg4cib58y996503-libkrb5-1.19.3.drv",
+                "digest": {
+                    "sha256": "6802f980094055ad46c734a018f9157e055e39abbbff9655639123ff93209c10"
+                }
+            },
+            {
+                "uri": "file:///nix/store/d8l6zwjm0ag914mw8xp7vyyhpg6l6vg3-nghttp2-1.47.0.drv",
+                "digest": {
+                    "sha256": "b8a419dc540f5bd627f98a0a794b728d1d4fa9c54ed00316b658d9c0da5fe838"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/jkn79jy5p1cdh953rsmnpadxk15jaili-perl-5.34.1.drv",
+                "digest": {
+                    "sha256": "87f4f98f9a11a87515771dacc6dcd294d640778e146d6119ee09b07f955a654e"
+                }
+            },
+            {
+                "uri": "file:///nix/store/l53gyyjbd85clxlnmvapb2zcdvcaw8sk-libssh2-1.10.0.drv",
+                "digest": {
+                    "sha256": "1659bb5d48729a1dbb5143c73d2797dad5ad222707f60fe11ae0b3d2282ce21f"
+                }
+            },
+            {
+                "uri": "file:///nix/store/s19mnwm6xc2nx6g3m74q80zi2xqv97mi-brotli-1.0.9.drv",
+                "digest": {
+                    "sha256": "1e33e72e555312ff170e6824d331d2539af56ac04a25e13f0d8379a6a70ff9f6"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ws4dlrkxr3bkw0mc2i59n8awmzgcjzkw-curl-7.83.1.tar.bz2.drv",
+                "digest": {
+                    "sha256": "3afb10d64952ae907fb352954f5348fcac0d351af6b80342008c75425f09758e"
+                }
+            }
+        ]
+    }
+}

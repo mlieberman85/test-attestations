@@ -1,0 +1,104 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/i8absq6s46b54z1nyk4sbz0kz40hzw2m-perl5.34.1-Try-Tiny-0.30",
+            "digest": {
+                "sha256": "71b58b79f4e3e8c8bab95c33570f2f8d34e2c456e8749e8a1757b43535ec83e4"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/qf3mzpvsmkrw963xchbivcci06078n13-builder.sh"
+                ]
+            },
+            "environment": {
+                "AUTOMATED_TESTING": "1",
+                "PERL_AUTOINSTALL": "--skipdeps",
+                "PERL_USE_UNSAFE_INC": "1",
+                "buildInputs": "/nix/store/qvw0c06bq72ja4332sb04l8w88i9z0gn-perl5.34.1-CPAN-Meta-Check-0.014 /nix/store/ahf2kssf9ayqfyz5icfhy7npfqbss8n1-perl5.34.1-Capture-Tiny-0.48 /nix/store/c34zmy26gc58bn7qbf4md2yh8vp133n6-perl-5.34.1",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "checkTarget": "test",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "devdoc": "/nix/store/gfgv9i12910qm3r4a46k3v72q9pq6gqy-perl5.34.1-Try-Tiny-0.30-devdoc",
+                "doCheck": "1",
+                "doInstallCheck": "",
+                "fullperl": "/nix/store/c34zmy26gc58bn7qbf4md2yh8vp133n6-perl-5.34.1",
+                "name": "perl5.34.1-Try-Tiny-0.30",
+                "nativeBuildInputs": "/nix/store/c34zmy26gc58bn7qbf4md2yh8vp133n6-perl-5.34.1",
+                "out": "/nix/store/i8absq6s46b54z1nyk4sbz0kz40hzw2m-perl5.34.1-Try-Tiny-0.30",
+                "outputs": "out devdoc",
+                "patches": "",
+                "pname": "perl5.34.1-Try-Tiny",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/1i0mn5cj69ajnykvzn558jmii56n09i1-Try-Tiny-0.30.tar.gz",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "0.30"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/qf3mzpvsmkrw963xchbivcci06078n13-builder.sh",
+                "digest": {
+                    "sha256": "3d93a1c4c99e05cc46b3f2121ff8ee2269d65693ae9555332a4b522202979a01"
+                }
+            },
+            {
+                "uri": "file:///nix/store/7hg1yql1fdrcff6bwvniynxy8yqh2wy5-Try-Tiny-0.30.tar.gz.drv",
+                "digest": {
+                    "sha256": "af2ca53cfbc3bddbd8f8d2a1804a3e728ddaa56410cd19bd3826cd24bdb03219"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/f01yxww87jnqpinslbp6l5gfz4bdfsih-perl5.34.1-CPAN-Meta-Check-0.014.drv",
+                "digest": {
+                    "sha256": "db268fcb588c7519dd70d4069c7397e38e26a76b7eb2996609e1da0b78480a77"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/jkn79jy5p1cdh953rsmnpadxk15jaili-perl-5.34.1.drv",
+                "digest": {
+                    "sha256": "87f4f98f9a11a87515771dacc6dcd294d640778e146d6119ee09b07f955a654e"
+                }
+            },
+            {
+                "uri": "file:///nix/store/s9g3ilaljclf969hhfdmdgplh2inyiyv-perl5.34.1-Capture-Tiny-0.48.drv",
+                "digest": {
+                    "sha256": "b09bac9544b2ea60d7aedb61a14ac7df3d5f7fae73d862b344e120001e668b43"
+                }
+            }
+        ]
+    }
+}

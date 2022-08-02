@@ -1,0 +1,39 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/sq7ixd6drzcng98s0d0kxbh0gsmmy6yi-Python-3.9.12.tar.xz",
+            "digest": {
+                "sha256": "3eb51662bcd66372751ededb4b102d618d3c4bd587ff77111b190a3c6772d20c"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://builtin:fetchurl"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {
+                "builder": "builtin:fetchurl",
+                "executable": "",
+                "impureEnvVars": "http_proxy https_proxy ftp_proxy all_proxy no_proxy",
+                "name": "Python-3.9.12.tar.xz",
+                "out": "/nix/store/sq7ixd6drzcng98s0d0kxbh0gsmmy6yi-Python-3.9.12.tar.xz",
+                "outputHash": "sha256-LNlLIGcOQVnG2atX+R2/JVuX2MGhRR0cNfTsGWit+XE=",
+                "outputHashAlgo": "sha256",
+                "outputHashMode": "flat",
+                "preferLocalBuild": "1",
+                "system": "builtin",
+                "unpack": "",
+                "url": "https://www.python.org/ftp/python/3.9.12/Python-3.9.12.tar.xz",
+                "urls": "https://www.python.org/ftp/python/3.9.12/Python-3.9.12.tar.xz"
+            }
+        },
+        "materials": []
+    }
+}

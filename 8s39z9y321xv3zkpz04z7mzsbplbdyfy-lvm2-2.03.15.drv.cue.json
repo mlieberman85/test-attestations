@@ -1,0 +1,127 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/xk812f1nj7k8y51nvshv6ckdkqyyrb09-lvm2-2.03.15",
+            "digest": {
+                "sha256": "2ef488c85f346e6ad01ac4d8164fc34cc42df95315e1dcadf1112f0b726e30bb"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "bin": "/nix/store/bhsyag3c0yifhgraz862zgybaw1af8n8-lvm2-2.03.15-bin",
+                "buildInputs": "/nix/store/3pvb9acgmmsq3pk0bggkmj3bvb5nlijd-libaio-0.3.112 /nix/store/0ghkx0adxyblvdgd4qpzcpciwhi9j440-systemd-minimal-250.4-dev /nix/store/qq1kncy66jxf5di20xs3y28d1gc9hl8h-util-linux-minimal-2.37.4-dev",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "--disable-readline --enable-pkgconfig --with-default-locking-dir=/run/lock/lvm --with-default-run-dir=/run/lvm --with-systemdsystemunitdir=/1rz4g4znpzjwh1xymhjpm42vipw92pr73vdgl6xs1hycac8kf2n9/lib/systemd/system --bindir=/04f3da1kmbr67m3gzxikmsl4vjz5zf777sv6m14ahv22r65aac9m/bin --sbindir=/04f3da1kmbr67m3gzxikmsl4vjz5zf777sv6m14ahv22r65aac9m/bin --libdir=/0sra2y18lr3h6j58qjm0w46yv36h1wjmilb09n8aimdpivdymscx/lib --enable-udev_rules --enable-udev_sync",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "dev": "/nix/store/7ba1p2wd9ngdac9i48gsaczhhmz635v8-lvm2-2.03.15-dev",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "installFlags": "OWNER= GROUP= confdir=$(out)/etc",
+                "installPhase": "",
+                "installTargets": "install install_systemd_generators install_systemd_units install_tmpfiles_configuration",
+                "lib": "/nix/store/jvz0c43pfwvdw36flzzg5ban850qim9k-lvm2-2.03.15-lib",
+                "makeFlags": "SYSTEMD_GENERATOR_DIR=$(out)/lib/systemd/system-generators",
+                "man": "/nix/store/jkkp2isigdixkhpgj2cgr0r826kxzmhg-lvm2-2.03.15-man",
+                "name": "lvm2-2.03.15",
+                "nativeBuildInputs": "/nix/store/prn4gvr4ljmrwnnm508i7m7qh7nfh7gz-pkg-config-wrapper-0.29.2",
+                "out": "/nix/store/xk812f1nj7k8y51nvshv6ckdkqyyrb09-lvm2-2.03.15",
+                "outputs": "out dev man bin lib",
+                "patches": "/nix/store/dqa3gycxy1sifkl7shh8gny3hjh7pw07-fix-blkdeactivate.patch",
+                "pname": "lvm2",
+                "postConfigure": "sed -i 's|^#define LVM_CONFIGURE_LINE.*$|#define LVM_CONFIGURE_LINE \"\u003cremoved\u003e\"|g' ./include/configure.h\n",
+                "postInstall": "moveToOutput lib/libdevmapper.so $lib\n",
+                "preConfigure": "sed -i /DEFAULT_SYS_DIR/d Makefile.in\nsed -i /DEFAULT_PROFILE_DIR/d conf/Makefile.in\nsubstituteInPlace udev/69-dm-lvm.rules.in \\\n  --replace \"/usr/bin/systemd-run\" /run/current-system/systemd/bin/systemd-run\nsubstituteInPlace make.tmpl.in --replace \"@systemdsystemunitdir@\" \"$out/lib/systemd/system\"\nsubstituteInPlace libdm/make.tmpl.in --replace \"@systemdsystemunitdir@\" \"$out/lib/systemd/system\"\n\nsubstituteInPlace scripts/blk_availability_systemd_red_hat.service.in \\\n  --replace '/usr/bin/true' '/nix/store/a99i3wf2ig85clra7rs5kgi46s46xvwc-coreutils-9.0/bin/true'\n",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/p2cbf65xiwrwvk5ilvzsyhk8m12v0a7z-LVM2.2.03.15.tgz",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "2.03.15"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/1v1lazzb2r2cg7a0vxv705jxyc8hidpn-pkg-config-wrapper-0.29.2.drv",
+                "digest": {
+                    "sha256": "d1c8e17a6c2ddf6900b817119c22f726a3a39af2ac395821e95d915fde3d9734"
+                }
+            },
+            {
+                "uri": "file:///nix/store/5hn9vqk4f8lvnm7lnnhmq7lvv8bz7hiv-LVM2.2.03.15.tgz.drv",
+                "digest": {
+                    "sha256": "2289a626ff20f3387f385ab729c923ab1c35ea81ea2a31a0660e792ad790845e"
+                }
+            },
+            {
+                "uri": "file:///nix/store/6ch34hgn48q2sh4brsl59khz0sa573ii-systemd-minimal-250.4.drv",
+                "digest": {
+                    "sha256": "a268b37735a408cdf156ccea5a23139c2b0a8eadd1684535590383ef6d330f6b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/9rzzcygmd3nhbwp4nzq55wpv8mp503kq-coreutils-9.0.drv",
+                "digest": {
+                    "sha256": "0745b28317369571fc337984bf894091825689ee8e9a3fcf0d1f83b27ffaba14"
+                }
+            },
+            {
+                "uri": "file:///nix/store/b6iw7q7lzs8vh24wd8hmlf2jl7dc9ql1-util-linux-minimal-2.37.4.drv",
+                "digest": {
+                    "sha256": "868639b6f595cc1e6e039a1eff44fa4d04edd6def9cb2b1b7e75d1648a035b06"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/hvh9lcsyavzr7j7l2ihwnnplpcpvmab6-fix-blkdeactivate.patch.drv",
+                "digest": {
+                    "sha256": "c26991508a77464d7e233044fa86a2c8c3ad1677f6694daa907d9a8ae1d89b35"
+                }
+            },
+            {
+                "uri": "file:///nix/store/rik3ipk6n5ls8rv26lhlrbmhinqa0jg8-libaio-0.3.112.drv",
+                "digest": {
+                    "sha256": "86d07b34f9182a84a9ffa60558b5075b3b5ac910bdf0660593e6620ff7fb6a4f"
+                }
+            }
+        ]
+    }
+}

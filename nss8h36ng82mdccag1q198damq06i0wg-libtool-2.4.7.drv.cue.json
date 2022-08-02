@@ -1,0 +1,128 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/4jjhqqg4w9qrhvykdc8d0j60drdl6pwi-libtool-2.4.7",
+            "digest": {
+                "sha256": "fcf90f1439d557621dee414419f0944bbf8f75f32593c4c590e44c1c163c3e5e"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "FILECMD": "/nix/store/wpb53qkpxab84iw415vs4s0b301nq5n2-file-5.41/bin/file",
+                "buildInputs": "",
+                "builder": "/nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "dontPatchShebangs": "1",
+                "enableParallelBuilding": "1",
+                "enableParallelChecking": "1",
+                "lib": "/nix/store/d3zxh6hsg8mnkpbzgr77v426yrv2rmx9-libtool-2.4.7-lib",
+                "name": "libtool-2.4.7",
+                "nativeBuildInputs": "/nix/store/8ph192qyza62ph9lk7razkwnaal0fqkv-autoconf-2.71 /nix/store/8x5423bmnryck989p3y5rjnbm0izm8p2-automake-1.16.5 /nix/store/8fklfyd878zqlnjmh4sf19lb0caqjl4n-help2man-1.49.1 /nix/store/nnc5dqzp6p88hb6q1cn4fh28n042n11h-gnum4-1.4.19 /nix/store/nwd35shggdjdbb5xgx8dhbcjnmx23706-perl-5.34.1",
+                "out": "/nix/store/4jjhqqg4w9qrhvykdc8d0j60drdl6pwi-libtool-2.4.7",
+                "outputs": "out lib",
+                "patches": "",
+                "pname": "libtool",
+                "postPatch": "aclocal -I m4\nautomake\nautoconf\n\npushd libltdl\naclocal -I ../m4\nautomake\nautoconf\npopd\nsubstituteInPlace libtoolize.in       --replace '#! /usr/bin/env sh' '#!/nix/store/s0yqllb7xpax21dcx53w7sybs97rgkx8-bash-5.1-p16/bin/bash'\nsubstituteInPlace build-aux/ltmain.in --replace '#! /usr/bin/env sh' '#!/nix/store/s0yqllb7xpax21dcx53w7sybs97rgkx8-bash-5.1-p16/bin/bash'\n",
+                "propagatedBuildInputs": "/nix/store/nnc5dqzp6p88hb6q1cn4fh28n042n11h-gnum4-1.4.19 /nix/store/wpb53qkpxab84iw415vs4s0b301nq5n2-file-5.41",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/ck70x6hdl1kgqa4a9ps8spw6ph9mfcj8-libtool-2.4.7.tar.gz",
+                "stdenv": "/nix/store/00ryhc0rgjvcaigxans5ph4q3j8jm6c6-bootstrap-stage2-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "2.4.7"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/0h6fm036wgzs9dn5hmgp8jdyd56rlniq-file-5.41.drv",
+                "digest": {
+                    "sha256": "06dd374ef53241e35f18e6dbae4af6a83b57ef9f58a72e9fb6f49d64ad83fa18"
+                }
+            },
+            {
+                "uri": "file:///nix/store/0zhkga32apid60mm7nh92z2970im5837-bootstrap-tools.drv",
+                "digest": {
+                    "sha256": "f91ccdc44b609d5a97b27804be2daa58b61d51b82caa7e9e765db4ad4180098a"
+                }
+            },
+            {
+                "uri": "file:///nix/store/2qklysz0hj51z8fq5qsj152c2crnghhg-bootstrap-stage2-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "847747fb7f255141ddd9ed26c9cbf707bf272d147ef5104268a8fd5c51c090af"
+                }
+            },
+            {
+                "uri": "file:///nix/store/9fpkh8r3f44vka98v82nx549ihskix2q-autoconf-2.71.drv",
+                "digest": {
+                    "sha256": "24f4179f12a438084a54bd28b566e809d9c95ab363f685503c1913bf48ebc036"
+                }
+            },
+            {
+                "uri": "file:///nix/store/d7jzz250i06qxqk889wxj24brkhbrk75-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "d3e93f6dfe3746f28301eeb33a60474d18baed8799241262ee9fe9abace1e1a2"
+                }
+            },
+            {
+                "uri": "file:///nix/store/f2wkk86pwbxfns7zgh35sa4gwrqknini-automake-1.16.5.drv",
+                "digest": {
+                    "sha256": "5df8a81a3b9268ab515d5308e09c042dc7d551dce361f35e28cfa95fb0304620"
+                }
+            },
+            {
+                "uri": "file:///nix/store/fikn7yf3w83g2kdq6il7ds871h15d64s-gnum4-1.4.19.drv",
+                "digest": {
+                    "sha256": "34c3c465eeaa0244d8131438d9f46e98e4e46501f125c8d66050338a6944386d"
+                }
+            },
+            {
+                "uri": "file:///nix/store/qzqv7h1dawzyxy361i4ml6307mgxk6kv-perl-5.34.1.drv",
+                "digest": {
+                    "sha256": "b761478df955663544c8c5cff482bcb1a997516b62e88a0854f1e251c5833b09"
+                }
+            },
+            {
+                "uri": "file:///nix/store/rwvhsf6hna1j3sgw20f1b4gl9mp5w9vr-libtool-2.4.7.tar.gz.drv",
+                "digest": {
+                    "sha256": "117123142e791fbb6640e171f6678485b62ea5c554b257ea5f4e06017d7207a3"
+                }
+            },
+            {
+                "uri": "file:///nix/store/szmrsnwgnw0mr0lw7xhw1yp0l871193i-help2man-1.49.1.drv",
+                "digest": {
+                    "sha256": "3e9d226c01739972ea23f0e47787517dcbb46eb531a44feb10a275c84033655d"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,91 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/53yjsi8nq6s1cchh7a0mg3javrn6qj8x-hook",
+            "digest": {
+                "sha256": "78464aa3eb8e0f6c83ed52a443202b7cfd0031c66070050fe96b501aacb69633"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildCommand": "mkdir -p $out/nix-support\ncp /nix/store/ky9g2y4l14801zfzmpbfwykmc4v6mm9z-make-binary-wrapper.sh $out/nix-support/setup-hook\nprintWords /nix/store/24x5sl9rwrny74awfkb438h6wjlcq6lv-hook /nix/store/gfr4ljdlr1wplc01j4fchw4w9x3lfvv9-gcc-wrapper-11.3.0 \u003e $out/nix-support/propagated-build-inputs\nsubstituteAll /nix/store/ky9g2y4l14801zfzmpbfwykmc4v6mm9z-make-binary-wrapper.sh $out/nix-support/setup-hook\n",
+                "buildInputs": "",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "name": "hook",
+                "nativeBuildInputs": "",
+                "out": "/nix/store/53yjsi8nq6s1cchh7a0mg3javrn6qj8x-hook",
+                "outputs": "out",
+                "passAsFile": "buildCommand",
+                "patches": "",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "stdenv": "/nix/store/lmj98vlk5h0v1x5gzslxjnaj4m58dwxm-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/3ga8qx6a74j26sy0yyvnqnxp6mva1b1z-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "f9bc13b9bdaa3cce0106294eeec282b55ca6f4f2d0b2d11e04685a22f7cb5170"
+                }
+            },
+            {
+                "uri": "file:///nix/store/f1akab530mpq6yxckn22wzbqdl50fbbp-make-binary-wrapper.sh.drv",
+                "digest": {
+                    "sha256": "7ff15c3e3ed80bc01308c4ef721ee5c5fc1f295af96520440414be1b7caf039f"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/hgi9979z6i6yzav843xkv5wj4qmp43xb-gcc-wrapper-11.3.0.drv",
+                "digest": {
+                    "sha256": "23daf1a1401858e4562e6aa61166712072a1f193942dd2478eef5513ddc9d2fb"
+                }
+            },
+            {
+                "uri": "file:///nix/store/m5vy6pqlkihyrymjar0nkbwydfw4qmny-hook.drv",
+                "digest": {
+                    "sha256": "a8199290c4d03eacb3f1358efcceae27524339f18d1a6fb3afba75135628115e"
+                }
+            }
+        ]
+    }
+}

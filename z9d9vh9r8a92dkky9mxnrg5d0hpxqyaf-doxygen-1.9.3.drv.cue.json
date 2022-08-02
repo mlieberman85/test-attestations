@@ -1,0 +1,112 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/6yp15lqs87lwmxn3mhwvdca7n9k7i7hv-doxygen-1.9.3",
+            "digest": {
+                "sha256": "1f1c46f366834e8ede54c2717b8013206ea1751be463edcf6584ff192fa53950"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "NIX_CFLAGS_COMPILE": "",
+                "buildInputs": "",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "cmakeFlags": "-DICONV_INCLUDE_DIR=/nix/store/8ryxs8jjbziday24xdr7qkf7icj8vr1y-glibc-iconv-2.34/include",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "name": "doxygen-1.9.3",
+                "nativeBuildInputs": "/nix/store/pg9xkxbscvfybwha04s118j9gikws31q-cmake-3.22.3 /nix/store/wnrc4daqbd6v5ifqlxsj75ky8556zy0p-python3-3.9.12 /nix/store/24w1xck3h95vi3l5qx2zm4d8rwpy8am0-flex-2.6.4 /nix/store/sl630spd1c59jdb5wicj0pb4qf37gy8g-bison-3.8.2",
+                "out": "/nix/store/6yp15lqs87lwmxn3mhwvdca7n9k7i7hv-doxygen-1.9.3",
+                "outputs": "out",
+                "patches": "",
+                "pname": "doxygen",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/aghsrkmn4adrnmg9c5df22i2xyncd7ly-source",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "1.9.3"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/f7pd672msda6cgg9kmzmbg1hghghxaz6-flex-2.6.4.drv",
+                "digest": {
+                    "sha256": "05ff8b10bc22aee839b288a3fec3b3b4b847bff6e7e2174735975d9dcd6624c2"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ic70qagv77gjbgci607i973xggv33931-bison-3.8.2.drv",
+                "digest": {
+                    "sha256": "86fac9c212c0643fde73b22ecf7c46f683936fd6711594c780cb0cea60b779ff"
+                }
+            },
+            {
+                "uri": "file:///nix/store/jy9zm9nmj7r19y2741wcvkc5wpdww61b-glibc-iconv-2.34.drv",
+                "digest": {
+                    "sha256": "082344439ef2b5523509fa4611ead6bbba6e8d855f32e4adc0a8e1de27eb6837"
+                }
+            },
+            {
+                "uri": "file:///nix/store/nj4w8zvk7k9kvf0ix9mchpbp6rfmp0bb-cmake-3.22.3.drv",
+                "digest": {
+                    "sha256": "0a2302cad5dd9254d110b42dd970ed43dea603462c7e90c933051c37f98ef3b5"
+                }
+            },
+            {
+                "uri": "file:///nix/store/s8ix6xnjwlgab05x0bb353x943lcma33-source.drv",
+                "digest": {
+                    "sha256": "ac32274add4343ce769dd3218eb1ad3d7c3f602c17840dc75df7e435c5ed0005"
+                }
+            },
+            {
+                "uri": "file:///nix/store/vdgkm605ayapf245hc17239qfpvivxfy-python3-3.9.12.drv",
+                "digest": {
+                    "sha256": "6684eb57aec053d7baf339e95827a8b7670f5709da588ab2576f58eb3be31ea6"
+                }
+            }
+        ]
+    }
+}

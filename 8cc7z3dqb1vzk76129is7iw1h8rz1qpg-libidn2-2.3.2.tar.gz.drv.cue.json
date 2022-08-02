@@ -1,0 +1,39 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/7abps0dar1gd6ljcmlic31q0517hfapp-libidn2-2.3.2.tar.gz",
+            "digest": {
+                "sha256": "75e56b9e30f577affaab71eb8d90cd98d010b04f4fb1cd68eddf57384f32af90"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://builtin:fetchurl"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {
+                "builder": "builtin:fetchurl",
+                "executable": "",
+                "impureEnvVars": "http_proxy https_proxy ftp_proxy all_proxy no_proxy",
+                "name": "libidn2-2.3.2.tar.gz",
+                "out": "/nix/store/7abps0dar1gd6ljcmlic31q0517hfapp-libidn2-2.3.2.tar.gz",
+                "outputHash": "sha256-dpQM1Od46Ak1eanRlbJf/16Tbp3GJCBoUotDenZ2T5E=",
+                "outputHashAlgo": "sha256",
+                "outputHashMode": "flat",
+                "preferLocalBuild": "1",
+                "system": "builtin",
+                "unpack": "",
+                "url": "https://ftpmirror.gnu.org/gnu/libidn/libidn2-2.3.2.tar.gz",
+                "urls": "https://ftpmirror.gnu.org/gnu/libidn/libidn2-2.3.2.tar.gz"
+            }
+        },
+        "materials": []
+    }
+}

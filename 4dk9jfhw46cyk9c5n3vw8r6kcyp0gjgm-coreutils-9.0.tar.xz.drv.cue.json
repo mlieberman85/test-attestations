@@ -1,0 +1,39 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/is8fadziysa55wpq1dppzhv5yhlhhm6n-coreutils-9.0.tar.xz",
+            "digest": {
+                "sha256": "2a363488e0add4eb81b9a21af139570f1d99ddfaad3bc8c5131363bafa7649bf"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://builtin:fetchurl"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {
+                "builder": "builtin:fetchurl",
+                "executable": "",
+                "impureEnvVars": "http_proxy https_proxy ftp_proxy all_proxy no_proxy",
+                "name": "coreutils-9.0.tar.xz",
+                "out": "/nix/store/is8fadziysa55wpq1dppzhv5yhlhhm6n-coreutils-9.0.tar.xz",
+                "outputHash": "sha256-zjCs30pBvFuzDdlV6eqnX6IWtOPesIiJ7TJDPHs7l84=",
+                "outputHashAlgo": "sha256",
+                "outputHashMode": "flat",
+                "preferLocalBuild": "1",
+                "system": "builtin",
+                "unpack": "",
+                "url": "https://ftpmirror.gnu.org/coreutils/coreutils-9.0.tar.xz",
+                "urls": "https://ftpmirror.gnu.org/coreutils/coreutils-9.0.tar.xz"
+            }
+        },
+        "materials": []
+    }
+}

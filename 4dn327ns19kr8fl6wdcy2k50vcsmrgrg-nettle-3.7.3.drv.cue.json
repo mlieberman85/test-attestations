@@ -1,0 +1,102 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/9xswcsvig930w9q3yb6fi18rlgq3dc8x-nettle-3.7.3",
+            "digest": {
+                "sha256": "c8914a969bde07755d7d66c38875233563e009c15403772084f4ecb1c128a5a7"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "--enable-fat",
+                "depsBuildBuild": "/nix/store/gfr4ljdlr1wplc01j4fchw4w9x3lfvv9-gcc-wrapper-11.3.0",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "dev": "/nix/store/7vlcbbd675g1f5ld0pz613msi1yqkdri-nettle-3.7.3-dev",
+                "doCheck": "1",
+                "doInstallCheck": "",
+                "enableParallelBuilding": "1",
+                "enableParallelChecking": "1",
+                "name": "nettle-3.7.3",
+                "nativeBuildInputs": "/nix/store/b3lh7rgzizg9r1wl6mnyqy9fy7zyhfxf-gnum4-1.4.19",
+                "out": "/nix/store/9xswcsvig930w9q3yb6fi18rlgq3dc8x-nettle-3.7.3",
+                "outputBin": "dev",
+                "outputs": "out dev",
+                "patches": "",
+                "pname": "nettle",
+                "propagatedBuildInputs": "/nix/store/5rh2bz76ldjpp3q7ncicriqz2m6cz16v-gmp-with-cxx-6.2.1-dev",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/5w02r3ah42m79fgfzbad3v4gxb124h5w-nettle-3.7.3.tar.gz",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "3.7.3"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/2gbjgzr7b80dq0laix8952cr5n9mxhs2-gnum4-1.4.19.drv",
+                "digest": {
+                    "sha256": "4d2cae1b88da2b9c7a1c942cc96e7f8a258a9ce342502a5e83e79c1926c2e188"
+                }
+            },
+            {
+                "uri": "file:///nix/store/4099r6v5k10a4rpj13fimjsvaqq6d5pk-nettle-3.7.3.tar.gz.drv",
+                "digest": {
+                    "sha256": "698afb7b9d00dce53de62584edc83934bf902a0a2574e258ee4e196717683685"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/hgi9979z6i6yzav843xkv5wj4qmp43xb-gcc-wrapper-11.3.0.drv",
+                "digest": {
+                    "sha256": "23daf1a1401858e4562e6aa61166712072a1f193942dd2478eef5513ddc9d2fb"
+                }
+            },
+            {
+                "uri": "file:///nix/store/kn6p1ysqp1yy1fr0ckkdm8105v6fx1zz-gmp-with-cxx-6.2.1.drv",
+                "digest": {
+                    "sha256": "bf248e37dd781518567b2f365e11b311dc5d2af2eb642a910b56fbf5b998736f"
+                }
+            }
+        ]
+    }
+}

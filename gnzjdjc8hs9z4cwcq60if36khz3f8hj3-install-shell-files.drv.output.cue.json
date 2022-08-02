@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/gnzjdjc8hs9z4cwcq60if36khz3f8hj3-install-shell-files.drv",
+            "digest": {
+                "sha256": "1a94ca039dd3a56d8736e87423c551d65bcadf6a86fbe3e4389904564748263d"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/lza91r981dvgasj4xws0mnw9jsdqwdra-install-shell-files",
+                "digest": {
+                    "sha256": "3b322bcf347098c322bb9eb22659992ddcb4e560f8c536bde3a33d8f52abaf8e"
+                }
+            }
+        ]
+    }
+}

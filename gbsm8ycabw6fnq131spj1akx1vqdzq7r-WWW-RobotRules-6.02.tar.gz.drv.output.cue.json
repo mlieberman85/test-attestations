@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/gbsm8ycabw6fnq131spj1akx1vqdzq7r-WWW-RobotRules-6.02.tar.gz.drv",
+            "digest": {
+                "sha256": "05206b6bf9f1fe48eb0368c1511bc3d0334b1e20f4e4e474f6d17810e018e68c"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/nv9m9x5smi365k2yrghwqacxdq8d1q3a-WWW-RobotRules-6.02.tar.gz",
+                "digest": {
+                    "sha256": "304109bfb33ba854465645281fe177ba1a17e1cc25054005abae28f51fa24cfd"
+                }
+            }
+        ]
+    }
+}

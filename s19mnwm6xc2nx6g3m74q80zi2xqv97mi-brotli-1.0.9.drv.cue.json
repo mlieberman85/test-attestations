@@ -1,0 +1,92 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/jkfws1j50l4ia1jrx89jhdx91mrmzrqa-brotli-1.0.9",
+            "digest": {
+                "sha256": "cbd80ffd48bb53b35065e7fe2c78cdbc0c72f7b28f9c0a8d066512ec49855b9c"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "checkTarget": "test",
+                "cmakeFlags": "",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "dev": "/nix/store/mi6mzff4yrdd81gxn96gclwhg04zmyfs-brotli-1.0.9-dev",
+                "doCheck": "1",
+                "doInstallCheck": "",
+                "lib": "/nix/store/vmrsgsfixpj1ybrvl21w8ypdn9p56kdr-brotli-1.0.9-lib",
+                "name": "brotli-1.0.9",
+                "nativeBuildInputs": "/nix/store/pg9xkxbscvfybwha04s118j9gikws31q-cmake-3.22.3",
+                "out": "/nix/store/jkfws1j50l4ia1jrx89jhdx91mrmzrqa-brotli-1.0.9",
+                "outputs": "out dev lib",
+                "patches": "",
+                "pname": "brotli",
+                "postInstall": "mkdir -p $out/share/man/man{1,3}\ncp ../docs/*.1 $out/share/man/man1/\ncp ../docs/*.3 $out/share/man/man3/\n",
+                "prePatch": "rm BUILD\n\n# Upstream fixed this reference to runtime-path after the release\n# and with this references g++ complains about invalid option -R\nsed -i 's/ -R${libdir}//' scripts/libbrotli*.pc.in\ncat scripts/libbrotli*.pc.in\n",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/61r295wfix78k9lv7ldbd7a9jl1gz512-source",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "1.0.9"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/nj4w8zvk7k9kvf0ix9mchpbp6rfmp0bb-cmake-3.22.3.drv",
+                "digest": {
+                    "sha256": "0a2302cad5dd9254d110b42dd970ed43dea603462c7e90c933051c37f98ef3b5"
+                }
+            },
+            {
+                "uri": "file:///nix/store/zqlrf9bi3fdmf16p8icqaglhhjsfxxq2-source.drv",
+                "digest": {
+                    "sha256": "aa368bbf2fb87ab1968a023d6f41c44ec8394921612bc9e8be101aba107734b7"
+                }
+            }
+        ]
+    }
+}

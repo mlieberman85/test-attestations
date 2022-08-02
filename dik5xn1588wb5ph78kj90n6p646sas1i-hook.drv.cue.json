@@ -1,0 +1,96 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/5sqn1lv2lbi1vs1q20skzaz3lnrchrfz-hook",
+            "digest": {
+                "sha256": "66df18bb57f0bd47f52c0ec1a27c29f8ab78e8dbedb98847caa2525bc6c4311d"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildCommand": "mkdir -p $out/nix-support\ncp /nix/store/ag815hbmmkgk4flh7rj3nw90b45kik64-wrap.sh $out/nix-support/setup-hook\nprintWords /nix/store/h0gk57azya21q6acdl6g5m3qrkfn2f3s-hook \u003e $out/nix-support/propagated-build-inputs\nsubstituteAll /nix/store/ag815hbmmkgk4flh7rj3nw90b45kik64-wrap.sh $out/nix-support/setup-hook\n",
+                "buildInputs": "",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "executable": "/nix/store/wnrc4daqbd6v5ifqlxsj75ky8556zy0p-python3-3.9.12/bin/python3.9",
+                "magicalSedExpression": "1 {\n  :r\n  /\\\\$|,$/{N;br}\n  /__future__|^ |^ *(#.*)?$/{n;br}\n  /^[a-z]?'\"'''\"'/ {\n  /'\"'''\"''\"'''\"'|'\"'''\"'.*'\"'''\"'/{n;br}\n  :q1; n; /^'\"'''\"'/{n;br}; /'\"'''\"'/{n;br}; bq1\n}\n/^[a-z]?\"\"\"/ {\n  /\"\"\"\"\"\"|\"\"\".*\"\"\"/{n;br}\n  :q2; n; /^\"\"\"/{n;br}; /\"\"\"/{n;br}; bq2\n}\n/^[a-z]?\"/ {\n  /\"\"|\".*[^\\\\]\"/{n;br}\n  :q3; n; /^\"/{n;br}; /[^\\\\]\"/{n;br}; bq3\n}\n/^[a-z]?'\"'\"'/ {\n  /'\"'\"''\"'\"'|'\"'\"'.*[^\\\\]'\"'\"'/{n;br}\n  :q4; n; /^'\"'\"'/{n;br}; /[^\\\\]'\"'\"'/{n;br}; bq4\n}\n\n  /^[^# ]/i import sys;import site;import functools;sys.argv[0] = '\"'$(readlink -f \"$f\")'\"';functools.reduce(lambda k, p: site.addsitedir(p, k), ['\"$([ -n \"$program_PYTHONPATH\" ] \u0026\u0026 (echo \"'$program_PYTHONPATH'\" | sed \"s|:|','|g\") || true)\"'], site._init_pathinfo());\n}\n",
+                "name": "hook",
+                "nativeBuildInputs": "",
+                "out": "/nix/store/5sqn1lv2lbi1vs1q20skzaz3lnrchrfz-hook",
+                "outputs": "out",
+                "passAsFile": "buildCommand",
+                "patches": "",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "python": "/nix/store/wnrc4daqbd6v5ifqlxsj75ky8556zy0p-python3-3.9.12",
+                "pythonHost": "/nix/store/wnrc4daqbd6v5ifqlxsj75ky8556zy0p-python3-3.9.12",
+                "sitePackages": "lib/python3.9/site-packages",
+                "stdenv": "/nix/store/lmj98vlk5h0v1x5gzslxjnaj4m58dwxm-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ag815hbmmkgk4flh7rj3nw90b45kik64-wrap.sh",
+                "digest": {
+                    "sha256": "eda86027549f30fdfa557a53fe043d4248371d0b6a4b8f4c066a14d71632c9b6"
+                }
+            },
+            {
+                "uri": "file:///nix/store/3ga8qx6a74j26sy0yyvnqnxp6mva1b1z-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "f9bc13b9bdaa3cce0106294eeec282b55ca6f4f2d0b2d11e04685a22f7cb5170"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/i0yr1bacwckxg615rh11935ni79ymhmq-hook.drv",
+                "digest": {
+                    "sha256": "4a8785edbf8cb2dd72f43e6a676b71a1f12bdd277509d74f837e6b8a05ccd57d"
+                }
+            },
+            {
+                "uri": "file:///nix/store/vdgkm605ayapf245hc17239qfpvivxfy-python3-3.9.12.drv",
+                "digest": {
+                    "sha256": "6684eb57aec053d7baf339e95827a8b7670f5709da588ab2576f58eb3be31ea6"
+                }
+            }
+        ]
+    }
+}

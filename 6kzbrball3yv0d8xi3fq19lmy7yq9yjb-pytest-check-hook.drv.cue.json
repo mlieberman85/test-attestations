@@ -1,0 +1,92 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/5h119kp003h8d8zkhynwan7xaigzr95j-pytest-check-hook",
+            "digest": {
+                "sha256": "c468cfe087165709705ecfa61ef8298f6ec1918a2962f84fcd477b257380b1de"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildCommand": "mkdir -p $out/nix-support\ncp /nix/store/4bd8vh5j05crj66rwi7g357qk949ckhv-pytest-check-hook.sh $out/nix-support/setup-hook\nprintWords /nix/store/3pr2rdb3jb92fz123722p04b7czwqyx0-python3.9-pytest-7.1.1 \u003e $out/nix-support/propagated-build-inputs\nsubstituteAll /nix/store/4bd8vh5j05crj66rwi7g357qk949ckhv-pytest-check-hook.sh $out/nix-support/setup-hook\n",
+                "buildInputs": "",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "name": "pytest-check-hook",
+                "nativeBuildInputs": "",
+                "out": "/nix/store/5h119kp003h8d8zkhynwan7xaigzr95j-pytest-check-hook",
+                "outputs": "out",
+                "passAsFile": "buildCommand",
+                "patches": "",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "pythonCheckInterpreter": "/nix/store/wnrc4daqbd6v5ifqlxsj75ky8556zy0p-python3-3.9.12/bin/python3.9",
+                "stdenv": "/nix/store/lmj98vlk5h0v1x5gzslxjnaj4m58dwxm-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/4bd8vh5j05crj66rwi7g357qk949ckhv-pytest-check-hook.sh",
+                "digest": {
+                    "sha256": "e6f621a333349110b85cca07685b12af65854d1180975ffe60ecd5215167bf9b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/3ga8qx6a74j26sy0yyvnqnxp6mva1b1z-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "f9bc13b9bdaa3cce0106294eeec282b55ca6f4f2d0b2d11e04685a22f7cb5170"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/vdgkm605ayapf245hc17239qfpvivxfy-python3-3.9.12.drv",
+                "digest": {
+                    "sha256": "6684eb57aec053d7baf339e95827a8b7670f5709da588ab2576f58eb3be31ea6"
+                }
+            },
+            {
+                "uri": "file:///nix/store/x7hb5hzxbkcq1iyv907s54vi2hpj01ww-python3.9-pytest-7.1.1.drv",
+                "digest": {
+                    "sha256": "a5ffdf5cbec7d02554bc03b51f944eda10a6f1ef63bb463a78f2b03bc093f76a"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,103 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/k3nrvdrsa014sk5027yj2jz339430jjf-source-highlight-3.1.9",
+            "digest": {
+                "sha256": "8d9b90f4a6c1ae5936fc5d2336feb1d2b33a1a858512cbfbad12bd23d5818f14"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "/nix/store/jm316gmh0dqhl4k1cj2nr5jsvgwpdcmd-boost-1.77.0-dev",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "--with-boost=/nix/store/528145k645s9ifdhpf10a64x5h6ywyaf-boost-1.77.0 --with-bash-completion=/1rz4g4znpzjwh1xymhjpm42vipw92pr73vdgl6xs1hycac8kf2n9/share/bash_completion.d",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "dev": "/nix/store/z17xci72jvnrwp6bvdc93cpf07042gq5-source-highlight-3.1.9-dev",
+                "doCheck": "1",
+                "doInstallCheck": "",
+                "doc": "/nix/store/6fkssb5s2xs19m2plc2y5pk9djl7fnbj-source-highlight-3.1.9-doc",
+                "enableParallelBuilding": "1",
+                "enableParallelChecking": "",
+                "name": "source-highlight-3.1.9",
+                "nativeBuildInputs": "",
+                "out": "/nix/store/k3nrvdrsa014sk5027yj2jz339430jjf-source-highlight-3.1.9",
+                "outputs": "out doc dev",
+                "patches": "/nix/store/9alq92lf7ixh8s6fsm8x19djxwjdygr2-?id=904949c9026cb772dc93fbe0947a252ef47127f4 /nix/store/9krhmi6kxjdn021jg3fkl3c7hpayn51f-gcc-12.patch",
+                "pname": "source-highlight",
+                "postPatch": "",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/w38a5jjba4g318aixw1iyjp68jqbv4wc-source-highlight-3.1.9.tar.gz",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "1",
+                "system": "x86_64-linux",
+                "version": "3.1.9"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/74csbw53bn6a86ahfnghccvhyfs0527d-gcc-12.patch.drv",
+                "digest": {
+                    "sha256": "a44159f830e4f7e22b77167c3a723e8adfd9419c8a75a255b300bfb2a50a018f"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/dy6d4qnx1p80vrp5gpc83yrq6bzdwnqa-source-highlight-3.1.9.tar.gz.drv",
+                "digest": {
+                    "sha256": "137330b48e3bccc8d8ef17bcbc1052d8dcbf19dc53625d782917ab66812207b7"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/jl55kmmi1c437n8wsxng89dwfrnmg7rl-boost-1.77.0.drv",
+                "digest": {
+                    "sha256": "4eb75ac9b49235f35aa961e818639856b11b1994598d8ade198371921c760c7e"
+                }
+            },
+            {
+                "uri": "file:///nix/store/z7ralxbapcv18ib8x9if25fj1kwgb70b-?id=904949c9026cb772dc93fbe0947a252ef47127f4.drv",
+                "digest": {
+                    "sha256": "260d2f3e7afdd1a2dd6734723f23d2ece2b4b2b7bbb80775962700d06a016a90"
+                }
+            }
+        ]
+    }
+}

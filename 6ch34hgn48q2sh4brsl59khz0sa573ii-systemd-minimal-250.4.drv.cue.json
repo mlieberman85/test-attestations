@@ -1,0 +1,379 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/d78fqlhcpijn7d8v8fz2mmjm4s3lmbv5-systemd-minimal-250.4",
+            "digest": {
+                "sha256": "71273a5ee90787982a736ceb216b3e66b75c409887a18caa26380fd0f6ca6e66"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "NIX_CFLAGS_COMPILE": "-UPOLKIT_AGENT_BINARY_PATH -DPOLKIT_AGENT_BINARY_PATH=\"/run/current-system/sw/bin/pkttyagent\" -USYSTEMD_CGROUP_AGENTS_PATH -DSYSTEMD_CGROUP_AGENTS_PATH=\"/run/current-system/systemd/lib/systemd/systemd-cgroups-agent\" -USYSTEMD_BINARY_PATH -DSYSTEMD_BINARY_PATH=\"/run/current-system/systemd/lib/systemd/systemd\"",
+                "buildInputs": "/nix/store/p4khsvkzxlpvzhfgdssviv5lrzscx9vf-acl-2.3.1-dev /nix/store/4my6ix0cgg8fk6jkn6qka4xxhpfxl49c-audit-2.8.5-dev /nix/store/9g3581ivc7bx1mf332nppqrm5g7cc5x0-kmod-29-dev /nix/store/1vi2ix3xfpqrbr7xp8qmkjcq5i4zi2h1-libcap-2.63-dev /nix/store/jipraw9gzhyrf8k6j8bnhmr12kxs8gns-libidn2-2.3.2-dev /nix/store/qq1kncy66jxf5di20xs3y28d1gc9hl8h-util-linux-minimal-2.37.4-dev /nix/store/54hg3i6wa7cbrmb99vm10zaba2mnw6pb-linux-headers-5.17 /nix/store/rnxbdkmbizkllhr0vbmk9611psd7vrmz-linux-pam-1.5.2 /nix/store/mq2r4pqy9mhmx6ca4jb2zy59gkqxblwj-kexec-tools-2.0.23 /nix/store/syzds9k8i4lg1hapxx7xwbm89lsfj4kj-libseccomp-2.5.3-dev",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "dev": "/nix/store/0ghkx0adxyblvdgd4qpzcpciwhi9j440-systemd-minimal-250.4-dev",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "man": "/nix/store/j34y6fqpgjjrl8vx0044aclp18a7dl48-systemd-minimal-250.4-man",
+                "mesonFlags": "-Dversion-tag=250.4 -Dtime-epoch=1640290180 -Ddbuspolicydir=/1rz4g4znpzjwh1xymhjpm42vipw92pr73vdgl6xs1hycac8kf2n9/share/dbus-1/system.d -Ddbussessionservicedir=/1rz4g4znpzjwh1xymhjpm42vipw92pr73vdgl6xs1hycac8kf2n9/share/dbus-1/services -Ddbussystemservicedir=/1rz4g4znpzjwh1xymhjpm42vipw92pr73vdgl6xs1hycac8kf2n9/share/dbus-1/system-services -Dpamconfdir=/1rz4g4znpzjwh1xymhjpm42vipw92pr73vdgl6xs1hycac8kf2n9/etc/pam.d -Drootprefix=/1rz4g4znpzjwh1xymhjpm42vipw92pr73vdgl6xs1hycac8kf2n9 -Dpkgconfiglibdir=/02qcpld1y6xhs5gz9bchpxaw0xdhmsp5dv88lh25r2ss44kh8dxz/lib/pkgconfig -Dpkgconfigdatadir=/02qcpld1y6xhs5gz9bchpxaw0xdhmsp5dv88lh25r2ss44kh8dxz/share/pkgconfig -Dloadkeys-path=/nix/store/pq0xzj6s8dhpzir7jnnryvicrr5pqysm-kbd-2.4.0/bin/loadkeys -Dsetfont-path=/nix/store/pq0xzj6s8dhpzir7jnnryvicrr5pqysm-kbd-2.4.0/bin/setfont -Dtty-gid=3 -Ddebug-shell=/nix/store/r2lllb3drbrakll6nwyajcjjmd19g7hl-bash-interactive-5.1-p16/bin/bash -Dglib=false -Dtests=false -Danalyze=false -Dgcrypt=false -Dimportd=false -Dlz4=false -Dhomed=false -Dlogind=false -Dlocaled=false -Dhostnamed=false -Dmachined=false -Dnetworkd=false -Doomd=false -Dpolkit=false -Dlibcryptsetup=false -Dportabled=false -Dhwdb=false -Dremote=false -Dsysusers=false -Dtimedated=false -Dtimesyncd=false -Duserdb=false -Dcoredump=false -Dfirstboot=false -Dresolve=false -Dsplit-usr=false -Dlibcurl=false -Dlibidn=false -Dlibidn2=true -Dquotacheck=false -Dldconfig=false -Dsmack=true -Db_pie=true -Dinstall-sysconfdir=false -Dsbat-distro=nixos -Dsbat-distro-summary=NixOS -Dsbat-distro-url=https://nixos.org/ -Dsbat-distro-pkgname=systemd-minimal -Dsbat-distro-version=250.4 -Dsystem-uid-max=999 -Dsystem-gid-max=999 -Dsysvinit-path= -Dsysvrcnd-path= -Dkmod-path=/nix/store/rxpg2hmbscb2hql1rpc81wq3pin1113y-kmod-29/bin/kmod -Dsulogin-path=/nix/store/5s6hfy8823ikf2arwlrkyjw96yyxg0rd-util-linux-minimal-2.37.4-bin/bin/sulogin -Dmount-path=/nix/store/5s6hfy8823ikf2arwlrkyjw96yyxg0rd-util-linux-minimal-2.37.4-bin/bin/mount -Dumount-path=/nix/store/5s6hfy8823ikf2arwlrkyjw96yyxg0rd-util-linux-minimal-2.37.4-bin/bin/umount -Dcreate-log-dirs=false -Ddefault-hierarchy=unified -Dman=true -Defi=false -Dgnu-efi=false -Dbashcompletiondir=no -Dzshcompletiondir=no -Dnss-myhostname=false -Dnss-mymachines=false -Dnss-resolve=false -Dnss-systemd=false",
+                "name": "systemd-minimal-250.4",
+                "nativeBuildInputs": "/nix/store/prn4gvr4ljmrwnnm508i7m7qh7nfh7gz-pkg-config-wrapper-0.29.2 /nix/store/5sf18g4jplf6yaqbfb3d58vlvyr8q6f3-gperf-3.1 /nix/store/5s2z0dfyhxg84gn18f0ydbcn7z30zbab-ninja-1.10.2 /nix/store/y310g8j4frfzrqqmhcdlww330mw4mcvv-meson-0.61.2 /nix/store/29ydm3z8g87m80m6f6q9k4ddhx39pdcs-glibc-locales-2.34-210 /nix/store/cm94b07ra068jyz49kv22mzj9dzwvfh1-getent-glibc-2.34-210 /nix/store/b3lh7rgzizg9r1wl6mnyqy9fy7zyhfxf-gnum4-1.4.19 /nix/store/444mgghff128qva5y384dh967p8v9zn9-intltool-0.51.0 /nix/store/vh0c05rc71vmbbicfrksjsvaj3qk92ak-gettext-0.21 /nix/store/n2l7za4zq4vndbrfnwm9gbcqkfwm945y-libxslt-1.1.35-dev /nix/store/i2yp52prdg0gs9xja4qylgs8cpkyz5ah-docbook-xsl-nons-1.79.2 /nix/store/aks858xs7yd6zbws41s1nnpr09wiqwys-docbook-xml-4.2 /nix/store/y6yvn77nnbgq96hnlzs1h4xczmd2j53l-docbook-xml-4.5 /nix/store/5ngklrj8rg38rz3q8nbg8b2izvyxhzd3-python3-3.9.12-env",
+                "out": "/nix/store/d78fqlhcpijn7d8v8fz2mmjm4s3lmbv5-systemd-minimal-250.4",
+                "outputs": "out man dev",
+                "patches": "/nix/store/s72nq0kr68vnl74lqpfaihr45r4hkp3s-0001-Start-device-units-for-uninitialised-encrypted-devic.patch /nix/store/p4zpzkbva8ckhkqi3wvw4hcqlgdg628d-0002-Don-t-try-to-unmount-nix-or-nix-store.patch /nix/store/2szbgj1a7la4lqwsaab9i53jw4qlbbi3-0003-Fix-NixOS-containers.patch /nix/store/7ig9rwg9sanypv241bh3bj0gnk8dnjvh-0004-Look-for-fsck-in-the-right-place.patch /nix/store/g34z3anny1r7fwrzmj3mam62rw6j3w1a-0005-Add-some-NixOS-specific-unit-directories.patch /nix/store/1npji6k0br8c3712d7rmygi9j63fn2f8-0006-Get-rid-of-a-useless-message-in-user-sessions.patch /nix/store/wqs8r3nzmbl58id21vg7vis7k2knyiqq-0007-hostnamed-localed-timedated-disable-methods-that-cha.patch /nix/store/4z2l72qpypmqbfpbkzbw2210dw92h5aw-0008-Fix-hwdb-paths.patch /nix/store/cnrpf7f0qz587jq9zknw3na4mm36hrjf-0009-Change-usr-share-zoneinfo-to-etc-zoneinfo.patch /nix/store/wgwawkqik54nhqx08s7a27qyl6b0vgd5-0010-localectl-use-etc-X11-xkb-for-list-x11.patch /nix/store/jpaqw4iycd1hi7vcrlhhab172kz1zf68-0011-build-don-t-create-statedir-and-don-t-touch-prefixdi.patch /nix/store/piz51kxrmx27h7zsj0avbvm8a01d67bk-0012-inherit-systemd-environment-when-calling-generators.patch /nix/store/biyyd43nihvi6g68ll2k8syqlb2jrnnp-0013-add-rootprefix-to-lookup-dir-paths.patch /nix/store/vj2q0y9fir00isp0phqf7pycmvyqa1nz-0014-systemd-shutdown-execute-scripts-in-etc-systemd-syst.patch /nix/store/31lk3pbnfv6ajnl9cl0jdi2v5c12b3dg-0015-systemd-sleep-execute-scripts-in-etc-systemd-system-.patch /nix/store/j11gknndx7rs0x5k1d7szyan8lps8i4y-0016-kmod-static-nodes.service-Update-ConditionFileNotEmp.patch /nix/store/a8avdy8qyf7961i3sgbm81qsnacbmv1q-0017-path-util.h-add-placeholder-for-DEFAULT_PATH_NORMAL.patch /nix/store/z9yvxs0s3xdkp5jgmzis4g50bfq3dgvm-0018-pkg-config-derive-prefix-from-prefix.patch /nix/store/c5pa07qa6q16blxi7zj1spdiazaw37i9-0019-core-handle-lookup-paths-being-symlinks.patch /nix/store/hkk2kjpxrcqj16v2b3bk4hckmlg4ci1n-22174.patch",
+                "pname": "systemd-minimal",
+                "postConfigure": "substituteInPlace config.h \\\n  --replace \"POLKIT_AGENT_BINARY_PATH\" \"_POLKIT_AGENT_BINARY_PATH\" \\\n  --replace \"SYSTEMD_BINARY_PATH\" \"_SYSTEMD_BINARY_PATH\" \\\n  --replace \"SYSTEMD_CGROUP_AGENTS_PATH\" \"_SYSTEMD_CGROUP_AGENT_PATH\"\n",
+                "postFixup": "",
+                "postInstall": "mkdir -p $out/example/systemd\nmv $out/lib/{modules-load.d,binfmt.d,sysctl.d,tmpfiles.d} $out/example\nmv $out/lib/systemd/{system,user} $out/example/systemd\n\nrm -rf $out/etc/systemd/system\n\n# Fix reference to /bin/false in the D-Bus services.\nfor i in $out/share/dbus-1/system-services/*.service; do\n  substituteInPlace $i --replace /bin/false /nix/store/a99i3wf2ig85clra7rs5kgi46s46xvwc-coreutils-9.0/bin/false\ndone\n\nrm -rf $out/etc/rpm\n\n# \"kernel-install\" shouldn't be used on NixOS.\nfind $out -name \"*kernel-install*\" -exec rm {} \\;\nrm -rf $out/share/doc\n",
+                "postPatch": "substituteInPlace src/basic/path-util.h --replace \"@defaultPathNormal@\" \"/1rz4g4znpzjwh1xymhjpm42vipw92pr73vdgl6xs1hycac8kf2n9/bin/\"\nsubstituteInPlace src/boot/efi/meson.build \\\n  --replace \\\n  \"find_program('objcopy'\" \\\n  \"find_program('objcopy'\"\n# remove the dependency on the library by replacing it with an invalid path\nfor file in $(grep -lr '\"libbpf.so.0\"' src); do\n  echo \"patching dlopen(\\\"libbpf.so.0\\\", …) in $file to an invalid store path (\"/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-not-implemented/libbpf.so.0\")…\"\n  substituteInPlace \"$file\" --replace '\"libbpf.so.0\"' '\"/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-not-implemented/libbpf.so.0\"'\ndone\n\n# remove the dependency on the library by replacing it with an invalid path\nfor file in $(grep -lr '\"libxkbcommon.so.0\"' src); do\n  echo \"patching dlopen(\\\"libxkbcommon.so.0\\\", …) in $file to an invalid store path (\"/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-not-implemented/libxkbcommon.so.0\")…\"\n  substituteInPlace \"$file\" --replace '\"libxkbcommon.so.0\"' '\"/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-not-implemented/libxkbcommon.so.0\"'\ndone\n\n# remove the dependency on the library by replacing it with an invalid path\nfor file in $(grep -lr '\"libqrencode.so.4\"' src); do\n  echo \"patching dlopen(\\\"libqrencode.so.4\\\", …) in $file to an invalid store path (\"/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-not-implemented/libqrencode.so.4\")…\"\n  substituteInPlace \"$file\" --replace '\"libqrencode.so.4\"' '\"/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-not-implemented/libqrencode.so.4\"'\ndone\n\n# remove the dependency on the library by replacing it with an invalid path\nfor file in $(grep -lr '\"libpwquality.so.1\"' src); do\n  echo \"patching dlopen(\\\"libpwquality.so.1\\\", …) in $file to an invalid store path (\"/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-not-implemented/libpwquality.so.1\")…\"\n  substituteInPlace \"$file\" --replace '\"libpwquality.so.1\"' '\"/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-not-implemented/libpwquality.so.1\"'\ndone\n\n# remove the dependency on the library by replacing it with an invalid path\nfor file in $(grep -lr '\"libcryptsetup.so.12\"' src); do\n  echo \"patching dlopen(\\\"libcryptsetup.so.12\\\", …) in $file to an invalid store path (\"/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-not-implemented/libcryptsetup.so.12\")…\"\n  substituteInPlace \"$file\" --replace '\"libcryptsetup.so.12\"' '\"/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-not-implemented/libcryptsetup.so.12\"'\ndone\n\n# ensure that the library we provide actually exists\nif ! [ -e /nix/store/d1gzs0dk0y7wyvy8ymzis1hq9x3w2zv0-libidn2-2.3.2/lib/libidn2.so.0 ]; then\n  # exceptional case, details:\n  # https://github.com/systemd/systemd-stable/blob/v249-stable/src/shared/tpm2-util.c#L157\n  if ! [[ \"/nix/store/d1gzs0dk0y7wyvy8ymzis1hq9x3w2zv0-libidn2-2.3.2/lib/libidn2.so.0\" =~ .*libtss2-tcti-$ ]]; then\n    echo 'The shared library `/nix/store/d1gzs0dk0y7wyvy8ymzis1hq9x3w2zv0-libidn2-2.3.2/lib/libidn2.so.0` does not exist but was given as substitute for `libidn2.so.0`'\n    exit 1\n  fi\nfi\n# make the path to the dependency explicit\nfor file in $(grep -lr '\"libidn2.so.0\"' src); do\n  echo \"patching dlopen(\\\"libidn2.so.0\\\", …) in $file to /nix/store/d1gzs0dk0y7wyvy8ymzis1hq9x3w2zv0-libidn2-2.3.2/lib/libidn2.so.0…\"\n  substituteInPlace \"$file\" --replace '\"libidn2.so.0\"' '\"/nix/store/d1gzs0dk0y7wyvy8ymzis1hq9x3w2zv0-libidn2-2.3.2/lib/libidn2.so.0\"'\ndone\n\n\n# remove the dependency on the library by replacing it with an invalid path\nfor file in $(grep -lr '\"libidn.so.12\"' src); do\n  echo \"patching dlopen(\\\"libidn.so.12\\\", …) in $file to an invalid store path (\"/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-not-implemented/libidn.so.12\")…\"\n  substituteInPlace \"$file\" --replace '\"libidn.so.12\"' '\"/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-not-implemented/libidn.so.12\"'\ndone\n\n# remove the dependency on the library by replacing it with an invalid path\nfor file in $(grep -lr '\"libidn.so.11\"' src); do\n  echo \"patching dlopen(\\\"libidn.so.11\\\", …) in $file to an invalid store path (\"/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-not-implemented/libidn.so.11\")…\"\n  substituteInPlace \"$file\" --replace '\"libidn.so.11\"' '\"/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-not-implemented/libidn.so.11\"'\ndone\n\n# ensure that the library we provide actually exists\nif ! [ -e /nix/store/6aswh0qmsr3hrj3ivm731860d7jwv39p-pcre2-10.39/lib/libpcre2-8.so.0 ]; then\n  # exceptional case, details:\n  # https://github.com/systemd/systemd-stable/blob/v249-stable/src/shared/tpm2-util.c#L157\n  if ! [[ \"/nix/store/6aswh0qmsr3hrj3ivm731860d7jwv39p-pcre2-10.39/lib/libpcre2-8.so.0\" =~ .*libtss2-tcti-$ ]]; then\n    echo 'The shared library `/nix/store/6aswh0qmsr3hrj3ivm731860d7jwv39p-pcre2-10.39/lib/libpcre2-8.so.0` does not exist but was given as substitute for `libpcre2-8.so.0`'\n    exit 1\n  fi\nfi\n# make the path to the dependency explicit\nfor file in $(grep -lr '\"libpcre2-8.so.0\"' src); do\n  echo \"patching dlopen(\\\"libpcre2-8.so.0\\\", …) in $file to /nix/store/6aswh0qmsr3hrj3ivm731860d7jwv39p-pcre2-10.39/lib/libpcre2-8.so.0…\"\n  substituteInPlace \"$file\" --replace '\"libpcre2-8.so.0\"' '\"/nix/store/6aswh0qmsr3hrj3ivm731860d7jwv39p-pcre2-10.39/lib/libpcre2-8.so.0\"'\ndone\n\n\n# remove the dependency on the library by replacing it with an invalid path\nfor file in $(grep -lr '\"libtss2-esys.so.0\"' src); do\n  echo \"patching dlopen(\\\"libtss2-esys.so.0\\\", …) in $file to an invalid store path (\"/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-not-implemented/libtss2-esys.so.0\")…\"\n  substituteInPlace \"$file\" --replace '\"libtss2-esys.so.0\"' '\"/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-not-implemented/libtss2-esys.so.0\"'\ndone\n\n# remove the dependency on the library by replacing it with an invalid path\nfor file in $(grep -lr '\"libtss2-rc.so.0\"' src); do\n  echo \"patching dlopen(\\\"libtss2-rc.so.0\\\", …) in $file to an invalid store path (\"/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-not-implemented/libtss2-rc.so.0\")…\"\n  substituteInPlace \"$file\" --replace '\"libtss2-rc.so.0\"' '\"/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-not-implemented/libtss2-rc.so.0\"'\ndone\n\n# remove the dependency on the library by replacing it with an invalid path\nfor file in $(grep -lr '\"libtss2-mu.so.0\"' src); do\n  echo \"patching dlopen(\\\"libtss2-mu.so.0\\\", …) in $file to an invalid store path (\"/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-not-implemented/libtss2-mu.so.0\")…\"\n  substituteInPlace \"$file\" --replace '\"libtss2-mu.so.0\"' '\"/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-not-implemented/libtss2-mu.so.0\"'\ndone\n\n# remove the dependency on the library by replacing it with an invalid path\nfor file in $(grep -lr '\"libtss2-tcti-\"' src); do\n  echo \"patching dlopen(\\\"libtss2-tcti-\\\", …) in $file to an invalid store path (\"/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-not-implemented/libtss2-tcti-\")…\"\n  substituteInPlace \"$file\" --replace '\"libtss2-tcti-\"' '\"/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-not-implemented/libtss2-tcti-\"'\ndone\n\n# remove the dependency on the library by replacing it with an invalid path\nfor file in $(grep -lr '\"libfido2.so.1\"' src); do\n  echo \"patching dlopen(\\\"libfido2.so.1\\\", …) in $file to an invalid store path (\"/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-not-implemented/libfido2.so.1\")…\"\n  substituteInPlace \"$file\" --replace '\"libfido2.so.1\"' '\"/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-not-implemented/libfido2.so.1\"'\ndone\n\n# remove the dependency on the library by replacing it with an invalid path\nfor file in $(grep -lr '\"libelf.so.1\"' src); do\n  echo \"patching dlopen(\\\"libelf.so.1\\\", …) in $file to an invalid store path (\"/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-not-implemented/libelf.so.1\")…\"\n  substituteInPlace \"$file\" --replace '\"libelf.so.1\"' '\"/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-not-implemented/libelf.so.1\"'\ndone\n\n# remove the dependency on the library by replacing it with an invalid path\nfor file in $(grep -lr '\"libdw.so.1\"' src); do\n  echo \"patching dlopen(\\\"libdw.so.1\\\", …) in $file to an invalid store path (\"/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-not-implemented/libdw.so.1\")…\"\n  substituteInPlace \"$file\" --replace '\"libdw.so.1\"' '\"/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-not-implemented/libdw.so.1\"'\ndone\nif grep -qr '\"lib[a-zA-Z0-9-]*\\.so[\\.0-9a-zA-z]*\"' src; then\n  echo \"Found unhandled dynamic library calls: \"\n  grep -r '\"lib[a-zA-Z0-9-]*\\.so[\\.0-9a-zA-z]*\"' src\n  exit 1\nfi\npatchShebangs .\n",
+                "preConfigure": "mesonFlagsArray+=(-Dntp-servers=\"0.nixos.pool.ntp.org 1.nixos.pool.ntp.org 2.nixos.pool.ntp.org 3.nixos.pool.ntp.org\")\nexport LC_ALL=\"en_US.UTF-8\";\n\nsubstituteInPlace src/nspawn/nspawn-setuid.c --replace '/usr/bin/getent' \"/nix/store/cm94b07ra068jyz49kv22mzj9dzwvfh1-getent-glibc-2.34-210/bin/getent\"\nsubstituteInPlace man/systemd-makefs@.service.xml --replace '/sbin/mkswap' \"/nix/store/5s6hfy8823ikf2arwlrkyjw96yyxg0rd-util-linux-minimal-2.37.4-bin/sbin/mkswap\"\nsubstituteInPlace src/core/swap.c --replace '/sbin/swapon' \"/nix/store/5s6hfy8823ikf2arwlrkyjw96yyxg0rd-util-linux-minimal-2.37.4-bin/sbin/swapon\"\nsubstituteInPlace src/basic/unit-def.h --replace '/sbin/swapon' \"/nix/store/5s6hfy8823ikf2arwlrkyjw96yyxg0rd-util-linux-minimal-2.37.4-bin/sbin/swapon\"\nsubstituteInPlace src/core/swap.c --replace '/sbin/swapoff' \"/nix/store/5s6hfy8823ikf2arwlrkyjw96yyxg0rd-util-linux-minimal-2.37.4-bin/sbin/swapoff\"\nsubstituteInPlace man/systemd-analyze.xml --replace '/bin/echo' \"/nix/store/a99i3wf2ig85clra7rs5kgi46s46xvwc-coreutils-9.0/bin/echo\"\nsubstituteInPlace man/systemd.service.xml --replace '/bin/echo' \"/nix/store/a99i3wf2ig85clra7rs5kgi46s46xvwc-coreutils-9.0/bin/echo\"\nsubstituteInPlace src/analyze/test-verify.c --replace '/bin/echo' \"/nix/store/a99i3wf2ig85clra7rs5kgi46s46xvwc-coreutils-9.0/bin/echo\"\nsubstituteInPlace src/test/test-env-file.c --replace '/bin/echo' \"/nix/store/a99i3wf2ig85clra7rs5kgi46s46xvwc-coreutils-9.0/bin/echo\"\nsubstituteInPlace src/test/test-fileio.c --replace '/bin/echo' \"/nix/store/a99i3wf2ig85clra7rs5kgi46s46xvwc-coreutils-9.0/bin/echo\"\nsubstituteInPlace test/create-busybox-container --replace '/bin/cat' \"/nix/store/a99i3wf2ig85clra7rs5kgi46s46xvwc-coreutils-9.0/bin/cat\"\nsubstituteInPlace test/test-execute/exec-noexecpaths-simple.service --replace '/bin/cat' \"/nix/store/a99i3wf2ig85clra7rs5kgi46s46xvwc-coreutils-9.0/bin/cat\"\nsubstituteInPlace src/journal/cat.c --replace '/bin/cat' \"/nix/store/a99i3wf2ig85clra7rs5kgi46s46xvwc-coreutils-9.0/bin/cat\"\nsubstituteInPlace units/modprobe@.service --replace '/sbin/modprobe' \"/nix/store/rxpg2hmbscb2hql1rpc81wq3pin1113y-kmod-29/sbin/modprobe\"\nsubstituteInPlace man/systemd-fsck@.service.xml --replace '/usr/lib/systemd/systemd-fsck' \"$out/lib/systemd/systemd-fsck\"\nif [[ $(grep -r '/usr/bin/getent' | grep -v \"/nix/store/cm94b07ra068jyz49kv22mzj9dzwvfh1-getent-glibc-2.34-210/bin/getent\" | grep -Ev 'NEWS|^test/' | wc -l) -gt 0 ]]; then\n  echo \"Not all references to '/usr/bin/getent' have been replaced. Found the following matches:\"\n  grep '/usr/bin/getent' -r | grep -v \"/nix/store/cm94b07ra068jyz49kv22mzj9dzwvfh1-getent-glibc-2.34-210/bin/getent\" | grep -Ev 'NEWS|^test/'\n  exit 1\nfi\n\nif [[ $(grep -r '/sbin/mkswap' | grep -v \"/nix/store/5s6hfy8823ikf2arwlrkyjw96yyxg0rd-util-linux-minimal-2.37.4-bin/sbin/mkswap\" | grep -Ev 'NEWS|^test/' | wc -l) -gt 0 ]]; then\n  echo \"Not all references to '/sbin/mkswap' have been replaced. Found the following matches:\"\n  grep '/sbin/mkswap' -r | grep -v \"/nix/store/5s6hfy8823ikf2arwlrkyjw96yyxg0rd-util-linux-minimal-2.37.4-bin/sbin/mkswap\" | grep -Ev 'NEWS|^test/'\n  exit 1\nfi\n\nif [[ $(grep -r '/sbin/swapon' | grep -v \"/nix/store/5s6hfy8823ikf2arwlrkyjw96yyxg0rd-util-linux-minimal-2.37.4-bin/sbin/swapon\" | grep -Ev 'NEWS|^test/' | wc -l) -gt 0 ]]; then\n  echo \"Not all references to '/sbin/swapon' have been replaced. Found the following matches:\"\n  grep '/sbin/swapon' -r | grep -v \"/nix/store/5s6hfy8823ikf2arwlrkyjw96yyxg0rd-util-linux-minimal-2.37.4-bin/sbin/swapon\" | grep -Ev 'NEWS|^test/'\n  exit 1\nfi\n\nif [[ $(grep -r '/sbin/swapoff' | grep -v \"/nix/store/5s6hfy8823ikf2arwlrkyjw96yyxg0rd-util-linux-minimal-2.37.4-bin/sbin/swapoff\" | grep -Ev 'NEWS|^test/' | wc -l) -gt 0 ]]; then\n  echo \"Not all references to '/sbin/swapoff' have been replaced. Found the following matches:\"\n  grep '/sbin/swapoff' -r | grep -v \"/nix/store/5s6hfy8823ikf2arwlrkyjw96yyxg0rd-util-linux-minimal-2.37.4-bin/sbin/swapoff\" | grep -Ev 'NEWS|^test/'\n  exit 1\nfi\n\nif [[ $(grep -r '/bin/echo' | grep -v \"/nix/store/a99i3wf2ig85clra7rs5kgi46s46xvwc-coreutils-9.0/bin/echo\" | grep -Ev 'NEWS|^test/' | wc -l) -gt 0 ]]; then\n  echo \"Not all references to '/bin/echo' have been replaced. Found the following matches:\"\n  grep '/bin/echo' -r | grep -v \"/nix/store/a99i3wf2ig85clra7rs5kgi46s46xvwc-coreutils-9.0/bin/echo\" | grep -Ev 'NEWS|^test/'\n  exit 1\nfi\n\nif [[ $(grep -r '/bin/cat' | grep -v \"/nix/store/a99i3wf2ig85clra7rs5kgi46s46xvwc-coreutils-9.0/bin/cat\" | grep -Ev 'NEWS|^test/' | wc -l) -gt 0 ]]; then\n  echo \"Not all references to '/bin/cat' have been replaced. Found the following matches:\"\n  grep '/bin/cat' -r | grep -v \"/nix/store/a99i3wf2ig85clra7rs5kgi46s46xvwc-coreutils-9.0/bin/cat\" | grep -Ev 'NEWS|^test/'\n  exit 1\nfi\n\nif [[ $(grep -r '/sbin/modprobe' | grep -v \"/nix/store/rxpg2hmbscb2hql1rpc81wq3pin1113y-kmod-29/sbin/modprobe\" | grep -Ev 'NEWS|^test/' | wc -l) -gt 0 ]]; then\n  echo \"Not all references to '/sbin/modprobe' have been replaced. Found the following matches:\"\n  grep '/sbin/modprobe' -r | grep -v \"/nix/store/rxpg2hmbscb2hql1rpc81wq3pin1113y-kmod-29/sbin/modprobe\" | grep -Ev 'NEWS|^test/'\n  exit 1\nfi\n\nif [[ $(grep -r '/usr/lib/systemd/systemd-fsck' | grep -v \"$out/lib/systemd/systemd-fsck\" | grep -Ev 'NEWS|^test/' | wc -l) -gt 0 ]]; then\n  echo \"Not all references to '/usr/lib/systemd/systemd-fsck' have been replaced. Found the following matches:\"\n  grep '/usr/lib/systemd/systemd-fsck' -r | grep -v \"$out/lib/systemd/systemd-fsck\" | grep -Ev 'NEWS|^test/'\n  exit 1\nfi\n\n\n\nfor dir in tools src/resolve test src/test src/shared; do\n  patchShebangs $dir\ndone\n\nsubstituteInPlace src/libsystemd/sd-journal/catalog.c \\\n  --replace /usr/lib/systemd/catalog/ $out/lib/systemd/catalog/\n",
+                "preFixup": "",
+                "preInstall": "export DESTDIR=/\n",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/4yyz09zgqq5gdyngxq7pvh9xcf55vmk0-source",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "250.4"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/1npji6k0br8c3712d7rmygi9j63fn2f8-0006-Get-rid-of-a-useless-message-in-user-sessions.patch",
+                "digest": {
+                    "sha256": "9a461fb511986dbb49f764c091a8fc18798d7eaa35cbc15f43435d54b3b773ff"
+                }
+            },
+            {
+                "uri": "file:///nix/store/2szbgj1a7la4lqwsaab9i53jw4qlbbi3-0003-Fix-NixOS-containers.patch",
+                "digest": {
+                    "sha256": "f5eb0278cc07dae143a0997985c88b6008d5c6ee036ac5cb30a25ab033d83d8c"
+                }
+            },
+            {
+                "uri": "file:///nix/store/31lk3pbnfv6ajnl9cl0jdi2v5c12b3dg-0015-systemd-sleep-execute-scripts-in-etc-systemd-system-.patch",
+                "digest": {
+                    "sha256": "f5ab3dee3f4680d7b7c6a71a09487ebd94f546874a3405b00d00a32634b03502"
+                }
+            },
+            {
+                "uri": "file:///nix/store/4z2l72qpypmqbfpbkzbw2210dw92h5aw-0008-Fix-hwdb-paths.patch",
+                "digest": {
+                    "sha256": "cb41a545d39904b8968b2489668a5755309816ea69792440e86f1e572dc990fb"
+                }
+            },
+            {
+                "uri": "file:///nix/store/7ig9rwg9sanypv241bh3bj0gnk8dnjvh-0004-Look-for-fsck-in-the-right-place.patch",
+                "digest": {
+                    "sha256": "96c0ff4ecf774c232db07dbbd063f480c21809f5c9e54b736c6a999b5aad6100"
+                }
+            },
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/a8avdy8qyf7961i3sgbm81qsnacbmv1q-0017-path-util.h-add-placeholder-for-DEFAULT_PATH_NORMAL.patch",
+                "digest": {
+                    "sha256": "14ee9e772c62e79afa33cec7e8c6331a683063c83e3e882649f9c30040f4aa02"
+                }
+            },
+            {
+                "uri": "file:///nix/store/biyyd43nihvi6g68ll2k8syqlb2jrnnp-0013-add-rootprefix-to-lookup-dir-paths.patch",
+                "digest": {
+                    "sha256": "7c2124ece5eefd59818abf4c26b2dd28a5532b54a6306491bafb84cdb142069b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/c5pa07qa6q16blxi7zj1spdiazaw37i9-0019-core-handle-lookup-paths-being-symlinks.patch",
+                "digest": {
+                    "sha256": "e3aa752a664997a8cac9dabb06ecdecd6a02dee283fd0e044884cbeec78ba87f"
+                }
+            },
+            {
+                "uri": "file:///nix/store/cnrpf7f0qz587jq9zknw3na4mm36hrjf-0009-Change-usr-share-zoneinfo-to-etc-zoneinfo.patch",
+                "digest": {
+                    "sha256": "39067b9a2550e234c77f178d1f1895567f76f27c60c926c1c3269f60f4f89962"
+                }
+            },
+            {
+                "uri": "file:///nix/store/g34z3anny1r7fwrzmj3mam62rw6j3w1a-0005-Add-some-NixOS-specific-unit-directories.patch",
+                "digest": {
+                    "sha256": "023cf824f6fff59a511c454ce2e6743d767596b7913b84a06a9086828c4a6dd2"
+                }
+            },
+            {
+                "uri": "file:///nix/store/j11gknndx7rs0x5k1d7szyan8lps8i4y-0016-kmod-static-nodes.service-Update-ConditionFileNotEmp.patch",
+                "digest": {
+                    "sha256": "ab75241f2f355f4ee9f3d22b4d55d6ebd4ef8a4d454cf06fa2dc4e312ebf0040"
+                }
+            },
+            {
+                "uri": "file:///nix/store/jpaqw4iycd1hi7vcrlhhab172kz1zf68-0011-build-don-t-create-statedir-and-don-t-touch-prefixdi.patch",
+                "digest": {
+                    "sha256": "954d8096fd0e843e56d3da3464a42a056e97ffba1e3c69d5e8c2b53c45365f7f"
+                }
+            },
+            {
+                "uri": "file:///nix/store/p4zpzkbva8ckhkqi3wvw4hcqlgdg628d-0002-Don-t-try-to-unmount-nix-or-nix-store.patch",
+                "digest": {
+                    "sha256": "ffc0f5d86d76e9ebae253c6f03175b36fc9ce1a434bc16493deedcf6e282cb75"
+                }
+            },
+            {
+                "uri": "file:///nix/store/piz51kxrmx27h7zsj0avbvm8a01d67bk-0012-inherit-systemd-environment-when-calling-generators.patch",
+                "digest": {
+                    "sha256": "c511d0b17e010773b3fefda32096106e70f5d184b52ffab2260594a447a532e4"
+                }
+            },
+            {
+                "uri": "file:///nix/store/s72nq0kr68vnl74lqpfaihr45r4hkp3s-0001-Start-device-units-for-uninitialised-encrypted-devic.patch",
+                "digest": {
+                    "sha256": "af9510d12f38d5c2b61293fc84155def99e4cbdbeb4d3f1a936a291e84b9f331"
+                }
+            },
+            {
+                "uri": "file:///nix/store/vj2q0y9fir00isp0phqf7pycmvyqa1nz-0014-systemd-shutdown-execute-scripts-in-etc-systemd-syst.patch",
+                "digest": {
+                    "sha256": "26286e8bd9f5cd153663449620d16f603a86a154f05c25b99e4c5fa6270fdee8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/wgwawkqik54nhqx08s7a27qyl6b0vgd5-0010-localectl-use-etc-X11-xkb-for-list-x11.patch",
+                "digest": {
+                    "sha256": "1569da8317d18e312f8ca99609036770088efab103b02bc4c0fbda35f18786ed"
+                }
+            },
+            {
+                "uri": "file:///nix/store/wqs8r3nzmbl58id21vg7vis7k2knyiqq-0007-hostnamed-localed-timedated-disable-methods-that-cha.patch",
+                "digest": {
+                    "sha256": "a6d96b2f39cfe9f75951ba11486c093cf424b384d10e714f550ed957a6ffaafc"
+                }
+            },
+            {
+                "uri": "file:///nix/store/z9yvxs0s3xdkp5jgmzis4g50bfq3dgvm-0018-pkg-config-derive-prefix-from-prefix.patch",
+                "digest": {
+                    "sha256": "32b0bdb01d40e0009c9152c6e94335f929f579f06f142cab7e4cdf5fde4d509d"
+                }
+            },
+            {
+                "uri": "file:///nix/store/1v1lazzb2r2cg7a0vxv705jxyc8hidpn-pkg-config-wrapper-0.29.2.drv",
+                "digest": {
+                    "sha256": "d1c8e17a6c2ddf6900b817119c22f726a3a39af2ac395821e95d915fde3d9734"
+                }
+            },
+            {
+                "uri": "file:///nix/store/202pdki656kf0rip4awxg4avywaacj9y-ninja-1.10.2.drv",
+                "digest": {
+                    "sha256": "f362bc012246f12ce67f1f221500056d08f7114d1198ed75285d11af8c36ebef"
+                }
+            },
+            {
+                "uri": "file:///nix/store/2gbjgzr7b80dq0laix8952cr5n9mxhs2-gnum4-1.4.19.drv",
+                "digest": {
+                    "sha256": "4d2cae1b88da2b9c7a1c942cc96e7f8a258a9ce342502a5e83e79c1926c2e188"
+                }
+            },
+            {
+                "uri": "file:///nix/store/4ads7k8nzd6pdfr89zwbhk7skmwgwfzl-docbook-xsl-nons-1.79.2.drv",
+                "digest": {
+                    "sha256": "60b296b9f0c779b006073333b6133c89f1819a8ebbc9c068d5751885ec844e7c"
+                }
+            },
+            {
+                "uri": "file:///nix/store/5335ykr9akbylm9ffijxfv0lnghirv8c-22174.patch.drv",
+                "digest": {
+                    "sha256": "a9b2eb3cf5ba3b3d2c6c32f72719255c087bde6c779d8b12a9f87baa343efb0a"
+                }
+            },
+            {
+                "uri": "file:///nix/store/6j9yh41lpmdpcviqkchirpbgjdcj0783-libidn2-2.3.2.drv",
+                "digest": {
+                    "sha256": "2f0df7fb6558be26ec4058d5d85ed5c07ceb4d1dd86c91e9337f989d5884d419"
+                }
+            },
+            {
+                "uri": "file:///nix/store/75w9q0hw3qasxg6h4v9y4w0yaa3j6h6d-gperf-3.1.drv",
+                "digest": {
+                    "sha256": "67346c7a758779669be694222708e1b954a1e4d72be597b04c2236f8a0c6a015"
+                }
+            },
+            {
+                "uri": "file:///nix/store/8vrndrblm5la36rzmbb2p7yyzp96431b-gettext-0.21.drv",
+                "digest": {
+                    "sha256": "0588a7500c6bc213d8667504ee8473358707f15b32decff365eb237f8f0ff25e"
+                }
+            },
+            {
+                "uri": "file:///nix/store/946y8w1nwzk3jlsybphjj8klck1qsh1k-libseccomp-2.5.3.drv",
+                "digest": {
+                    "sha256": "f409ce12e1c13864968204ad5637febaf209b081ace83ec462bd43edcf6a3d10"
+                }
+            },
+            {
+                "uri": "file:///nix/store/9ds15sy46h5rx8z4246iv1ia0k3sb605-docbook-xml-4.2.drv",
+                "digest": {
+                    "sha256": "e7d878cc9892c92749d43bac34184dc723cae97d472b7fee5ed80858c8fb752d"
+                }
+            },
+            {
+                "uri": "file:///nix/store/9qhb9kgh5c0dpipfjrfkq8hd8a1va1fb-acl-2.3.1.drv",
+                "digest": {
+                    "sha256": "5fbddf7c31ec335aed1b940f62f11743907e8e9d53d4f4d4da3c50077394dc70"
+                }
+            },
+            {
+                "uri": "file:///nix/store/9rzzcygmd3nhbwp4nzq55wpv8mp503kq-coreutils-9.0.drv",
+                "digest": {
+                    "sha256": "0745b28317369571fc337984bf894091825689ee8e9a3fcf0d1f83b27ffaba14"
+                }
+            },
+            {
+                "uri": "file:///nix/store/b4irljw2rb5q9zjcc1qizxa6khlisb7d-getent-glibc-2.34-210.drv",
+                "digest": {
+                    "sha256": "d8addfe7dc2594948976ee1def20eaf2c191e5bcaf84ca8dbed65bc521a7800f"
+                }
+            },
+            {
+                "uri": "file:///nix/store/b6iw7q7lzs8vh24wd8hmlf2jl7dc9ql1-util-linux-minimal-2.37.4.drv",
+                "digest": {
+                    "sha256": "868639b6f595cc1e6e039a1eff44fa4d04edd6def9cb2b1b7e75d1648a035b06"
+                }
+            },
+            {
+                "uri": "file:///nix/store/bj164592cvispjgi7dhcgnls1dnys5kk-bash-interactive-5.1-p16.drv",
+                "digest": {
+                    "sha256": "755f7e30af84cf396d2163285a0d39005a86b792f3ae1a2a5fc5fa6f4a1c789d"
+                }
+            },
+            {
+                "uri": "file:///nix/store/bxkv07fcj6i96f3lsi8bj3gnrzy4hxbg-linux-headers-5.17.drv",
+                "digest": {
+                    "sha256": "dfecb1eb3671e790e14110560dd3692d5c2c19e8d9d52a856576a384f00dbb00"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/dy0h7li7p1cgfjbvb9ywi7h8ikxlzwhv-python3-3.9.12-env.drv",
+                "digest": {
+                    "sha256": "747d41d6c81eb1a63e47beb4915f60412cd90845cdce2914bc27e2081df64044"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/hwlmaqf5gv430574g2cxjjgy4kpv3pvw-meson-0.61.2.drv",
+                "digest": {
+                    "sha256": "c4cebf7b59b7013e7488c111126ed4266df40504582878c5a61aa4a96b5c3a96"
+                }
+            },
+            {
+                "uri": "file:///nix/store/j784kg9q15qp5p5m1k6dfjwrx4b83dpw-libcap-2.63.drv",
+                "digest": {
+                    "sha256": "bd6fc43888950ba9e7dd09b5e4ae09aa89d143d947e65ba198c6918f62262424"
+                }
+            },
+            {
+                "uri": "file:///nix/store/jcqrvcm4ranjygyx0hgmgmjrm39f64pj-libxslt-1.1.35.drv",
+                "digest": {
+                    "sha256": "3a6ac5d1605a71f09c39214e1bcbf90914860eed9b7fe8a5074e7b44cedf815c"
+                }
+            },
+            {
+                "uri": "file:///nix/store/jx3csj1sfplhr5pdjyjr95jvfi4ffj2w-kmod-29.drv",
+                "digest": {
+                    "sha256": "e00cc5e57f4563017a9ce6d43bac9c0d9f3b914d258ac6805960099ecb9aa223"
+                }
+            },
+            {
+                "uri": "file:///nix/store/l1s0i96ny9lcbg6s71fm3gy1yvvdybvk-source.drv",
+                "digest": {
+                    "sha256": "4184e853e08808fe7817856c598638d73cfa3505b50634c76079647feda69ddd"
+                }
+            },
+            {
+                "uri": "file:///nix/store/lr656fsq8xhig0a6l78jq26x13cc1zj7-audit-2.8.5.drv",
+                "digest": {
+                    "sha256": "0d186b192a7537177a9b562c1b14e9a3cbbde072a8918262dcf98b7e33ae0e4d"
+                }
+            },
+            {
+                "uri": "file:///nix/store/qzkxqg511vw1bx497q819nkf2s0v4b30-linux-pam-1.5.2.drv",
+                "digest": {
+                    "sha256": "b5cf1dce4b5a12c1a8dbafb345a1a74ac6551e5809ed7090726041af78041a60"
+                }
+            },
+            {
+                "uri": "file:///nix/store/rgvdxwj55zhn5n5xjm7m2bc8pvxfsz29-kexec-tools-2.0.23.drv",
+                "digest": {
+                    "sha256": "d3f8da4e66326675265c4a8346770f3d6192bdd2794303aa9e8a664ea02a2a5f"
+                }
+            },
+            {
+                "uri": "file:///nix/store/w9n7pv47jaw9m6lq64wn6wsll97dbnnd-kbd-2.4.0.drv",
+                "digest": {
+                    "sha256": "75a85199b2681d0221720b9788e566d3876dc7ad4a8041d5e048e5d48c7a6ac9"
+                }
+            },
+            {
+                "uri": "file:///nix/store/x7d0z1naifhp9fj9cmm9x9x0421092pn-glibc-locales-2.34-210.drv",
+                "digest": {
+                    "sha256": "6e5c76a4c9a6edd5d5558358c2ae5dfaaca208bd8101fad4cb3b8dd9013a7a83"
+                }
+            },
+            {
+                "uri": "file:///nix/store/x7yjipr2g7raickg2imqd7sak0xvq44q-docbook-xml-4.5.drv",
+                "digest": {
+                    "sha256": "0302afe3b0f00dfad6b1a249112508d04b208a31123415a0ffb27c9bb6cf827c"
+                }
+            },
+            {
+                "uri": "file:///nix/store/x8zrd476mwwvfmdn5j4dcqsgwv8pm4pk-pcre2-10.39.drv",
+                "digest": {
+                    "sha256": "2d7ecb5e32436bea0e4f008e1d827daaebdca39a8f2674dd383c9c4361ddaf51"
+                }
+            },
+            {
+                "uri": "file:///nix/store/zmrdbn96yqavbir14mifg7nsvz879r7y-intltool-0.51.0.drv",
+                "digest": {
+                    "sha256": "38ca8023cb0a42068df090569f68ada21401bd1fc575904e9de98d7bef518155"
+                }
+            }
+        ]
+    }
+}

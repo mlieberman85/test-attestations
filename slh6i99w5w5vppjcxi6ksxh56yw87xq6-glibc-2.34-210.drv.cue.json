@@ -1,0 +1,223 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/bvy2z17rzlvkx2sj7fy99ajm853yv898-glibc-2.34-210",
+            "digest": {
+                "sha256": "0a095c3cd1c62da411c899b9ff437f987f8d2d91e2c8c8c056f2622073f895ad"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "BASH_SHELL": "/bin/sh",
+                "NIX_CFLAGS_COMPILE": "",
+                "NIX_HARDENING_ENABLE": "pic strictoverflow format relro bindnow",
+                "NIX_NO_SELF_RPATH": "1",
+                "bin": "/nix/store/vinqsa9jxqjg590i9rxy1d6ikvn3zv0g-glibc-2.34-210-bin",
+                "buildInputs": "/nix/store/r6333dqmg30cpv0imya82vbpwrm2yval-linux-headers-5.17",
+                "builder": "/nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash",
+                "configureFlags": "-C --enable-add-ons --sysconfdir=/etc --enable-stackguard-randomization --enable-bind-now --with-headers=/nix/store/r6333dqmg30cpv0imya82vbpwrm2yval-linux-headers-5.17/include --disable-profile --enable-static-pie --enable-kernel=3.2.0",
+                "debug": "/nix/store/2amsd6idljrkcnbl34ll7kl6vy9wicsk-glibc-2.34-210-debug",
+                "depsBuildBuild": "/nix/store/gx703kxmgscwp9476gvxzg55rkgmggi9-bootstrap-stage2-gcc-wrapper-",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "dev": "/nix/store/hd3j5xfvffs4vaa74l1har94q10fpnm5-glibc-2.34-210-dev",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "enableParallelBuilding": "1",
+                "enableParallelChecking": "1",
+                "hardeningDisable": "fortify pie stackprotector",
+                "installFlags": "sysconfdir=$(out)/etc",
+                "is64bit": "1",
+                "linuxHeaders": "/nix/store/r6333dqmg30cpv0imya82vbpwrm2yval-linux-headers-5.17",
+                "makeFlags": "OBJCOPY=objcopy",
+                "name": "glibc-2.34-210",
+                "nativeBuildInputs": "/nix/store/nrgh9xgmglj6a2rrqzasw8f7mrbz27vv-bison-3.8.2 /nix/store/77zhkxs682cwqy9m0x1lp4ikasdm689n-python3-minimal-3.9.12 /nix/store/ikmqczy0y20n04a2b8qfflzwihv8139g-separate-debug-info.sh",
+                "out": "/nix/store/bvy2z17rzlvkx2sj7fy99ajm853yv898-glibc-2.34-210",
+                "outputs": "out bin dev static debug",
+                "patches": "/nix/store/mgx19wbmgrh3rblbxhs6vi47sha15n11-2.34-master.patch.gz /nix/store/8haph3ng4mgsqr6p4024vj8k6kg3mqc4-nix-locale-archive.patch /nix/store/b1w7zbvm39ff1i52iyjggyvw2rdxz104-dont-use-system-ld-so-cache.patch /nix/store/mnglr8rr7nl444h7p50ysyq8qd0fm1lm-dont-use-system-ld-so-preload.patch /nix/store/za0pg7fmysrcwrqcal26fnmzw6vycgdn-fix_path_attribute_in_getconf.patch /nix/store/xkd50xxii6k7l1kmw4l5x6xzbhamcs87-allow-kernel-2.6.32.patch /nix/store/3l70d7kcfsh91w6792h4fqs4kjbq17py-glibc-reinstate-prlimit64-fallback.patch?id=eab07e78b691ae7866267fc04d31c7c3ad6b0eeb /nix/store/nqa9d4yxz1l2cgswzqr1pkm4jfrksm0q-locale-C.diff /nix/store/7kw224hdyxd7115lrqh9a4dv2x8msq2s-fix-x64-abi.patch /nix/store/001gp43bjqzx60cg345n2slzg7131za8-nix-nss-open-files.patch /nix/store/95hp6hs9g73h93safadb8x6vajyqkv6q-0001-Revert-Remove-all-usage-of-BASH-or-BASH-in-installed.patch /nix/store/qhlivc5m9wh8pq93v1smplibyxakbjby-raw",
+                "pname": "glibc",
+                "postConfigure": "# Hack: get rid of the `-static' flag set by the bootstrap stdenv.\n# This has to be done *after* `configure' because it builds some\n# test binaries.\nexport NIX_CFLAGS_LINK=\nexport NIX_LDFLAGS_BEFORE=\n\nexport NIX_DONT_SET_RPATH=1\nunset CFLAGS\n\n# Apparently --bindir is not respected.\nmakeFlagsArray+=(\"bindir=$bin/bin\" \"sbindir=$bin/sbin\" \"rootsbindir=$bin/sbin\")\n",
+                "postInstall": "echo SUPPORTED-LOCALES=C.UTF-8/UTF-8 \u003e ../glibc-2*/localedata/SUPPORTED\nmake -j${NIX_BUILD_CORES:-1} -l${NIX_BUILD_CORES:-1} localedata/install-locales\n\ntest -f $out/etc/ld.so.cache \u0026\u0026 rm $out/etc/ld.so.cache\n\nif test -n \"$linuxHeaders\"; then\n    # Include the Linux kernel headers in Glibc, except the `scsi'\n    # subdirectory, which Glibc provides itself.\n    (cd $dev/include \u0026\u0026 \\\n     ln -sv $(ls -d $linuxHeaders/include/* | grep -v scsi\\$) .)\nfi\n\n# Fix for NIXOS-54 (ldd not working on x86_64).  Make a symlink\n# \"lib64\" to \"lib\".\nif test -n \"$is64bit\"; then\n    ln -s lib $out/lib64\nfi\n\n# Get rid of more unnecessary stuff.\nrm -rf $out/var $bin/bin/sln\n\n# Backwards-compatibility to fix e.g.\n# \"configure: error: Pthreads are required to build libgomp\" during `gcc`-build\n# because it's not actually needed anymore to link against `pthreads` since\n# it's now part of `libc.so.6` itself, but the gcc build breaks if\n# this doesn't work.\nln -sf $out/lib/libpthread.so.0 $out/lib/libpthread.so\nln -sf $out/lib/librt.so.1 $out/lib/librt.so\nln -sf $out/lib/libdl.so.2 $out/lib/libdl.so\nln -sf $out/lib/libutil.so.1 $out/lib/libutil.so\ntouch $out/lib/libpthread.a\n\nfor i in \"$out\"/lib/*.a; do\n    [ \"$i\" = \"$out/lib/libm.a\" ] || $STRIP -S \"$i\"\ndone\n\n# Put libraries for static linking in a separate output.  Note\n# that libc_nonshared.a and libpthread_nonshared.a are required\n# for dynamically-linked applications.\nmkdir -p $static/lib\nmv $out/lib/*.a $static/lib\nmv $static/lib/lib*_nonshared.a $out/lib\n# Some of *.a files are linker scripts where moving broke the paths.\nsed \"/^GROUP/s|$out/lib/lib|$static/lib/lib|g\" \\\n  -i \"$static\"/lib/*.a\n\n# Work around a Nix bug: hard links across outputs cause a build failure.\ncp $bin/bin/getconf $bin/bin/getconf_\nmv $bin/bin/getconf_ $bin/bin/getconf\n",
+                "postPatch": "# Needed for glibc to build with the gnumake 3.82\n# http://comments.gmane.org/gmane.linux.lfs.support/31227\nsed -i 's/ot \\$/ot:\\n\\ttouch $@\\n$/' manual/Makefile\n\n# nscd needs libgcc, and we don't want it dynamically linked\n# because we don't want it to depend on bootstrap-tools libs.\necho \"LDFLAGS-nscd += -static-libgcc\" \u003e\u003e nscd/Makefile\n\n# Ensure that `__nss_files_fopen` can still be wrapped by `libredirect`.\nsed -i -e '/libc_hidden_def (__nss_files_fopen)/d' nss/nss_files_fopen.c\nsed -i -e '/libc_hidden_proto (__nss_files_fopen)/d' include/nss_files.h\n\n# Ensure that libidn2 is found.\npatch -p 1 \u003c\u003cEOF\n--- a/inet/idna.c\n+++ b/inet/idna.c\n@@ -25,1 +25,1 @@\n-#define LIBIDN2_SONAME \"libidn2.so.0\"\n+#define LIBIDN2_SONAME \"/nix/store/d1gzs0dk0y7wyvy8ymzis1hq9x3w2zv0-libidn2-2.3.2/lib/libidn2.so.0\"\nEOF\n",
+                "preBuild": "",
+                "preConfigure": "export PWD_P=$(type -tP pwd)\nfor i in configure io/ftwtest-sh; do\n    # Can't use substituteInPlace here because replace hasn't been\n    # built yet in the bootstrap.\n    sed -i \"$i\" -e \"s^/bin/pwd^$PWD_P^g\"\ndone\n\nmkdir ../build\ncd ../build\n\nconfigureScript=\"`pwd`/../$sourceRoot/configure\"\n\nmakeFlags=\"$makeFlags BUILD_LDFLAGS=-Wl,-rpath,/nix/store/k2w9nmcz5rvnq5xrxlsgmypqvr8qqc57-bootstrap-stage0-glibc-bootstrap/lib OBJDUMP=/nix/store/yf8nzrqzvps8yk2576nqyb9bci6y3x6f-binutils-2.38/bin/objdump\"\n\n\n",
+                "preInstall": "if [ -f /nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/lib/libgcc_s.so.1 ]; then\n    mkdir -p $out/lib\n    cp /nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/lib/libgcc_s.so.1 $out/lib/libgcc_s.so.1\n    # the .so It used to be a symlink, but now it is a script\n    cp -a /nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/lib/libgcc_s.so $out/lib/libgcc_s.so\nfi\n",
+                "profilingLibraries": "",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "separateDebugInfo": "1",
+                "src": "/nix/store/wjbv1k6yigmb280wrvc1gkv8cnrsacij-glibc-2.34.tar.xz",
+                "static": "/nix/store/5v40r4vq2gh5ss6pkg22v81maa38hl8i-glibc-2.34-210-static",
+                "stdenv": "/nix/store/00ryhc0rgjvcaigxans5ph4q3j8jm6c6-bootstrap-stage2-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "2.34-210"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/001gp43bjqzx60cg345n2slzg7131za8-nix-nss-open-files.patch",
+                "digest": {
+                    "sha256": "22d2d6bf720bb8445fcbf4be6e0dbe82e01f1d7c6075685d9ef686cc58148083"
+                }
+            },
+            {
+                "uri": "file:///nix/store/7kw224hdyxd7115lrqh9a4dv2x8msq2s-fix-x64-abi.patch",
+                "digest": {
+                    "sha256": "736dfb5fd706e0a993476f44f0c345e5e4c494e76c3c5e90730f9da23bcdca3d"
+                }
+            },
+            {
+                "uri": "file:///nix/store/8haph3ng4mgsqr6p4024vj8k6kg3mqc4-nix-locale-archive.patch",
+                "digest": {
+                    "sha256": "f339a2cb8dfd663d8385870f3d540f4bfbd906035100bdd258db73fab51b91b5"
+                }
+            },
+            {
+                "uri": "file:///nix/store/95hp6hs9g73h93safadb8x6vajyqkv6q-0001-Revert-Remove-all-usage-of-BASH-or-BASH-in-installed.patch",
+                "digest": {
+                    "sha256": "cf86c9c3a9a814411635dd38f26ed2d73f643202dae4cbfb1927b002e9c30072"
+                }
+            },
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/b1w7zbvm39ff1i52iyjggyvw2rdxz104-dont-use-system-ld-so-cache.patch",
+                "digest": {
+                    "sha256": "2e35c8e6370d4a0d324f4aa3cc94eac9b9ca73f7d93ae1f090661f41e692b506"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ikmqczy0y20n04a2b8qfflzwihv8139g-separate-debug-info.sh",
+                "digest": {
+                    "sha256": "6a9bffeef698bb4db776df8fdaaf2a4766c65c1a468204b9ae425eeaa4e961c7"
+                }
+            },
+            {
+                "uri": "file:///nix/store/mgx19wbmgrh3rblbxhs6vi47sha15n11-2.34-master.patch.gz",
+                "digest": {
+                    "sha256": "9ed46d476bd8497b239b79f958effb24bb2931d68b7eb6e4d98767d225a8918f"
+                }
+            },
+            {
+                "uri": "file:///nix/store/mnglr8rr7nl444h7p50ysyq8qd0fm1lm-dont-use-system-ld-so-preload.patch",
+                "digest": {
+                    "sha256": "430f6205d9ad0d5045a86085d7e50f669f67a11cda957d71d2d86d86a3e35bae"
+                }
+            },
+            {
+                "uri": "file:///nix/store/xkd50xxii6k7l1kmw4l5x6xzbhamcs87-allow-kernel-2.6.32.patch",
+                "digest": {
+                    "sha256": "22e6f1f0250b2b36bc4530ddb78ef5a6468654332c04274e5c2bc7bdc2ed2977"
+                }
+            },
+            {
+                "uri": "file:///nix/store/za0pg7fmysrcwrqcal26fnmzw6vycgdn-fix_path_attribute_in_getconf.patch",
+                "digest": {
+                    "sha256": "291171c2d057f2e9167cb12aff564f0ed202ca3d1199c6c42ae41d9ab71df88e"
+                }
+            },
+            {
+                "uri": "file:///nix/store/0zhkga32apid60mm7nh92z2970im5837-bootstrap-tools.drv",
+                "digest": {
+                    "sha256": "f91ccdc44b609d5a97b27804be2daa58b61d51b82caa7e9e765db4ad4180098a"
+                }
+            },
+            {
+                "uri": "file:///nix/store/1zi0k7y01rhqr2gfqb42if0icswg65sj-locale-C.diff.drv",
+                "digest": {
+                    "sha256": "f8bbc81506616f1a3e9932d63826a3bd7cec0aae33fbf614562e05677344f571"
+                }
+            },
+            {
+                "uri": "file:///nix/store/2qklysz0hj51z8fq5qsj152c2crnghhg-bootstrap-stage2-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "847747fb7f255141ddd9ed26c9cbf707bf272d147ef5104268a8fd5c51c090af"
+                }
+            },
+            {
+                "uri": "file:///nix/store/3cijn0l8qsw7d83x3x49famijhsqhjmb-bootstrap-stage2-gcc-wrapper-.drv",
+                "digest": {
+                    "sha256": "15331aaea0c2a527ac46a016a70c1626cd0646b11e271889db6bbab31963dd91"
+                }
+            },
+            {
+                "uri": "file:///nix/store/57y2zhgvwaf7rlc7rdr4xbdqq4yk4f69-bison-3.8.2.drv",
+                "digest": {
+                    "sha256": "963415c7db1e0185adf81585350e29bde4a6025da336106fc0ea86b6d7eae043"
+                }
+            },
+            {
+                "uri": "file:///nix/store/6iyzwvqdfqrrhn1rg662k0zx3i7kvxk5-python3-minimal-3.9.12.drv",
+                "digest": {
+                    "sha256": "c1a39c33ddbc7fcc46115a1f13aaf63b34d83d6eb2bcd2977c1183310127266d"
+                }
+            },
+            {
+                "uri": "file:///nix/store/6j9yh41lpmdpcviqkchirpbgjdcj0783-libidn2-2.3.2.drv",
+                "digest": {
+                    "sha256": "2f0df7fb6558be26ec4058d5d85ed5c07ceb4d1dd86c91e9337f989d5884d419"
+                }
+            },
+            {
+                "uri": "file:///nix/store/8g9xyslx8zh7bdyg3ykgjid95aqmmw3g-binutils-2.38.drv",
+                "digest": {
+                    "sha256": "fa21c66641144fdda37cf4d6b63b4f0611b9eb6eea10da7881c7e87ea63156cd"
+                }
+            },
+            {
+                "uri": "file:///nix/store/k3786wfzw637r7sylccdmm92saqp73d8-glibc-2.34.tar.xz.drv",
+                "digest": {
+                    "sha256": "e18e5d11bd752acb0e407782f352410707f657993430035a7a7570ff5b7145dd"
+                }
+            },
+            {
+                "uri": "file:///nix/store/kqxwmfndn8fm73iinml88fxwp1npgn7b-linux-headers-5.17.drv",
+                "digest": {
+                    "sha256": "63ad6b0ec9635f63d073624e3b04f0ace5ff384421ff7cfdded0a51ceec9c099"
+                }
+            },
+            {
+                "uri": "file:///nix/store/l5zr5m1agvvnic49fg6qc44g5fgj3la1-glibc-reinstate-prlimit64-fallback.patch?id=eab07e78b691ae7866267fc04d31c7c3ad6b0eeb.drv",
+                "digest": {
+                    "sha256": "7c9635fb261815cba0ff00523fc5ca41c377bb5ac5a4401ae016c342bf8e4f4c"
+                }
+            },
+            {
+                "uri": "file:///nix/store/r1daaldgc14159w4ffzlz3fdi9p0qqq0-bootstrap-stage0-glibc-bootstrap.drv",
+                "digest": {
+                    "sha256": "2a727f630d7b0d12bebd53604aedb40c3f7bcbfd7eff0e885cac2adc9088eb7f"
+                }
+            },
+            {
+                "uri": "file:///nix/store/wlldapf5bg58kivw520ll5bw0fmlaid7-raw.drv",
+                "digest": {
+                    "sha256": "1671a529d32593815802ec3668a57a778b70ed0d1bdc56ef5b8aec1033132a35"
+                }
+            }
+        ]
+    }
+}

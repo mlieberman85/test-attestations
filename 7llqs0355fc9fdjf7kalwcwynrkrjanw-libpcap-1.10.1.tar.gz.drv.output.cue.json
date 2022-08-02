@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/7llqs0355fc9fdjf7kalwcwynrkrjanw-libpcap-1.10.1.tar.gz.drv",
+            "digest": {
+                "sha256": "4b86cd6f189f8d67473586bd73568e3ecf860b47e2d5fffe53904f821ae90340"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/0wjmm7vxzn66pim4ckd3wfs8k978p41b-libpcap-1.10.1.tar.gz",
+                "digest": {
+                    "sha256": "06bcc9d9aa9ceac90e1d8f53a5c9d0bdfbf96a312f1c50149aab8b4d8e7884e3"
+                }
+            }
+        ]
+    }
+}

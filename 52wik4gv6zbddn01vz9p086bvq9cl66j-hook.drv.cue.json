@@ -1,0 +1,103 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/asxvhidp47dm558b4j2rzgzjy6d7al2p-hook",
+            "digest": {
+                "sha256": "f09ad1441ec07cb2325988a62c2a519af4cdd1c1c2c9cd4d626490edf34fb81e"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildCommand": "mkdir -p $out/nix-support\ncp /nix/store/ghdamd4hl6yi7jysh1x3436fj1v9yvjb-autoreconf.sh $out/nix-support/setup-hook\nprintWords /nix/store/bb7zn7i1imf6ryjmnxvxy0sf3l87b8w8-autoconf-2.69 /nix/store/s0bkddayvfc1snn8npz438dqb5zkbgzz-automake-1.16.5 /nix/store/vh0c05rc71vmbbicfrksjsvaj3qk92ak-gettext-0.21 /nix/store/zahcayqy4jr89g0dphqk5d0pk6f063rf-libtool-2.4.7 \u003e $out/nix-support/propagated-build-inputs\n",
+                "buildInputs": "",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "name": "hook",
+                "nativeBuildInputs": "",
+                "out": "/nix/store/asxvhidp47dm558b4j2rzgzjy6d7al2p-hook",
+                "outputs": "out",
+                "passAsFile": "buildCommand",
+                "patches": "",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "stdenv": "/nix/store/lmj98vlk5h0v1x5gzslxjnaj4m58dwxm-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ghdamd4hl6yi7jysh1x3436fj1v9yvjb-autoreconf.sh",
+                "digest": {
+                    "sha256": "83f98fd382f6d9bc160bf21e3d9cecebac0f645b33b1c5a4dcc9f5b57b1a1cbf"
+                }
+            },
+            {
+                "uri": "file:///nix/store/3ga8qx6a74j26sy0yyvnqnxp6mva1b1z-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "f9bc13b9bdaa3cce0106294eeec282b55ca6f4f2d0b2d11e04685a22f7cb5170"
+                }
+            },
+            {
+                "uri": "file:///nix/store/885s7mq3zn24fsm4h6v7agbzaqhkiids-libtool-2.4.7.drv",
+                "digest": {
+                    "sha256": "7faf6e79f3cf2bc594d9495febcc257c69c6e9d5015259c7f2fbd2273b94db49"
+                }
+            },
+            {
+                "uri": "file:///nix/store/8vrndrblm5la36rzmbb2p7yyzp96431b-gettext-0.21.drv",
+                "digest": {
+                    "sha256": "0588a7500c6bc213d8667504ee8473358707f15b32decff365eb237f8f0ff25e"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ijbc1gw8zi8b4ja6dz4ilz5k267y3vz3-automake-1.16.5.drv",
+                "digest": {
+                    "sha256": "e1d0a5fba23e2b3cb4df295cab4345d1208f3880969e363740eb8b68997b0f93"
+                }
+            },
+            {
+                "uri": "file:///nix/store/mc4w5d1bkvrxvyn0b4548hd34v3cp0yz-autoconf-2.69.drv",
+                "digest": {
+                    "sha256": "f1259aba33544fc0b6d00367947442336196bd1253b9cb1abfe452ab1e7752f3"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,132 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/x99llbwzivcp34xwb31lq24lxcc4a3d5-util-linux-minimal-2.37.4",
+            "digest": {
+                "sha256": "3206e6edad8a7eddfb395cf700a47617fb39343290a30c072fff7077bc5b55c3"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "bin": "/nix/store/5s6hfy8823ikf2arwlrkyjw96yyxg0rd-util-linux-minimal-2.37.4-bin",
+                "buildInputs": "/nix/store/38ryqbjx5i1hir1a3sfk4za1yq5fbkpd-zlib-1.2.12-dev /nix/store/rnxbdkmbizkllhr0vbmk9611psd7vrmz-linux-pam-1.5.2 /nix/store/55v31ixplmp0bgw560bz3yl2fmnicmz7-libcap-ng-0.8.3",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "--localstatedir=/var --enable-write --disable-use-tty-group --enable-fs-paths-default=/run/wrappers/bin:/run/current-system/sw/bin:/sbin --disable-makeinstall-setuid --disable-makeinstall-chown --disable-su --disable-nls --without-ncursesw --without-systemd --without-systemdsystemunitdir SYSCONFSTATICDIR=/0sra2y18lr3h6j58qjm0w46yv36h1wjmilb09n8aimdpivdymscx/lib",
+                "debug": "/nix/store/qzzascip4dx58fd36v529a2b7fpsc5bc-util-linux-minimal-2.37.4-debug",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "dev": "/nix/store/qq1kncy66jxf5di20xs3y28d1gc9hl8h-util-linux-minimal-2.37.4-dev",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "enableParallelBuilding": "1",
+                "enableParallelChecking": "1",
+                "lib": "/nix/store/6vknp0f9jjm2116pz04x8fm02ryyqz51-util-linux-minimal-2.37.4-lib",
+                "makeFlags": "usrbin_execdir=/04f3da1kmbr67m3gzxikmsl4vjz5zf777sv6m14ahv22r65aac9m/bin usrlib_execdir=/0sra2y18lr3h6j58qjm0w46yv36h1wjmilb09n8aimdpivdymscx/lib usrsbin_execdir=/04f3da1kmbr67m3gzxikmsl4vjz5zf777sv6m14ahv22r65aac9m/sbin",
+                "man": "/nix/store/9zfhqsifw99jah1ivqwhnjnwzlgv661z-util-linux-minimal-2.37.4-man",
+                "name": "util-linux-minimal-2.37.4",
+                "nativeBuildInputs": "/nix/store/prn4gvr4ljmrwnnm508i7m7qh7nfh7gz-pkg-config-wrapper-0.29.2 /nix/store/ikmqczy0y20n04a2b8qfflzwihv8139g-separate-debug-info.sh",
+                "out": "/nix/store/x99llbwzivcp34xwb31lq24lxcc4a3d5-util-linux-minimal-2.37.4",
+                "outputs": "bin dev out lib man debug",
+                "patches": "/nix/store/1j9sp0yd6jbcbkwsc5a826rxqy3lk6vh-rtcwake-search-PATH-for-shutdown.patch",
+                "pname": "util-linux-minimal",
+                "postPatch": "patchShebangs tests/run.sh\n\nsubstituteInPlace include/pathnames.h \\\n  --replace \"/bin/login\" \"/nix/store/c8i93wnfzv0nhphh0p3l3kxs000vhjgx-shadow-4.11.1/bin/login\"\nsubstituteInPlace sys-utils/eject.c \\\n  --replace \"/bin/umount\" \"$bin/bin/umount\"\n",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "separateDebugInfo": "1",
+                "src": "/nix/store/lsss400m69dbynj1g1qk015rjf93rfq8-util-linux-2.37.4.tar.xz",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "2.37.4"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/1j9sp0yd6jbcbkwsc5a826rxqy3lk6vh-rtcwake-search-PATH-for-shutdown.patch",
+                "digest": {
+                    "sha256": "3dc70b37d56c02f594f2e613c9f5f55e9a567b6d23aadbdaa8698d79af7eb5ed"
+                }
+            },
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ikmqczy0y20n04a2b8qfflzwihv8139g-separate-debug-info.sh",
+                "digest": {
+                    "sha256": "6a9bffeef698bb4db776df8fdaaf2a4766c65c1a468204b9ae425eeaa4e961c7"
+                }
+            },
+            {
+                "uri": "file:///nix/store/17m2k6025mkq98bv7rkys5inxwi9a81i-util-linux-2.37.4.tar.xz.drv",
+                "digest": {
+                    "sha256": "d4f0652eb958b631669ad2260b65102bc066570f4bc33d9e4a64e166a6281da1"
+                }
+            },
+            {
+                "uri": "file:///nix/store/1v1lazzb2r2cg7a0vxv705jxyc8hidpn-pkg-config-wrapper-0.29.2.drv",
+                "digest": {
+                    "sha256": "d1c8e17a6c2ddf6900b817119c22f726a3a39af2ac395821e95d915fde3d9734"
+                }
+            },
+            {
+                "uri": "file:///nix/store/4ps3shhk3a83nxw82pirrp84kjza42qr-zlib-1.2.12.drv",
+                "digest": {
+                    "sha256": "f1c161051f72552716fdcba6f78370a3f93dab26e28779bbb0002f809c502534"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/dr6g7cw362c2030xb68398ap5cl5mj2y-shadow-4.11.1.drv",
+                "digest": {
+                    "sha256": "841e7ebcccf5a900e93673679fc9486250a919c89a4465767c9eec20793eb5dd"
+                }
+            },
+            {
+                "uri": "file:///nix/store/fxrac8vxvrkgnqbjys6vbxzll2sga3rx-libcap-ng-0.8.3.drv",
+                "digest": {
+                    "sha256": "33378f943af5dc1599c4882caaa0af98253525d2fa42d0b816228c26b1dd542a"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/qzkxqg511vw1bx497q819nkf2s0v4b30-linux-pam-1.5.2.drv",
+                "digest": {
+                    "sha256": "b5cf1dce4b5a12c1a8dbafb345a1a74ac6551e5809ed7090726041af78041a60"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/771h2gi42sxwgmnd7qnlp4fsy0qvaqkp-avoid-null-pointer-dereference.patch.drv",
+            "digest": {
+                "sha256": "bc6af1da853cd669257588c1408c30c18e50ec0b97c46d705f308578344a3532"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/x0bfl5z1qbmgp02ds2a0wmsr53p25spp-avoid-null-pointer-dereference.patch",
+                "digest": {
+                    "sha256": "7a160a3a57df4f3dbb2667ad347e5860fee4822b8ed15b548c793c88be8fbf34"
+                }
+            }
+        ]
+    }
+}

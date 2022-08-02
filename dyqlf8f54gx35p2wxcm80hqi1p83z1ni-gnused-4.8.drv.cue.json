@@ -1,0 +1,88 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/2clbzz8170g3rcbc6d1aq1gdkph85ji8-gnused-4.8",
+            "digest": {
+                "sha256": "54fd61668acc55f3892bb086a07307dcad30eb8fd755ee863f75ea1b2976851d"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "",
+                "builder": "/nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "info": "/nix/store/ahs7jhdhvnsq8636162ja2synqwqfbv6-gnused-4.8-info",
+                "name": "gnused-4.8",
+                "nativeBuildInputs": "/nix/store/nwd35shggdjdbb5xgx8dhbcjnmx23706-perl-5.34.1",
+                "out": "/nix/store/2clbzz8170g3rcbc6d1aq1gdkph85ji8-gnused-4.8",
+                "outputs": "out info",
+                "patches": "",
+                "pname": "gnused",
+                "preConfigure": "patchShebangs ./build-aux/help2man",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/yvmxwjqla2q9xrk3m9fhx7xfbci44cfz-sed-4.8.tar.xz",
+                "stdenv": "/nix/store/mhhmr6r7852384nmlpplxm23la0l68cs-bootstrap-stage4-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "4.8"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/0zhkga32apid60mm7nh92z2970im5837-bootstrap-tools.drv",
+                "digest": {
+                    "sha256": "f91ccdc44b609d5a97b27804be2daa58b61d51b82caa7e9e765db4ad4180098a"
+                }
+            },
+            {
+                "uri": "file:///nix/store/5n7j0l13pmshd0ibl1is5yq4cx3yfgrk-bootstrap-stage4-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "8e185e061d88ebd2426602e337b5fcbf1def9e959c2ede344c2c5c662836b0b1"
+                }
+            },
+            {
+                "uri": "file:///nix/store/cnh3rigjsk9vfismiz6cjx3qf6g0pipz-sed-4.8.tar.xz.drv",
+                "digest": {
+                    "sha256": "15d74807879fd8baf2e0a9ef701d65cdc5ea73f73d81ce29817409cc51969e08"
+                }
+            },
+            {
+                "uri": "file:///nix/store/qzqv7h1dawzyxy361i4ml6307mgxk6kv-perl-5.34.1.drv",
+                "digest": {
+                    "sha256": "b761478df955663544c8c5cff482bcb1a997516b62e88a0854f1e251c5833b09"
+                }
+            }
+        ]
+    }
+}

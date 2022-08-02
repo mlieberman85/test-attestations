@@ -1,0 +1,115 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/vh0c05rc71vmbbicfrksjsvaj3qk92ak-gettext-0.21",
+            "digest": {
+                "sha256": "41951f8d92df7d8a3f5a0b9fbc2dc535e964fb96b126bdc4c8476e20c9d67aa1"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "LDFLAGS": "",
+                "NIX_HARDENING_ENABLE": "fortify stackprotector pic strictoverflow relro bindnow",
+                "buildInputs": "/nix/store/gr0b8sadn3x65x1aadbsvrk4jy4rvq23-bash-5.1-p16-dev",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "--disable-csharp --with-xz",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "doc": "/nix/store/7arqns22r3cyvbhaqdy1wyy3y7kzs9iq-gettext-0.21-doc",
+                "enableParallelBuilding": "1",
+                "enableParallelChecking": "",
+                "gettextNeedsLdflags": "",
+                "hardeningDisable": "format",
+                "info": "/nix/store/5w531ky3458drxk31js1sgi3di7akrrc-gettext-0.21-info",
+                "man": "/nix/store/lncfzy5idw9fvys0xc59g4mi05dyrnl2-gettext-0.21-man",
+                "name": "gettext-0.21",
+                "nativeBuildInputs": "/nix/store/kr4khs45v461g4m20v2d9v1dcxl52mks-xz-5.2.5-dev /nix/store/5arbmmyiadd8m0s9bq9di8xxz5lb037b-xz-5.2.5-bin",
+                "out": "/nix/store/vh0c05rc71vmbbicfrksjsvaj3qk92ak-gettext-0.21",
+                "outputs": "out man doc info",
+                "patches": "/nix/store/p2fp6i7hjx9af1wbwr32k217wp2dxmiw-absolute-paths.diff",
+                "pname": "gettext",
+                "postPatch": "substituteAllInPlace gettext-runtime/src/gettext.sh.in\nsubstituteInPlace gettext-tools/projects/KDE/trigger --replace \"/bin/pwd\" pwd\nsubstituteInPlace gettext-tools/projects/GNOME/trigger --replace \"/bin/pwd\" pwd\nsubstituteInPlace gettext-tools/src/project-id --replace \"/bin/pwd\" pwd\n",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "setupHooks": "/nix/store/797k3249lr4rx8wslf7kcsa3hv6fis3x-role.bash /nix/store/ny42y6hs4p294rvnrwbmrpwzqghw2816-gettext-setup-hook.sh",
+                "src": "/nix/store/s1bb06rzbxlvq08sg0ymwdgcgd1a7xh3-gettext-0.21.tar.gz",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "1",
+                "system": "x86_64-linux",
+                "version": "0.21"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/797k3249lr4rx8wslf7kcsa3hv6fis3x-role.bash",
+                "digest": {
+                    "sha256": "4925984c7209620d5658cd0980da9d62eb0b2f98539cf05641aa996a308b7a69"
+                }
+            },
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ny42y6hs4p294rvnrwbmrpwzqghw2816-gettext-setup-hook.sh",
+                "digest": {
+                    "sha256": "27ce7a1a7062e4b965d58a0383256b3295db8fb0e0e5cfcfb70dfdacb2037996"
+                }
+            },
+            {
+                "uri": "file:///nix/store/p2fp6i7hjx9af1wbwr32k217wp2dxmiw-absolute-paths.diff",
+                "digest": {
+                    "sha256": "ffc797f8fd6816a51a76158c868e84202d54451dca6a229bc090738664561e53"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/m6myrsd5dxf4j1y2cvb16q44q2ldslm5-xz-5.2.5.drv",
+                "digest": {
+                    "sha256": "1cface54b543e279b3f8594e8a222057d996c31ec363efcd89013973f25d9911"
+                }
+            },
+            {
+                "uri": "file:///nix/store/x2s1x03n4figdaj146b0lx96x7q772ds-gettext-0.21.tar.gz.drv",
+                "digest": {
+                    "sha256": "4b4d665a43771ca22b0ba36971e9b85fdeb4bd3ed04914a01cbbd12e635be140"
+                }
+            }
+        ]
+    }
+}

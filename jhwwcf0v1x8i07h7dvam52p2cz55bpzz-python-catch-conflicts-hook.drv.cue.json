@@ -1,0 +1,99 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/9pmg0ash9q107ghc9nqggqv9mawy1j06-python-catch-conflicts-hook",
+            "digest": {
+                "sha256": "b5b9c4daaecc9b504f67d746050817880713d1677c925e7ada1ff008894f1a60"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildCommand": "mkdir -p $out/nix-support\ncp /nix/store/9x5ycdmcdgajnjfnppj2i8qg7js5h13p-python-catch-conflicts-hook.sh $out/nix-support/setup-hook\nprintWords /nix/store/yxl1d0sa5a8a4gz6qn4529w5ijxvh7fd-python3.9-setuptools-61.2.0 \u003e $out/nix-support/propagated-build-inputs\nsubstituteAll /nix/store/9x5ycdmcdgajnjfnppj2i8qg7js5h13p-python-catch-conflicts-hook.sh $out/nix-support/setup-hook\n",
+                "buildInputs": "",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "catchConflicts": "/nix/store/q2zpnf017gccs9w9mb0ikdqhkf0k5v82-catch_conflicts.py",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "name": "python-catch-conflicts-hook",
+                "nativeBuildInputs": "",
+                "out": "/nix/store/9pmg0ash9q107ghc9nqggqv9mawy1j06-python-catch-conflicts-hook",
+                "outputs": "out",
+                "passAsFile": "buildCommand",
+                "patches": "",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "pythonInterpreter": "/nix/store/wnrc4daqbd6v5ifqlxsj75ky8556zy0p-python3-3.9.12/bin/python3.9",
+                "stdenv": "/nix/store/lmj98vlk5h0v1x5gzslxjnaj4m58dwxm-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/9x5ycdmcdgajnjfnppj2i8qg7js5h13p-python-catch-conflicts-hook.sh",
+                "digest": {
+                    "sha256": "fff42d55c93c6600acc4cffa7d1976d5f1d1d2c37db68955581621983782826d"
+                }
+            },
+            {
+                "uri": "file:///nix/store/q2zpnf017gccs9w9mb0ikdqhkf0k5v82-catch_conflicts.py",
+                "digest": {
+                    "sha256": "4285955eb75e38c6e630a9580b5b2df3126daa3ac9a3f001d263600190c4cc35"
+                }
+            },
+            {
+                "uri": "file:///nix/store/3ga8qx6a74j26sy0yyvnqnxp6mva1b1z-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "f9bc13b9bdaa3cce0106294eeec282b55ca6f4f2d0b2d11e04685a22f7cb5170"
+                }
+            },
+            {
+                "uri": "file:///nix/store/arfv2q0kv93dzmqwkrlhl02ifvf1xyk1-python3.9-setuptools-61.2.0.drv",
+                "digest": {
+                    "sha256": "4b2d7711d84f357c9fa5449872a2a2b21f471cfd9cdb4b69ff2923762c7e18ef"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/vdgkm605ayapf245hc17239qfpvivxfy-python3-3.9.12.drv",
+                "digest": {
+                    "sha256": "6684eb57aec053d7baf339e95827a8b7670f5709da588ab2576f58eb3be31ea6"
+                }
+            }
+        ]
+    }
+}

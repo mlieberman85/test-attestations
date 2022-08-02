@@ -1,0 +1,95 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/nms8b3kwmr4lfvxzcgg3y7xvanj60jpm-re2c-3.0",
+            "digest": {
+                "sha256": "4a14091d350b2e0cdb07ed64ff42a191de51d09d2af61111aa053b418c18f60b"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "1",
+                "doInstallCheck": "",
+                "enableParallelBuilding": "1",
+                "enableParallelChecking": "1",
+                "name": "re2c-3.0",
+                "nativeBuildInputs": "/nix/store/35fvnsr5k0lwvpvp8dcl457vmc8cahib-hook /nix/store/wnrc4daqbd6v5ifqlxsj75ky8556zy0p-python3-3.9.12",
+                "out": "/nix/store/nms8b3kwmr4lfvxzcgg3y7xvanj60jpm-re2c-3.0",
+                "outputs": "out",
+                "patches": "",
+                "pname": "re2c",
+                "preCheck": "patchShebangs run_tests.py\n",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/sl98y4sk9vzxinydlbc9nyzlqr5az8sj-source",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "3.0"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/5k1sfc5qmzb93addcjxxnqcd5bpf2wlz-hook.drv",
+                "digest": {
+                    "sha256": "e2b0f8b1570352fccde979f3d8e4b70c5bbc8cce6a08b1f7fbfbafbf4b702445"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/vdgkm605ayapf245hc17239qfpvivxfy-python3-3.9.12.drv",
+                "digest": {
+                    "sha256": "6684eb57aec053d7baf339e95827a8b7670f5709da588ab2576f58eb3be31ea6"
+                }
+            },
+            {
+                "uri": "file:///nix/store/w3nsf67g3pq4zx8kmchbbgpg2pgds209-source.drv",
+                "digest": {
+                    "sha256": "1910b50a6a0b71322b1a98adbc7b2d599fd6bc6785f1f5b45ae89d6b128bbea4"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,101 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/5xriv7q6sadqlsl5wkcnl39wzyimk8vy-ncurses-6.3",
+            "digest": {
+                "sha256": "cb611ecb03793e5ea695ea71ca331a8087eceba305b51d5d4b16d4be59762551"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "CFLAGS": "",
+                "buildInputs": "",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "--with-shared --without-debug --enable-pc-files --enable-symlinks --with-manpage-format=normal --disable-stripping --with-versioned-syms --enable-widec",
+                "depsBuildBuild": "/nix/store/gfr4ljdlr1wplc01j4fchw4w9x3lfvv9-gcc-wrapper-11.3.0",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "dev": "/nix/store/xfbflasrprwi6gavla92mn3b7s28g879-ncurses-6.3-dev",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "enableParallelBuilding": "1",
+                "enableParallelChecking": "1",
+                "man": "/nix/store/df8plyics5ga3wl6a21w0vj7wbc34cdn-ncurses-6.3-man",
+                "name": "ncurses-6.3",
+                "nativeBuildInputs": "/nix/store/prn4gvr4ljmrwnnm508i7m7qh7nfh7gz-pkg-config-wrapper-0.29.2",
+                "out": "/nix/store/5xriv7q6sadqlsl5wkcnl39wzyimk8vy-ncurses-6.3",
+                "outputs": "out dev man",
+                "patches": "",
+                "pname": "ncurses",
+                "postFixup": "# Determine what suffixes our libraries have\nsuffix=\"$(awk -F': ' 'f{print $3; f=0} /default library suffix/{f=1}' config.log)\"\nlibs=\"$(ls $dev/lib/pkgconfig | tr ' ' '\\n' | sed \"s,\\(.*\\)$suffix\\.pc,\\1,g\")\"\nsuffixes=\"$(echo \"$suffix\" | awk '{for (i=1; i \u003c length($0); i++) {x=substr($0, i+1, length($0)-i); print x}}')\"\n\n# Get the path to the config util\ncfg=$(basename $dev/bin/ncurses*-config)\n\n# symlink the full suffixed include directory\nln -svf . $dev/include/ncurses$suffix\n\nfor newsuffix in $suffixes \"\"; do\n  # Create a non-abi versioned config util links\n  ln -svf $cfg $dev/bin/ncurses$newsuffix-config\n\n  # Allow for end users who #include \u003cncurses?w/*.h\u003e\n  ln -svf . $dev/include/ncurses$newsuffix\n\n  for library in $libs; do\n    for dylibtype in so dll dylib; do\n      if [ -e \"$out/lib/lib${library}$suffix.$dylibtype\" ]; then\n        ln -svf lib${library}$suffix.$dylibtype $out/lib/lib$library$newsuffix.$dylibtype\n        ln -svf lib${library}$suffix.$dylibtype.6 $out/lib/lib$library$newsuffix.$dylibtype.6\n        if [ \"ncurses\" = \"$library\" ]\n        then\n          # make libtinfo symlinks\n          ln -svf lib${library}$suffix.$dylibtype $out/lib/libtinfo$newsuffix.$dylibtype\n          ln -svf lib${library}$suffix.$dylibtype.6 $out/lib/libtinfo$newsuffix.$dylibtype.6\n        fi\n      fi\n    done\n    for statictype in a dll.a la; do\n      if [ -e \"$out/lib/lib${library}$suffix.$statictype\" ]; then\n        ln -svf lib${library}$suffix.$statictype $out/lib/lib$library$newsuffix.$statictype\n        if [ \"ncurses\" = \"$library\" ]\n        then\n          # make libtinfo symlinks\n          ln -svf lib${library}$suffix.$statictype $out/lib/libtinfo$newsuffix.$statictype\n        fi\n      fi\n    done\n    ln -svf ${library}$suffix.pc $dev/lib/pkgconfig/$library$newsuffix.pc\n  done\ndone\n\n# move some utilities to $bin\n# these programs are used at runtime and don't really belong in $dev\nmoveToOutput \"bin/clear\" \"$out\"\nmoveToOutput \"bin/reset\" \"$out\"\nmoveToOutput \"bin/tabs\" \"$out\"\nmoveToOutput \"bin/tic\" \"$out\"\nmoveToOutput \"bin/tput\" \"$out\"\nmoveToOutput \"bin/tset\" \"$out\"\nmoveToOutput \"bin/captoinfo\" \"$out\"\nmoveToOutput \"bin/infotocap\" \"$out\"\nmoveToOutput \"bin/infocmp\" \"$out\"\n",
+                "preConfigure": "export PKG_CONFIG_LIBDIR=\"$dev/lib/pkgconfig\"\nmkdir -p \"$PKG_CONFIG_LIBDIR\"\nconfigureFlagsArray+=(\n  \"--libdir=$out/lib\"\n  \"--includedir=$dev/include\"\n  \"--bindir=$dev/bin\"\n  \"--mandir=$man/share/man\"\n  \"--with-pkg-config-libdir=$PKG_CONFIG_LIBDIR\"\n)\n",
+                "preFixup": "rm \"$out\"/lib/*.a\n",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "setOutputFlags": "",
+                "src": "/nix/store/kwj727kkb1mh4cz4idhgqhxsfjck60z3-v6.3.tar.gz",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "6.3"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/1v1lazzb2r2cg7a0vxv705jxyc8hidpn-pkg-config-wrapper-0.29.2.drv",
+                "digest": {
+                    "sha256": "d1c8e17a6c2ddf6900b817119c22f726a3a39af2ac395821e95d915fde3d9734"
+                }
+            },
+            {
+                "uri": "file:///nix/store/3lbxz8jfm4wa53sir1shhqvzrp7m1r0l-v6.3.tar.gz.drv",
+                "digest": {
+                    "sha256": "7aff87323aa0b91ebd5b9477b34a8617b74023b8b4a9d84ffd8877456247a940"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/hgi9979z6i6yzav843xkv5wj4qmp43xb-gcc-wrapper-11.3.0.drv",
+                "digest": {
+                    "sha256": "23daf1a1401858e4562e6aa61166712072a1f193942dd2478eef5513ddc9d2fb"
+                }
+            }
+        ]
+    }
+}

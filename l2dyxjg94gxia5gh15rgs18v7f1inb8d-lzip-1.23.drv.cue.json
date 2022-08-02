@@ -1,0 +1,97 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/9ix9p4ndianf8zcyjm39nk65qdq48k0q-lzip-1.23",
+            "digest": {
+                "sha256": "89f5a6468109dcbc9d456bf190bce478301ff14180668cb234002614eb3ba1c6"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "",
+                "builder": "/nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash",
+                "configureFlags": "CPPFLAGS=-DNDEBUG CFLAGS=-O3 CXXFLAGS=-O3 CXX=c++",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "1",
+                "doInstallCheck": "",
+                "enableParallelBuilding": "1",
+                "enableParallelChecking": "1",
+                "info": "/nix/store/6f6k1xbflvfxqhvhffq66f4lvw6zy1gx-lzip-1.23-info",
+                "man": "/nix/store/6bnbq35z4pd8nzcvi0ra1k18qk0i067s-lzip-1.23-man",
+                "name": "lzip-1.23",
+                "nativeBuildInputs": "/nix/store/10q3qyy2qqvdycliynasdw9vbzxcbmvm-texinfo-6.8",
+                "out": "/nix/store/9ix9p4ndianf8zcyjm39nk65qdq48k0q-lzip-1.23",
+                "outputs": "out man info",
+                "patches": "",
+                "pname": "lzip",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "setupHook": "/nix/store/h2fcbw7ghgn3i4qadszdp272w4dab7ln-lzip-setup-hook.sh",
+                "src": "/nix/store/fim96i2pigbmdkkc2rf34f71g9v50i5x-lzip-1.23.tar.gz",
+                "stdenv": "/nix/store/mhhmr6r7852384nmlpplxm23la0l68cs-bootstrap-stage4-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "1.23"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2fcbw7ghgn3i4qadszdp272w4dab7ln-lzip-setup-hook.sh",
+                "digest": {
+                    "sha256": "1b7be7e5afdf38bdc24262f7f2c9a58e088d978428966f105883b1e9614ff979"
+                }
+            },
+            {
+                "uri": "file:///nix/store/0zhkga32apid60mm7nh92z2970im5837-bootstrap-tools.drv",
+                "digest": {
+                    "sha256": "f91ccdc44b609d5a97b27804be2daa58b61d51b82caa7e9e765db4ad4180098a"
+                }
+            },
+            {
+                "uri": "file:///nix/store/5n7j0l13pmshd0ibl1is5yq4cx3yfgrk-bootstrap-stage4-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "8e185e061d88ebd2426602e337b5fcbf1def9e959c2ede344c2c5c662836b0b1"
+                }
+            },
+            {
+                "uri": "file:///nix/store/k529q8rr17ki21zlyq440gh61039n0qw-texinfo-6.8.drv",
+                "digest": {
+                    "sha256": "8a16877d06a5622581392bda3e3e448693b5d1ff8a501678c4149d1edc6560f4"
+                }
+            },
+            {
+                "uri": "file:///nix/store/mxiibcd5b5v63fas7pfg2zavgp5bi5fk-lzip-1.23.tar.gz.drv",
+                "digest": {
+                    "sha256": "ebce83e049046908d7675ef6e3f93100382fc7ab91e38943ef3fd86ab0415c11"
+                }
+            }
+        ]
+    }
+}

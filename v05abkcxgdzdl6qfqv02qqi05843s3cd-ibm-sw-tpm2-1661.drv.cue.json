@@ -1,0 +1,102 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/6n3chwi4wcw2zq8wkpy1i1cy4ib20mlw-ibm-sw-tpm2-1661",
+            "digest": {
+                "sha256": "007cf2405a4e987bad136cbf2b1e3882c28768562a29628c070e4d57f560f517"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "/nix/store/6na02j2cznbkwlis5h9837d96jlf4j5p-openssl-1.1.1o-dev",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "installPhase": "mkdir -p $out/bin\ncp tpm_server $out/bin\n",
+                "name": "ibm-sw-tpm2-1661",
+                "nativeBuildInputs": "",
+                "out": "/nix/store/6n3chwi4wcw2zq8wkpy1i1cy4ib20mlw-ibm-sw-tpm2-1661",
+                "outputs": "out",
+                "patchFlags": "-p2",
+                "patches": "/nix/store/yv0yzk8vpzxwjz5bib5jqgg3yklwrb96-e6684009aff9c1bad38875e3319c2e02ef791424.patch",
+                "pname": "ibm-sw-tpm2",
+                "prePatch": "# Fix hardcoded path to GCC.\nsubstituteInPlace makefile --replace /usr/bin/gcc \"/nix/store/gfr4ljdlr1wplc01j4fchw4w9x3lfvv9-gcc-wrapper-11.3.0/bin/cc\"\n\n# Remove problematic default CFLAGS.\nsubstituteInPlace makefile \\\n  --replace -Werror \"\" \\\n  --replace -O0 \"\" \\\n  --replace -ggdb \"\"\n",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "sourceRoot": "src",
+                "src": "/nix/store/h67jv6b3zp00l05v8q79b3jb1w9dvxkh-ibmtpm1661.tar.gz",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "1661"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/cd44h08a0mbg07qwpih5zd31nikks2f7-openssl-1.1.1o.drv",
+                "digest": {
+                    "sha256": "acdeaa5cdbfb13fd590a628dc0b6a07ee25c464bedec941bac90715cacc33c2e"
+                }
+            },
+            {
+                "uri": "file:///nix/store/dcxhmm8f6pcigskcg5kfi4x130ral6ic-ibmtpm1661.tar.gz.drv",
+                "digest": {
+                    "sha256": "05bd12b620b2c90b455bb76962045e704a027181ead3833aa9773a7ae9bddaea"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/hgi9979z6i6yzav843xkv5wj4qmp43xb-gcc-wrapper-11.3.0.drv",
+                "digest": {
+                    "sha256": "23daf1a1401858e4562e6aa61166712072a1f193942dd2478eef5513ddc9d2fb"
+                }
+            },
+            {
+                "uri": "file:///nix/store/q2pvnkq9hxca7ncg5m64jyydw68kmkry-e6684009aff9c1bad38875e3319c2e02ef791424.patch.drv",
+                "digest": {
+                    "sha256": "b4b6fbbfe048f7bd183a6614466ce10ce6a0d62b9cf9feafdee09f16c08c0ddf"
+                }
+            }
+        ]
+    }
+}

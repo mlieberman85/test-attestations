@@ -1,0 +1,105 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/9j2afv9p3dpvz46w70cr12mx9mgz535f-gmp-with-cxx-6.2.1",
+            "digest": {
+                "sha256": "c34b9e2d3150ad10a9c85a04d5df43f542aac59cef98fa34ae6ca4af45b4da8c"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "",
+                "builder": "/nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash",
+                "cmakeFlags": "-DBUILD_SHARED_LIBS:BOOL=OFF",
+                "configureFlags": "--with-pic --enable-cxx --enable-fat --build=x86_64-unknown-linux-gnu --enable-static --disable-shared",
+                "depsBuildBuild": "/nix/store/4g09m1rwmifjdvcxa4zd418bbsxdyl6b-bootstrap-stage3-gcc-wrapper-",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "dev": "/nix/store/g9k1z3b750zzyhlrda5088hrk4965b2l-gmp-with-cxx-6.2.1-dev",
+                "doCheck": "1",
+                "doInstallCheck": "",
+                "dontDisableStatic": "1",
+                "enableParallelBuilding": "1",
+                "enableParallelChecking": "1",
+                "info": "/nix/store/mgzgh5wdqxsvgi6vr9m4ppfkbqd9ig8r-gmp-with-cxx-6.2.1-info",
+                "mesonFlags": "-Ddefault_library=static",
+                "name": "gmp-with-cxx-6.2.1",
+                "nativeBuildInputs": "/nix/store/nnc5dqzp6p88hb6q1cn4fh28n042n11h-gnum4-1.4.19",
+                "out": "/nix/store/9j2afv9p3dpvz46w70cr12mx9mgz535f-gmp-with-cxx-6.2.1",
+                "outputs": "out dev info",
+                "patches": "/nix/store/h96aykl4imzhfapnmavplr49v43c8apx-6.2.1-CVE-2021-43618.patch",
+                "pname": "gmp-with-cxx",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/mw1rz69y1gm0504mnziij4n51993zi74-gmp-6.2.1.tar.bz2",
+                "stdenv": "/nix/store/9zsyvv4fp7hj9jd11dimj0lxy74pv6m4-bootstrap-stage3-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "6.2.1"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h96aykl4imzhfapnmavplr49v43c8apx-6.2.1-CVE-2021-43618.patch",
+                "digest": {
+                    "sha256": "54eacde859e73ed41ccea300fcb69d5d6aaea0de3a8948a1e75341341ff24b28"
+                }
+            },
+            {
+                "uri": "file:///nix/store/0zhkga32apid60mm7nh92z2970im5837-bootstrap-tools.drv",
+                "digest": {
+                    "sha256": "f91ccdc44b609d5a97b27804be2daa58b61d51b82caa7e9e765db4ad4180098a"
+                }
+            },
+            {
+                "uri": "file:///nix/store/a5alapfd1s4rf9dbwb1h0mhlvanl3qvz-gmp-6.2.1.tar.bz2.drv",
+                "digest": {
+                    "sha256": "dde02c7ff100688af8ef5fe6c7ba1d71adedf5714a0d4fe1537eb32c17d53815"
+                }
+            },
+            {
+                "uri": "file:///nix/store/f5qhpix26la3hi87z96fvcv11dj5cdpm-bootstrap-stage3-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "7d7584971c870ee114dfc4fa772287e316b9de662a9a99784f96380215448c9a"
+                }
+            },
+            {
+                "uri": "file:///nix/store/fikn7yf3w83g2kdq6il7ds871h15d64s-gnum4-1.4.19.drv",
+                "digest": {
+                    "sha256": "34c3c465eeaa0244d8131438d9f46e98e4e46501f125c8d66050338a6944386d"
+                }
+            },
+            {
+                "uri": "file:///nix/store/wq1118wfwp1ks507sk1ag3s9aq8s7a61-bootstrap-stage3-gcc-wrapper-.drv",
+                "digest": {
+                    "sha256": "88ac253f4ec991bb5754956b9f73c719009880682131685ed5bfd8537867fc17"
+                }
+            }
+        ]
+    }
+}

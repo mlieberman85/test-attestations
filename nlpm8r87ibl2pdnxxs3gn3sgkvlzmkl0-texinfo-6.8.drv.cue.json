@@ -1,0 +1,107 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/pvj03kaqc4c52dcx6l7q33rgcfjq3f1k-texinfo-6.8",
+            "digest": {
+                "sha256": "0eca103d20dc9b3ca6feca5bd1633f796ae92d3adbe29d2978d67eff63a40923"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "/nix/store/q0zwp4n0l4q52472scmgkr0nimsp4svx-xz-5.2.5-bin",
+                "builder": "/nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash",
+                "checkFlagsArray": "XFAIL_TESTS=test_scripts/layout_formatting_fr_icons.sh",
+                "configureFlags": "PERL=/nix/store/nwd35shggdjdbb5xgx8dhbcjnmx23706-perl-5.34.1/bin/perl",
+                "depsBuildBuild": "/nix/store/gx703kxmgscwp9476gvxzg55rkgmggi9-bootstrap-stage2-gcc-wrapper- /nix/store/nwd35shggdjdbb5xgx8dhbcjnmx23706-perl-5.34.1",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "installFlags": "TEXMF=$(out)/texmf-dist",
+                "installTargets": "install install-tex",
+                "name": "texinfo-6.8",
+                "nativeBuildInputs": "",
+                "out": "/nix/store/pvj03kaqc4c52dcx6l7q33rgcfjq3f1k-texinfo-6.8",
+                "outputs": "out",
+                "patches": "/nix/store/yl6g04fsr6p9lkvccqjjl8q1xnnmw49s-fix-glibc-2.34.patch",
+                "pname": "texinfo",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/ycj1q918l6852kndr75rlwmw43k5ybys-texinfo-6.8.tar.xz",
+                "stdenv": "/nix/store/00ryhc0rgjvcaigxans5ph4q3j8jm6c6-bootstrap-stage2-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "6.8"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/yl6g04fsr6p9lkvccqjjl8q1xnnmw49s-fix-glibc-2.34.patch",
+                "digest": {
+                    "sha256": "e74d3cf17f9d71f1e1a9ae046ba32897d56593126bc39f8ba75a92644849f426"
+                }
+            },
+            {
+                "uri": "file:///nix/store/0zhkga32apid60mm7nh92z2970im5837-bootstrap-tools.drv",
+                "digest": {
+                    "sha256": "f91ccdc44b609d5a97b27804be2daa58b61d51b82caa7e9e765db4ad4180098a"
+                }
+            },
+            {
+                "uri": "file:///nix/store/2qklysz0hj51z8fq5qsj152c2crnghhg-bootstrap-stage2-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "847747fb7f255141ddd9ed26c9cbf707bf272d147ef5104268a8fd5c51c090af"
+                }
+            },
+            {
+                "uri": "file:///nix/store/3cijn0l8qsw7d83x3x49famijhsqhjmb-bootstrap-stage2-gcc-wrapper-.drv",
+                "digest": {
+                    "sha256": "15331aaea0c2a527ac46a016a70c1626cd0646b11e271889db6bbab31963dd91"
+                }
+            },
+            {
+                "uri": "file:///nix/store/8x8fismhjkqwcl5qc2rq2zpm70sm9vv7-texinfo-6.8.tar.xz.drv",
+                "digest": {
+                    "sha256": "798fd1841b98ff4170933b790439f170aba2bce285eeaeec7b784602d2f1c303"
+                }
+            },
+            {
+                "uri": "file:///nix/store/nc2dm0sq3niwhj3dy7nfr29p467qrc9j-xz-5.2.5.drv",
+                "digest": {
+                    "sha256": "ea35f11e97285209c9465ae04f9cbc2e94cb2a448810ace4abd41c5c5f7c1560"
+                }
+            },
+            {
+                "uri": "file:///nix/store/qzqv7h1dawzyxy361i4ml6307mgxk6kv-perl-5.34.1.drv",
+                "digest": {
+                    "sha256": "b761478df955663544c8c5cff482bcb1a997516b62e88a0854f1e251c5833b09"
+                }
+            }
+        ]
+    }
+}

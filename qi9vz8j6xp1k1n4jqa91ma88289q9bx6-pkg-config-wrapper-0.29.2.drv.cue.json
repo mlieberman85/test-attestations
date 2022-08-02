@@ -1,0 +1,124 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/irxlgs008fq2wvvbpyq3nafr6shmwk3v-pkg-config-wrapper-0.29.2",
+            "digest": {
+                "sha256": "03d1854d2ef6a5b088b23d7d5800dbb17df005e3576480e094636b74888d4a47"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "addFlags": "",
+                "baseBinName": "pkg-config",
+                "buildInputs": "",
+                "builder": "/nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "doc": "/nix/store/rb2c0xs5i042md6khp97ypmwg8hkrh7a-pkg-config-wrapper-0.29.2-doc",
+                "dontBuild": "1",
+                "dontConfigure": "1",
+                "installPhase": "mkdir -p $out/bin $out/nix-support\n\nwrap() {\n  local dst=\"$1\"\n  local wrapper=\"$2\"\n  export prog=\"$3\"\n  substituteAll \"$wrapper\" \"$out/bin/$dst\"\n  chmod +x \"$out/bin/$dst\"\n}\n\necho $pkg-config \u003e $out/nix-support/orig-pkg-config\n\nwrap pkg-config /nix/store/9whvblgb7bgnmqsv7y5xqs1w8xv9aa1d-pkg-config-wrapper.sh \"/nix/store/2p0qgqpai61dysqmpm65f632czyr0mq5-pkg-config-0.29.2/bin/pkg-config\"\nln -s /nix/store/2p0qgqpai61dysqmpm65f632czyr0mq5-pkg-config-0.29.2/share $out/share\n",
+                "man": "/nix/store/163vgdw4p43as3crzh9k0djm43l0bawg-pkg-config-wrapper-0.29.2-man",
+                "name": "pkg-config-wrapper-0.29.2",
+                "nativeBuildInputs": "",
+                "out": "/nix/store/irxlgs008fq2wvvbpyq3nafr6shmwk3v-pkg-config-wrapper-0.29.2",
+                "outputs": "out man doc",
+                "patches": "",
+                "pname": "pkg-config-wrapper",
+                "postFixup": "printWords /nix/store/2p0qgqpai61dysqmpm65f632czyr0mq5-pkg-config-0.29.2 \u003e $out/nix-support/propagated-user-env-packages\nln -s /nix/store/wv6a67w116jn9dmqd56k262154pf79si-pkg-config-0.29.2-man $man\nln -s /nix/store/x6gpjmniqfz7ddiz6vc01j3ix211pn4m-pkg-config-0.29.2-doc $doc\nsubstituteAll /nix/store/1ksmnsr3m6paw8gs7jp9b623agzdrqi2-add-flags.sh $out/nix-support/add-flags.sh\nsubstituteAll /nix/store/2idjp2xdckqyrdk3hd8msp4cfdi6b8if-utils.bash $out/nix-support/utils.bash\n",
+                "preferLocalBuild": "1",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "setupHooks": "/nix/store/797k3249lr4rx8wslf7kcsa3hv6fis3x-role.bash /nix/store/c4akajrb4jg50k72jw7zfbyv8z139ri0-setup-hook.sh",
+                "shell": "/nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash",
+                "stdenv": "/nix/store/dyi81yq7jl1ga3qjkja55gfjzhv6k0nc-bootstrap-stage2-stdenv-linux",
+                "strictDeps": "1",
+                "suffixSalt": "x86_64_unknown_linux_gnu",
+                "system": "x86_64-linux",
+                "targetPrefix": "",
+                "unpackPhase": "src=$PWD\n",
+                "version": "0.29.2",
+                "wrapperName": "PKG_CONFIG_WRAPPER"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/1ksmnsr3m6paw8gs7jp9b623agzdrqi2-add-flags.sh",
+                "digest": {
+                    "sha256": "d228546b67f5f80feaecb5b76bba9b0da850b94cfcf37fda382c87f911b2138f"
+                }
+            },
+            {
+                "uri": "file:///nix/store/2idjp2xdckqyrdk3hd8msp4cfdi6b8if-utils.bash",
+                "digest": {
+                    "sha256": "97f3e7d47d96a3c51ab92d3913cbf1b3cf672cf4914a7cbafbaf3e09f38022da"
+                }
+            },
+            {
+                "uri": "file:///nix/store/797k3249lr4rx8wslf7kcsa3hv6fis3x-role.bash",
+                "digest": {
+                    "sha256": "4925984c7209620d5658cd0980da9d62eb0b2f98539cf05641aa996a308b7a69"
+                }
+            },
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/9whvblgb7bgnmqsv7y5xqs1w8xv9aa1d-pkg-config-wrapper.sh",
+                "digest": {
+                    "sha256": "5e30f08621d35056893c2afa48aa223a09287ad6c440449c73e8754092f95a49"
+                }
+            },
+            {
+                "uri": "file:///nix/store/c4akajrb4jg50k72jw7zfbyv8z139ri0-setup-hook.sh",
+                "digest": {
+                    "sha256": "c3af00b22ed08ac4909fc79cf553e0fa635311045f2033120ef7cbe936884d10"
+                }
+            },
+            {
+                "uri": "file:///nix/store/0zhkga32apid60mm7nh92z2970im5837-bootstrap-tools.drv",
+                "digest": {
+                    "sha256": "f91ccdc44b609d5a97b27804be2daa58b61d51b82caa7e9e765db4ad4180098a"
+                }
+            },
+            {
+                "uri": "file:///nix/store/8krkbj5b4lzzqriq979fz122qv363vvk-pkg-config-0.29.2.drv",
+                "digest": {
+                    "sha256": "0cbce7f3e7d9f4c66533a2abd5c833da52fb3b8de90c42420040da98fc957fc4"
+                }
+            },
+            {
+                "uri": "file:///nix/store/vk6d0wmdh0ll5ww7xbv08mnjmgvsngjq-bootstrap-stage2-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "c20c20054502ac1a9d9f17fc5a09094ac74b39ac8b9cc945d47a46f65f31844c"
+                }
+            }
+        ]
+    }
+}

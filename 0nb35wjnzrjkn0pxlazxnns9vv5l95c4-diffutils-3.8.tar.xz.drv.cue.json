@@ -1,0 +1,39 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/021kkbvplg4z72pp3hp1vjp74qz7g92l-diffutils-3.8.tar.xz",
+            "digest": {
+                "sha256": "216fa75f71610483c5d034664a611c4ba65834632fc38dce9d4de04e4b02ab9d"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://builtin:fetchurl"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {
+                "builder": "builtin:fetchurl",
+                "executable": "",
+                "impureEnvVars": "http_proxy https_proxy ftp_proxy all_proxy no_proxy",
+                "name": "diffutils-3.8.tar.xz",
+                "out": "/nix/store/021kkbvplg4z72pp3hp1vjp74qz7g92l-diffutils-3.8.tar.xz",
+                "outputHash": "sha256-pr3X0bMSZtEcT03mwbdI1GB6sCMa9RiPwlM9CuJDj+w=",
+                "outputHashAlgo": "sha256",
+                "outputHashMode": "flat",
+                "preferLocalBuild": "1",
+                "system": "builtin",
+                "unpack": "",
+                "url": "https://ftpmirror.gnu.org/diffutils/diffutils-3.8.tar.xz",
+                "urls": "https://ftpmirror.gnu.org/diffutils/diffutils-3.8.tar.xz"
+            }
+        },
+        "materials": []
+    }
+}

@@ -1,0 +1,94 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/anj4dw5ssrcya6117dyw6zka8sf4f4jq-nghttp2-1.47.0",
+            "digest": {
+                "sha256": "b9cfe74e85184867e8687e4bba772ce3075e01d8d8018c35ac6f0adf1280ad69"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "bin": "/nix/store/gj6p6wll3drc3a75kfpb076apzjkq8mi-nghttp2-1.47.0-bin",
+                "buildInputs": "",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "--disable-examples --disable-app",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "dev": "/nix/store/zw8gkv54j59k6cy1g6pw90qf0sad99qy-nghttp2-1.47.0-dev",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "enableParallelBuilding": "1",
+                "enableParallelChecking": "1",
+                "lib": "/nix/store/lbb2jz986kvwfqkdx4yrwpnk84mda1i2-nghttp2-1.47.0-lib",
+                "name": "nghttp2-1.47.0",
+                "nativeBuildInputs": "/nix/store/prn4gvr4ljmrwnnm508i7m7qh7nfh7gz-pkg-config-wrapper-0.29.2",
+                "out": "/nix/store/anj4dw5ssrcya6117dyw6zka8sf4f4jq-nghttp2-1.47.0",
+                "outputs": "bin out dev lib",
+                "patches": "",
+                "pname": "nghttp2",
+                "postInstall": "",
+                "preCheck": "",
+                "preInstall": "",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/1vavp7iv34x0yc25j2gfn8yv5s8c81v2-nghttp2-1.47.0.tar.bz2",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "1.47.0"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/7mqnv8rvvgnv2y8lhynmj8f88120wj3l-pkg-config-wrapper-0.29.2.drv",
+                "digest": {
+                    "sha256": "d8d3de1475e034bb3ad38e878acd66ee84da2d9feca55c29ac413756a3934d92"
+                }
+            },
+            {
+                "uri": "file:///nix/store/c9sgpp7j2skq276i7ws8xg96i0273jpk-nghttp2-1.47.0.tar.bz2.drv",
+                "digest": {
+                    "sha256": "f9b6ef49ead09b53d52e36ad77ada5e07fbc63509e8cc5d6feb07a99507d632c"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            }
+        ]
+    }
+}

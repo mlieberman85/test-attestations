@@ -1,0 +1,84 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/73l0b2xl5l3gq2zggnwxh2gljgbv5qaf-gawk-5.1.1",
+            "digest": {
+                "sha256": "0a5f24fd58d78a2b992acb9e566fe2ab480f64d6d9da39fb688cb6ad3f59faaa"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "",
+                "builder": "/nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash",
+                "configureFlags": "--without-libsigsegv --without-readline",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "info": "/nix/store/ffdcr7dypvd54an0aikbk60m2f06gijq-gawk-5.1.1-info",
+                "makeFlags": "AR=ar",
+                "man": "/nix/store/qsl453wl2mpdrr418bj9wndrz0mnk8gj-gawk-5.1.1-man",
+                "name": "gawk-5.1.1",
+                "nativeBuildInputs": "",
+                "out": "/nix/store/73l0b2xl5l3gq2zggnwxh2gljgbv5qaf-gawk-5.1.1",
+                "outputs": "out info man",
+                "patches": "",
+                "pname": "gawk",
+                "postInstall": "rm \"$out\"/bin/gawk-*\nln -s gawk.1 \"${!outputMan}\"/share/man/man1/awk.1\n",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/n96s4cryw417jh2y7h01wdvm24pmkw2p-gawk-5.1.1.tar.xz",
+                "stdenv": "/nix/store/mhhmr6r7852384nmlpplxm23la0l68cs-bootstrap-stage4-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "5.1.1"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/0zhkga32apid60mm7nh92z2970im5837-bootstrap-tools.drv",
+                "digest": {
+                    "sha256": "f91ccdc44b609d5a97b27804be2daa58b61d51b82caa7e9e765db4ad4180098a"
+                }
+            },
+            {
+                "uri": "file:///nix/store/5n7j0l13pmshd0ibl1is5yq4cx3yfgrk-bootstrap-stage4-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "8e185e061d88ebd2426602e337b5fcbf1def9e959c2ede344c2c5c662836b0b1"
+                }
+            },
+            {
+                "uri": "file:///nix/store/xir6rxfd3wnq4lw8j3zksfkri490nzxp-gawk-5.1.1.tar.xz.drv",
+                "digest": {
+                    "sha256": "9b98bd2836fd8431ccf3bb5dd2d956c1d18f9b85bf09cbd9248b8ad2e7ab95d1"
+                }
+            }
+        ]
+    }
+}

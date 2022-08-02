@@ -1,0 +1,80 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/n0n27ymfdv1ai8f5jljn2kgqybapix9v-python-setup-hook.sh",
+            "digest": {
+                "sha256": "ed5798511c069cc0eb620e0b3cb0c5a031b9ca81599ba235f7375173dc99adfb"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildCommand": "cp /nix/store/zi0m9pfmvy5lw89x7a8x674rm99i8qiq-setup-hook.sh hook.sh\nsubstituteAllInPlace hook.sh\nmv hook.sh $out\n",
+                "buildInputs": "",
+                "builder": "/nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "name": "python-setup-hook.sh",
+                "nativeBuildInputs": "",
+                "out": "/nix/store/n0n27ymfdv1ai8f5jljn2kgqybapix9v-python-setup-hook.sh",
+                "outputs": "out",
+                "passAsFile": "buildCommand",
+                "patches": "",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "sitePackages": "lib/python3.9/site-packages",
+                "stdenv": "/nix/store/dyi81yq7jl1ga3qjkja55gfjzhv6k0nc-bootstrap-stage2-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/zi0m9pfmvy5lw89x7a8x674rm99i8qiq-setup-hook.sh",
+                "digest": {
+                    "sha256": "253a09f8055d23efe8c173e4953680e95c94500245e84d8882c8714f42aa5204"
+                }
+            },
+            {
+                "uri": "file:///nix/store/0zhkga32apid60mm7nh92z2970im5837-bootstrap-tools.drv",
+                "digest": {
+                    "sha256": "f91ccdc44b609d5a97b27804be2daa58b61d51b82caa7e9e765db4ad4180098a"
+                }
+            },
+            {
+                "uri": "file:///nix/store/vk6d0wmdh0ll5ww7xbv08mnjmgvsngjq-bootstrap-stage2-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "c20c20054502ac1a9d9f17fc5a09094ac74b39ac8b9cc945d47a46f65f31844c"
+                }
+            }
+        ]
+    }
+}

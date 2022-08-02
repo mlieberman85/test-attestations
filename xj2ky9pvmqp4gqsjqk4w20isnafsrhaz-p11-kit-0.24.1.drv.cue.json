@@ -1,0 +1,148 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/zn5dab6z2c7agra79d3bsji1vamm2q56-p11-kit-0.24.1",
+            "digest": {
+                "sha256": "3e446032d838b1df62a3ab23b72ce99d78138a4aa27e191f12ad3ad0943de273"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "autoreconfPhase": "NOCONFIGURE=1 ./autogen.sh\n",
+                "bin": "/nix/store/0rfr8440x986lqrzy0gprkp89m2lvm36-p11-kit-0.24.1-bin",
+                "buildInputs": "/nix/store/842akkfxvrhvsa3mwamzbzxsdbvyi37c-libffi-3.4.2-dev /nix/store/8ryxs8jjbziday24xdr7qkf7icj8vr1y-glibc-iconv-2.34  /nix/store/21q4ih8r48iv1clfxj2vz592m6yibm2l-libtasn1-4.18.0-dev",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "--enable-doc --sysconfdir=/etc --localstatedir=/var --with-trust-paths=/etc/ssl/trust-source:/etc/ssl/certs/ca-certificates.crt:/etc/pki/tls/certs/ca-bundle.crt",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "dev": "/nix/store/aiy5miq3ffb7s05jmgwdq30ij08lwrfg-p11-kit-0.24.1-dev",
+                "doCheck": "1",
+                "doInstallCheck": "",
+                "enableParallelBuilding": "1",
+                "enableParallelChecking": "1",
+                "installFlags": "exampledir=/1rz4g4znpzjwh1xymhjpm42vipw92pr73vdgl6xs1hycac8kf2n9/etc/pkcs11",
+                "name": "p11-kit-0.24.1",
+                "nativeBuildInputs": "/nix/store/35fvnsr5k0lwvpvp8dcl457vmc8cahib-hook /nix/store/i2yp52prdg0gs9xja4qylgs8cpkyz5ah-docbook-xsl-nons-1.79.2 /nix/store/haq26j8k0ndbqjpcbgp0kf536jkw9fw8-gtk-doc-1.33.2 /nix/store/lza91r981dvgasj4xws0mnw9jsdqwdra-install-shell-files /nix/store/21q4ih8r48iv1clfxj2vz592m6yibm2l-libtasn1-4.18.0-dev /nix/store/0in3r4sysr60by67bpcgn9m1r7fgchk1-libxslt-1.1.35-bin /nix/store/prn4gvr4ljmrwnnm508i7m7qh7nfh7gz-pkg-config-wrapper-0.29.2 /nix/store/q196i8jk4d2abxqlc88ai5a6fsxnnzk4-which-2.21",
+                "out": "/nix/store/zn5dab6z2c7agra79d3bsji1vamm2q56-p11-kit-0.24.1",
+                "outputs": "out bin dev",
+                "patches": "",
+                "pname": "p11-kit",
+                "postInstall": "installShellCompletion --bash bash-completion/{p11-kit,trust}\n",
+                "preCheck": "if [ \"$(id -u)\" != \"0\" ]; then\n  export FAKED_MODE=1\nfi\n",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/26lx27vmrv95fi3hljkgil7w6l9z8d30-source",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "0.24.1"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/1v1lazzb2r2cg7a0vxv705jxyc8hidpn-pkg-config-wrapper-0.29.2.drv",
+                "digest": {
+                    "sha256": "d1c8e17a6c2ddf6900b817119c22f726a3a39af2ac395821e95d915fde3d9734"
+                }
+            },
+            {
+                "uri": "file:///nix/store/49bwik6n0r8r0f34ss14pajg1y66sg2g-source.drv",
+                "digest": {
+                    "sha256": "0a76064c6635b123286f509a0283b43f1dfcae82109068fe5973f2e222492d51"
+                }
+            },
+            {
+                "uri": "file:///nix/store/4ads7k8nzd6pdfr89zwbhk7skmwgwfzl-docbook-xsl-nons-1.79.2.drv",
+                "digest": {
+                    "sha256": "60b296b9f0c779b006073333b6133c89f1819a8ebbc9c068d5751885ec844e7c"
+                }
+            },
+            {
+                "uri": "file:///nix/store/5k1sfc5qmzb93addcjxxnqcd5bpf2wlz-hook.drv",
+                "digest": {
+                    "sha256": "e2b0f8b1570352fccde979f3d8e4b70c5bbc8cce6a08b1f7fbfbafbf4b702445"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ar318b4pmnfcr0c9bs6sp4v93r6zn1xy-libtasn1-4.18.0.drv",
+                "digest": {
+                    "sha256": "aafd3576ed38485c2ecef42f06480869669afb229605bd613d6763176bc0c276"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/dbllbxr7c1582b6p2cwvjfhfarqq82mg-gtk-doc-1.33.2.drv",
+                "digest": {
+                    "sha256": "7fd267ab7532dac67bef52461e5f8ce5c52ae9dc1bd3eaf7d6072f132b7ce480"
+                }
+            },
+            {
+                "uri": "file:///nix/store/gnzjdjc8hs9z4cwcq60if36khz3f8hj3-install-shell-files.drv",
+                "digest": {
+                    "sha256": "1a94ca039dd3a56d8736e87423c551d65bcadf6a86fbe3e4389904564748263d"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/jcqrvcm4ranjygyx0hgmgmjrm39f64pj-libxslt-1.1.35.drv",
+                "digest": {
+                    "sha256": "3a6ac5d1605a71f09c39214e1bcbf90914860eed9b7fe8a5074e7b44cedf815c"
+                }
+            },
+            {
+                "uri": "file:///nix/store/jy9zm9nmj7r19y2741wcvkc5wpdww61b-glibc-iconv-2.34.drv",
+                "digest": {
+                    "sha256": "082344439ef2b5523509fa4611ead6bbba6e8d855f32e4adc0a8e1de27eb6837"
+                }
+            },
+            {
+                "uri": "file:///nix/store/qb2fkpfha6acj02pns2n93dlray9dl2g-libffi-3.4.2.drv",
+                "digest": {
+                    "sha256": "abfae1cfde6d1b3235a42c924a09933178c4098da113bfae4d2288ea6ee54d4f"
+                }
+            },
+            {
+                "uri": "file:///nix/store/zp8a14dsgrgavjrvmidh908jp1kwxvsx-which-2.21.drv",
+                "digest": {
+                    "sha256": "130f29ea5771798b19124b358db75fae1c6ab914424b56c3449f2d04452e7efc"
+                }
+            }
+        ]
+    }
+}

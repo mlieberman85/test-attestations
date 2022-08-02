@@ -1,0 +1,39 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/x4jhvxj104vdciivf1zvijncyd4rd3dp-mpc-1.2.1.tar.gz",
+            "digest": {
+                "sha256": "168c4b239d7c2f7c7f543522c3b5f16aa6f304824ae4ac9a7588dbf1feb2f92b"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://builtin:fetchurl"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {
+                "builder": "builtin:fetchurl",
+                "executable": "",
+                "impureEnvVars": "http_proxy https_proxy ftp_proxy all_proxy no_proxy",
+                "name": "mpc-1.2.1.tar.gz",
+                "out": "/nix/store/x4jhvxj104vdciivf1zvijncyd4rd3dp-mpc-1.2.1.tar.gz",
+                "outputHash": "0n846hqfqvmsmim7qdlms0qr86f1hck19p12nq3g3z2x74n3sl0p",
+                "outputHashAlgo": "sha256",
+                "outputHashMode": "flat",
+                "preferLocalBuild": "1",
+                "system": "builtin",
+                "unpack": "",
+                "url": "https://ftpmirror.gnu.org/mpc/mpc-1.2.1.tar.gz",
+                "urls": "https://ftpmirror.gnu.org/mpc/mpc-1.2.1.tar.gz"
+            }
+        },
+        "materials": []
+    }
+}

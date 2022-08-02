@@ -1,0 +1,105 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/r6333dqmg30cpv0imya82vbpwrm2yval-linux-headers-5.17",
+            "digest": {
+                "sha256": "2d8647e9ae8315ab9e8aaf56d5f21dd373d11a74fb00aeb6d78f9a7186c9c223"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "ARCH": "x86_64",
+                "buildInputs": "",
+                "buildPhase": "make mrproper $makeFlags\nmake headers $makeFlags\n",
+                "builder": "/nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash",
+                "checkPhase": "make headers_check $makeFlags\n",
+                "configureFlags": "",
+                "depsBuildBuild": "/nix/store/gx703kxmgscwp9476gvxzg55rkgmggi9-bootstrap-stage2-gcc-wrapper-",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "extraIncludeDirs": "",
+                "hardeningDisable": "",
+                "installPhase": "mkdir -p $out\ncp -r usr/include $out\nfind $out -type f ! -name '*.h' -delete\nmkdir -p $out/include/config\necho \"5.17-default\" \u003e $out/include/config/kernel.release\n",
+                "makeFlags": "SHELL=bash cc-version:=9999 cc-fullversion:=999999 HOSTCC:=$(CC_FOR_BUILD) HOSTCXX:=$(CXX_FOR_BUILD)",
+                "name": "linux-headers-5.17",
+                "nativeBuildInputs": "/nix/store/nwd35shggdjdbb5xgx8dhbcjnmx23706-perl-5.34.1 ",
+                "out": "/nix/store/r6333dqmg30cpv0imya82vbpwrm2yval-linux-headers-5.17",
+                "outputs": "out",
+                "patches": "/nix/store/69lyjyca86317hdsc1rwf3ahn7s5kiyn-no-relocs.patch",
+                "pname": "linux-headers",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/p7j3qgh0i6s6icsq00fdgv7fzsj45n1p-linux-5.17.tar.xz",
+                "stdenv": "/nix/store/dyi81yq7jl1ga3qjkja55gfjzhv6k0nc-bootstrap-stage2-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "5.17"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/69lyjyca86317hdsc1rwf3ahn7s5kiyn-no-relocs.patch",
+                "digest": {
+                    "sha256": "dce07a65011a4f921890dd81d3db590dd68cd01caa82af2c6d3001842246e7e4"
+                }
+            },
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/0zhkga32apid60mm7nh92z2970im5837-bootstrap-tools.drv",
+                "digest": {
+                    "sha256": "f91ccdc44b609d5a97b27804be2daa58b61d51b82caa7e9e765db4ad4180098a"
+                }
+            },
+            {
+                "uri": "file:///nix/store/3cijn0l8qsw7d83x3x49famijhsqhjmb-bootstrap-stage2-gcc-wrapper-.drv",
+                "digest": {
+                    "sha256": "15331aaea0c2a527ac46a016a70c1626cd0646b11e271889db6bbab31963dd91"
+                }
+            },
+            {
+                "uri": "file:///nix/store/n6hwl4y21nhvf6kdmnipdhphxd1nyq13-linux-5.17.tar.xz.drv",
+                "digest": {
+                    "sha256": "075bad23e69fa4aa202faee462002d65b709715180d309c41d05f9aa9c6f2aa0"
+                }
+            },
+            {
+                "uri": "file:///nix/store/qzqv7h1dawzyxy361i4ml6307mgxk6kv-perl-5.34.1.drv",
+                "digest": {
+                    "sha256": "b761478df955663544c8c5cff482bcb1a997516b62e88a0854f1e251c5833b09"
+                }
+            },
+            {
+                "uri": "file:///nix/store/vk6d0wmdh0ll5ww7xbv08mnjmgvsngjq-bootstrap-stage2-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "c20c20054502ac1a9d9f17fc5a09094ac74b39ac8b9cc945d47a46f65f31844c"
+                }
+            }
+        ]
+    }
+}

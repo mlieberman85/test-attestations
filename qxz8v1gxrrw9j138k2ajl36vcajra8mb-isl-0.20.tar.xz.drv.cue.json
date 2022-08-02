@@ -1,0 +1,39 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/x9v0hmr76dm68pijzldzxks01iqzag1z-isl-0.20.tar.xz",
+            "digest": {
+                "sha256": "37271fba7df798e3a27bc789f3a3ea8b1bd967af7f01ebd133c370f4ae799403"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://builtin:fetchurl"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {
+                "builder": "builtin:fetchurl",
+                "executable": "",
+                "impureEnvVars": "http_proxy https_proxy ftp_proxy all_proxy no_proxy",
+                "name": "isl-0.20.tar.xz",
+                "out": "/nix/store/x9v0hmr76dm68pijzldzxks01iqzag1z-isl-0.20.tar.xz",
+                "outputHash": "1akpgq0rbqbah5517blg2zlnfvjxfcl9cjrfc75nbcx5p2gnlnd5",
+                "outputHashAlgo": "sha256",
+                "outputHashMode": "flat",
+                "preferLocalBuild": "1",
+                "system": "builtin",
+                "unpack": "",
+                "url": "https://downloads.sourceforge.net/libisl/isl-0.20.tar.xz",
+                "urls": "https://downloads.sourceforge.net/libisl/isl-0.20.tar.xz"
+            }
+        },
+        "materials": []
+    }
+}

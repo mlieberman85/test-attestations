@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/1pyvkyqcllhgjaigg0vpgfc6wz7rlwp5-rsync-patches-3.2.3.tar.gz.drv",
+            "digest": {
+                "sha256": "74a93c772aab077fc4b6f9d04d27002f393fffc1053e9479afa5064874d3fe52"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/z06ahw83xjyvs5crmrj1j3scckl6n7lf-rsync-patches-3.2.3.tar.gz",
+                "digest": {
+                    "sha256": "cc56814e2f958e3f44176f73ef1c8e6e473e599329414e967008a73a25731588"
+                }
+            }
+        ]
+    }
+}

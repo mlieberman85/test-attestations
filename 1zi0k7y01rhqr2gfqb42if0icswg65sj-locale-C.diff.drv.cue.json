@@ -1,0 +1,39 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/nqa9d4yxz1l2cgswzqr1pkm4jfrksm0q-locale-C.diff",
+            "digest": {
+                "sha256": "649c9b8be6c511285aaa1e3c5fdc5adaa0f3e808d88f419cae588542941a375e"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://builtin:fetchurl"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {
+                "builder": "builtin:fetchurl",
+                "executable": "",
+                "impureEnvVars": "http_proxy https_proxy ftp_proxy all_proxy no_proxy",
+                "name": "locale-C.diff",
+                "out": "/nix/store/nqa9d4yxz1l2cgswzqr1pkm4jfrksm0q-locale-C.diff",
+                "outputHash": "0irj60hs2i91ilwg5w7sqrxb695c93xg0ik7yhhq9irprd7fidn4",
+                "outputHashAlgo": "sha256",
+                "outputHashMode": "flat",
+                "preferLocalBuild": "1",
+                "system": "builtin",
+                "unpack": "",
+                "url": "https://salsa.debian.org/glibc-team/glibc/raw/49767c9f7de4828220b691b29de0baf60d8a54ec/debian/patches/localedata/locale-C.diff",
+                "urls": "https://salsa.debian.org/glibc-team/glibc/raw/49767c9f7de4828220b691b29de0baf60d8a54ec/debian/patches/localedata/locale-C.diff"
+            }
+        },
+        "materials": []
+    }
+}

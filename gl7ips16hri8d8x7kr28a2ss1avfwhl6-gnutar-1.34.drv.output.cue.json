@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/gl7ips16hri8d8x7kr28a2ss1avfwhl6-gnutar-1.34.drv",
+            "digest": {
+                "sha256": "cf52520a2e1df017fdcb5b1a214c0ff0aaf3d8bfd49346db489f0e512e3c1e7a"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9ia80kzgnizdj7ninwqgswqw4fjk3kb9-gnutar-1.34",
+                "digest": {
+                    "sha256": "175b09211961af0ec3ec9b1a684d1824c3618484d9e4d8a5d06cdc8188e1df1b"
+                }
+            }
+        ]
+    }
+}

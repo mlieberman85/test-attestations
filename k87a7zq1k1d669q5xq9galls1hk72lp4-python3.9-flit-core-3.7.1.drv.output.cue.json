@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/k87a7zq1k1d669q5xq9galls1hk72lp4-python3.9-flit-core-3.7.1.drv",
+            "digest": {
+                "sha256": "9833bbdcd2d6ea19c0521981d1a7625dd6e58daeb79033b9bb5516a15162c2cd"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/vssbhqnnnqrw7brlg25qamllq8f6cm2y-python3.9-flit-core-3.7.1",
+                "digest": {
+                    "sha256": "c4cad45d6d2a3995bf464b4536575d8707b712f71f8189e2ea7b49af155ff9dc"
+                }
+            }
+        ]
+    }
+}

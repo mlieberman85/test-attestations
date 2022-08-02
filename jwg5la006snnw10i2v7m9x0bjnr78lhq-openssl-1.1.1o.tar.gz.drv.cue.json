@@ -1,0 +1,39 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/id0jwdqfhyvnvz73r9m8jl9lfgrrldrv-openssl-1.1.1o.tar.gz",
+            "digest": {
+                "sha256": "a32907a6b4c3e46d13b000e656f5692e455d6d82d550222d7fbc10e706443efa"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://builtin:fetchurl"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {
+                "builder": "builtin:fetchurl",
+                "executable": "",
+                "impureEnvVars": "http_proxy https_proxy ftp_proxy all_proxy no_proxy",
+                "name": "openssl-1.1.1o.tar.gz",
+                "out": "/nix/store/id0jwdqfhyvnvz73r9m8jl9lfgrrldrv-openssl-1.1.1o.tar.gz",
+                "outputHash": "sha256-k4SisFcN2ANYhBRkZ3EV33he25QccSEfdQdtcv5rQ48=",
+                "outputHashAlgo": "sha256",
+                "outputHashMode": "flat",
+                "preferLocalBuild": "1",
+                "system": "builtin",
+                "unpack": "",
+                "url": "https://www.openssl.org/source/openssl-1.1.1o.tar.gz",
+                "urls": "https://www.openssl.org/source/openssl-1.1.1o.tar.gz"
+            }
+        },
+        "materials": []
+    }
+}

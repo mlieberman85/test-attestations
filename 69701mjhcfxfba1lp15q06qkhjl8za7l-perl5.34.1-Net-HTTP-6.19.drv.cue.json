@@ -1,0 +1,98 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/wx6qg9qxdkdi3ac8a450gas72hkgf6n3-perl5.34.1-Net-HTTP-6.19",
+            "digest": {
+                "sha256": "8077c00b533fd0fed5a4cf0dfa7e926da07106067f3abe293b7731a79c9caef3"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/qf3mzpvsmkrw963xchbivcci06078n13-builder.sh"
+                ]
+            },
+            "environment": {
+                "AUTOMATED_TESTING": "1",
+                "PERL_AUTOINSTALL": "--skipdeps",
+                "PERL_USE_UNSAFE_INC": "1",
+                "buildInputs": "/nix/store/c34zmy26gc58bn7qbf4md2yh8vp133n6-perl-5.34.1",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "checkTarget": "test",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "devdoc": "/nix/store/f7dm4myfix6bgfr3bhm8nxjf2in5zn1r-perl5.34.1-Net-HTTP-6.19-devdoc",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "fullperl": "/nix/store/c34zmy26gc58bn7qbf4md2yh8vp133n6-perl-5.34.1",
+                "name": "perl5.34.1-Net-HTTP-6.19",
+                "nativeBuildInputs": "/nix/store/c34zmy26gc58bn7qbf4md2yh8vp133n6-perl-5.34.1",
+                "out": "/nix/store/wx6qg9qxdkdi3ac8a450gas72hkgf6n3-perl5.34.1-Net-HTTP-6.19",
+                "outputs": "out devdoc",
+                "patches": "",
+                "pname": "perl5.34.1-Net-HTTP",
+                "propagatedBuildInputs": "/nix/store/pjcmwjzij7x8smh0r1zsd0f2akhscf8a-perl5.34.1-URI-5.05",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/8vnibjafixvqad9wa2gf6xgj59862yn5-Net-HTTP-6.19.tar.gz",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "6.19"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/qf3mzpvsmkrw963xchbivcci06078n13-builder.sh",
+                "digest": {
+                    "sha256": "3d93a1c4c99e05cc46b3f2121ff8ee2269d65693ae9555332a4b522202979a01"
+                }
+            },
+            {
+                "uri": "file:///nix/store/09vyfzjxhpcfww1n6k11qmigvpnkxylq-perl5.34.1-URI-5.05.drv",
+                "digest": {
+                    "sha256": "43d6f7eb47329038404b92f0ce8514d98acd157307f06357358d8751e1b9263d"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/fbzmpgzpq2j0m4v303gf24m2y945xi0r-Net-HTTP-6.19.tar.gz.drv",
+                "digest": {
+                    "sha256": "dba550a7ee148cbdaf9d1989b0f807265604eb4a700505982974dd890bba68d1"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/jkn79jy5p1cdh953rsmnpadxk15jaili-perl-5.34.1.drv",
+                "digest": {
+                    "sha256": "87f4f98f9a11a87515771dacc6dcd294d640778e146d6119ee09b07f955a654e"
+                }
+            }
+        ]
+    }
+}

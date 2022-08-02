@@ -1,0 +1,101 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/r90cncsaa519pwqpijg7ii4rkcmwjn6h-zlib-1.2.12",
+            "digest": {
+                "sha256": "12e6f218914d53eb1368be4506810ed728aaf1ec24ae1ab7873b2d9e599120f0"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "NIX_CFLAGS_COMPILE": "-static-libgcc",
+                "buildInputs": "",
+                "builder": "/nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash",
+                "configureFlags": "--static --shared",
+                "configurePlatforms": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "dev": "/nix/store/38ryqbjx5i1hir1a3sfk4za1yq5fbkpd-zlib-1.2.12-dev",
+                "doCheck": "1",
+                "doInstallCheck": "",
+                "dontAddStaticConfigureFlags": "1",
+                "dontDisableStatic": "1",
+                "dontStrip": "",
+                "enableParallelBuilding": "1",
+                "enableParallelChecking": "1",
+                "installFlags": "",
+                "makeFlags": "PREFIX= SHARED_MODE=1",
+                "name": "zlib-1.2.12",
+                "nativeBuildInputs": "",
+                "out": "/nix/store/r90cncsaa519pwqpijg7ii4rkcmwjn6h-zlib-1.2.12",
+                "outputDoc": "dev",
+                "outputs": "out dev static",
+                "patches": "/nix/store/jw5f744vn0nv6q0ms6s5q0w0kkml2a8v-fix-configure-issue-cross.patch",
+                "pname": "zlib",
+                "postInstall": "moveToOutput lib/libz.a \"$static\"\n",
+                "postPatch": "",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "setOutputFlags": "",
+                "src": "/nix/store/6pldh8v2i8wh5qw0rz9ifby965yj58y6-zlib-1.2.12.tar.gz",
+                "static": "/nix/store/zs35px6qxsgv8c0p8f7gn4bniwx5qi1y-zlib-1.2.12-static",
+                "stdenv": "/nix/store/9zsyvv4fp7hj9jd11dimj0lxy74pv6m4-bootstrap-stage3-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "1.2.12"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/jw5f744vn0nv6q0ms6s5q0w0kkml2a8v-fix-configure-issue-cross.patch",
+                "digest": {
+                    "sha256": "3f1bec4f5acf50590d0e1c3d8f0b1d6240d3cbf2deca88a48cf329e7a93738d3"
+                }
+            },
+            {
+                "uri": "file:///nix/store/0zhkga32apid60mm7nh92z2970im5837-bootstrap-tools.drv",
+                "digest": {
+                    "sha256": "f91ccdc44b609d5a97b27804be2daa58b61d51b82caa7e9e765db4ad4180098a"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ara7ym168qgzfzi2an6g594361xxk0c9-zlib-1.2.12.tar.gz.drv",
+                "digest": {
+                    "sha256": "cf5efaf7479784b97ec95b63d892c7fa2afa1ac8016a2cfa693e27676f389a36"
+                }
+            },
+            {
+                "uri": "file:///nix/store/f5qhpix26la3hi87z96fvcv11dj5cdpm-bootstrap-stage3-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "7d7584971c870ee114dfc4fa772287e316b9de662a9a99784f96380215448c9a"
+                }
+            }
+        ]
+    }
+}

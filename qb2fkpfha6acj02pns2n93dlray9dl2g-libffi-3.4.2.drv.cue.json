@@ -1,0 +1,91 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/ryv1fym9ms3lbniq4clicdc781wy9rap-libffi-3.4.2",
+            "digest": {
+                "sha256": "23954ed56ecb8ad339d16186d177737151d10524818fed5ab3b055ac8bd40390"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "--with-gcc-arch=generic --enable-pax_emutramp --disable-exec-static-tramp",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "dev": "/nix/store/842akkfxvrhvsa3mwamzbzxsdbvyi37c-libffi-3.4.2-dev",
+                "doCheck": "1",
+                "doInstallCheck": "",
+                "dontStrip": "",
+                "info": "/nix/store/pc8ccfk44qlnjh8pk0anhax58cnd65i4-libffi-3.4.2-info",
+                "man": "/nix/store/4w8kz5y1njgc4zy2j8sfjyq6i2yxv2yn-libffi-3.4.2-man",
+                "name": "libffi-3.4.2",
+                "nativeBuildInputs": "/nix/store/grpbz577hfchp23z0dncxfsk88mfsi5r-dejagnu-1.6.3",
+                "out": "/nix/store/ryv1fym9ms3lbniq4clicdc781wy9rap-libffi-3.4.2",
+                "outputs": "out dev man info",
+                "patches": "",
+                "pname": "libffi",
+                "preCheck": "# The tests use -O0 which is not compatible with -D_FORTIFY_SOURCE.\nNIX_HARDENING_ENABLE=${NIX_HARDENING_ENABLE/fortify/}\n",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/m5yq1p3wcz5b77dc72ylmpfbs2yfmq8j-libffi-3.4.2.tar.gz",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "3.4.2"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/1jyns5j198ccpab923sx655x00i0q7hc-libffi-3.4.2.tar.gz.drv",
+                "digest": {
+                    "sha256": "4c688fb5d2dac0a257e678e14c0e7366f7d9fb908b26a08da218397f7c545065"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/jjsn4cqw9lz4gjnyc8dz9zs2vrdqw342-dejagnu-1.6.3.drv",
+                "digest": {
+                    "sha256": "997110055e933e9696ee58054a70cafa571ca90347a2867fb360e086c9af572c"
+                }
+            }
+        ]
+    }
+}

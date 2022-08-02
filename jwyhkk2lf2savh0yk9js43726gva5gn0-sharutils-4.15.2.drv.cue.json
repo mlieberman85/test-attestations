@@ -1,0 +1,119 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/l9aw1r15a5fbfv17bqsi9ykl41gsbphz-sharutils-4.15.2",
+            "digest": {
+                "sha256": "99d26f4a86ef514eb5cc789b20ab79be0d9d0238f6b256e4bb5ce87a90e6fe44"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "NIX_HARDENING_ENABLE": "fortify stackprotector pic strictoverflow relro bindnow",
+                "buildInputs": "/nix/store/a99i3wf2ig85clra7rs5kgi46s46xvwc-coreutils-9.0 /nix/store/vh0c05rc71vmbbicfrksjsvaj3qk92ak-gettext-0.21",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "1",
+                "doInstallCheck": "",
+                "hardeningDisable": "format",
+                "name": "sharutils-4.15.2",
+                "nativeBuildInputs": "",
+                "out": "/nix/store/l9aw1r15a5fbfv17bqsi9ykl41gsbphz-sharutils-4.15.2",
+                "outputs": "out",
+                "patches": "/nix/store/szg677zzcqb34gi14yhmh25cyvmg3a6g-01-fix-heap-buffer-overflow-cve-2018-1000097.patch /nix/store/vdw2q3ik790cwfig6308knaxnixbgz74-02-fix-ftbfs-with-glibc-2.28.patch /nix/store/49a35gy6z5ycf099iwimbnzmlaif9i0a-sharutils-4.15.2-Fix-building-with-GCC-10.patch /nix/store/zm66z7hl0wksvn2a37vm21nxj90ssvi9-sharutils-4.15.2-Do-not-include-lib-md5.c-into-src-shar.c.patch",
+                "pname": "sharutils",
+                "postPatch": "substituteInPlace tests/shar-1 --replace '${SHAR}' '${SHAR} -s submitter'\nsubstituteInPlace tests/shar-2 --replace '${SHAR}' '${SHAR} -s submitter'\n\nsubstituteInPlace intl/Makefile.in --replace \"AR = ar\" \"\"\n",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/4d60374av7kwvrkdm1098j1p6z07i6g2-sharutils-4.15.2.tar.xz",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "4.15.2"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/1mn4gcm78pfw5qq1957zz6k2rcgma674-01-fix-heap-buffer-overflow-cve-2018-1000097.patch.drv",
+                "digest": {
+                    "sha256": "7cc3e74ac4f445845d09ef4db54f6e54ad6c12f46a1cf811e616e05ba3316dd7"
+                }
+            },
+            {
+                "uri": "file:///nix/store/8vrndrblm5la36rzmbb2p7yyzp96431b-gettext-0.21.drv",
+                "digest": {
+                    "sha256": "0588a7500c6bc213d8667504ee8473358707f15b32decff365eb237f8f0ff25e"
+                }
+            },
+            {
+                "uri": "file:///nix/store/9rzzcygmd3nhbwp4nzq55wpv8mp503kq-coreutils-9.0.drv",
+                "digest": {
+                    "sha256": "0745b28317369571fc337984bf894091825689ee8e9a3fcf0d1f83b27ffaba14"
+                }
+            },
+            {
+                "uri": "file:///nix/store/a2iylgixlriw7zv5vpgndrfhxysxkaxg-sharutils-4.15.2.tar.xz.drv",
+                "digest": {
+                    "sha256": "879aefae462fb50cdf0ce3216dff3adc5543ecf07df7e6d0d32f2f7e165d9c6e"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/r6dyl4579shy2xq92n6m21xgazn13zvy-02-fix-ftbfs-with-glibc-2.28.patch.drv",
+                "digest": {
+                    "sha256": "3af1e0b7f1506b02a5bd3a6650920f92fc14f2523b82138b22ad7bf9da96e596"
+                }
+            },
+            {
+                "uri": "file:///nix/store/rlpvzyfhjvmha56japz77hxch03f1f1a-sharutils-4.15.2-Fix-building-with-GCC-10.patch.drv",
+                "digest": {
+                    "sha256": "d8f1b5da9e4da4a45f80cd2b8322fce77d3c31731de2c1c80d27e31265a69406"
+                }
+            },
+            {
+                "uri": "file:///nix/store/zd0p4izcj54ddw04jrnmgj3hw4qpjw4v-sharutils-4.15.2-Do-not-include-lib-md5.c-into-src-shar.c.patch.drv",
+                "digest": {
+                    "sha256": "62593fcfda940fedd11cdb1158defa8410140250b29cb753e6f78ceb20bab671"
+                }
+            }
+        ]
+    }
+}

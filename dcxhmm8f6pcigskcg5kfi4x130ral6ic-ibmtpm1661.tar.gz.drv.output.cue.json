@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/dcxhmm8f6pcigskcg5kfi4x130ral6ic-ibmtpm1661.tar.gz.drv",
+            "digest": {
+                "sha256": "05bd12b620b2c90b455bb76962045e704a027181ead3833aa9773a7ae9bddaea"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/h67jv6b3zp00l05v8q79b3jb1w9dvxkh-ibmtpm1661.tar.gz",
+                "digest": {
+                    "sha256": "e43de24bba5cef3c8c1cf51dd0d85218739c2ad93483853bd0318ffcac00eec7"
+                }
+            }
+        ]
+    }
+}

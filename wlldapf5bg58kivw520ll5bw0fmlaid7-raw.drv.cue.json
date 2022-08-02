@@ -1,0 +1,39 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/qhlivc5m9wh8pq93v1smplibyxakbjby-raw",
+            "digest": {
+                "sha256": "35f26260d3a0bbd7fb926603be3cb1d4f18b0351bcc51782ef647df5f8cc32d4"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://builtin:fetchurl"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {
+                "builder": "builtin:fetchurl",
+                "executable": "",
+                "impureEnvVars": "http_proxy https_proxy ftp_proxy all_proxy no_proxy",
+                "name": "raw",
+                "out": "/nix/store/qhlivc5m9wh8pq93v1smplibyxakbjby-raw",
+                "outputHash": "sq0BoPqXHQ69Vq4zJobCspe4XRfnAiuac/wqzVQJESc=",
+                "outputHashAlgo": "sha256",
+                "outputHashMode": "flat",
+                "preferLocalBuild": "1",
+                "system": "builtin",
+                "unpack": "",
+                "url": "https://patchwork.sourceware.org/project/glibc/patch/20220314175316.3239120-2-sam@gentoo.org/raw/",
+                "urls": "https://patchwork.sourceware.org/project/glibc/patch/20220314175316.3239120-2-sam@gentoo.org/raw/"
+            }
+        },
+        "materials": []
+    }
+}

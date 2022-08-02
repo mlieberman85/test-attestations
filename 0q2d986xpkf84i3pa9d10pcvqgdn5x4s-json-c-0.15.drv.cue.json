@@ -1,0 +1,87 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/cqqqxih5w56q9mad57hsgx23jxk86yzz-json-c-0.15",
+            "digest": {
+                "sha256": "a09d0e90545c3cb3c852360f6ac515c57a76ea96342960647c36402f5e665e31"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "dev": "/nix/store/06cmbq4rvy6l5wncrrdl1vmsm3ayviwk-json-c-0.15-dev",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "name": "json-c-0.15",
+                "nativeBuildInputs": "/nix/store/pg9xkxbscvfybwha04s118j9gikws31q-cmake-3.22.3",
+                "out": "/nix/store/cqqqxih5w56q9mad57hsgx23jxk86yzz-json-c-0.15",
+                "outputs": "out dev",
+                "patches": "",
+                "pname": "json-c",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/h6qchaxfqa5qh1plm9h9jb298q26q36p-json-c-0.15.tar.gz",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "0.15"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/dsrznmw126ff3mjam7h0fi39ciyapq3v-json-c-0.15.tar.gz.drv",
+                "digest": {
+                    "sha256": "cbaeb4ad3ec873c599d151fc711958ed2be0fb2e137db6188aaf047532aeb857"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/nj4w8zvk7k9kvf0ix9mchpbp6rfmp0bb-cmake-3.22.3.drv",
+                "digest": {
+                    "sha256": "0a2302cad5dd9254d110b42dd970ed43dea603462c7e90c933051c37f98ef3b5"
+                }
+            }
+        ]
+    }
+}

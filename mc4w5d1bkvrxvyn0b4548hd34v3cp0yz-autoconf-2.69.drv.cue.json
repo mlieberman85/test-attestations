@@ -1,0 +1,96 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/bb7zn7i1imf6ryjmnxvxy0sf3l87b8w8-autoconf-2.69",
+            "digest": {
+                "sha256": "89df097e99fd856eb3c601d1bdacb54551721ebd9290248054930e85ce1bb39e"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "/nix/store/b3lh7rgzizg9r1wl6mnyqy9fy7zyhfxf-gnum4-1.4.19",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "dontPatchShebangs": "1",
+                "enableParallelBuilding": "1",
+                "enableParallelChecking": "1",
+                "name": "autoconf-2.69",
+                "nativeBuildInputs": "/nix/store/b3lh7rgzizg9r1wl6mnyqy9fy7zyhfxf-gnum4-1.4.19 /nix/store/c34zmy26gc58bn7qbf4md2yh8vp133n6-perl-5.34.1",
+                "out": "/nix/store/bb7zn7i1imf6ryjmnxvxy0sf3l87b8w8-autoconf-2.69",
+                "outputs": "out",
+                "patches": "",
+                "pname": "autoconf",
+                "preCheck": "export TESTSUITEFLAGS=\"-j$NIX_BUILD_CORES\"\n",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/sm3m6c71sxa8rwzk85zllm9xjqrdvdb4-autoconf-2.69.tar.xz",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "2.69"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/2gbjgzr7b80dq0laix8952cr5n9mxhs2-gnum4-1.4.19.drv",
+                "digest": {
+                    "sha256": "4d2cae1b88da2b9c7a1c942cc96e7f8a258a9ce342502a5e83e79c1926c2e188"
+                }
+            },
+            {
+                "uri": "file:///nix/store/5i3cpbiifsiwn0iiaj0jr0wh48g85snn-autoconf-2.69.tar.xz.drv",
+                "digest": {
+                    "sha256": "7b388c838187310a6b8bbcf0d2063e7d112584860d537661306ebf1ff10e0703"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/jkn79jy5p1cdh953rsmnpadxk15jaili-perl-5.34.1.drv",
+                "digest": {
+                    "sha256": "87f4f98f9a11a87515771dacc6dcd294d640778e146d6119ee09b07f955a654e"
+                }
+            }
+        ]
+    }
+}

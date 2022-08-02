@@ -1,0 +1,95 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/rkbf30wik1w8k09n2nva0ki8h9cdj0lp-gnu-efi-3.0.11",
+            "digest": {
+                "sha256": "319c7f363bca9c5f7562cbf879ad962b32f673df4a5c9c0aeb8140556858a91f"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "NIX_HARDENING_ENABLE": "fortify pic strictoverflow format relro bindnow",
+                "buildInputs": "/nix/store/ccbya0p618bgv70y1899s5kwcmr08jds-pciutils-3.7.0",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "hardeningDisable": "stackprotector",
+                "makeFlags": "PREFIX=${out} HOSTCC=cc CROSS_COMPILE=",
+                "name": "gnu-efi-3.0.11",
+                "nativeBuildInputs": "",
+                "out": "/nix/store/rkbf30wik1w8k09n2nva0ki8h9cdj0lp-gnu-efi-3.0.11",
+                "outputs": "out",
+                "patches": "/nix/store/9xfvg1gdy5wmsbssdww5yvx6lba0xhzn-0001-Fix-ARCH-on-armv6-and-other-32-bit-ARM-platforms.patch",
+                "pname": "gnu-efi",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/qhcln45hfkggnqxjkj5azkx91vll6288-gnu-efi-3.0.11.tar.bz2",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "3.0.11"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/g9zvldr3afhyh49r3n901ql66rns0jh2-pciutils-3.7.0.drv",
+                "digest": {
+                    "sha256": "e8f275a8cc91a4f5fa05e32ce68ca93de19cbef2a639d6dcfe676f10e72b76fd"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/q949bcb36xj572im3zp610nygkwzysvr-0001-Fix-ARCH-on-armv6-and-other-32-bit-ARM-platforms.patch.drv",
+                "digest": {
+                    "sha256": "c6e27f0b7f5adec3dad2066d2981e9f27b26b2bda0322da6994994ea98b9d6a6"
+                }
+            },
+            {
+                "uri": "file:///nix/store/vyzl03hlv7j8nirbb3wm0lzza9zfkm9z-gnu-efi-3.0.11.tar.bz2.drv",
+                "digest": {
+                    "sha256": "50cb38a4014d88c1c50808cb84c7dfa865d833bd1825568faa54a5954286af76"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/a3mbpq4wjpxdx9madfx3r3yrwsd8p780-libseccomp-2.5.3.tar.gz.drv",
+            "digest": {
+                "sha256": "cfc6ff47576599200252cbc6ac2c6e83ae5b6d0339d944f5cba28938995ad1c5"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/94w3p7jjp9mkzmi0yfyj4l4zr88fjc8r-libseccomp-2.5.3.tar.gz",
+                "digest": {
+                    "sha256": "2737df4c358a22e9f3093b912b3633b0351d16e2377efcf658ee2ddeb3e20df5"
+                }
+            }
+        ]
+    }
+}

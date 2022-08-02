@@ -1,0 +1,79 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/j22f87xsvbqcxqanpaxyv7ra3xh325s3-glibc-iconv-2.34",
+            "digest": {
+                "sha256": "439b8be3e38398d14e38bca54d3e2e6f8e5be2071a8944ded9f19902cb4b5c2f"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildCommand": "mkdir -p $out/include\nln -sv /nix/store/hd3j5xfvffs4vaa74l1har94q10fpnm5-glibc-2.34-210-dev/include/iconv.h $out/include\n",
+                "buildInputs": "",
+                "builder": "/nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "name": "glibc-iconv-2.34",
+                "nativeBuildInputs": "",
+                "out": "/nix/store/j22f87xsvbqcxqanpaxyv7ra3xh325s3-glibc-iconv-2.34",
+                "outputs": "out",
+                "passAsFile": "buildCommand",
+                "patches": "",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "stdenv": "/nix/store/j2m243dydb0nc77xw2vmkfb8lcc2gji8-bootstrap-stage4-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/0zhkga32apid60mm7nh92z2970im5837-bootstrap-tools.drv",
+                "digest": {
+                    "sha256": "f91ccdc44b609d5a97b27804be2daa58b61d51b82caa7e9e765db4ad4180098a"
+                }
+            },
+            {
+                "uri": "file:///nix/store/dg6l2chz77caipgfd7ndmpwfgs342nwn-bootstrap-stage4-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "b45e27fa41151e20470c91ef53c082c35801c3414e2d810e296f16c0d9e7f8c8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/slh6i99w5w5vppjcxi6ksxh56yw87xq6-glibc-2.34-210.drv",
+                "digest": {
+                    "sha256": "e77e6d503666f4a073d742a97b9a1ecb2ce20311289fec458e531677d7ac7fdb"
+                }
+            }
+        ]
+    }
+}

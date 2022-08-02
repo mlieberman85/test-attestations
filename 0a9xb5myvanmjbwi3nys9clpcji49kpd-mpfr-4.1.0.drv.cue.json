@@ -1,0 +1,94 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/qzq1svrf3j0z23l0jr2m3gjw36yafqg3-mpfr-4.1.0",
+            "digest": {
+                "sha256": "e0e3eb58dd5c6c9db710096214215b5bb3322ca436925a241948df2c0d7e22ff"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "",
+                "builder": "/nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash",
+                "cmakeFlags": "-DBUILD_SHARED_LIBS:BOOL=OFF",
+                "configureFlags": "--with-pic --enable-static --disable-shared",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "dev": "/nix/store/hffd2yd4lgk4z3iy5v2dr2xgdx3bc94k-mpfr-4.1.0-dev",
+                "doCheck": "1",
+                "doInstallCheck": "",
+                "doc": "/nix/store/f5qqz88vjlndp9n9qlvnfl0pbrb6w4lc-mpfr-4.1.0-doc",
+                "dontDisableStatic": "1",
+                "enableParallelBuilding": "1",
+                "enableParallelChecking": "1",
+                "info": "/nix/store/x3wkal8lhbfn08v039bhc30p685226wq-mpfr-4.1.0-info",
+                "mesonFlags": "-Ddefault_library=static",
+                "name": "mpfr-4.1.0",
+                "nativeBuildInputs": "",
+                "out": "/nix/store/qzq1svrf3j0z23l0jr2m3gjw36yafqg3-mpfr-4.1.0",
+                "outputs": "out dev doc info",
+                "patches": "",
+                "pname": "mpfr",
+                "propagatedBuildInputs": "/nix/store/g9k1z3b750zzyhlrda5088hrk4965b2l-gmp-with-cxx-6.2.1-dev",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/nl9ycnfgc3j36kv95ljhvrgj6m8nblw9-mpfr-4.1.0.tar.xz",
+                "stdenv": "/nix/store/9zsyvv4fp7hj9jd11dimj0lxy74pv6m4-bootstrap-stage3-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "4.1.0"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/0zhkga32apid60mm7nh92z2970im5837-bootstrap-tools.drv",
+                "digest": {
+                    "sha256": "f91ccdc44b609d5a97b27804be2daa58b61d51b82caa7e9e765db4ad4180098a"
+                }
+            },
+            {
+                "uri": "file:///nix/store/c8c0nvjjib7w8wd833pyynpwsrfnnpv9-gmp-with-cxx-6.2.1.drv",
+                "digest": {
+                    "sha256": "67c5c885c37d8abc62faae9af17f1e9efaa42a2d966acd87b17d4c539c6ffa4f"
+                }
+            },
+            {
+                "uri": "file:///nix/store/f5qhpix26la3hi87z96fvcv11dj5cdpm-bootstrap-stage3-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "7d7584971c870ee114dfc4fa772287e316b9de662a9a99784f96380215448c9a"
+                }
+            },
+            {
+                "uri": "file:///nix/store/lv1hwcmry75256awiysfa7mb93a0c49c-mpfr-4.1.0.tar.xz.drv",
+                "digest": {
+                    "sha256": "b96058d76686ba5f592410cb2b5fedd742f44bdb19b20e544a6ffeb664cf7d4e"
+                }
+            }
+        ]
+    }
+}

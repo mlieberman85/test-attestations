@@ -1,0 +1,111 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/5l1r7xjjy8mxiy52cr6hqlkygjhsxqpd-libkrb5-1.19.3",
+            "digest": {
+                "sha256": "a1bf68175dbff439089d46f0a1a4f08bb6968436316b5d2c3e3e34f2a6ca175c"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "/nix/store/04f6wxa0x2llhyjh9p5vb70rr63ck81a-openssl-1.1.1o-dev /nix/store/iam9a7b22y508p5cj14p491xg3289xi5-keyutils-1.6.3-dev",
+                "buildPhase": "MAKE=\"make -j $NIX_BUILD_CORES -l $NIX_BUILD_CORES\"\n(cd util; $MAKE)\n(cd include; $MAKE)\n(cd lib; $MAKE)\n(cd build-tools; $MAKE)\n",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "--with-tcl=no --localstatedir=/var/lib",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "dev": "/nix/store/b8ymyr4m0xxn41czbcpi9z7nbh1npf3r-libkrb5-1.19.3-dev",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "enableParallelBuilding": "1",
+                "enableParallelChecking": "1",
+                "installPhase": "mkdir -p \"$out\"/{bin,sbin,lib/pkgconfig,share/{et,man/man1}} \\\n  \"$dev\"/include/{gssapi,gssrpc,kadm5,krb5}\n(cd util; $MAKE install)\n(cd include; $MAKE install)\n(cd lib; $MAKE install)\n(cd build-tools; $MAKE install)\nmoveToOutput bin/krb5-config \"$dev\"\n\n",
+                "name": "libkrb5-1.19.3",
+                "nativeBuildInputs": "/nix/store/prn4gvr4ljmrwnnm508i7m7qh7nfh7gz-pkg-config-wrapper-0.29.2 /nix/store/c34zmy26gc58bn7qbf4md2yh8vp133n6-perl-5.34.1",
+                "out": "/nix/store/5l1r7xjjy8mxiy52cr6hqlkygjhsxqpd-libkrb5-1.19.3",
+                "outputs": "out dev",
+                "patches": "",
+                "pname": "libkrb5",
+                "postInstall": "moveToOutput bin/krb5-config \"$dev\"\n",
+                "preConfigure": "cd ./src",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/f6071472l5ggf821kzy1bdb085979qxy-krb5-1.19.3.tar.gz",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "1.19.3"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/0cixafavy49m0czb31sysr2w3wmc761j-krb5-1.19.3.tar.gz.drv",
+                "digest": {
+                    "sha256": "0a2cedcd9d3a2753d1960626e971fb401b8f1d03d3011356dd1888582cbb1546"
+                }
+            },
+            {
+                "uri": "file:///nix/store/5sp63ahzdhy0gnda7jwpvf99kr7qmqfa-perl-5.34.1.drv",
+                "digest": {
+                    "sha256": "800d69380d04fda3959a8a719701d7bdc84e8f587722612ad045201887bb8b9f"
+                }
+            },
+            {
+                "uri": "file:///nix/store/7mqnv8rvvgnv2y8lhynmj8f88120wj3l-pkg-config-wrapper-0.29.2.drv",
+                "digest": {
+                    "sha256": "d8d3de1475e034bb3ad38e878acd66ee84da2d9feca55c29ac413756a3934d92"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/fwp19723jyva229wfsqfz3qv42bbnsck-openssl-1.1.1o.drv",
+                "digest": {
+                    "sha256": "36856ddd04e3f5beadf2a2b01d1a9a496eb63d5b7c2217462ed9f6adae5a1dd4"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/p63bg78pfk4frys6npklg845ym81c4n6-keyutils-1.6.3.drv",
+                "digest": {
+                    "sha256": "6c6c61e9fc83e0a4289bed8950dccb7b5b5e35c4b7587c264b93ad52895c93ac"
+                }
+            }
+        ]
+    }
+}

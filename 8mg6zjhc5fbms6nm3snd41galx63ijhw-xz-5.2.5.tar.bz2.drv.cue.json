@@ -1,0 +1,39 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/540m10fmc7qss0kgm9xszs6na2piw3pr-xz-5.2.5.tar.bz2",
+            "digest": {
+                "sha256": "5aaad099e0ee8c35147fc9e064d0d85116dc75a423ae7eb2238e3dd6090e2877"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://builtin:fetchurl"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {
+                "builder": "builtin:fetchurl",
+                "executable": "",
+                "impureEnvVars": "http_proxy https_proxy ftp_proxy all_proxy no_proxy",
+                "name": "xz-5.2.5.tar.bz2",
+                "out": "/nix/store/540m10fmc7qss0kgm9xszs6na2piw3pr-xz-5.2.5.tar.bz2",
+                "outputHash": "1ps2i8i212n0f4xpq6clp7h13q7m1y8slqvxha9i8d0bj0qgj5si",
+                "outputHashAlgo": "sha256",
+                "outputHashMode": "flat",
+                "preferLocalBuild": "1",
+                "system": "builtin",
+                "unpack": "",
+                "url": "https://tukaani.org/xz/xz-5.2.5.tar.bz2",
+                "urls": "https://tukaani.org/xz/xz-5.2.5.tar.bz2"
+            }
+        },
+        "materials": []
+    }
+}

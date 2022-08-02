@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/mscsrzvh6dxv9yx0cl1n4s8c41crz453-boost_1_77_0.tar.bz2.drv",
+            "digest": {
+                "sha256": "089b584bb68f8fea939b5ddc64d0b34f76c4b949f4c819f97f96a4ff2b8607d4"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/c34g9iqbgbzc0hn8bar0qq2qsiaj1nny-boost_1_77_0.tar.bz2",
+                "digest": {
+                    "sha256": "872ecf8a04d45acb1a139da003ea4e0fbdf44fe47e06c5a20c6511b075243fd5"
+                }
+            }
+        ]
+    }
+}

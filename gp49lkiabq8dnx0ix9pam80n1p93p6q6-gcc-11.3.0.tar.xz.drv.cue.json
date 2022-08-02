@@ -1,0 +1,39 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/lask01x6hyji5sd06f6yc9nz3rxcf2ia-gcc-11.3.0.tar.xz",
+            "digest": {
+                "sha256": "479bc29627a2d406c687c8bbd0c7cf17fb94e82e1bcdc02a5ccdbbe506c43cc5"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://builtin:fetchurl"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {
+                "builder": "builtin:fetchurl",
+                "executable": "",
+                "impureEnvVars": "http_proxy https_proxy ftp_proxy all_proxy no_proxy",
+                "name": "gcc-11.3.0.tar.xz",
+                "out": "/nix/store/lask01x6hyji5sd06f6yc9nz3rxcf2ia-gcc-11.3.0.tar.xz",
+                "outputHash": "sha256-tHzygYaR9bHiHfK7OMeV+sLPvWQO3i0KXhyJ4zijrDk=",
+                "outputHashAlgo": "sha256",
+                "outputHashMode": "flat",
+                "preferLocalBuild": "1",
+                "system": "builtin",
+                "unpack": "",
+                "url": "https://bigsearcher.com/mirrors/gcc/releases/gcc-11.3.0/gcc-11.3.0.tar.xz",
+                "urls": "https://bigsearcher.com/mirrors/gcc/releases/gcc-11.3.0/gcc-11.3.0.tar.xz"
+            }
+        },
+        "materials": []
+    }
+}

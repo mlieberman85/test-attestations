@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/rl9cwwl72dcdj4md46nhi6jbkbwvn3md-dejagnu-1.6.3.tar.gz.drv",
+            "digest": {
+                "sha256": "87e77e4b2e3c2402c0757f487430ea4b76732583e77de835d672bc1e2726312e"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/lhfgbqdaizrv41549mm458r900qqya8r-dejagnu-1.6.3.tar.gz",
+                "digest": {
+                    "sha256": "cc76c56018561d309e7811e2ed3bba4d839debbbaafecfea4f8053e1ef3001f1"
+                }
+            }
+        ]
+    }
+}

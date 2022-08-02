@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/bmcvg04baasbcxx24449qm8k63248g2y-libmpc-1.2.1.drv",
+            "digest": {
+                "sha256": "8e32cda8cf2b4d6bb890c890527652da110e7e23e73001c13da915e712881ad8"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/ahlxyimq3h9c7v8yqnndzz8yni9aqmgf-libmpc-1.2.1",
+                "digest": {
+                    "sha256": "66e8e5d3792285b23c3df4b5a8c4c4abd7d0fb358f8896a2ca16c06ae807e633"
+                }
+            }
+        ]
+    }
+}

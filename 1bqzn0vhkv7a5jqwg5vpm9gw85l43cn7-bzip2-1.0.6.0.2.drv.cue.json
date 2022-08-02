@@ -1,0 +1,105 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/nn1m5l9dqsc4rc556z0wgc02y4cfkn22-bzip2-1.0.6.0.2",
+            "digest": {
+                "sha256": "f6e346d973ba8701a636cfaf5e53d2b8a323ee831adeefc5f92a0f959e7955e4"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "bin": "/nix/store/748wyy9xzn2sw4fkzdcdwd0wvnckkr6r-bzip2-1.0.6.0.2-bin",
+                "buildInputs": "",
+                "builder": "/nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "dev": "/nix/store/36qhkrxpi5hnkr2g1vf7mz87dicxp7qw-bzip2-1.0.6.0.2-dev",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "enableParallelBuilding": "1",
+                "enableParallelChecking": "1",
+                "man": "/nix/store/mbyc9dmym99pk2mhj7flia92kzaqla6n-bzip2-1.0.6.0.2-man",
+                "name": "bzip2-1.0.6.0.2",
+                "nativeBuildInputs": "/nix/store/zjngfrvcprndncqp8zy8m2lcyrrl7mjg-hook",
+                "out": "/nix/store/nn1m5l9dqsc4rc556z0wgc02y4cfkn22-bzip2-1.0.6.0.2",
+                "outputs": "bin dev out man",
+                "patches": "/nix/store/r8acyr4xb2yw1k73qjzm9sxmpws27gjr-CVE-2016-3189.patch /nix/store/wnf28g32lllbi3i80n97gyzfj2sf9zyx-cve-2019-12900.patch",
+                "pname": "bzip2",
+                "postInstall": "ln -s $out/lib/libbz2.so.1.0.* $out/lib/libbz2.so.1.0\n",
+                "postPatch": "sed -i -e '/\u003csys\\\\stat\\.h\u003e/s|\\\\|/|' bzip2.c\n",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/8lchadwcwrn4icgnsfmfalzmaxx653nm-bzip2-1.0.6.0.2.tar.gz",
+                "stdenv": "/nix/store/00ryhc0rgjvcaigxans5ph4q3j8jm6c6-bootstrap-stage2-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "1.0.6.0.2"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/r8acyr4xb2yw1k73qjzm9sxmpws27gjr-CVE-2016-3189.patch",
+                "digest": {
+                    "sha256": "e6fc50bd52c89c3edc3cc5446539efb4923b075baec334e8bfab51e9119ffc1e"
+                }
+            },
+            {
+                "uri": "file:///nix/store/wnf28g32lllbi3i80n97gyzfj2sf9zyx-cve-2019-12900.patch",
+                "digest": {
+                    "sha256": "7d9df62d36ff010b4c904cd9eb052d7e193f82dc404cd08163dc9341558cb9ed"
+                }
+            },
+            {
+                "uri": "file:///nix/store/0zhkga32apid60mm7nh92z2970im5837-bootstrap-tools.drv",
+                "digest": {
+                    "sha256": "f91ccdc44b609d5a97b27804be2daa58b61d51b82caa7e9e765db4ad4180098a"
+                }
+            },
+            {
+                "uri": "file:///nix/store/2qklysz0hj51z8fq5qsj152c2crnghhg-bootstrap-stage2-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "847747fb7f255141ddd9ed26c9cbf707bf272d147ef5104268a8fd5c51c090af"
+                }
+            },
+            {
+                "uri": "file:///nix/store/806qrynji7s8dayqd5gzqxk5s7816nyw-bzip2-1.0.6.0.2.tar.gz.drv",
+                "digest": {
+                    "sha256": "ecb0e70be9622dcc38b9e4d745012a01f89acbd4b79355672b07cebee98e1959"
+                }
+            },
+            {
+                "uri": "file:///nix/store/i6f0dyxss311ns72agyyzpi5jhkbm349-hook.drv",
+                "digest": {
+                    "sha256": "85b0aa0b03d58597b58fee5c332fb5e4c42a8975474997c71dbfc58ecc9ce188"
+                }
+            }
+        ]
+    }
+}

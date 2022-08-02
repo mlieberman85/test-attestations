@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/7r97fpjiq60h2aqxknp8h9p7z8sww58b-mailcap-2.1.53.drv",
+            "digest": {
+                "sha256": "7436f28b23a16a0a6f4cad2fa0752df7cbbc0e789ab89a7dc73f1a8465d7f2b9"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/qd3g8rk5hx5zkb70idjh6fa12sh6bipg-mailcap-2.1.53",
+                "digest": {
+                    "sha256": "e893e3dad660a13119f213448bd659844941366f5245349789f3260a273088ba"
+                }
+            }
+        ]
+    }
+}

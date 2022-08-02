@@ -1,0 +1,94 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/k9p9n4gvf1m148fmp026xjcdczipll3c-libevent-2.1.12",
+            "digest": {
+                "sha256": "d18928cef17d6af51d9c9659618211224abc9c2f84042ec76a2fef6841c8c79c"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "/nix/store/6na02j2cznbkwlis5h9837d96jlf4j5p-openssl-1.1.1o-dev",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "dev": "/nix/store/8m92aq02d42f5cmwjr4sval1g0a9ymgs-libevent-2.1.12-dev",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "enableParallelBuilding": "1",
+                "enableParallelChecking": "1",
+                "name": "libevent-2.1.12",
+                "nativeBuildInputs": "",
+                "openssl": "/nix/store/p5hs7vsc5195sa78ri2dw49xxx6yzcb3-libevent-2.1.12-openssl",
+                "out": "/nix/store/k9p9n4gvf1m148fmp026xjcdczipll3c-libevent-2.1.12",
+                "outputBin": "dev",
+                "outputs": "out dev openssl",
+                "patches": "",
+                "pname": "libevent",
+                "postInstall": "moveToOutput \"lib/libevent_openssl*\" \"$openssl\"\nsubstituteInPlace \"$dev/lib/pkgconfig/libevent_openssl.pc\" \\\n  --replace \"$out\" \"$openssl\"\nsed \"/^libdir=/s|$out|$openssl|\" -i \"$openssl\"/lib/libevent_openssl.la\n",
+                "preConfigure": "",
+                "propagatedBuildInputs": "",
+                "propagatedBuildOutputs": "out openssl",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/2ib2j4j86gkszc12gs37ggdxyafx5191-libevent-2.1.12-stable.tar.gz",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "2.1.12"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/anr2r3bw9d5i5sl9ax8yfd03ix6l983d-libevent-2.1.12-stable.tar.gz.drv",
+                "digest": {
+                    "sha256": "85beefab10c3338a18a051d14c2957bc42b11a3bb4541735e9479c6b0ec2166c"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/cd44h08a0mbg07qwpih5zd31nikks2f7-openssl-1.1.1o.drv",
+                "digest": {
+                    "sha256": "acdeaa5cdbfb13fd590a628dc0b6a07ee25c464bedec941bac90715cacc33c2e"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            }
+        ]
+    }
+}

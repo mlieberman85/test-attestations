@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/rfrznr1npd2v9q17gdbrrrh7n6fpdnay-HTML-Parser-3.75.tar.gz.drv",
+            "digest": {
+                "sha256": "5f28c3afbd8b308a3b1c1a68e78625af6ab0bbdb97eae39ed2a31042eb98e247"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/b6dnpaj9rmgzrpc5mh69iw1y7wy7s1ww-HTML-Parser-3.75.tar.gz",
+                "digest": {
+                    "sha256": "96e6fcedb39bd36078ef98a6e606d8060f85cab05f8e42d1601f4237fe56083d"
+                }
+            }
+        ]
+    }
+}

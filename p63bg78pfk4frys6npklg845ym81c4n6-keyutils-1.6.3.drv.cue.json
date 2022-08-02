@@ -1,0 +1,99 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/haf73fp89xki0j9y38yk1p9dh28x8ijw-keyutils-1.6.3",
+            "digest": {
+                "sha256": "313382849bd4eddbff0a8c3751ec3794201093bcd3dd0a4dc5cc573690a349e7"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "dev": "/nix/store/iam9a7b22y508p5cj14p491xg3289xi5-keyutils-1.6.3-dev",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "enableParallelBuilding": "1",
+                "enableParallelChecking": "1",
+                "installFlags": "ETCDIR=$(out)/etc BINDIR=$(out)/bin SBINDIR=$(out)/sbin SHAREDIR=$(out)/share/keyutils MANDIR=$(out)/share/man INCLUDEDIR=$(dev)/include LIBDIR=$(lib)/lib USRLIBDIR=$(lib)/lib",
+                "lib": "/nix/store/2ka561amlpf0rqwqmzkrp19swc2x7yl8-keyutils-1.6.3-lib",
+                "makeFlags": "",
+                "name": "keyutils-1.6.3",
+                "nativeBuildInputs": "",
+                "out": "/nix/store/haf73fp89xki0j9y38yk1p9dh28x8ijw-keyutils-1.6.3",
+                "outputs": "out lib dev",
+                "patches": "/nix/store/88a62ypvi5xpa3m8znhrl6l7jc307i8r-conf-symlink.patch /nix/store/z0sjg5c7g1iqb4x5vyiqcm5n68mb5x5p-0001-Remove-unused-function-after_eq.patch",
+                "pname": "keyutils",
+                "postPatch": "# https://github.com/archlinux/svntogit-packages/blob/packages/keyutils/trunk/reproducible.patch\nsubstituteInPlace Makefile \\\n  --replace \\\n    'VCPPFLAGS\t:= -DPKGBUILD=\"\\\"$(shell date -u +%F)\\\"\"' \\\n    'VCPPFLAGS\t:= -DPKGBUILD=\"\\\"$(date -ud \"@$SOURCE_DATE_EPOCH\" +%F)\\\"\"'\n",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/9n3d2g1pplp7bacghxkqb73z0fipgn2h-keyutils-1.6.3.tar.gz",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "1.6.3"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/88a62ypvi5xpa3m8znhrl6l7jc307i8r-conf-symlink.patch",
+                "digest": {
+                    "sha256": "e5a9c5a1756c37bdffd12b632cf6caa50f05f7f87c500892520f6c723a5498d2"
+                }
+            },
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/z0sjg5c7g1iqb4x5vyiqcm5n68mb5x5p-0001-Remove-unused-function-after_eq.patch",
+                "digest": {
+                    "sha256": "d8d273e6cd5c7a5cfe5a73eb5f6781d0a6d049d02af2e227e6d6d0c9150ac4ea"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/lkkzb8ybhp5jjgvb04b13n68i51lxwd9-keyutils-1.6.3.tar.gz.drv",
+                "digest": {
+                    "sha256": "be0d58bbdf7b828d72ce8d53bd2dc6e6fa2b7c76db6935faa1acf4b7a4eff29f"
+                }
+            }
+        ]
+    }
+}

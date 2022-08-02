@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/16ikjxrb3ssnpqzg982km9imrrvsixc2-musl-asm-ptrace-h.patch.drv",
+            "digest": {
+                "sha256": "d785463eb89c6ccf6fa5bc9128e7a603ba84bfa27013d823af71c9b3f85f398f"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/vg5dsxxj9ayfgn35x0d04sdih8035rr4-musl-asm-ptrace-h.patch",
+                "digest": {
+                    "sha256": "cb46e975c4fb3b2cbda7eb5a5b475338c13606a1e71567e4cc0c2ce23f3f974f"
+                }
+            }
+        ]
+    }
+}

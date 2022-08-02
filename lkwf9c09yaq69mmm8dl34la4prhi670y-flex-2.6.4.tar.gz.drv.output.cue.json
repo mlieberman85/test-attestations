@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/lkwf9c09yaq69mmm8dl34la4prhi670y-flex-2.6.4.tar.gz.drv",
+            "digest": {
+                "sha256": "b4b2fc103ebc2040fc3712d7342d6ba487890cf26a40fa7a95fb489c39a4d031"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/98d26yjqqzphrwzp5yisg2f5aq8l08j4-flex-2.6.4.tar.gz",
+                "digest": {
+                    "sha256": "fe753c939229e47d2219840a3d7c072969b9e0e330f01ec37b62990b0e728497"
+                }
+            }
+        ]
+    }
+}

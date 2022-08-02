@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/vrfb40wg71q214fypw1l58a69474rrsl-cryptsetup-2.4.3.drv",
+            "digest": {
+                "sha256": "4617156a6d4a814fdb77a3b901fd16cbbe321519b761b967802b9e240a7f6b7c"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/6c1bn8037sh7l9p8z4z3zyi8fc1yxphz-cryptsetup-2.4.3",
+                "digest": {
+                    "sha256": "75d9648f1871b2a9734d3c0b265400552ae74d0d626f46b0f69b59e57ea44832"
+                }
+            }
+        ]
+    }
+}

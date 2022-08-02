@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/0r4iidmb80wz1cqijp1nl4zlxkmmg4mr-sqlite-3.38.5.drv",
+            "digest": {
+                "sha256": "b519f9b62cc4856cef1eedfc47db0c6eaebcd0d05763d0816f65bd5b52dfac20"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/wr3d5ck96xy3al2d9b38hby950xfwrxi-sqlite-3.38.5",
+                "digest": {
+                    "sha256": "efd9d0bbb7f57e0297a99e485c03f5f01e87c4c9fc6c3901ec578e1d8e7ae530"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,100 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/ydry8l8mcy2khi5n1qvy07xygqgsczyv-itstool-2.0.6",
+            "digest": {
+                "sha256": "74f890327487216507dfe34e698a0680e691af350e2f46866326240eefe0eca6"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "/nix/store/wnrc4daqbd6v5ifqlxsj75ky8556zy0p-python3-3.9.12 /nix/store/ds7a86mq3522fpjay82dbd3x0zf1a0yi-libxml2-2.9.14-py",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "name": "itstool-2.0.6",
+                "nativeBuildInputs": "/nix/store/wnrc4daqbd6v5ifqlxsj75ky8556zy0p-python3-3.9.12 /nix/store/5sqn1lv2lbi1vs1q20skzaz3lnrchrfz-hook",
+                "out": "/nix/store/ydry8l8mcy2khi5n1qvy07xygqgsczyv-itstool-2.0.6",
+                "outputs": "out",
+                "patches": "",
+                "pname": "itstool",
+                "postFixup": "wrapPythonPrograms\n",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "pythonPath": "/nix/store/ds7a86mq3522fpjay82dbd3x0zf1a0yi-libxml2-2.9.14-py",
+                "src": "/nix/store/javq8bvmpkd3w3qvwpyaip8r17hiavy4-itstool-2.0.6.tar.bz2",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "1",
+                "system": "x86_64-linux",
+                "version": "2.0.6"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/2by8zqkgh21hci91i31nnjp1gs0x6r3y-libxml2-2.9.14.drv",
+                "digest": {
+                    "sha256": "a038c857127ec4dbe6829cb0aeb1b7dbd0491c5c0932024209b1f84293b5e264"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/dik5xn1588wb5ph78kj90n6p646sas1i-hook.drv",
+                "digest": {
+                    "sha256": "3bc293f8b2ef1ae2a66209f28ed12636f70c2179d0ac76f075abde6e87e5d74b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/lqrq7kvkyh8kd7ili7ncq0f81py5wrf9-itstool-2.0.6.tar.bz2.drv",
+                "digest": {
+                    "sha256": "0139bdba6e8f213c6572c75c8a3b2c49a5f36377525c11eafb873821cb3eb69e"
+                }
+            },
+            {
+                "uri": "file:///nix/store/vdgkm605ayapf245hc17239qfpvivxfy-python3-3.9.12.drv",
+                "digest": {
+                    "sha256": "6684eb57aec053d7baf339e95827a8b7670f5709da588ab2576f58eb3be31ea6"
+                }
+            }
+        ]
+    }
+}

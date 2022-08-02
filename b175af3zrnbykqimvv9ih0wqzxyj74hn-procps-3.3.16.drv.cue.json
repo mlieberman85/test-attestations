@@ -1,0 +1,102 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/s27xi8wvrr44ggbwwlfp67cbny665rjh-procps-3.3.16",
+            "digest": {
+                "sha256": "e85573bd7e6f28e87c58f5a0b591c50af6a6e784264d65d5ea182d47852c0130"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "/nix/store/xfbflasrprwi6gavla92mn3b7s28g879-ncurses-6.3-dev",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "--disable-modern-top",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "enableParallelBuilding": "1",
+                "enableParallelChecking": "1",
+                "installPhase": "",
+                "makeFlags": "usrbin_execdir=$(out)/bin",
+                "name": "procps-3.3.16",
+                "nativeBuildInputs": "/nix/store/prn4gvr4ljmrwnnm508i7m7qh7nfh7gz-pkg-config-wrapper-0.29.2",
+                "out": "/nix/store/s27xi8wvrr44ggbwwlfp67cbny665rjh-procps-3.3.16",
+                "outputs": "out",
+                "patches": "/nix/store/cgc2j7m9l7wmfx42ily5qlh0fcx483f3-sysconf-argmax-sanity.patch",
+                "pname": "procps",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/z2wzqvjljicnmhr1dk2mc11q9gv4j1zs-procps-ng-3.3.16.tar.xz",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "3.3.16"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/1v1lazzb2r2cg7a0vxv705jxyc8hidpn-pkg-config-wrapper-0.29.2.drv",
+                "digest": {
+                    "sha256": "d1c8e17a6c2ddf6900b817119c22f726a3a39af2ac395821e95d915fde3d9734"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/l5y6ghs0kpvyrbsg99v56h1phd4lvpas-ncurses-6.3.drv",
+                "digest": {
+                    "sha256": "b04aaac5b9f13913712c318b35890248423d5cc4f96dbcd2df42d14210295a1d"
+                }
+            },
+            {
+                "uri": "file:///nix/store/r9bw7kqcscc45jzlc4dblrb4cy8cq5dq-sysconf-argmax-sanity.patch.drv",
+                "digest": {
+                    "sha256": "ddddee432d31826d7d3442806a4f7744bc77ce824bb68ed9300a6af5d5956069"
+                }
+            },
+            {
+                "uri": "file:///nix/store/sbxw9dvrhpha12m6w5gwarqwnynv6853-procps-ng-3.3.16.tar.xz.drv",
+                "digest": {
+                    "sha256": "c1013b49133435add2d4809065750badf52b024448b508e0f8995bdfa43cc978"
+                }
+            }
+        ]
+    }
+}

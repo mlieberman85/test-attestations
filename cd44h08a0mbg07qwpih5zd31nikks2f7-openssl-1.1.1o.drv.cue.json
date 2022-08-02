@@ -1,0 +1,126 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/v71f11hrf2b8ga7gnl31h46sd7nky73l-openssl-1.1.1o",
+            "digest": {
+                "sha256": "bd156ad05ec017418487966f39495769744dfff77c9304abc90d68b45a71070e"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "bin": "/nix/store/0pkii60i2rppp8rvyy29njlbgd6rfgyn-openssl-1.1.1o-bin",
+                "buildInputs": "/nix/store/c34zmy26gc58bn7qbf4md2yh8vp133n6-perl-5.34.1",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "shared --libdir=lib --openssldir=etc/ssl",
+                "configurePlatforms": "",
+                "configureScript": "./Configure linux-x86_64",
+                "debug": "/nix/store/fb8przv0ll38jpwcpjwdbi6nybpvfx0k-openssl-1.1.1o-debug",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "dev": "/nix/store/6na02j2cznbkwlis5h9837d96jlf4j5p-openssl-1.1.1o-dev",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "doc": "/nix/store/wap4s1qjy4zv7hnhb265zga7fmj8mkx3-openssl-1.1.1o-doc",
+                "dontAddStaticConfigureFlags": "1",
+                "enableParallelBuilding": "1",
+                "enableParallelChecking": "1",
+                "makeFlags": "MANDIR=$(man)/share/man MANSUFFIX=ssl",
+                "man": "/nix/store/pn52njvnhygbkv0m5yw0pnr4xsjml9wc-openssl-1.1.1o-man",
+                "name": "openssl-1.1.1o",
+                "nativeBuildInputs": "/nix/store/c34zmy26gc58bn7qbf4md2yh8vp133n6-perl-5.34.1 /nix/store/ikmqczy0y20n04a2b8qfflzwihv8139g-separate-debug-info.sh",
+                "out": "/nix/store/v71f11hrf2b8ga7gnl31h46sd7nky73l-openssl-1.1.1o",
+                "outputs": "bin dev out man doc debug",
+                "patches": "/nix/store/3xk9ps0qz073k641b88swpa4fgx3hzwg-nix-ssl-cert-file.patch /nix/store/lzmcfv2m4ripknpvbsv8wcg1ik1kif4h-use-etc-ssl-certs.patch",
+                "pname": "openssl",
+                "postFixup": "# Check to make sure the main output doesn't depend on perl\nif grep -r '/nix/store/c34zmy26gc58bn7qbf4md2yh8vp133n6-perl-5.34.1' $out; then\n  echo \"Found an erroneous dependency on perl ^^^\" \u003e\u00262\n  exit 1\nfi\n",
+                "postInstall": "# If we're building dynamic libraries, then don't install static\n# libraries.\nif [ -n \"$(echo $out/lib/*.so $out/lib/*.dylib $out/lib/*.dll)\" ]; then\n    rm \"$out/lib/\"*.a\nfi\nsubstituteInPlace $out/bin/c_rehash --replace /nix/store/c34zmy26gc58bn7qbf4md2yh8vp133n6-perl-5.34.1/bin/perl \"/usr/bin/env perl\"\nmkdir -p $bin\nmv $out/bin $bin/bin\n\nmkdir $dev\nmv $out/include $dev/\n\n# remove dependency on Perl at runtime\nrm -r $out/etc/ssl/misc\n\nrmdir $out/etc/ssl/{certs,private}\n",
+                "postPatch": "patchShebangs Configure\nsubstituteInPlace config --replace '/usr/bin/env' '/nix/store/a99i3wf2ig85clra7rs5kgi46s46xvwc-coreutils-9.0/bin/env'\n",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "separateDebugInfo": "1",
+                "setOutputFlags": "",
+                "src": "/nix/store/id0jwdqfhyvnvz73r9m8jl9lfgrrldrv-openssl-1.1.1o.tar.gz",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "1.1.1o"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/3xk9ps0qz073k641b88swpa4fgx3hzwg-nix-ssl-cert-file.patch",
+                "digest": {
+                    "sha256": "0257c0e0567c84f8e4608f3069aa630424bd9bed8f79261307a6d07c8aa7009b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ikmqczy0y20n04a2b8qfflzwihv8139g-separate-debug-info.sh",
+                "digest": {
+                    "sha256": "6a9bffeef698bb4db776df8fdaaf2a4766c65c1a468204b9ae425eeaa4e961c7"
+                }
+            },
+            {
+                "uri": "file:///nix/store/lzmcfv2m4ripknpvbsv8wcg1ik1kif4h-use-etc-ssl-certs.patch",
+                "digest": {
+                    "sha256": "189f9c892e2a0b8fb606573a83ec6bb56732d13c1bf489f0662431f5e3e9faaf"
+                }
+            },
+            {
+                "uri": "file:///nix/store/9rzzcygmd3nhbwp4nzq55wpv8mp503kq-coreutils-9.0.drv",
+                "digest": {
+                    "sha256": "0745b28317369571fc337984bf894091825689ee8e9a3fcf0d1f83b27ffaba14"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/jkn79jy5p1cdh953rsmnpadxk15jaili-perl-5.34.1.drv",
+                "digest": {
+                    "sha256": "87f4f98f9a11a87515771dacc6dcd294d640778e146d6119ee09b07f955a654e"
+                }
+            },
+            {
+                "uri": "file:///nix/store/xxlfr72r9s5l5wiym1rfr44lpyxvsqwc-openssl-1.1.1o.tar.gz.drv",
+                "digest": {
+                    "sha256": "f422bddde5a51b508cabb4a8d6c38e397bb13613b6bbe77b26bf81100d8ee166"
+                }
+            }
+        ]
+    }
+}

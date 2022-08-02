@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/cix9fzds1k3lkml09c9v74ar2lpc58d7-libgpg-error-1.42.tar.bz2.drv",
+            "digest": {
+                "sha256": "23389febeeff2ce00def596aa99f5d78a3b1f96d4200c72601fc6a2c5389224a"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/gkq6hjj713f03136jby7q1wjmj7dkvqa-libgpg-error-1.42.tar.bz2",
+                "digest": {
+                    "sha256": "ef0f322dc13584abfcf393c45708d2490b49fc7dd5c71f19da2b1005b8c44bed"
+                }
+            }
+        ]
+    }
+}

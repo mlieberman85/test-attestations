@@ -1,0 +1,114 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/n89gaajq3v6911jis4babxcw5f6hzjyp-libmicrohttpd-0.9.71",
+            "digest": {
+                "sha256": "9628fd659ec15a1053f716a1b3d70644d6f8eaf8f539a9b5af75c89a39538e25"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "/nix/store/73084jz24c54jl383ffbhl75f7lmnqlj-libgcrypt-1.10.1-dev /nix/store/kxyz4sl8hna586np50zg0zv3v7ah0pv2-curl-7.83.1-dev /nix/store/pnnlyb2bygapwzwsw5xigv8xwmdy6i2n-gnutls-3.7.3-dev /nix/store/8ryxs8jjbziday24xdr7qkf7icj8vr1y-glibc-iconv-2.34 ",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "dev": "/nix/store/89nggb7ryjkg30yn4xlql9ccg5mylpyk-libmicrohttpd-0.9.71-dev",
+                "devdoc": "/nix/store/hl21r2ldwz8wj4zzwa6xswnwqb5kdkg6-libmicrohttpd-0.9.71-devdoc",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "info": "/nix/store/h9dwqgandwg28bbsc9xlz9vb13ykj48g-libmicrohttpd-0.9.71-info",
+                "name": "libmicrohttpd-0.9.71",
+                "nativeBuildInputs": "/nix/store/prn4gvr4ljmrwnnm508i7m7qh7nfh7gz-pkg-config-wrapper-0.29.2",
+                "out": "/nix/store/n89gaajq3v6911jis4babxcw5f6hzjyp-libmicrohttpd-0.9.71",
+                "outputs": "out dev devdoc info",
+                "patches": "",
+                "pname": "libmicrohttpd",
+                "preCheck": "# Since `localhost' can't be resolved in a chroot, work around it.\nsed -ie 's/localhost/127.0.0.1/g' src/test*/*.[ch]\n",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/7vs25ql2ylnzf3ldixqr76qbsk954pl1-libmicrohttpd-0.9.71.tar.gz",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "0.9.71"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/1v1lazzb2r2cg7a0vxv705jxyc8hidpn-pkg-config-wrapper-0.29.2.drv",
+                "digest": {
+                    "sha256": "d1c8e17a6c2ddf6900b817119c22f726a3a39af2ac395821e95d915fde3d9734"
+                }
+            },
+            {
+                "uri": "file:///nix/store/6xv1zb1szihp06fhd06f2aj2v4931lnn-gnutls-3.7.3.drv",
+                "digest": {
+                    "sha256": "03c756532044819310a476e25c006328108218f7f90f9a4e88566f6130f618eb"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/cssp4x75iwqf6mnwimns33xwnpwk3jvk-curl-7.83.1.drv",
+                "digest": {
+                    "sha256": "45012e3e4101725861a3b07063f024c4bb45be8e110950cc0620be5723686bcf"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/jy9zm9nmj7r19y2741wcvkc5wpdww61b-glibc-iconv-2.34.drv",
+                "digest": {
+                    "sha256": "082344439ef2b5523509fa4611ead6bbba6e8d855f32e4adc0a8e1de27eb6837"
+                }
+            },
+            {
+                "uri": "file:///nix/store/klyqqhfnbk448mmr37hqzy72z9mj01v1-libmicrohttpd-0.9.71.tar.gz.drv",
+                "digest": {
+                    "sha256": "f861c81c1144b032f1ae88aa5d0d78533e581e9ae26e1bef5df868db28a6ef30"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ybygd3l9qrrf90mclg738s7rjk1lr14k-libgcrypt-1.10.1.drv",
+                "digest": {
+                    "sha256": "677ea5f9b4e3e555a681373f534dd0fbab2bbad444f0bc9602eae112b4353e9f"
+                }
+            }
+        ]
+    }
+}

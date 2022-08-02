@@ -1,0 +1,39 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/y3yiminrckvhf35fh9q42vjwi0npznji-acl-2.3.1.tar.gz",
+            "digest": {
+                "sha256": "906708897be4a35e677734e34e3f295f74ad5ac8dea8a167bd996c8d84d41586"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://builtin:fetchurl"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {
+                "builder": "builtin:fetchurl",
+                "executable": "",
+                "impureEnvVars": "http_proxy https_proxy ftp_proxy all_proxy no_proxy",
+                "name": "acl-2.3.1.tar.gz",
+                "out": "/nix/store/y3yiminrckvhf35fh9q42vjwi0npznji-acl-2.3.1.tar.gz",
+                "outputHash": "sha256-dgxhxokBs3/dXu/ur0wMeia9/disdHoe3/HODiQ8Ea8=",
+                "outputHashAlgo": "sha256",
+                "outputHashMode": "flat",
+                "preferLocalBuild": "1",
+                "system": "builtin",
+                "unpack": "",
+                "url": "https://mirror.easyname.at/nongnu/acl/acl-2.3.1.tar.gz",
+                "urls": "https://mirror.easyname.at/nongnu/acl/acl-2.3.1.tar.gz"
+            }
+        },
+        "materials": []
+    }
+}

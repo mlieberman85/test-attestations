@@ -1,0 +1,39 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/5ibv7vnqs9qq75qwp9p276l9r35ldccm-bash51-001",
+            "digest": {
+                "sha256": "b58b72ac87921cb4138ec26511ebaa31485212ea13dde008e40675abb0697636"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://builtin:fetchurl"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {
+                "builder": "builtin:fetchurl",
+                "executable": "",
+                "impureEnvVars": "http_proxy https_proxy ftp_proxy all_proxy no_proxy",
+                "name": "bash51-001",
+                "out": "/nix/store/5ibv7vnqs9qq75qwp9p276l9r35ldccm-bash51-001",
+                "outputHash": "1ymm8ppss6gyh9ifznjwiabrb4k91npd09c10y7mk66xp8yppc7b",
+                "outputHashAlgo": "sha256",
+                "outputHashMode": "flat",
+                "preferLocalBuild": "1",
+                "system": "builtin",
+                "unpack": "",
+                "url": "https://ftpmirror.gnu.org/bash/bash-5.1-patches/bash51-001",
+                "urls": "https://ftpmirror.gnu.org/bash/bash-5.1-patches/bash51-001"
+            }
+        },
+        "materials": []
+    }
+}

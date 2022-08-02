@@ -1,0 +1,111 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/8ph192qyza62ph9lk7razkwnaal0fqkv-autoconf-2.71",
+            "digest": {
+                "sha256": "fe95e43aca43b340adcf5f9b0cb86450ddbb3368313e8fa36d01113426725cd7"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "/nix/store/nnc5dqzp6p88hb6q1cn4fh28n042n11h-gnum4-1.4.19",
+                "builder": "/nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "1",
+                "doInstallCheck": "",
+                "doc": "/nix/store/jwf2h43mw6b8qndvlij127y1rkcffm1b-autoconf-2.71-doc",
+                "dontPatchShebangs": "1",
+                "enableParallelBuilding": "1",
+                "enableParallelChecking": "1",
+                "name": "autoconf-2.71",
+                "nativeBuildInputs": "/nix/store/nnc5dqzp6p88hb6q1cn4fh28n042n11h-gnum4-1.4.19 /nix/store/nwd35shggdjdbb5xgx8dhbcjnmx23706-perl-5.34.1 /nix/store/pvj03kaqc4c52dcx6l7q33rgcfjq3f1k-texinfo-6.8",
+                "out": "/nix/store/8ph192qyza62ph9lk7razkwnaal0fqkv-autoconf-2.71",
+                "outputs": "out doc",
+                "patches": "/nix/store/4hcdpxjmr4nh625ry840g70xp00vdf5a-2.71-fix-race.patch",
+                "pname": "autoconf",
+                "postBuild": "\n    make html\n  ",
+                "postInstall": "\n    make install-html\n  ",
+                "preCheck": "export TESTSUITEFLAGS=\"-j$NIX_BUILD_CORES\"\n",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/g3pzpdicszf700d5xffyk939jzxa4r2k-autoconf-2.71.tar.xz",
+                "stdenv": "/nix/store/00ryhc0rgjvcaigxans5ph4q3j8jm6c6-bootstrap-stage2-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "2.71"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/4hcdpxjmr4nh625ry840g70xp00vdf5a-2.71-fix-race.patch",
+                "digest": {
+                    "sha256": "d89da4de1b90f2d89f9fef226a0d275c756835488ce81f7882f22c4629fd6a41"
+                }
+            },
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/0zhkga32apid60mm7nh92z2970im5837-bootstrap-tools.drv",
+                "digest": {
+                    "sha256": "f91ccdc44b609d5a97b27804be2daa58b61d51b82caa7e9e765db4ad4180098a"
+                }
+            },
+            {
+                "uri": "file:///nix/store/2qklysz0hj51z8fq5qsj152c2crnghhg-bootstrap-stage2-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "847747fb7f255141ddd9ed26c9cbf707bf272d147ef5104268a8fd5c51c090af"
+                }
+            },
+            {
+                "uri": "file:///nix/store/c99ihlhb2lh875spzsl6rnc4058grxvn-autoconf-2.71.tar.xz.drv",
+                "digest": {
+                    "sha256": "77c8be9692455ce06e9e0f246b39be69bfce78c728637c1b58245941a780c2f6"
+                }
+            },
+            {
+                "uri": "file:///nix/store/fikn7yf3w83g2kdq6il7ds871h15d64s-gnum4-1.4.19.drv",
+                "digest": {
+                    "sha256": "34c3c465eeaa0244d8131438d9f46e98e4e46501f125c8d66050338a6944386d"
+                }
+            },
+            {
+                "uri": "file:///nix/store/nlpm8r87ibl2pdnxxs3gn3sgkvlzmkl0-texinfo-6.8.drv",
+                "digest": {
+                    "sha256": "d9865f92d7ceed41e948badefa12ece17c8695dc534414a843ff7e8a277218d3"
+                }
+            },
+            {
+                "uri": "file:///nix/store/qzqv7h1dawzyxy361i4ml6307mgxk6kv-perl-5.34.1.drv",
+                "digest": {
+                    "sha256": "b761478df955663544c8c5cff482bcb1a997516b62e88a0854f1e251c5833b09"
+                }
+            }
+        ]
+    }
+}

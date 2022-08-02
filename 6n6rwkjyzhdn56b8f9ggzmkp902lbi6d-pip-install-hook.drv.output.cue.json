@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/6n6rwkjyzhdn56b8f9ggzmkp902lbi6d-pip-install-hook.drv",
+            "digest": {
+                "sha256": "a5e2f2c91e7a72f7be11a8d7805db2bbb66f0ed79042d8abd2ab43066cf801fc"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/j44b5akh6m7n87c1aj4ssih4ixvnym2i-pip-install-hook",
+                "digest": {
+                    "sha256": "4e9bc6a4cfcbf2ec0817a5e3e566c8b8a0fdd3357c2bb699e17b44c121c61eb3"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,128 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/cgz6wqipjx24b5mqvjrm5kxb105gv14c-patch-2.7.6",
+            "digest": {
+                "sha256": "3a154d57aadc3aa355bcf83c41efc06a70a918bbfca1c44542705669065a5e18"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "",
+                "builder": "/nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "1",
+                "doInstallCheck": "",
+                "name": "patch-2.7.6",
+                "nativeBuildInputs": "/nix/store/06rl8dhxizx3qfkmzyf0gpvcjcxzin5v-hook /nix/store/71ascc9mw149qcw7jhgbgzai6r8pp78q-ed-1.18",
+                "out": "/nix/store/cgz6wqipjx24b5mqvjrm5kxb105gv14c-patch-2.7.6",
+                "outputs": "out",
+                "patches": "/nix/store/8p3z4jsrxr5ck92iasc9bc7bmapb5mmg-CVE-2018-6951.patch /nix/store/2j0fmwgm5ybgnc8jprc4ypcxw6s4r2nv-Allow_input_files_to_be_missing_for_ed-style_patches.patch /nix/store/sz6rhpf50kqh75fhqwl75q6dm6fr9xyd-CVE-2018-1000156.patch /nix/store/npqvgz8c8w9kpj1gdma5bbn0pdkisyzp-CVE-2018-6952.patch /nix/store/0y5flakfvnf813cwrr8rygf1jnk0gfnc-CVE-2019-13636.patch /nix/store/rxgi2l6jrgd5xmrrsbcv5cwi558lb36m-CVE-2019-13638-and-CVE-2018-20969.patch",
+                "pname": "patch",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/hl7wxzav5znk5wxfqncdrzpcb3hqy0y0-patch-2.7.6.tar.xz",
+                "stdenv": "/nix/store/mhhmr6r7852384nmlpplxm23la0l68cs-bootstrap-stage4-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "2.7.6"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/0y5flakfvnf813cwrr8rygf1jnk0gfnc-CVE-2019-13636.patch",
+                "digest": {
+                    "sha256": "38730ab176a25bd58ef3bf10554b9d58ccf2a3de82129e907088b94d50e50def"
+                }
+            },
+            {
+                "uri": "file:///nix/store/2j0fmwgm5ybgnc8jprc4ypcxw6s4r2nv-Allow_input_files_to_be_missing_for_ed-style_patches.patch",
+                "digest": {
+                    "sha256": "d7cb139f9681c74a5dea5a5ad9bbbf4a2819c283fb710526cc481ddbaea72437"
+                }
+            },
+            {
+                "uri": "file:///nix/store/8p3z4jsrxr5ck92iasc9bc7bmapb5mmg-CVE-2018-6951.patch",
+                "digest": {
+                    "sha256": "b16065fab10e0a19f815fc2cf447fd1c5fffb554190c9f25698ff3ebc7445b34"
+                }
+            },
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/npqvgz8c8w9kpj1gdma5bbn0pdkisyzp-CVE-2018-6952.patch",
+                "digest": {
+                    "sha256": "2d342e2900628545998df9998b1f1910c11cb1efbf8a74e32c8c462abec6ea19"
+                }
+            },
+            {
+                "uri": "file:///nix/store/rxgi2l6jrgd5xmrrsbcv5cwi558lb36m-CVE-2019-13638-and-CVE-2018-20969.patch",
+                "digest": {
+                    "sha256": "a1615ace2c996df12740e7f6736b1666d2fd0ee2cee27e77068255296486cf2f"
+                }
+            },
+            {
+                "uri": "file:///nix/store/sz6rhpf50kqh75fhqwl75q6dm6fr9xyd-CVE-2018-1000156.patch",
+                "digest": {
+                    "sha256": "1edef469ae110ee83f0215e23552a72247311a8728279c0871b7d037e0e1b33f"
+                }
+            },
+            {
+                "uri": "file:///nix/store/0zhkga32apid60mm7nh92z2970im5837-bootstrap-tools.drv",
+                "digest": {
+                    "sha256": "f91ccdc44b609d5a97b27804be2daa58b61d51b82caa7e9e765db4ad4180098a"
+                }
+            },
+            {
+                "uri": "file:///nix/store/5n7j0l13pmshd0ibl1is5yq4cx3yfgrk-bootstrap-stage4-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "8e185e061d88ebd2426602e337b5fcbf1def9e959c2ede344c2c5c662836b0b1"
+                }
+            },
+            {
+                "uri": "file:///nix/store/8f8diaah2kx8ipkp9idbplv6x97vkawi-ed-1.18.drv",
+                "digest": {
+                    "sha256": "717804871ba037f3a672bb5c9a1a2808d20c7df13bf1d290db25a34bd07ba299"
+                }
+            },
+            {
+                "uri": "file:///nix/store/angvcbhbr5p8viv4zphsxxx5nl4zr1hi-patch-2.7.6.tar.xz.drv",
+                "digest": {
+                    "sha256": "ce359ce4761631077c8f15f3672fbcebef0080839cc763241a4e3da213418dc8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/dczg3cj0byvmranxmqjyiv83aqmd3rc6-hook.drv",
+                "digest": {
+                    "sha256": "b4f0e9288a437d91c7927fb976276b216e07e9d6eb4cba66c74bedf80a7e924e"
+                }
+            }
+        ]
+    }
+}

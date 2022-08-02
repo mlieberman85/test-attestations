@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/dy0h7li7p1cgfjbvb9ywi7h8ikxlzwhv-python3-3.9.12-env.drv",
+            "digest": {
+                "sha256": "747d41d6c81eb1a63e47beb4915f60412cd90845cdce2914bc27e2081df64044"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/5ngklrj8rg38rz3q8nbg8b2izvyxhzd3-python3-3.9.12-env",
+                "digest": {
+                    "sha256": "aab4e2bf318805d06d2957f608d74ef7eb04208b615e111c6d2a6d6f030bce4f"
+                }
+            }
+        ]
+    }
+}

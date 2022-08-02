@@ -1,0 +1,151 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/gx703kxmgscwp9476gvxzg55rkgmggi9-bootstrap-stage2-gcc-wrapper-",
+            "digest": {
+                "sha256": "1f6e034b3a0fa4eeb5da245a563f63b64d3157cbc5db0792684fbc1697e2c87f"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "bintools": "/nix/store/36ssswcvjj39vcrksrl1xiw0nqd7zc9s-binutils-wrapper-2.38",
+                "buildInputs": "",
+                "builder": "/nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash",
+                "cc": "/nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools",
+                "configureFlags": "",
+                "coreutils_bin": "/nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools",
+                "darwinMinVersion": "",
+                "darwinMinVersionVariable": "",
+                "darwinPlatformForCC": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "dontBuild": "1",
+                "dontConfigure": "1",
+                "expand-response-params": "/nix/store/yvmrd85drn5m4yplpv2z3w9dvzv9m0i8-expand-response-params",
+                "expandResponseParams": "/nix/store/yvmrd85drn5m4yplpv2z3w9dvzv9m0i8-expand-response-params/bin/expand-response-params",
+                "gnugrep_bin": "/nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools",
+                "installPhase": "mkdir -p $out/bin $out/nix-support\n\nwrap() {\n  local dst=\"$1\"\n  local wrapper=\"$2\"\n  export prog=\"$3\"\n  export use_response_file_by_default=0\n  substituteAll \"$wrapper\" \"$out/bin/$dst\"\n  chmod +x \"$out/bin/$dst\"\n}\necho $cc \u003e $out/nix-support/orig-cc\n\nccPath=\"/nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin\"\nfor bbin in $bintools/bin/*; do\n  mkdir -p \"$out/bin\"\n  ln -s \"$bbin\" \"$out/bin/$(basename $bbin)\"\ndone\nexport named_cc=cc\nexport named_cxx=c++\n\nif [ -e $ccPath/gcc ]; then\n  wrap gcc $wrapper $ccPath/gcc\n  ln -s gcc $out/bin/cc\n  export named_cc=gcc\n  export named_cxx=g++\nelif [ -e $ccPath/clang ]; then\n  wrap clang $wrapper $ccPath/clang\n  ln -s clang $out/bin/cc\n  export named_cc=clang\n  export named_cxx=clang++\nfi\n\nif [ -e $ccPath/g++ ]; then\n  wrap g++ $wrapper $ccPath/g++\n  ln -s g++ $out/bin/c++\nelif [ -e $ccPath/clang++ ]; then\n  wrap clang++ $wrapper $ccPath/clang++\n  ln -s clang++ $out/bin/c++\nfi\n\nif [ -e $ccPath/cpp ]; then\n  wrap cpp $wrapper $ccPath/cpp\nfi\n",
+                "libc_bin": "/nix/store/k2w9nmcz5rvnq5xrxlsgmypqvr8qqc57-bootstrap-stage0-glibc-bootstrap",
+                "libc_dev": "/nix/store/k2w9nmcz5rvnq5xrxlsgmypqvr8qqc57-bootstrap-stage0-glibc-bootstrap",
+                "libc_lib": "/nix/store/k2w9nmcz5rvnq5xrxlsgmypqvr8qqc57-bootstrap-stage0-glibc-bootstrap",
+                "name": "bootstrap-stage2-gcc-wrapper-",
+                "nativeBuildInputs": "",
+                "out": "/nix/store/gx703kxmgscwp9476gvxzg55rkgmggi9-bootstrap-stage2-gcc-wrapper-",
+                "outputs": "out",
+                "patches": "",
+                "pname": "bootstrap-stage2-gcc-wrapper",
+                "postFixup": "touch \"$out/nix-support/cc-cflags\"\ntouch \"$out/nix-support/cc-ldflags\"\nif [[ -f \"$bintools/nix-support/dynamic-linker\" ]]; then\n  ln -s \"$bintools/nix-support/dynamic-linker\" \"$out/nix-support\"\nfi\nif [[ -f \"$bintools/nix-support/dynamic-linker-m32\" ]]; then\n  ln -s \"$bintools/nix-support/dynamic-linker-m32\" \"$out/nix-support\"\nfi\ntouch \"$out/nix-support/libc-cflags\"\ntouch \"$out/nix-support/libc-ldflags\"\necho \"-B/nix/store/k2w9nmcz5rvnq5xrxlsgmypqvr8qqc57-bootstrap-stage0-glibc-bootstrap/lib/\" \u003e\u003e $out/nix-support/libc-crt1-cflags\necho \"-idirafter /nix/store/k2w9nmcz5rvnq5xrxlsgmypqvr8qqc57-bootstrap-stage0-glibc-bootstrap/include\" \u003e\u003e $out/nix-support/libc-cflags\nfor dir in \"/nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools\"/lib/gcc/*/*/include-fixed; do\n  echo '-idirafter' ${dir} \u003e\u003e $out/nix-support/libc-cflags\ndone\n\necho \"/nix/store/k2w9nmcz5rvnq5xrxlsgmypqvr8qqc57-bootstrap-stage0-glibc-bootstrap\" \u003e $out/nix-support/orig-libc\necho \"/nix/store/k2w9nmcz5rvnq5xrxlsgmypqvr8qqc57-bootstrap-stage0-glibc-bootstrap\" \u003e $out/nix-support/orig-libc-dev\ntouch \"$out/nix-support/libcxx-cxxflags\"\ntouch \"$out/nix-support/libcxx-ldflags\"\nif [ -e \"/nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/lib64\" -a ! -L \"/nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/lib64\" ]; then\n  ccLDFlags+=\" -L/nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/lib64\"\n  ccCFlags+=\" -B/nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/lib64\"\nfi\nccLDFlags+=\" -L/nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/lib\"\nccCFlags+=\" -B/nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/lib\"\n\necho \"$ccLDFlags\" \u003e\u003e $out/nix-support/cc-ldflags\necho \"$ccCFlags\" \u003e\u003e $out/nix-support/cc-cflags\nexport hardening_unsupported_flags=\"\"\nfor flags in \"$out/nix-support\"/*flags*; do\n  substituteInPlace \"$flags\" --replace $'\\n' ' '\ndone\n\nsubstituteAll /nix/store/ji2yrl1na00bwav65hh1vr0nc0s1xzvz-add-flags.sh $out/nix-support/add-flags.sh\nsubstituteAll /nix/store/hc3z14jhqg35x5286hw5wmc3injg62fa-add-hardening.sh $out/nix-support/add-hardening.sh\nsubstituteAll /nix/store/2idjp2xdckqyrdk3hd8msp4cfdi6b8if-utils.bash $out/nix-support/utils.bash\n",
+                "preferLocalBuild": "1",
+                "propagatedBuildInputs": "/nix/store/36ssswcvjj39vcrksrl1xiw0nqd7zc9s-binutils-wrapper-2.38",
+                "propagatedNativeBuildInputs": "",
+                "setupHooks": "/nix/store/797k3249lr4rx8wslf7kcsa3hv6fis3x-role.bash /nix/store/nc4bvrgb8jxh4k1fq2zgzh4mmxqavp54-setup-hook.sh",
+                "shell": "/nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash",
+                "stdenv": "/nix/store/zlnl1cd2w0m6qfcci1dprxlp0z8w73ih-bootstrap-stage0-stdenv-linux",
+                "strictDeps": "1",
+                "suffixSalt": "x86_64_unknown_linux_gnu",
+                "system": "x86_64-linux",
+                "targetPrefix": "",
+                "unpackPhase": "src=$PWD\n",
+                "version": "",
+                "wrapper": "/nix/store/6jabq3799g5n8gmwip3277si8clkl4rw-cc-wrapper.sh",
+                "wrapperName": "CC_WRAPPER"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/2idjp2xdckqyrdk3hd8msp4cfdi6b8if-utils.bash",
+                "digest": {
+                    "sha256": "97f3e7d47d96a3c51ab92d3913cbf1b3cf672cf4914a7cbafbaf3e09f38022da"
+                }
+            },
+            {
+                "uri": "file:///nix/store/6jabq3799g5n8gmwip3277si8clkl4rw-cc-wrapper.sh",
+                "digest": {
+                    "sha256": "72b6264163061c1157b7e58139cea9efa56b4888f286cfa70da4baccbe46b99c"
+                }
+            },
+            {
+                "uri": "file:///nix/store/797k3249lr4rx8wslf7kcsa3hv6fis3x-role.bash",
+                "digest": {
+                    "sha256": "4925984c7209620d5658cd0980da9d62eb0b2f98539cf05641aa996a308b7a69"
+                }
+            },
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/hc3z14jhqg35x5286hw5wmc3injg62fa-add-hardening.sh",
+                "digest": {
+                    "sha256": "763bbdf8ccbab2d2d573861afcafb138ec52c3c4453eb164b0a78b65f335bcc4"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ji2yrl1na00bwav65hh1vr0nc0s1xzvz-add-flags.sh",
+                "digest": {
+                    "sha256": "62d79426825af2d37efc0524a037ceb6112ddc09e9089c845c5f72cfa3d60c15"
+                }
+            },
+            {
+                "uri": "file:///nix/store/nc4bvrgb8jxh4k1fq2zgzh4mmxqavp54-setup-hook.sh",
+                "digest": {
+                    "sha256": "ec62309da67be216cab62915410a40130ea1963c709ccd09e933d627a1ac5a29"
+                }
+            },
+            {
+                "uri": "file:///nix/store/0zhkga32apid60mm7nh92z2970im5837-bootstrap-tools.drv",
+                "digest": {
+                    "sha256": "f91ccdc44b609d5a97b27804be2daa58b61d51b82caa7e9e765db4ad4180098a"
+                }
+            },
+            {
+                "uri": "file:///nix/store/5pd3nryggnk2vsikf754qahha8dvsr31-bootstrap-stage0-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "961574cb6989cff97fecf6cafab9f244018a8bdb61d26dabdb81c54137a47f1e"
+                }
+            },
+            {
+                "uri": "file:///nix/store/6iwslyhpp1r704hp61w46b4000zam62x-expand-response-params.drv",
+                "digest": {
+                    "sha256": "424aa8abcbf3bea91f586753cbc9ba03e941ec020005bdc3c8e9f10f29a02969"
+                }
+            },
+            {
+                "uri": "file:///nix/store/6wh1scx9kbalgmyk4zdhfabl6xlh36zh-binutils-wrapper-2.38.drv",
+                "digest": {
+                    "sha256": "291e5002d3786aaa9a35969017f493a64bae1defa43af8f9e97db1ba396e50e1"
+                }
+            },
+            {
+                "uri": "file:///nix/store/r1daaldgc14159w4ffzlz3fdi9p0qqq0-bootstrap-stage0-glibc-bootstrap.drv",
+                "digest": {
+                    "sha256": "2a727f630d7b0d12bebd53604aedb40c3f7bcbfd7eff0e885cac2adc9088eb7f"
+                }
+            }
+        ]
+    }
+}

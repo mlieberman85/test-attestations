@@ -1,0 +1,103 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/d1gzs0dk0y7wyvy8ymzis1hq9x3w2zv0-libidn2-2.3.2",
+            "digest": {
+                "sha256": "84dc99dde34d7b3b7b91c2ca8fe0d959638d41983e63736f5577380368d12757"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "bin": "/nix/store/701nyn13bf1gsj6k65z5hgcykq1q48zv-libidn2-2.3.2-bin",
+                "buildInputs": "/nix/store/xp5ckf0rlj7kawrni1qg4bryc5xl7b1d-libunistring-1.0-dev",
+                "builder": "/nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "/nix/store/gx703kxmgscwp9476gvxzg55rkgmggi9-bootstrap-stage2-gcc-wrapper-",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "dev": "/nix/store/jipraw9gzhyrf8k6j8bnhmr12kxs8gns-libidn2-2.3.2-dev",
+                "devdoc": "/nix/store/nx49sipck4yzs39pgpircy6g41c02wkp-libidn2-2.3.2-devdoc",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "info": "/nix/store/0fajxbjaa48r5w7bvrxsj52bh1wflj2q-libidn2-2.3.2-info",
+                "name": "libidn2-2.3.2",
+                "nativeBuildInputs": "",
+                "out": "/nix/store/d1gzs0dk0y7wyvy8ymzis1hq9x3w2zv0-libidn2-2.3.2",
+                "outputs": "bin dev out info devdoc",
+                "patches": "",
+                "pname": "libidn2",
+                "postFixup": "/nix/store/igv7anz5xbyhqm6k2ihknbxxd5f6886n-nuke-references/bin/nuke-refs -e '/nix/store/g2yq2isbv84zp3cmp7ihdflqlsjbnb62-libunistring-1.0' \\\n  \"$out\"/lib/lib*.so.*.*\n",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/7abps0dar1gd6ljcmlic31q0517hfapp-libidn2-2.3.2.tar.gz",
+                "stdenv": "/nix/store/00ryhc0rgjvcaigxans5ph4q3j8jm6c6-bootstrap-stage2-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "2.3.2"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/0zhkga32apid60mm7nh92z2970im5837-bootstrap-tools.drv",
+                "digest": {
+                    "sha256": "f91ccdc44b609d5a97b27804be2daa58b61d51b82caa7e9e765db4ad4180098a"
+                }
+            },
+            {
+                "uri": "file:///nix/store/2qklysz0hj51z8fq5qsj152c2crnghhg-bootstrap-stage2-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "847747fb7f255141ddd9ed26c9cbf707bf272d147ef5104268a8fd5c51c090af"
+                }
+            },
+            {
+                "uri": "file:///nix/store/3cijn0l8qsw7d83x3x49famijhsqhjmb-bootstrap-stage2-gcc-wrapper-.drv",
+                "digest": {
+                    "sha256": "15331aaea0c2a527ac46a016a70c1626cd0646b11e271889db6bbab31963dd91"
+                }
+            },
+            {
+                "uri": "file:///nix/store/5p4m51km1h978593w1pnxpdpalliwlyc-libunistring-1.0.drv",
+                "digest": {
+                    "sha256": "8a43aba3b879944b7b27654bcb9098b59f35f778193d70ed1af4c8cd2380753d"
+                }
+            },
+            {
+                "uri": "file:///nix/store/8cc7z3dqb1vzk76129is7iw1h8rz1qpg-libidn2-2.3.2.tar.gz.drv",
+                "digest": {
+                    "sha256": "cf2121a5820de1ae71b729cdb35962c78883872eafb9f6e824df44f75ae0f5c6"
+                }
+            },
+            {
+                "uri": "file:///nix/store/d7svzl6jg4wn25ici2rvgzkc7zqnfwg8-nuke-references.drv",
+                "digest": {
+                    "sha256": "95575bb91318da58e0c604b592dbdf25bf23cc1534ece18039db67d37181a677"
+                }
+            }
+        ]
+    }
+}

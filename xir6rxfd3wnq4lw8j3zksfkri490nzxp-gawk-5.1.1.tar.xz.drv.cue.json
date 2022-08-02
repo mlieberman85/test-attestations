@@ -1,0 +1,39 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/n96s4cryw417jh2y7h01wdvm24pmkw2p-gawk-5.1.1.tar.xz",
+            "digest": {
+                "sha256": "5f28bf7198465f53177827fa73a0723e4ea8ea7b7bf1bda02280013ed2efbf74"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://builtin:fetchurl"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {
+                "builder": "builtin:fetchurl",
+                "executable": "",
+                "impureEnvVars": "http_proxy https_proxy ftp_proxy all_proxy no_proxy",
+                "name": "gawk-5.1.1.tar.xz",
+                "out": "/nix/store/n96s4cryw417jh2y7h01wdvm24pmkw2p-gawk-5.1.1.tar.xz",
+                "outputHash": "18kybw47fb1sdagav7aj95r9pp09r5gm202y3ahvwjw9dqw2jxnq",
+                "outputHashAlgo": "sha256",
+                "outputHashMode": "flat",
+                "preferLocalBuild": "1",
+                "system": "builtin",
+                "unpack": "",
+                "url": "https://ftpmirror.gnu.org/gawk/gawk-5.1.1.tar.xz",
+                "urls": "https://ftpmirror.gnu.org/gawk/gawk-5.1.1.tar.xz"
+            }
+        },
+        "materials": []
+    }
+}

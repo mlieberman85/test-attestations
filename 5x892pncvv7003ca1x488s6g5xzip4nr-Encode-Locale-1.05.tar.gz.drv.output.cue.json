@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/5x892pncvv7003ca1x488s6g5xzip4nr-Encode-Locale-1.05.tar.gz.drv",
+            "digest": {
+                "sha256": "fb8f8006086ef699126fa7bda9ff23f8387f775ba93f19c3914ab60b9ec10dfc"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/8bmm056gz61ksirlp1r8n4644k0psng3-Encode-Locale-1.05.tar.gz",
+                "digest": {
+                    "sha256": "d355c0fe0df87e4d21180b733f011a8d75f8e1a92a55bce72cab7a9e4b902732"
+                }
+            }
+        ]
+    }
+}

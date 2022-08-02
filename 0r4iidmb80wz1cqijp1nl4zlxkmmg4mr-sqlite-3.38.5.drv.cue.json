@@ -1,0 +1,100 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/wr3d5ck96xy3al2d9b38hby950xfwrxi-sqlite-3.38.5",
+            "digest": {
+                "sha256": "efd9d0bbb7f57e0297a99e485c03f5f01e87c4c9fc6c3901ec578e1d8e7ae530"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "NIX_CFLAGS_COMPILE": "-DSQLITE_ENABLE_COLUMN_METADATA -DSQLITE_ENABLE_DBSTAT_VTAB -DSQLITE_ENABLE_JSON1 -DSQLITE_ENABLE_FTS3 -DSQLITE_ENABLE_FTS3_PARENTHESIS -DSQLITE_ENABLE_FTS3_TOKENIZER -DSQLITE_ENABLE_FTS4 -DSQLITE_ENABLE_FTS5 -DSQLITE_ENABLE_RTREE -DSQLITE_ENABLE_STMT_SCANSTATUS -DSQLITE_ENABLE_UNLOCK_NOTIFY -DSQLITE_SOUNDEX -DSQLITE_SECURE_DELETE -DSQLITE_MAX_VARIABLE_NUMBER=250000 -DSQLITE_MAX_EXPR_DEPTH=10000",
+                "bin": "/nix/store/7mq0yv3022na9ib6snwd96mp8x30rbki-sqlite-3.38.5-bin",
+                "buildInputs": "/nix/store/38ryqbjx5i1hir1a3sfk4za1yq5fbkpd-zlib-1.2.12-dev",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "--enable-threadsafe",
+                "debug": "/nix/store/2dwd77zflgrxvhbr88fpp3vnw1v4qxv1-sqlite-3.38.5-debug",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "dev": "/nix/store/d5gfff3xawqk8b7ajkvq1893x3nnhbz1-sqlite-3.38.5-dev",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "name": "sqlite-3.38.5",
+                "nativeBuildInputs": "/nix/store/ikmqczy0y20n04a2b8qfflzwihv8139g-separate-debug-info.sh",
+                "out": "/nix/store/wr3d5ck96xy3al2d9b38hby950xfwrxi-sqlite-3.38.5",
+                "outputs": "bin dev out debug",
+                "patches": "",
+                "pname": "sqlite",
+                "postInstall": "# Do not contaminate dependent libtool-based projects with sqlite dependencies.\nsed -i $out/lib/libsqlite3.la -e \"s/dependency_libs=.*/dependency_libs=''/\"\n",
+                "preBuild": "# Use pread(), pread64(), pwrite(), pwrite64() functions for better performance if they are available.\nif cc -Werror=implicit-function-declaration -x c - -o \"$TMPDIR/pread_pwrite_test\" \u003c\u003c\u003c \\\n  $'#include \u003cunistd.h\u003e\\nint main()\\n{\\n  pread(0, NULL, 0, 0);\\n  pwrite(0, NULL, 0, 0);\\n  return 0;\\n}'; then\n  export NIX_CFLAGS_COMPILE=\"$NIX_CFLAGS_COMPILE -DUSE_PREAD\"\nfi\nif cc -Werror=implicit-function-declaration -x c - -o \"$TMPDIR/pread64_pwrite64_test\" \u003c\u003c\u003c \\\n  $'#include \u003cunistd.h\u003e\\nint main()\\n{\\n  pread64(0, NULL, 0, 0);\\n  pwrite64(0, NULL, 0, 0);\\n  return 0;\\n}'; then\n  export NIX_CFLAGS_COMPILE=\"$NIX_CFLAGS_COMPILE -DUSE_PREAD64\"\nelif cc -D_LARGEFILE64_SOURCE -Werror=implicit-function-declaration -x c - -o \"$TMPDIR/pread64_pwrite64_test\" \u003c\u003c\u003c \\\n  $'#include \u003cunistd.h\u003e\\nint main()\\n{\\n  pread64(0, NULL, 0, 0);\\n  pwrite64(0, NULL, 0, 0);\\n  return 0;\\n}'; then\n  export NIX_CFLAGS_COMPILE=\"$NIX_CFLAGS_COMPILE -DUSE_PREAD64 -D_LARGEFILE64_SOURCE\"\nfi\n\n# Necessary for FTS5 on Linux\nexport NIX_LDFLAGS=\"$NIX_LDFLAGS -lm\"\n\necho \"\"\necho \"NIX_CFLAGS_COMPILE = $NIX_CFLAGS_COMPILE\"\necho \"\"\n",
+                "preConfigure": "patchShebangs configure\n",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "separateDebugInfo": "1",
+                "src": "/nix/store/3hv63asv2r5sspbkfv6wpziw75zqxmj3-sqlite-autoconf-3380500.tar.gz",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "3.38.5"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ikmqczy0y20n04a2b8qfflzwihv8139g-separate-debug-info.sh",
+                "digest": {
+                    "sha256": "6a9bffeef698bb4db776df8fdaaf2a4766c65c1a468204b9ae425eeaa4e961c7"
+                }
+            },
+            {
+                "uri": "file:///nix/store/4ps3shhk3a83nxw82pirrp84kjza42qr-zlib-1.2.12.drv",
+                "digest": {
+                    "sha256": "f1c161051f72552716fdcba6f78370a3f93dab26e28779bbb0002f809c502534"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/kkjvaikgava6jfqh8w4ww3y4kpcdsjmi-sqlite-autoconf-3380500.tar.gz.drv",
+                "digest": {
+                    "sha256": "b9dd3e36d3ffb401b1c5aabb1fae398cd4d3d83351e21cf349aa08cdd6899af9"
+                }
+            }
+        ]
+    }
+}

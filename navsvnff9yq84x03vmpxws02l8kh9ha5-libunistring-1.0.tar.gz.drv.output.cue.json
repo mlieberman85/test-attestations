@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/navsvnff9yq84x03vmpxws02l8kh9ha5-libunistring-1.0.tar.gz.drv",
+            "digest": {
+                "sha256": "803d0adc209b879907280a8a56f908992900e6f687453c31ab9f2f8280bf1209"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/wp9v6jcv4vdxp8vwrfsb3q6qfalf2n5l-libunistring-1.0.tar.gz",
+                "digest": {
+                    "sha256": "59e52816cf6623037737256d2abad09df24b19d8f5f5216ce536fb68a53fef16"
+                }
+            }
+        ]
+    }
+}

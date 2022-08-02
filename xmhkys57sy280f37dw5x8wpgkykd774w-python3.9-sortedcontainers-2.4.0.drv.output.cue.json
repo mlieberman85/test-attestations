@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/xmhkys57sy280f37dw5x8wpgkykd774w-python3.9-sortedcontainers-2.4.0.drv",
+            "digest": {
+                "sha256": "65900ad177cf77986a3ef8335951fca11a118a8a9b9e959329fd8a4b97f0bcfb"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/jpv0ym6qgql4yd11lbxlcsq25jq8fchh-python3.9-sortedcontainers-2.4.0",
+                "digest": {
+                    "sha256": "f1456fd447ca4009cadbde8df33087a9ed82b17df190f01847ceee5ac6d93a25"
+                }
+            }
+        ]
+    }
+}

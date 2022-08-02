@@ -1,0 +1,39 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/7ifrkfd7m64v1c6lcg346hs2vkkdvi1x-libssh2-1.10.0.tar.gz",
+            "digest": {
+                "sha256": "3b5d2b2cd5a84d336aa9c1a3dbaf8b2234acd4fce9e743d28e018417ce96ffb2"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://builtin:fetchurl"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {
+                "builder": "builtin:fetchurl",
+                "executable": "",
+                "impureEnvVars": "http_proxy https_proxy ftp_proxy all_proxy no_proxy",
+                "name": "libssh2-1.10.0.tar.gz",
+                "out": "/nix/store/7ifrkfd7m64v1c6lcg346hs2vkkdvi1x-libssh2-1.10.0.tar.gz",
+                "outputHash": "sha256-LWTpDz3tOUuR06LndMogOkF59prr7gMAPlpvpiHkHVE=",
+                "outputHashAlgo": "sha256",
+                "outputHashMode": "flat",
+                "preferLocalBuild": "1",
+                "system": "builtin",
+                "unpack": "",
+                "url": "https://www.libssh2.org/download/libssh2-1.10.0.tar.gz",
+                "urls": "https://www.libssh2.org/download/libssh2-1.10.0.tar.gz"
+            }
+        },
+        "materials": []
+    }
+}

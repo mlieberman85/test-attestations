@@ -1,0 +1,108 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/pskm2shn5yayj7cpw9bfmi210mzbx2k7-libuv-1.44.1",
+            "digest": {
+                "sha256": "987ce16d2e50daa093b0cf50c468583c3a68750840ed739c0d4cb2d00702a6d2"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "1",
+                "doInstallCheck": "",
+                "enableParallelBuilding": "1",
+                "enableParallelChecking": "1",
+                "name": "libuv-1.44.1",
+                "nativeBuildInputs": "/nix/store/s0bkddayvfc1snn8npz438dqb5zkbgzz-automake-1.16.5 /nix/store/ndqivn28vbniwnz0k03sgga9z0zg2mdk-autoconf-2.71 /nix/store/zahcayqy4jr89g0dphqk5d0pk6f063rf-libtool-2.4.7 /nix/store/prn4gvr4ljmrwnnm508i7m7qh7nfh7gz-pkg-config-wrapper-0.29.2",
+                "out": "/nix/store/pskm2shn5yayj7cpw9bfmi210mzbx2k7-libuv-1.44.1",
+                "outputs": "out",
+                "patches": "",
+                "pname": "libuv",
+                "postPatch": "sed '/getnameinfo_basic\\|udp_send_hang_loop\\|tcp_connect_timeout\\|spawn_setuid_fails\\|spawn_setgid_fails\\|fs_chown\\|getaddrinfo_fail\\|getaddrinfo_fail_sync\\|threadpool_multiple_event_loops\\|get_passwd\\|tcp_writealot\\|udp_multicast_join\\|udp_multicast_join6\\|fs_fstat/d' -i test/test-list.h\n",
+                "preConfigure": "LIBTOOLIZE=libtoolize ./autogen.sh\n",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/9viqvgi9mz5qvs0iak58kyak1s8km6kf-source",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "1.44.1"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/1v1lazzb2r2cg7a0vxv705jxyc8hidpn-pkg-config-wrapper-0.29.2.drv",
+                "digest": {
+                    "sha256": "d1c8e17a6c2ddf6900b817119c22f726a3a39af2ac395821e95d915fde3d9734"
+                }
+            },
+            {
+                "uri": "file:///nix/store/885s7mq3zn24fsm4h6v7agbzaqhkiids-libtool-2.4.7.drv",
+                "digest": {
+                    "sha256": "7faf6e79f3cf2bc594d9495febcc257c69c6e9d5015259c7f2fbd2273b94db49"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/dzsvla59i2g705722jnsvkmihmpqfaxi-source.drv",
+                "digest": {
+                    "sha256": "48a108930ce9dc768d089a705b8da2ae143d55383dff8e139e2642a0be0c295f"
+                }
+            },
+            {
+                "uri": "file:///nix/store/gl0dcpvnhvnnl0mqiw7phrida95lkvxg-autoconf-2.71.drv",
+                "digest": {
+                    "sha256": "f9e31747ea9138495bb268512b394006824b45ae8e7a565051766afef98176a8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ijbc1gw8zi8b4ja6dz4ilz5k267y3vz3-automake-1.16.5.drv",
+                "digest": {
+                    "sha256": "e1d0a5fba23e2b3cb4df295cab4345d1208f3880969e363740eb8b68997b0f93"
+                }
+            }
+        ]
+    }
+}

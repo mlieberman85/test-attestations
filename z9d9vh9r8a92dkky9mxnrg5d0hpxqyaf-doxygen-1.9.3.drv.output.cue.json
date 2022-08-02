@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/z9d9vh9r8a92dkky9mxnrg5d0hpxqyaf-doxygen-1.9.3.drv",
+            "digest": {
+                "sha256": "c3c3fb333dae708fcb3a6b386b4e64571d273dac9ef35f9f1244c30454ec668c"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/6yp15lqs87lwmxn3mhwvdca7n9k7i7hv-doxygen-1.9.3",
+                "digest": {
+                    "sha256": "1f1c46f366834e8ede54c2717b8013206ea1751be463edcf6584ff192fa53950"
+                }
+            }
+        ]
+    }
+}

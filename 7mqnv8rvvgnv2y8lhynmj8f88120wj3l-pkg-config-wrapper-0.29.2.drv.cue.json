@@ -1,0 +1,124 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/prn4gvr4ljmrwnnm508i7m7qh7nfh7gz-pkg-config-wrapper-0.29.2",
+            "digest": {
+                "sha256": "45805c48d56c32345e4df63d087f6fac631ca2660f9c50d85c5ce53b4e7f17db"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "addFlags": "",
+                "baseBinName": "pkg-config",
+                "buildInputs": "",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "doc": "/nix/store/cz19r8vmrkpqns60h3b6pdy59c8s1qgz-pkg-config-wrapper-0.29.2-doc",
+                "dontBuild": "1",
+                "dontConfigure": "1",
+                "installPhase": "mkdir -p $out/bin $out/nix-support\n\nwrap() {\n  local dst=\"$1\"\n  local wrapper=\"$2\"\n  export prog=\"$3\"\n  substituteAll \"$wrapper\" \"$out/bin/$dst\"\n  chmod +x \"$out/bin/$dst\"\n}\n\necho $pkg-config \u003e $out/nix-support/orig-pkg-config\n\nwrap pkg-config /nix/store/9whvblgb7bgnmqsv7y5xqs1w8xv9aa1d-pkg-config-wrapper.sh \"/nix/store/my48mw5m1qwdkc6vmxrxdf5wn9g5pqp0-pkg-config-0.29.2/bin/pkg-config\"\nln -s /nix/store/my48mw5m1qwdkc6vmxrxdf5wn9g5pqp0-pkg-config-0.29.2/share $out/share\n",
+                "man": "/nix/store/qpndf5hpnwq813c3hq868l8hcrp959v6-pkg-config-wrapper-0.29.2-man",
+                "name": "pkg-config-wrapper-0.29.2",
+                "nativeBuildInputs": "",
+                "out": "/nix/store/prn4gvr4ljmrwnnm508i7m7qh7nfh7gz-pkg-config-wrapper-0.29.2",
+                "outputs": "out man doc",
+                "patches": "",
+                "pname": "pkg-config-wrapper",
+                "postFixup": "printWords /nix/store/my48mw5m1qwdkc6vmxrxdf5wn9g5pqp0-pkg-config-0.29.2 \u003e $out/nix-support/propagated-user-env-packages\nln -s /nix/store/hscnhcp9csj027228lp163lvhj4hw95w-pkg-config-0.29.2-man $man\nln -s /nix/store/5a1vygj0qvygmnnmzyfr0bpjlzr6zsfn-pkg-config-0.29.2-doc $doc\nsubstituteAll /nix/store/1ksmnsr3m6paw8gs7jp9b623agzdrqi2-add-flags.sh $out/nix-support/add-flags.sh\nsubstituteAll /nix/store/2idjp2xdckqyrdk3hd8msp4cfdi6b8if-utils.bash $out/nix-support/utils.bash\n",
+                "preferLocalBuild": "1",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "setupHooks": "/nix/store/797k3249lr4rx8wslf7kcsa3hv6fis3x-role.bash /nix/store/c4akajrb4jg50k72jw7zfbyv8z139ri0-setup-hook.sh",
+                "shell": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "stdenv": "/nix/store/lmj98vlk5h0v1x5gzslxjnaj4m58dwxm-stdenv-linux",
+                "strictDeps": "1",
+                "suffixSalt": "x86_64_unknown_linux_gnu",
+                "system": "x86_64-linux",
+                "targetPrefix": "",
+                "unpackPhase": "src=$PWD\n",
+                "version": "0.29.2",
+                "wrapperName": "PKG_CONFIG_WRAPPER"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/1ksmnsr3m6paw8gs7jp9b623agzdrqi2-add-flags.sh",
+                "digest": {
+                    "sha256": "d228546b67f5f80feaecb5b76bba9b0da850b94cfcf37fda382c87f911b2138f"
+                }
+            },
+            {
+                "uri": "file:///nix/store/2idjp2xdckqyrdk3hd8msp4cfdi6b8if-utils.bash",
+                "digest": {
+                    "sha256": "97f3e7d47d96a3c51ab92d3913cbf1b3cf672cf4914a7cbafbaf3e09f38022da"
+                }
+            },
+            {
+                "uri": "file:///nix/store/797k3249lr4rx8wslf7kcsa3hv6fis3x-role.bash",
+                "digest": {
+                    "sha256": "4925984c7209620d5658cd0980da9d62eb0b2f98539cf05641aa996a308b7a69"
+                }
+            },
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/9whvblgb7bgnmqsv7y5xqs1w8xv9aa1d-pkg-config-wrapper.sh",
+                "digest": {
+                    "sha256": "5e30f08621d35056893c2afa48aa223a09287ad6c440449c73e8754092f95a49"
+                }
+            },
+            {
+                "uri": "file:///nix/store/c4akajrb4jg50k72jw7zfbyv8z139ri0-setup-hook.sh",
+                "digest": {
+                    "sha256": "c3af00b22ed08ac4909fc79cf553e0fa635311045f2033120ef7cbe936884d10"
+                }
+            },
+            {
+                "uri": "file:///nix/store/3ga8qx6a74j26sy0yyvnqnxp6mva1b1z-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "f9bc13b9bdaa3cce0106294eeec282b55ca6f4f2d0b2d11e04685a22f7cb5170"
+                }
+            },
+            {
+                "uri": "file:///nix/store/3l77lcfnlpgzygia7avvhy4j7vwck7lw-pkg-config-0.29.2.drv",
+                "digest": {
+                    "sha256": "c822a387804dfed840d8e9e93269fe8cf956fa24a09c467986be3628c4c35569"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            }
+        ]
+    }
+}

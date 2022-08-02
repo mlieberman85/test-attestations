@@ -1,0 +1,80 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/cm94b07ra068jyz49kv22mzj9dzwvfh1-getent-glibc-2.34-210",
+            "digest": {
+                "sha256": "18378fe293b691165ddbb0fed037af800a56feaf1a46110e22120ae1e7163b7f"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildCommand": "if ! [ -x /nix/store/vinqsa9jxqjg590i9rxy1d6ikvn3zv0g-glibc-2.34-210-bin/bin/getent ]; then\n  echo Cannot find command getent\n  exit 1\nfi\n\nmkdir -p $out/bin\nln -s /nix/store/vinqsa9jxqjg590i9rxy1d6ikvn3zv0g-glibc-2.34-210-bin/bin/getent $out/bin/getent\n\nif [ -f /nix/store/bvy2z17rzlvkx2sj7fy99ajm853yv898-glibc-2.34-210/share/man/man1/getent.1.gz ]; then\n  mkdir -p $out/share/man/man1\n  ln -s /nix/store/bvy2z17rzlvkx2sj7fy99ajm853yv898-glibc-2.34-210/share/man/man1/getent.1.gz $out/share/man/man1/getent.1.gz\nfi\n",
+                "buildInputs": "",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "name": "getent-glibc-2.34-210",
+                "nativeBuildInputs": "",
+                "out": "/nix/store/cm94b07ra068jyz49kv22mzj9dzwvfh1-getent-glibc-2.34-210",
+                "outputs": "out",
+                "passAsFile": "buildCommand",
+                "patches": "",
+                "preferLocalBuild": "1",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "stdenv": "/nix/store/lmj98vlk5h0v1x5gzslxjnaj4m58dwxm-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/3ga8qx6a74j26sy0yyvnqnxp6mva1b1z-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "f9bc13b9bdaa3cce0106294eeec282b55ca6f4f2d0b2d11e04685a22f7cb5170"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/slh6i99w5w5vppjcxi6ksxh56yw87xq6-glibc-2.34-210.drv",
+                "digest": {
+                    "sha256": "e77e6d503666f4a073d742a97b9a1ecb2ce20311289fec458e531677d7ac7fdb"
+                }
+            }
+        ]
+    }
+}

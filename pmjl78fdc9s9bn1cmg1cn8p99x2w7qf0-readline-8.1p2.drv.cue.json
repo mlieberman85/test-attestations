@@ -1,0 +1,116 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/npi66rs8m27qhjh1gbxwnycrj5v3dahw-readline-8.1p2",
+            "digest": {
+                "sha256": "cebf8ffb9d2e5739de1f0708b63a02c6c65965de451efe344467909e42297945"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "dev": "/nix/store/r8ya5l9xj82n1nxfrxv2p3vf0145lc9g-readline-8.1p2-dev",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "doc": "/nix/store/zmwxz9v1cynhdx0bv8r6c7ps33pmk60k-readline-8.1p2-doc",
+                "info": "/nix/store/ircvcsbwfw8zdbp1skw8fw5nxa3vxy8x-readline-8.1p2-info",
+                "man": "/nix/store/s5rmc780p2w4ch35jjfaj79jl889slrj-readline-8.1p2-man",
+                "name": "readline-8.1p2",
+                "nativeBuildInputs": "",
+                "out": "/nix/store/npi66rs8m27qhjh1gbxwnycrj5v3dahw-readline-8.1p2",
+                "outputs": "out dev man doc info",
+                "patchFlags": "-p0",
+                "patches": "/nix/store/bw6aa38615ww5karcn8kslsf5hxgz412-link-against-ncurses.patch /nix/store/v3fnnlch7i18q6ga55dqc05ig9nry17r-no-arch_only-6.3.patch /nix/store/wkjh2dr3q35bwyd1rmzcqyw64jspvbl7-readline81-001 /nix/store/l3nm4jqnxwq4qjn48aa72dbb6k0rwmf6-readline81-002",
+                "pname": "readline",
+                "propagatedBuildInputs": "/nix/store/xfbflasrprwi6gavla92mn3b7s28g879-ncurses-6.3-dev",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/g640j3x8z0ykqyjbn2ag5r3952075ynq-readline-8.1.tar.gz",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "upstreamPatches": "/nix/store/wkjh2dr3q35bwyd1rmzcqyw64jspvbl7-readline81-001 /nix/store/l3nm4jqnxwq4qjn48aa72dbb6k0rwmf6-readline81-002",
+                "version": "8.1p2"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/bw6aa38615ww5karcn8kslsf5hxgz412-link-against-ncurses.patch",
+                "digest": {
+                    "sha256": "1f253e24ac61352b69f9570d15960738ed75e81514bb318c8e717492039234e9"
+                }
+            },
+            {
+                "uri": "file:///nix/store/v3fnnlch7i18q6ga55dqc05ig9nry17r-no-arch_only-6.3.patch",
+                "digest": {
+                    "sha256": "0a1bfb4b35613c1ce720ef8e172518f49a31505720e2058a3463b7be53a2c030"
+                }
+            },
+            {
+                "uri": "file:///nix/store/17glrrnx0ggnhfy52hgp7zp3l9w7zci3-readline81-001.drv",
+                "digest": {
+                    "sha256": "1bafcccaa5a566dcbea2aa6229360061507af8e28777a9db22c67191b2a68401"
+                }
+            },
+            {
+                "uri": "file:///nix/store/9ghpd3yl05rnl3y4xsw26qbz3w69ksm9-readline-8.1.tar.gz.drv",
+                "digest": {
+                    "sha256": "ebb4963c5130ba5851e42eb6e9b9062beb48b1e811a71eefcdaf331ab33d2624"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/jnjyfslfrnfwkhcng8872izwp8g2fdj8-readline81-002.drv",
+                "digest": {
+                    "sha256": "0114b1a90f29ac7150c19223455cabbfa3a35815c3e8c991e6054824b67d9277"
+                }
+            },
+            {
+                "uri": "file:///nix/store/l5y6ghs0kpvyrbsg99v56h1phd4lvpas-ncurses-6.3.drv",
+                "digest": {
+                    "sha256": "b04aaac5b9f13913712c318b35890248423d5cc4f96dbcd2df42d14210295a1d"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,103 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/s0bkddayvfc1snn8npz438dqb5zkbgzz-automake-1.16.5",
+            "digest": {
+                "sha256": "b8852ceda1e4cdd705f436abfffd617457e2b237d3477d1ca1ec75d06074e341"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "/nix/store/ndqivn28vbniwnz0k03sgga9z0zg2mdk-autoconf-2.71",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "dontPatchShebangs": "1",
+                "enableParallelBuilding": "1",
+                "enableParallelChecking": "1",
+                "name": "automake-1.16.5",
+                "nativeBuildInputs": "/nix/store/ndqivn28vbniwnz0k03sgga9z0zg2mdk-autoconf-2.71 /nix/store/c34zmy26gc58bn7qbf4md2yh8vp133n6-perl-5.34.1",
+                "out": "/nix/store/s0bkddayvfc1snn8npz438dqb5zkbgzz-automake-1.16.5",
+                "outputs": "out",
+                "patches": "",
+                "pname": "automake",
+                "preCheck": "unset NIX_INDENT_MAKE",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "setupHook": "/nix/store/4cmjzk8yr6i5vls5d2050p653zzdvmvp-setup-hook.sh",
+                "src": "/nix/store/gmaq49vzfrkvr714y4fhfxv100ijihin-automake-1.16.5.tar.xz",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "1.16.5"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/4cmjzk8yr6i5vls5d2050p653zzdvmvp-setup-hook.sh",
+                "digest": {
+                    "sha256": "adb433bb0d8d3e0c4078221c7f326c1265f4bf7ab6c2020c49d6fb309dd288be"
+                }
+            },
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/a6qamgxrkzvmj7w5gqvlwl4zsvam47nm-automake-1.16.5.tar.xz.drv",
+                "digest": {
+                    "sha256": "74139c673279318e65980c9a13845416a7ed4f0be301128fd54b1980cbbd8133"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/gl0dcpvnhvnnl0mqiw7phrida95lkvxg-autoconf-2.71.drv",
+                "digest": {
+                    "sha256": "f9e31747ea9138495bb268512b394006824b45ae8e7a565051766afef98176a8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/jkn79jy5p1cdh953rsmnpadxk15jaili-perl-5.34.1.drv",
+                "digest": {
+                    "sha256": "87f4f98f9a11a87515771dacc6dcd294d640778e146d6119ee09b07f955a654e"
+                }
+            }
+        ]
+    }
+}

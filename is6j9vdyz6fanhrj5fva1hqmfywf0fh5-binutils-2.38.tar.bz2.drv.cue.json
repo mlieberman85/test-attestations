@@ -1,0 +1,39 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/7pi1c8n0sl1b8sy8cjv2sxwppawwgndk-binutils-2.38.tar.bz2",
+            "digest": {
+                "sha256": "be7b0b011de7290c567bde7b250649f7aa2d81cff53f47aa6a4d2fce9d8a604f"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://builtin:fetchurl"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {
+                "builder": "builtin:fetchurl",
+                "executable": "",
+                "impureEnvVars": "http_proxy https_proxy ftp_proxy all_proxy no_proxy",
+                "name": "binutils-2.38.tar.bz2",
+                "out": "/nix/store/7pi1c8n0sl1b8sy8cjv2sxwppawwgndk-binutils-2.38.tar.bz2",
+                "outputHash": "sha256-Bw7HHPB3pqWOC5WfBaCaNQFTeMLYpR6Q866r/jBZDvg=",
+                "outputHashAlgo": "sha256",
+                "outputHashMode": "flat",
+                "preferLocalBuild": "1",
+                "system": "builtin",
+                "unpack": "",
+                "url": "https://ftpmirror.gnu.org/binutils/binutils-2.38.tar.bz2",
+                "urls": "https://ftpmirror.gnu.org/binutils/binutils-2.38.tar.bz2"
+            }
+        },
+        "materials": []
+    }
+}

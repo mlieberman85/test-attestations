@@ -1,0 +1,39 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/nl9ycnfgc3j36kv95ljhvrgj6m8nblw9-mpfr-4.1.0.tar.xz",
+            "digest": {
+                "sha256": "8b46b33308d6dfd1e90ea11ef23fc8222de8740c3f189c417581a8027a1b95c8"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://builtin:fetchurl"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {
+                "builder": "builtin:fetchurl",
+                "executable": "",
+                "impureEnvVars": "http_proxy https_proxy ftp_proxy all_proxy no_proxy",
+                "name": "mpfr-4.1.0.tar.xz",
+                "out": "/nix/store/nl9ycnfgc3j36kv95ljhvrgj6m8nblw9-mpfr-4.1.0.tar.xz",
+                "outputHash": "0zwaanakrqjf84lfr5hfsdr7hncwv9wj0mchlr7cmxigfgqs760c",
+                "outputHashAlgo": "sha256",
+                "outputHashMode": "flat",
+                "preferLocalBuild": "1",
+                "system": "builtin",
+                "unpack": "",
+                "url": "https://ftpmirror.gnu.org/mpfr/mpfr-4.1.0.tar.xz",
+                "urls": "https://ftpmirror.gnu.org/mpfr/mpfr-4.1.0.tar.xz"
+            }
+        },
+        "materials": []
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/9n14rgx13vixmdch1jg05xh9l8bh2lma-libtasn1-4.18.0.tar.gz.drv",
+            "digest": {
+                "sha256": "f3118795977994811aa229633ed50a083a24da924737c35c0c02992759a82e37"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/vlxh07vrj06d7am9mlayay48ldiqdmi5-libtasn1-4.18.0.tar.gz",
+                "digest": {
+                    "sha256": "1b49237d41b5f938134b4591cce087e15f1a8d9450372be9df4afc1d73011d8b"
+                }
+            }
+        ]
+    }
+}

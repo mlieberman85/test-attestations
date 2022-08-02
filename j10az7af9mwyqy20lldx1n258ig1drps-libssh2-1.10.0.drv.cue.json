@@ -1,0 +1,94 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/2f8dy122rqbzscciakzxa7dj5d7jznm4-libssh2-1.10.0",
+            "digest": {
+                "sha256": "b78886c1e11cd82eb592265153ff200af4111cb069cb7a59811e6e5d937953f5"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "/nix/store/04f6wxa0x2llhyjh9p5vb70rr63ck81a-openssl-1.1.1o-dev /nix/store/38ryqbjx5i1hir1a3sfk4za1yq5fbkpd-zlib-1.2.12-dev",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "dev": "/nix/store/8b7mxfibq4850dnypiqm3x6sd7iaxvxv-libssh2-1.10.0-dev",
+                "devdoc": "/nix/store/8flnqgmf232ppnsm3wf69xq6npnm01mh-libssh2-1.10.0-devdoc",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "name": "libssh2-1.10.0",
+                "nativeBuildInputs": "",
+                "out": "/nix/store/2f8dy122rqbzscciakzxa7dj5d7jznm4-libssh2-1.10.0",
+                "outputs": "out dev devdoc",
+                "patches": "",
+                "pname": "libssh2",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/7ifrkfd7m64v1c6lcg346hs2vkkdvi1x-libssh2-1.10.0.tar.gz",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "1.10.0"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/4ps3shhk3a83nxw82pirrp84kjza42qr-zlib-1.2.12.drv",
+                "digest": {
+                    "sha256": "f1c161051f72552716fdcba6f78370a3f93dab26e28779bbb0002f809c502534"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/fwp19723jyva229wfsqfz3qv42bbnsck-openssl-1.1.1o.drv",
+                "digest": {
+                    "sha256": "36856ddd04e3f5beadf2a2b01d1a9a496eb63d5b7c2217462ed9f6adae5a1dd4"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/vizgh9p9qc3v9f4c17f10smqb7zg90sg-libssh2-1.10.0.tar.gz.drv",
+                "digest": {
+                    "sha256": "1869b838de71db098edd09af92dc32010cac3acafa7bffd967f30a640f957c4f"
+                }
+            }
+        ]
+    }
+}

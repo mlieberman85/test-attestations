@@ -1,0 +1,109 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/73lwnsr46pfn9wwrh32s8hlv457433xg-nss-cacert-3.77",
+            "digest": {
+                "sha256": "16c5e748f66fca10f7731f2e7a0065367523c6945e8f63d5f0c44cdd2572e1b6"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "",
+                "buildPhase": "mkdir unbundled\nbuildcatrust \\\n  --certdata_input certdata.txt \\\n  --ca_bundle_input \"/nix/store/n3ky7mr6c1q0w44962x3b5x4m7zwcdlg-cacert-extra-certificates-bundle.crt\"  \\\n  --blocklist \"/nix/store/7v8b010lzryn8i5gqarfg0hfnw17lvxz-cacert-blocklist.txt\" \\\n  --ca_bundle_output ca-bundle.crt \\\n  --ca_unpacked_output unbundled \\\n  --p11kit_output ca-bundle.trust.p11-kit\n",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "installPhase": "install -D -t \"$out/etc/ssl/certs\" ca-bundle.crt\n\n# install p11-kit specific output to p11kit output\ninstall -D -t \"$p11kit/etc/ssl/trust-source\" ca-bundle.trust.p11-kit\n\n# install individual certs in unbundled output\ninstall -D -t \"$unbundled/etc/ssl/certs\" unbundled/*.crt\n",
+                "name": "nss-cacert-3.77",
+                "nativeBuildInputs": "/nix/store/5j9mzl1vqclsh206jd4lpw8xgjkaaxk1-python3.9-buildcatrust-0.1.3",
+                "out": "/nix/store/73lwnsr46pfn9wwrh32s8hlv457433xg-nss-cacert-3.77",
+                "outputs": "out unbundled p11kit",
+                "p11kit": "/nix/store/4129kaqy5zwyay2rxbni8cal7avc9ckl-nss-cacert-3.77-p11kit",
+                "patches": "",
+                "pname": "nss-cacert",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "setupHook": "/nix/store/d8nly91nc3h5gs1rlhfkxdwxr4jvqd49-setup-hook.sh",
+                "src": "/nix/store/i2fq1m763l5zsnbj6i66hgkw9vqsmzxk-nss-cacert-certdata-3.77",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "unbundled": "/nix/store/bhy39b6xvvik9dbcknwpwxnaibkb4rfh-nss-cacert-3.77-unbundled",
+                "version": "3.77"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/d8nly91nc3h5gs1rlhfkxdwxr4jvqd49-setup-hook.sh",
+                "digest": {
+                    "sha256": "c3dacea47cad6068550c78cfdf45131648abf839e616d9d0be02ca5779402988"
+                }
+            },
+            {
+                "uri": "file:///nix/store/2y5wm0rnh2bx7szv8xs49cd2zrxhajx9-nss-cacert-certdata-3.77.drv",
+                "digest": {
+                    "sha256": "1bc911c531e2354aafb6986c51d55593124f752d3e4c60e90b4d2f9a6d2900ec"
+                }
+            },
+            {
+                "uri": "file:///nix/store/9dr50qwl1mkmbxgqi0n8lmvrhx494v2v-cacert-extra-certificates-bundle.crt.drv",
+                "digest": {
+                    "sha256": "9afa0b7a23259176e3fb0a3c4dff0e0023a81bde4edf22b7721d1834ac3c8b48"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/dffhjbl5xkdw83s94c3yc1jx4zmhxvcb-python3.9-buildcatrust-0.1.3.drv",
+                "digest": {
+                    "sha256": "8953f06336a7f3a9ddb1a6cc028d6447f1ea42654924c0c35ee2b72b4a5f7e81"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/pncax3cpkvg1vnz0g1b3cv5p75g1pd38-cacert-blocklist.txt.drv",
+                "digest": {
+                    "sha256": "60fbbc196294664f301699baf31d317112d781b763c82cfe0e6d41437db34041"
+                }
+            }
+        ]
+    }
+}

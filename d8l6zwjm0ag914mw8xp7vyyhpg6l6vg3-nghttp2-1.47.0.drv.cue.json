@@ -1,0 +1,136 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/gp18w6k3s9v5ji8l62x23l34l22vnrwf-nghttp2-1.47.0",
+            "digest": {
+                "sha256": "b9cfe74e85184867e8687e4bba772ce3075e01d8d8018c35ac6f0adf1280ad69"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "bin": "/nix/store/bj7frh970jkzfihylk5dhz319bp4pf73-nghttp2-1.47.0-bin",
+                "buildInputs": "/nix/store/x7pzy03f33pydjdrfnjhc3k42655pkb8-c-ares-1.18.1 /nix/store/wjfm4xdfrm9c6667ha12pqm4ywazvbrx-libev-4.33 /nix/store/6na02j2cznbkwlis5h9837d96jlf4j5p-openssl-1.1.1o-dev /nix/store/38ryqbjx5i1hir1a3sfk4za1yq5fbkpd-zlib-1.2.12-dev",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "--disable-examples --enable-app",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "dev": "/nix/store/qrkqvsg9rm0bnjvn544ldfr1gwq03m51-nghttp2-1.47.0-dev",
+                "doCheck": "1",
+                "doInstallCheck": "",
+                "enableParallelBuilding": "1",
+                "enableParallelChecking": "1",
+                "lib": "/nix/store/wjbvrqadfjqq830cqdkdr3ni5z1p4c5g-nghttp2-1.47.0-lib",
+                "name": "nghttp2-1.47.0",
+                "nativeBuildInputs": "/nix/store/prn4gvr4ljmrwnnm508i7m7qh7nfh7gz-pkg-config-wrapper-0.29.2 /nix/store/lza91r981dvgasj4xws0mnw9jsdqwdra-install-shell-files /nix/store/xlm003r43ay89wcq3nywcprmrbsw7b6i-CUnit-2.1-3 /nix/store/0ljx1nv1j54sxsh14cg8qpb2d141i5rk-tzdata-2022a-dev",
+                "out": "/nix/store/gp18w6k3s9v5ji8l62x23l34l22vnrwf-nghttp2-1.47.0",
+                "outputs": "bin out dev lib",
+                "patches": "",
+                "pname": "nghttp2",
+                "postInstall": "installShellCompletion --bash doc/bash_completion/{h2load,nghttp,nghttpd,nghttpx}\n",
+                "preCheck": "export TZDIR=/nix/store/57ggjgs9z8s711b875v3707739frnnlc-tzdata-2022a/share/zoneinfo\n",
+                "preInstall": "",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/1vavp7iv34x0yc25j2gfn8yv5s8c81v2-nghttp2-1.47.0.tar.bz2",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "1.47.0"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/1v1lazzb2r2cg7a0vxv705jxyc8hidpn-pkg-config-wrapper-0.29.2.drv",
+                "digest": {
+                    "sha256": "d1c8e17a6c2ddf6900b817119c22f726a3a39af2ac395821e95d915fde3d9734"
+                }
+            },
+            {
+                "uri": "file:///nix/store/4fxp8iddfbg6x4lmdj1606gkdv1lvijd-nghttp2-1.47.0.tar.bz2.drv",
+                "digest": {
+                    "sha256": "ce96b56f350c79ed237e1a1c5108fcf477e090cd1c242ab48d0c18d7650ffa76"
+                }
+            },
+            {
+                "uri": "file:///nix/store/4ps3shhk3a83nxw82pirrp84kjza42qr-zlib-1.2.12.drv",
+                "digest": {
+                    "sha256": "f1c161051f72552716fdcba6f78370a3f93dab26e28779bbb0002f809c502534"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/cd44h08a0mbg07qwpih5zd31nikks2f7-openssl-1.1.1o.drv",
+                "digest": {
+                    "sha256": "acdeaa5cdbfb13fd590a628dc0b6a07ee25c464bedec941bac90715cacc33c2e"
+                }
+            },
+            {
+                "uri": "file:///nix/store/gnzjdjc8hs9z4cwcq60if36khz3f8hj3-install-shell-files.drv",
+                "digest": {
+                    "sha256": "1a94ca039dd3a56d8736e87423c551d65bcadf6a86fbe3e4389904564748263d"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/hw93zrxwfspn9ylisrnbjf5wqrl46245-CUnit-2.1-3.drv",
+                "digest": {
+                    "sha256": "2c04450145796052b13f30c1cbe758aa4611072d99129e499b0f08fab058020f"
+                }
+            },
+            {
+                "uri": "file:///nix/store/jp3jd6zxaf70ls5w2w7589jha2fz7bm5-tzdata-2022a.drv",
+                "digest": {
+                    "sha256": "2f07baed867640897274b264bd5c3ece5d2486056ca000beb545307698fabe5c"
+                }
+            },
+            {
+                "uri": "file:///nix/store/q3yf7gjxyz3fjlviaxij1jwadg63k5ah-c-ares-1.18.1.drv",
+                "digest": {
+                    "sha256": "bcaca14ea9a8083532bcd9b1f024f7fd115582d07d00d69b676f20872303e878"
+                }
+            },
+            {
+                "uri": "file:///nix/store/vi0dllifclk8p21n1a85kdqvp9yvf2jj-libev-4.33.drv",
+                "digest": {
+                    "sha256": "5cb43aadda8f16ce612866634fb28628ffa74064a0e647e3ca37fef0a8605d70"
+                }
+            }
+        ]
+    }
+}

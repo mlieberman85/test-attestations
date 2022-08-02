@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/imbvw4qk303vxiy0jh7mw4f3mp89505l-cmake-boot-3.22.3.drv",
+            "digest": {
+                "sha256": "cfe3396778d80b2d754d616ae6dd958deec942efdec88bf66dde79cf5cabf9ac"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/in00j2345mdb7svs7mspky910697dh12-cmake-boot-3.22.3",
+                "digest": {
+                    "sha256": "c2462d3c02e1a4442c2ca71dc6525311cc2949a2091683e14cca00d55a9a3aec"
+                }
+            }
+        ]
+    }
+}

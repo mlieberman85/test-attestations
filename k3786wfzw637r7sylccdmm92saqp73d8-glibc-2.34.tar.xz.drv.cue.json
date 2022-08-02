@@ -1,0 +1,39 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/wjbv1k6yigmb280wrvc1gkv8cnrsacij-glibc-2.34.tar.xz",
+            "digest": {
+                "sha256": "1f8a7cd834b7e8e494bf37d5ec068f6cab7ffa7e2b67756be782773878af62ce"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://builtin:fetchurl"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {
+                "builder": "builtin:fetchurl",
+                "executable": "",
+                "impureEnvVars": "http_proxy https_proxy ftp_proxy all_proxy no_proxy",
+                "name": "glibc-2.34.tar.xz",
+                "out": "/nix/store/wjbv1k6yigmb280wrvc1gkv8cnrsacij-glibc-2.34.tar.xz",
+                "outputHash": "sha256-RNJqH+ILiFOkj0cOrQHkJ56GmsFJsZXdpORKGV2YGrI=",
+                "outputHashAlgo": "sha256",
+                "outputHashMode": "flat",
+                "preferLocalBuild": "1",
+                "system": "builtin",
+                "unpack": "",
+                "url": "https://ftpmirror.gnu.org/glibc/glibc-2.34.tar.xz",
+                "urls": "https://ftpmirror.gnu.org/glibc/glibc-2.34.tar.xz"
+            }
+        },
+        "materials": []
+    }
+}

@@ -1,0 +1,93 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/6csi1dq3fbjn218pcc5453f5ch2hpcap-diffutils-3.8",
+            "digest": {
+                "sha256": "fb1e0b3b788963fe84f93c91696f886304295f42490b5b45ea951b9be6835988"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "/nix/store/a99i3wf2ig85clra7rs5kgi46s46xvwc-coreutils-9.0",
+                "builder": "/nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash",
+                "configureFlags": "PR_PROGRAM=/nix/store/a99i3wf2ig85clra7rs5kgi46s46xvwc-coreutils-9.0/bin/pr",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "info": "/nix/store/apcnm6qyza31n90y1hijlfw8ggdrsmzc-diffutils-3.8-info",
+                "name": "diffutils-3.8",
+                "nativeBuildInputs": "/nix/store/5arbmmyiadd8m0s9bq9di8xxz5lb037b-xz-5.2.5-bin",
+                "out": "/nix/store/6csi1dq3fbjn218pcc5453f5ch2hpcap-diffutils-3.8",
+                "outputs": "out info",
+                "patches": "",
+                "pname": "diffutils",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/021kkbvplg4z72pp3hp1vjp74qz7g92l-diffutils-3.8.tar.xz",
+                "stdenv": "/nix/store/mhhmr6r7852384nmlpplxm23la0l68cs-bootstrap-stage4-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "3.8"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/0nb35wjnzrjkn0pxlazxnns9vv5l95c4-diffutils-3.8.tar.xz.drv",
+                "digest": {
+                    "sha256": "f0727fc8725106aa7030f2ca0ee29cba1326870074eec85f3115fab2e124cdcc"
+                }
+            },
+            {
+                "uri": "file:///nix/store/0zhkga32apid60mm7nh92z2970im5837-bootstrap-tools.drv",
+                "digest": {
+                    "sha256": "f91ccdc44b609d5a97b27804be2daa58b61d51b82caa7e9e765db4ad4180098a"
+                }
+            },
+            {
+                "uri": "file:///nix/store/5n7j0l13pmshd0ibl1is5yq4cx3yfgrk-bootstrap-stage4-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "8e185e061d88ebd2426602e337b5fcbf1def9e959c2ede344c2c5c662836b0b1"
+                }
+            },
+            {
+                "uri": "file:///nix/store/9rzzcygmd3nhbwp4nzq55wpv8mp503kq-coreutils-9.0.drv",
+                "digest": {
+                    "sha256": "0745b28317369571fc337984bf894091825689ee8e9a3fcf0d1f83b27ffaba14"
+                }
+            },
+            {
+                "uri": "file:///nix/store/m6myrsd5dxf4j1y2cvb16q44q2ldslm5-xz-5.2.5.drv",
+                "digest": {
+                    "sha256": "1cface54b543e279b3f8594e8a222057d996c31ec363efcd89013973f25d9911"
+                }
+            }
+        ]
+    }
+}

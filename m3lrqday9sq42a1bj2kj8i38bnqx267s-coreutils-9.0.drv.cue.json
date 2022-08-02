@@ -1,0 +1,132 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/n0ail94spx31al95fpcdbcpr9l046sri-coreutils-9.0",
+            "digest": {
+                "sha256": "d0b01e07342f683141864bf2930429e7539071e6b3ad4e096ea597d895d44e57"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "FORCE_UNSAFE_CONFIGURE": "",
+                "NIX_LDFLAGS": "",
+                "buildInputs": "",
+                "builder": "/nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash",
+                "configureFlags": "--with-packager=https://NixOS.org --enable-single-binary=symlinks",
+                "debug": "/nix/store/j078hsh3lplvj1n9fawjxqr12f9kba6p-coreutils-9.0-debug",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "1",
+                "doInstallCheck": "",
+                "enableParallelBuilding": "1",
+                "enableParallelChecking": "1",
+                "info": "/nix/store/a5p5zz714mx7qy44sfv0p3l3c4r2lw6p-coreutils-9.0-info",
+                "name": "coreutils-9.0",
+                "nativeBuildInputs": "/nix/store/c34zmy26gc58bn7qbf4md2yh8vp133n6-perl-5.34.1 /nix/store/5arbmmyiadd8m0s9bq9di8xxz5lb037b-xz-5.2.5-bin /nix/store/06rl8dhxizx3qfkmzyf0gpvcjcxzin5v-hook /nix/store/ikmqczy0y20n04a2b8qfflzwihv8139g-separate-debug-info.sh",
+                "out": "/nix/store/n0ail94spx31al95fpcdbcpr9l046sri-coreutils-9.0",
+                "outputs": "out info debug",
+                "patches": "/nix/store/2j8nv5xpgw7js9lr3dnspc2vk04jifzv-fix-chmod-exit-code.patch /nix/store/snhl0w63mc0s3q6y386g061bgc7jdwwn-disable-seek-hole.patch /nix/store/nqrwkrrnpc7443annivd10zgnnfcc0cm-fix-arm64-macos.patch",
+                "pname": "coreutils",
+                "postInstall": "rm -r \"$out/share\"\n",
+                "postPatch": "# The test tends to fail on btrfs,f2fs and maybe other unusual filesystems.\nsed '2i echo Skipping dd sparse test \u0026\u0026 exit 77' -i ./tests/dd/sparse.sh\nsed '2i echo Skipping du threshold test \u0026\u0026 exit 77' -i ./tests/du/threshold.sh\nsed '2i echo Skipping cp sparse test \u0026\u0026 exit 77' -i ./tests/cp/sparse.sh\nsed '2i echo Skipping rm deep-2 test \u0026\u0026 exit 77' -i ./tests/rm/deep-2.sh\nsed '2i echo Skipping du long-from-unreadable test \u0026\u0026 exit 77' -i ./tests/du/long-from-unreadable.sh\n\n# Some target platforms, especially when building inside a container have\n# issues with the inotify test.\nsed '2i echo Skipping tail inotify dir recreate test \u0026\u0026 exit 77' -i ./tests/tail-2/inotify-dir-recreate.sh\n\n# sandbox does not allow setgid\nsed '2i echo Skipping chmod setgid test \u0026\u0026 exit 77' -i ./tests/chmod/setgid.sh\nsubstituteInPlace ./tests/install/install-C.sh \\\n  --replace 'mode3=2755' 'mode3=1755'\n\n# Fails on systems with a rootfs. Looks like a bug in the test, see\n# https://lists.gnu.org/archive/html/bug-coreutils/2019-12/msg00000.html\nsed '2i print \"Skipping df skip-rootfs test\"; exit 77' -i ./tests/df/skip-rootfs.sh\n\n# these tests fail in the unprivileged nix sandbox (without nix-daemon) as we break posix assumptions\nfor f in ./tests/chgrp/{basic.sh,recurse.sh,default-no-deref.sh,no-x.sh,posix-H.sh}; do\n  sed '2i echo Skipping chgrp \u0026\u0026 exit 77' -i \"$f\"\ndone\nfor f in gnulib-tests/{test-chown.c,test-fchownat.c,test-lchown.c}; do\n  echo \"int main() { return 77; }\" \u003e \"$f\"\ndone\n\n# intermittent failures on builders, unknown reason\nsed '2i echo Skipping du basic test \u0026\u0026 exit 77' -i ./tests/du/basic.sh\n",
+                "preInstall": "",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "separateDebugInfo": "1",
+                "src": "/nix/store/is8fadziysa55wpq1dppzhv5yhlhhm6n-coreutils-9.0.tar.xz",
+                "stdenv": "/nix/store/mhhmr6r7852384nmlpplxm23la0l68cs-bootstrap-stage4-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "9.0"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/2j8nv5xpgw7js9lr3dnspc2vk04jifzv-fix-chmod-exit-code.patch",
+                "digest": {
+                    "sha256": "3fbd20f38b461ef7817930c4f3b6b8592236e2ee938a1fa6b6c342b6303a7042"
+                }
+            },
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ikmqczy0y20n04a2b8qfflzwihv8139g-separate-debug-info.sh",
+                "digest": {
+                    "sha256": "6a9bffeef698bb4db776df8fdaaf2a4766c65c1a468204b9ae425eeaa4e961c7"
+                }
+            },
+            {
+                "uri": "file:///nix/store/nqrwkrrnpc7443annivd10zgnnfcc0cm-fix-arm64-macos.patch",
+                "digest": {
+                    "sha256": "252f7ac08530c6dac7cd4128a220a127764a382c9447cd58fdd5ee323356af06"
+                }
+            },
+            {
+                "uri": "file:///nix/store/snhl0w63mc0s3q6y386g061bgc7jdwwn-disable-seek-hole.patch",
+                "digest": {
+                    "sha256": "cf3355fb6b8636b43bf4f1e5a88d02a09e2b5910a0fcb1864b520b160c91434f"
+                }
+            },
+            {
+                "uri": "file:///nix/store/0zhkga32apid60mm7nh92z2970im5837-bootstrap-tools.drv",
+                "digest": {
+                    "sha256": "f91ccdc44b609d5a97b27804be2daa58b61d51b82caa7e9e765db4ad4180098a"
+                }
+            },
+            {
+                "uri": "file:///nix/store/4dk9jfhw46cyk9c5n3vw8r6kcyp0gjgm-coreutils-9.0.tar.xz.drv",
+                "digest": {
+                    "sha256": "1cbb38852358f27be278c66c1467b135a83e212aa6bc621e4313f563249979ed"
+                }
+            },
+            {
+                "uri": "file:///nix/store/5n7j0l13pmshd0ibl1is5yq4cx3yfgrk-bootstrap-stage4-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "8e185e061d88ebd2426602e337b5fcbf1def9e959c2ede344c2c5c662836b0b1"
+                }
+            },
+            {
+                "uri": "file:///nix/store/5sp63ahzdhy0gnda7jwpvf99kr7qmqfa-perl-5.34.1.drv",
+                "digest": {
+                    "sha256": "800d69380d04fda3959a8a719701d7bdc84e8f587722612ad045201887bb8b9f"
+                }
+            },
+            {
+                "uri": "file:///nix/store/dczg3cj0byvmranxmqjyiv83aqmd3rc6-hook.drv",
+                "digest": {
+                    "sha256": "b4f0e9288a437d91c7927fb976276b216e07e9d6eb4cba66c74bedf80a7e924e"
+                }
+            },
+            {
+                "uri": "file:///nix/store/m6myrsd5dxf4j1y2cvb16q44q2ldslm5-xz-5.2.5.drv",
+                "digest": {
+                    "sha256": "1cface54b543e279b3f8594e8a222057d996c31ec363efcd89013973f25d9911"
+                }
+            }
+        ]
+    }
+}

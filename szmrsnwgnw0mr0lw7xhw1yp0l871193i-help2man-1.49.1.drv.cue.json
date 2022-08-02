@@ -1,0 +1,98 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/8fklfyd878zqlnjmh4sf19lb0caqjl4n-help2man-1.49.1",
+            "digest": {
+                "sha256": "20a551f8db01bc547f4fd2a42bbae989c9f45a449cbb25f10ba714f858a86277"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "/nix/store/lzsbmiad8krcqi4d1fd916ia2cy3acal-perl5.34.1-gettext-1.07 ",
+                "builder": "/nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash",
+                "configureFlags": "--enable-nls",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "name": "help2man-1.49.1",
+                "nativeBuildInputs": "/nix/store/miqy5dyczzm85rypvqk09zpa3h4vmjqh-gettext-0.21 /nix/store/7ivaaqbz5zgpprcacs23c7zzqfffirgs-perl-5.34.1 /nix/store/lzsbmiad8krcqi4d1fd916ia2cy3acal-perl5.34.1-gettext-1.07",
+                "out": "/nix/store/8fklfyd878zqlnjmh4sf19lb0caqjl4n-help2man-1.49.1",
+                "outputs": "out",
+                "pname": "help2man",
+                "postInstall": "mv $out/bin/help2man $out/bin/.help2man-wrapped\ncat \u003e $out/bin/help2man \u003c\u003cEOF\n#! $SHELL -e\nexport PERL5LIB=\\${PERL5LIB:+:}/nix/store/lzsbmiad8krcqi4d1fd916ia2cy3acal-perl5.34.1-gettext-1.07/lib/perl5/site_perl\n\nexec -a \\$0 $out/bin/.help2man-wrapped \"\\$@\"\nEOF\nchmod +x $out/bin/help2man\n",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/h6h408vg3amy4pmjv95w0vb1czy0i7b4-help2man-1.49.1.tar.xz",
+                "stdenv": "/nix/store/00ryhc0rgjvcaigxans5ph4q3j8jm6c6-bootstrap-stage2-stdenv-linux",
+                "strictDeps": "1",
+                "system": "x86_64-linux",
+                "version": "1.49.1"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/0pz5id6hz1xxscqhrnd3cr8wxakr31kp-perl5.34.1-gettext-1.07.drv",
+                "digest": {
+                    "sha256": "7cb49efdf9b1da08b8ea86f194faa1ea0c39d3b0afc8b6222bd50e7ed10ec351"
+                }
+            },
+            {
+                "uri": "file:///nix/store/0zhkga32apid60mm7nh92z2970im5837-bootstrap-tools.drv",
+                "digest": {
+                    "sha256": "f91ccdc44b609d5a97b27804be2daa58b61d51b82caa7e9e765db4ad4180098a"
+                }
+            },
+            {
+                "uri": "file:///nix/store/2qklysz0hj51z8fq5qsj152c2crnghhg-bootstrap-stage2-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "847747fb7f255141ddd9ed26c9cbf707bf272d147ef5104268a8fd5c51c090af"
+                }
+            },
+            {
+                "uri": "file:///nix/store/wsqm127z52159zzrd39ikvi07zcdk50d-help2man-1.49.1.tar.xz.drv",
+                "digest": {
+                    "sha256": "81dc21af91a593ccccaed6d3df60bb0fb56d3944da92cc0be685f85717d4760f"
+                }
+            },
+            {
+                "uri": "file:///nix/store/x17a04w953z2gynh6kh7i67il2hcv5z7-gettext-0.21.drv",
+                "digest": {
+                    "sha256": "028a17047d128adea9cf98cf66cccc7b54966a632f84852eb28914c2b09b88d2"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ymzm9q1d22bzh21nzrslqf01dlpzn0if-perl-5.34.1.drv",
+                "digest": {
+                    "sha256": "bebb9855ae179aaee5cf0edad7eb7e7171aad8bfa8f6f3d60afdcb7cdc399ed4"
+                }
+            }
+        ]
+    }
+}

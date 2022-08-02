@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/715zjvc2bwrgvrq1pv32jhyi4pj2vy96-locales-setup-hook.sh.drv",
+            "digest": {
+                "sha256": "3d466f3c1943464c14b3636927008067d7af8880ef965ac164e8ef2940f92bcf"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/axlgjkw98060f3pgq0g8abh9nwr6qzq6-locales-setup-hook.sh",
+                "digest": {
+                    "sha256": "1935752af777ced8821b55e1fedd04e47a6f1dd8995c7017d01ae64fafac7eaa"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,125 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/5s2z0dfyhxg84gn18f0ydbcn7z30zbab-ninja-1.10.2",
+            "digest": {
+                "sha256": "196143e4274876af4760840f176956d1187fe9e233feaec111bd89fba5b2d7d3"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "",
+                "buildPhase": "python configure.py --bootstrap\n# \"./ninja -vn manual\" output copied here to support cross compilation.\nasciidoc -b docbook -d book -o build/manual.xml doc/manual.asciidoc\nxsltproc --nonet doc/docbook.xsl build/manual.xml \u003e doc/manual.html\n",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "installPhase": "install -Dm555 -t $out/bin ninja\ninstall -Dm444 misc/bash-completion $out/share/bash-completion/completions/ninja\ninstall -Dm444 misc/zsh-completion $out/share/zsh/site-functions/_ninja\ninstall -Dm444 -t $out/share/doc/ninja doc/manual.asciidoc doc/manual.html\n",
+                "name": "ninja-1.10.2",
+                "nativeBuildInputs": "/nix/store/wnrc4daqbd6v5ifqlxsj75ky8556zy0p-python3-3.9.12 /nix/store/nms8b3kwmr4lfvxzcgg3y7xvanj60jpm-re2c-3.0 /nix/store/shcqdjc90gaf67bzf8cw350082qmbw7y-asciidoc-9.1.0 /nix/store/y6yvn77nnbgq96hnlzs1h4xczmd2j53l-docbook-xml-4.5 /nix/store/i2yp52prdg0gs9xja4qylgs8cpkyz5ah-docbook-xsl-nons-1.79.2 /nix/store/0in3r4sysr60by67bpcgn9m1r7fgchk1-libxslt-1.1.35-bin",
+                "out": "/nix/store/5s2z0dfyhxg84gn18f0ydbcn7z30zbab-ninja-1.10.2",
+                "outputs": "out",
+                "patches": "",
+                "pname": "ninja",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "setupHook": "/nix/store/y9yz15h8mlpggmr3jidjdhjpddsx7d25-setup-hook.sh",
+                "src": "/nix/store/8x4aqaqaiyylvcpnhn1phypkb4n6ady0-source",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "1.10.2"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/y9yz15h8mlpggmr3jidjdhjpddsx7d25-setup-hook.sh",
+                "digest": {
+                    "sha256": "94c729c087a09ae288aaaad5b8c913701aaeaed633c42b15489e740c0ae87764"
+                }
+            },
+            {
+                "uri": "file:///nix/store/4ads7k8nzd6pdfr89zwbhk7skmwgwfzl-docbook-xsl-nons-1.79.2.drv",
+                "digest": {
+                    "sha256": "60b296b9f0c779b006073333b6133c89f1819a8ebbc9c068d5751885ec844e7c"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/g5hmi70hiipv0d175v2b6s31liwfd7wp-source.drv",
+                "digest": {
+                    "sha256": "ba175278840f6a2a37a7c214bdbf461b0e9a47f99d7a757474e3e5a23a2e04bc"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/hivrq0c7fjqk4382ng6swpqvd6bwn9za-asciidoc-9.1.0.drv",
+                "digest": {
+                    "sha256": "41af15a92230edd895e98e84462e6ef9f279c7f5259d696d6bbb86ad37ab7bf1"
+                }
+            },
+            {
+                "uri": "file:///nix/store/jcqrvcm4ranjygyx0hgmgmjrm39f64pj-libxslt-1.1.35.drv",
+                "digest": {
+                    "sha256": "3a6ac5d1605a71f09c39214e1bcbf90914860eed9b7fe8a5074e7b44cedf815c"
+                }
+            },
+            {
+                "uri": "file:///nix/store/vdgkm605ayapf245hc17239qfpvivxfy-python3-3.9.12.drv",
+                "digest": {
+                    "sha256": "6684eb57aec053d7baf339e95827a8b7670f5709da588ab2576f58eb3be31ea6"
+                }
+            },
+            {
+                "uri": "file:///nix/store/w9pzjs658qa037yqi1azpqs1fysycgim-re2c-3.0.drv",
+                "digest": {
+                    "sha256": "8f068aa51aac89d47f7049598ef8b5fc6c7fea11b70b022680d308b6ec9f40fb"
+                }
+            },
+            {
+                "uri": "file:///nix/store/x7yjipr2g7raickg2imqd7sak0xvq44q-docbook-xml-4.5.drv",
+                "digest": {
+                    "sha256": "0302afe3b0f00dfad6b1a249112508d04b208a31123415a0ffb27c9bb6cf827c"
+                }
+            }
+        ]
+    }
+}

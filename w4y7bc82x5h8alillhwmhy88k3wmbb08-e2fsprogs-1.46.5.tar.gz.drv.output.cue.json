@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/w4y7bc82x5h8alillhwmhy88k3wmbb08-e2fsprogs-1.46.5.tar.gz.drv",
+            "digest": {
+                "sha256": "a487cd096e9e53375cc5318ad6699e76ecca5828312c6cfcf847e93172f2d95e"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/yz9g5ph70mjynkbxggrg1yqq5mrzdz66-e2fsprogs-1.46.5.tar.gz",
+                "digest": {
+                    "sha256": "18aed57663853cc93c68e49a0c2d7acdcccc24bd7449662055d30fc023ae98aa"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,98 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/lybib13dmqa686dd6i1fykigg0im1z0x-setuptools-61.2.0-sdist.tar.gz",
+            "digest": {
+                "sha256": "1825db7cbafd9455c8626ba4c2acc9ce8c2bfbc866c7922390ab349c889fc5d6"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "",
+                "buildPhase": "/nix/store/wnrc4daqbd6v5ifqlxsj75ky8556zy0p-python3-3.9.12/bin/python3.9 setup.py egg_info\n/nix/store/wnrc4daqbd6v5ifqlxsj75ky8556zy0p-python3-3.9.12/bin/python3.9 setup.py sdist --formats=gztar\n\n# Here we untar the sdist and retar it in order to control the timestamps\n# of all the files included\ntar -xzf dist/setuptools-61.2.0.post0.tar.gz -C dist/\ntar -czf dist/setuptools-61.2.0-sdist.tar.gz -C dist/ --mtime=\"@$SOURCE_DATE_EPOCH\" --sort=name setuptools-61.2.0.post0\n",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "installPhase": "echo \"Moving sdist...\"\nmv dist/setuptools-61.2.0-sdist.tar.gz $out\n",
+                "name": "setuptools-61.2.0-sdist.tar.gz",
+                "nativeBuildInputs": "",
+                "out": "/nix/store/lybib13dmqa686dd6i1fykigg0im1z0x-setuptools-61.2.0-sdist.tar.gz",
+                "outputs": "out",
+                "patches": "/nix/store/0qzs4kq2lvl09k80nf54bl00hd2ylfam-tag-date.patch /nix/store/alckvda5hllp5w48vxbbvpx65w2i6v3j-setuptools-distutils-C++.patch",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/kag8z981p6jrphsffqm2qfkwnk8fwb3x-setuptools-61.2.0-source",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/0qzs4kq2lvl09k80nf54bl00hd2ylfam-tag-date.patch",
+                "digest": {
+                    "sha256": "214e608d8fa433b989e9bb51b132e55de2bd16544ad09f3b74e180e0e06e9133"
+                }
+            },
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/alckvda5hllp5w48vxbbvpx65w2i6v3j-setuptools-distutils-C++.patch",
+                "digest": {
+                    "sha256": "f3f8225543f6a63276c17b3dfb79963fc097229e8c187be1eff85ec312135865"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/q4iy3rl7afh084p2xqmsrk1vh2h4dl6h-setuptools-61.2.0-source.drv",
+                "digest": {
+                    "sha256": "bfc41824248e2e68091cc76a6758f3331c8876ff0bc12929e1d3e8c3d8ccb3b5"
+                }
+            },
+            {
+                "uri": "file:///nix/store/vdgkm605ayapf245hc17239qfpvivxfy-python3-3.9.12.drv",
+                "digest": {
+                    "sha256": "6684eb57aec053d7baf339e95827a8b7670f5709da588ab2576f58eb3be31ea6"
+                }
+            }
+        ]
+    }
+}

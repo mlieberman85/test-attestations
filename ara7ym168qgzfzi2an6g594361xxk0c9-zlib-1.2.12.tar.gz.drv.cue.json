@@ -1,0 +1,39 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/6pldh8v2i8wh5qw0rz9ifby965yj58y6-zlib-1.2.12.tar.gz",
+            "digest": {
+                "sha256": "47b230156a759ca88df0ce26165647a78654c5ddcf22cb192471c107ab961038"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://builtin:fetchurl"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {
+                "builder": "builtin:fetchurl",
+                "executable": "",
+                "impureEnvVars": "http_proxy https_proxy ftp_proxy all_proxy no_proxy",
+                "name": "zlib-1.2.12.tar.gz",
+                "out": "/nix/store/6pldh8v2i8wh5qw0rz9ifby965yj58y6-zlib-1.2.12.tar.gz",
+                "outputHash": "91844808532e5ce316b3c010929493c0244f3d37593afd6de04f71821d5136d9",
+                "outputHashAlgo": "sha256",
+                "outputHashMode": "flat",
+                "preferLocalBuild": "1",
+                "system": "builtin",
+                "unpack": "",
+                "url": "https://www.zlib.net/fossils/zlib-1.2.12.tar.gz",
+                "urls": "https://www.zlib.net/fossils/zlib-1.2.12.tar.gz"
+            }
+        },
+        "materials": []
+    }
+}

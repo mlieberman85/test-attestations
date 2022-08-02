@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/bdb0cwa1m1ymm4zh4i2gadw11frjms7z-python3.9-bootstrapped-pip-22.0.4.drv",
+            "digest": {
+                "sha256": "f19eb4d37a1bca243baf7f807e2b3d97d2d830ba22cafeabe3a17f6e1a9899d5"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/kp7q4fawyrcw4ccr9387dg2i7ffz7zrr-python3.9-bootstrapped-pip-22.0.4",
+                "digest": {
+                    "sha256": "54d4324801e711e2c2b5c5a606fcfa646785d28e22288b02be72210618d88fb6"
+                }
+            }
+        ]
+    }
+}

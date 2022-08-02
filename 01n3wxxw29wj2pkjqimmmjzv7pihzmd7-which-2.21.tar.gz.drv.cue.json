@@ -1,0 +1,39 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/349f140sh7m12vy9mp1wkp58axyp06c9-which-2.21.tar.gz",
+            "digest": {
+                "sha256": "31eea8c6c05702c94f7b5b08f9bb55a5d3f161da2d263e3565025e2eedbe5c6d"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://builtin:fetchurl"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {
+                "builder": "builtin:fetchurl",
+                "executable": "",
+                "impureEnvVars": "http_proxy https_proxy ftp_proxy all_proxy no_proxy",
+                "name": "which-2.21.tar.gz",
+                "out": "/nix/store/349f140sh7m12vy9mp1wkp58axyp06c9-which-2.21.tar.gz",
+                "outputHash": "1bgafvy3ypbhhfznwjv1lxmd6mci3x1byilnnkc7gcr486wlb8pl",
+                "outputHashAlgo": "sha256",
+                "outputHashMode": "flat",
+                "preferLocalBuild": "1",
+                "system": "builtin",
+                "unpack": "",
+                "url": "https://ftpmirror.gnu.org/which/which-2.21.tar.gz",
+                "urls": "https://ftpmirror.gnu.org/which/which-2.21.tar.gz"
+            }
+        },
+        "materials": []
+    }
+}

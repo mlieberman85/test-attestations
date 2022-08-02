@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/ql8nx0xkdiswm4ahy9is7qy0if0134ii-freezegun-1.2.1.tar.gz.drv",
+            "digest": {
+                "sha256": "863e1cbb5e5d9d3a2996eee0269993337a8118a24b32a7605dd645f4937803af"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/prqpvrahpgaq49rsaibs4hrz2my1bvh7-freezegun-1.2.1.tar.gz",
+                "digest": {
+                    "sha256": "207460fcad3fa5d8b3119861a2f5ce2a42f9695cee5f6aea56871521e7806870"
+                }
+            }
+        ]
+    }
+}

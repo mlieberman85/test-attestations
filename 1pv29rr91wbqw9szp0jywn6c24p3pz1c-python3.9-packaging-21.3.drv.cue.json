@@ -1,0 +1,155 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/wlhc2wa8px6w6hlwajch1bkmxzhzhvnl-python3.9-packaging-21.3",
+            "digest": {
+                "sha256": "70fc967d13ee74af302c9b768de8062c3adb62a6f04433398f0519d2d8c476d5"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "LANG": "C.UTF-8",
+                "buildInputs": "",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "disallowedReferences": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "name": "python3.9-packaging-21.3",
+                "nativeBuildInputs": "/nix/store/wnrc4daqbd6v5ifqlxsj75ky8556zy0p-python3-3.9.12 /nix/store/5sqn1lv2lbi1vs1q20skzaz3lnrchrfz-hook /nix/store/c0km59ssiqajdjn1fwky0cd7ldpm85g9-hook /nix/store/dmrwvnc9zy8xn1685yribg7idac60pkr-python-remove-tests-dir-hook /nix/store/yxl1d0sa5a8a4gz6qn4529w5ijxvh7fd-python3.9-setuptools-61.2.0 /nix/store/9pmg0ash9q107ghc9nqggqv9mawy1j06-python-catch-conflicts-hook /nix/store/zavasignqz13213kxfl6ngdbwbz2hhg2-python-remove-bin-bytecode-hook /nix/store/fqxgh2j3mq44kc4ifnfh83cy8br7r2ym-pip-build-hook.sh /nix/store/lnk0fq2mjajyz52h6x910556y4qfkq20-pip-install-hook /nix/store/5q767570w1w0q438d9rffnh5yjc7qzn8-python-imports-check-hook.sh /nix/store/ygxk1ramy7gwsj93qz5bha18nl5dkp8z-python-namespaces-hook.sh /nix/store/yxl1d0sa5a8a4gz6qn4529w5ijxvh7fd-python3.9-setuptools-61.2.0",
+                "out": "/nix/store/wlhc2wa8px6w6hlwajch1bkmxzhzhvnl-python3.9-packaging-21.3",
+                "outputs": "out",
+                "patches": "",
+                "pname": "packaging",
+                "postFixup": "wrapPythonPrograms\n",
+                "propagatedBuildInputs": "/nix/store/s4kh530nx3a5jbxrzc4pxymplc401k0d-python3.9-pyparsing-3.0.9 /nix/store/wnrc4daqbd6v5ifqlxsj75ky8556zy0p-python3-3.9.12",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/n4d8islvnfr3prq1pr6329zf8hsam7sx-packaging-21.3.tar.gz",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "1",
+                "system": "x86_64-linux",
+                "version": "21.3"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/1msk6sd0pi6sc1hr3lxdvrp8a72g0rqb-pip-install-hook.drv",
+                "digest": {
+                    "sha256": "8edf452aae3d87132753e64da80c42e118a61881d1ede50ac5f61748d3261f3e"
+                }
+            },
+            {
+                "uri": "file:///nix/store/1x4araxc6d5xlcgz4v5gz1karaljp26m-python-imports-check-hook.sh.drv",
+                "digest": {
+                    "sha256": "bf49fccacfbbfae442bd44cf5bf27bc6f74677cad9320f3ca1da6e2e8da4e627"
+                }
+            },
+            {
+                "uri": "file:///nix/store/3zpqyxj3zzx50ryw82xmfswl468w9sb3-pip-build-hook.sh.drv",
+                "digest": {
+                    "sha256": "dcd18287e33e2df333b6e60ca0c673e2823361dae08bc6bca608642243770774"
+                }
+            },
+            {
+                "uri": "file:///nix/store/6qga5pk2vbk9z0jyffp1r7r5xjqavgc5-python3.9-pyparsing-3.0.9.drv",
+                "digest": {
+                    "sha256": "67778cc50faa82b1c6cc6af81e154172ab03dd341504264bc2679f8cfd170749"
+                }
+            },
+            {
+                "uri": "file:///nix/store/6swbpvsiyqscycfbp4dqgbsm2dxph5my-python-namespaces-hook.sh.drv",
+                "digest": {
+                    "sha256": "79cae01be1b49687a72a7458871a0070935e7092cf6d454f48254528bab39204"
+                }
+            },
+            {
+                "uri": "file:///nix/store/arfv2q0kv93dzmqwkrlhl02ifvf1xyk1-python3.9-setuptools-61.2.0.drv",
+                "digest": {
+                    "sha256": "4b2d7711d84f357c9fa5449872a2a2b21f471cfd9cdb4b69ff2923762c7e18ef"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/dik5xn1588wb5ph78kj90n6p646sas1i-hook.drv",
+                "digest": {
+                    "sha256": "3bc293f8b2ef1ae2a66209f28ed12636f70c2179d0ac76f075abde6e87e5d74b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/jhwwcf0v1x8i07h7dvam52p2cz55bpzz-python-catch-conflicts-hook.drv",
+                "digest": {
+                    "sha256": "179a0e252dff9eae2c5045496dd14360ee8d8bd6665ebbecafbf88e8efdce1a3"
+                }
+            },
+            {
+                "uri": "file:///nix/store/l0s6228rnaichjzkwrc24kyzkrb4xa80-hook.drv",
+                "digest": {
+                    "sha256": "493fd09dfa0cfbb5d11f188219288809c122a4563a15dbe4651a202189f31d44"
+                }
+            },
+            {
+                "uri": "file:///nix/store/mqzmiv6v9fb3qpzyjxkgapm5azmg6a5c-python-remove-tests-dir-hook.drv",
+                "digest": {
+                    "sha256": "7a57dc7149f9c96051b2f201c65b57e029be656736314e584300f5dc30319ab1"
+                }
+            },
+            {
+                "uri": "file:///nix/store/qv2v8lp04mxz0k5bhh4768rg2440jb51-python-remove-bin-bytecode-hook.drv",
+                "digest": {
+                    "sha256": "215f59f08a999cd28675f3840bcf9cfe5a5f499ba717eb66e9b824e459268f13"
+                }
+            },
+            {
+                "uri": "file:///nix/store/r7pr83dfimhawka2nq1sdf6zalhcvq37-packaging-21.3.tar.gz.drv",
+                "digest": {
+                    "sha256": "9a8ba930afaa4c1aef80ce9b1dead7e585376db08ca37c3a9babcff6d1e4bc51"
+                }
+            },
+            {
+                "uri": "file:///nix/store/vdgkm605ayapf245hc17239qfpvivxfy-python3-3.9.12.drv",
+                "digest": {
+                    "sha256": "6684eb57aec053d7baf339e95827a8b7670f5709da588ab2576f58eb3be31ea6"
+                }
+            }
+        ]
+    }
+}

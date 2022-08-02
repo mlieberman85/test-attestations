@@ -1,0 +1,111 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/ssb6kylhrlf2lb6c4jfa90vh2whjw5ky-libseccomp-2.5.3",
+            "digest": {
+                "sha256": "ac936b78860a369285d0f90a9b08c069d4ec495e87dc6e6bb0eecd9edeb272f2"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "/nix/store/1696jmwil5lcmi87ahc1p4fw4liq1nfv-getopt-1.1.6",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "dev": "/nix/store/syzds9k8i4lg1hapxx7xwbm89lsfj4kj-libseccomp-2.5.3-dev",
+                "doCheck": "1",
+                "doInstallCheck": "",
+                "lib": "/nix/store/pl9k31psk7wppc4l336f4vr6ncgwd0s7-libseccomp-2.5.3-lib",
+                "man": "/nix/store/cxxa9rp4z3i3zg9rn4jdckbqb4pyx2kw-libseccomp-2.5.3-man",
+                "name": "libseccomp-2.5.3",
+                "nativeBuildInputs": "/nix/store/5sf18g4jplf6yaqbfb3d58vlvyr8q6f3-gperf-3.1 /nix/store/qq1kncy66jxf5di20xs3y28d1gc9hl8h-util-linux-minimal-2.37.4-dev /nix/store/q196i8jk4d2abxqlc88ai5a6fsxnnzk4-which-2.21",
+                "out": "/nix/store/ssb6kylhrlf2lb6c4jfa90vh2whjw5ky-libseccomp-2.5.3",
+                "outputs": "out lib dev man pythonsrc",
+                "patchPhase": "patchShebangs .\n",
+                "patches": "",
+                "pname": "libseccomp",
+                "postInstall": "cp -R ./src/python/ tmp-pythonsrc/\ntar -zcf $pythonsrc --mtime=\"@$SOURCE_DATE_EPOCH\" --sort=name --transform s/tmp-pythonsrc/python-foundationdb/ ./tmp-pythonsrc/\n",
+                "preFixup": "rm -rfv src",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "pythonsrc": "/nix/store/a57dpabwcfcfl529dhnqwyiivl3zs03r-libseccomp-2.5.3-pythonsrc",
+                "src": "/nix/store/94w3p7jjp9mkzmi0yfyj4l4zr88fjc8r-libseccomp-2.5.3.tar.gz",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "2.5.3"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/75w9q0hw3qasxg6h4v9y4w0yaa3j6h6d-gperf-3.1.drv",
+                "digest": {
+                    "sha256": "67346c7a758779669be694222708e1b954a1e4d72be597b04c2236f8a0c6a015"
+                }
+            },
+            {
+                "uri": "file:///nix/store/a3mbpq4wjpxdx9madfx3r3yrwsd8p780-libseccomp-2.5.3.tar.gz.drv",
+                "digest": {
+                    "sha256": "cfc6ff47576599200252cbc6ac2c6e83ae5b6d0339d944f5cba28938995ad1c5"
+                }
+            },
+            {
+                "uri": "file:///nix/store/b6iw7q7lzs8vh24wd8hmlf2jl7dc9ql1-util-linux-minimal-2.37.4.drv",
+                "digest": {
+                    "sha256": "868639b6f595cc1e6e039a1eff44fa4d04edd6def9cb2b1b7e75d1648a035b06"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/yxqpdxa6inxh23r5sjyfranxr7px3mam-getopt-1.1.6.drv",
+                "digest": {
+                    "sha256": "a5ccef19ea9534f0b6cd9530a8dd7c991e03ea7d6aeabc38526c973526b707cd"
+                }
+            },
+            {
+                "uri": "file:///nix/store/zp8a14dsgrgavjrvmidh908jp1kwxvsx-which-2.21.drv",
+                "digest": {
+                    "sha256": "130f29ea5771798b19124b358db75fae1c6ab914424b56c3449f2d04452e7efc"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,88 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/nq0ka40w8vkvbv47mnwn7dkmw1052qmj-net-tools-2.10",
+            "digest": {
+                "sha256": "ec170e057c6d06ef1a69710771ba99766e9f753ab9938fc6afe9f3fd2ed3a264"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "makeFlags": "CC=cc AR=ar BASEDIR=$(out) mandir=/share/man HAVE_ARP_TOOLS=1 HAVE_PLIP_TOOLS=1 HAVE_SERIAL_TOOLS=1 HAVE_HOSTNAME_TOOLS=1 HAVE_HOSTNAME_SYMLINKS=1 HAVE_MII=1",
+                "name": "net-tools-2.10",
+                "nativeBuildInputs": "",
+                "out": "/nix/store/nq0ka40w8vkvbv47mnwn7dkmw1052qmj-net-tools-2.10",
+                "outputs": "out",
+                "patches": "",
+                "pname": "net-tools",
+                "preBuild": "cp /nix/store/ifvvs1imzrcrcjnw08pp0g45crbk7w9b-config.h config.h\n",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/lx8mjbgf29ccsiniz7cl4y8fxq707cy9-net-tools-2.10.tar.xz",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "2.10"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ifvvs1imzrcrcjnw08pp0g45crbk7w9b-config.h",
+                "digest": {
+                    "sha256": "9a4416d3530010e4c3af02af47da86061434c4850cacaaf511c8223a9516827b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/j0i5kqbl4xmwpazymcxbxs88bm5hvkvh-net-tools-2.10.tar.xz.drv",
+                "digest": {
+                    "sha256": "f253f77e3962a3e6e134b654beb939b0319bc51b2bf5d39c036a9739cfae16e3"
+                }
+            }
+        ]
+    }
+}

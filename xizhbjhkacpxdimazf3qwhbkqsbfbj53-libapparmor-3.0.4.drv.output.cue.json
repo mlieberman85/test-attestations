@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/xizhbjhkacpxdimazf3qwhbkqsbfbj53-libapparmor-3.0.4.drv",
+            "digest": {
+                "sha256": "e1a952334cd089f0868d871dd5b34feafbbfdb954a06211f245e0143c17ebd57"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/z4p19f0n0d75kncndnmycdjkhldy80xy-libapparmor-3.0.4",
+                "digest": {
+                    "sha256": "855bf81c2b6824684def993f0360fc1290baf679f696220cf6dc9c529374bfee"
+                }
+            }
+        ]
+    }
+}

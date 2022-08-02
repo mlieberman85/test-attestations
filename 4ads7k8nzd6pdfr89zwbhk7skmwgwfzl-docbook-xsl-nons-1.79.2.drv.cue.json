@@ -1,0 +1,106 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/i2yp52prdg0gs9xja4qylgs8cpkyz5ah-docbook-xsl-nons-1.79.2",
+            "digest": {
+                "sha256": "3b09fe450ac7a0d183d6bf4827d9a6cd4cc94e7521c8ac3d7acbbeccd89d995e"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "dontBuild": "1",
+                "installPhase": "dst=$out/share/xml/docbook-xsl-nons\nmkdir -p $dst\nrm -rf RELEASE* README* INSTALL TODO NEWS* BUGS install.sh tools Makefile tests extensions webhelp\nmv * $dst/\n\n# Backwards compatibility. Will remove eventually.\nmkdir -p $out/xml/xsl\nln -s $dst $out/xml/xsl/docbook\n\n# More backwards compatibility\nln -s $dst $out/share/xml/docbook-xsl\n",
+                "name": "docbook-xsl-nons-1.79.2",
+                "nativeBuildInputs": "",
+                "out": "/nix/store/i2yp52prdg0gs9xja4qylgs8cpkyz5ah-docbook-xsl-nons-1.79.2",
+                "outputs": "out",
+                "patches": "/nix/store/am8h4spbaylaj37952zhkqlbbcw394yy-docbook-style-xsl-non-recursive-string-subst.patch /nix/store/ir6sycy7p1yxbk9vbsdwkwihdr54sv9k-07631601e6602bc49b8eac3aab9d2b35968d3e7a.patch /nix/store/7m5h23lk1qzss847f4byd5z8crv8p2x4-catalog-legacy-uris.patch",
+                "pname": "docbook-xsl-nons",
+                "propagatedBuildInputs": "/nix/store/nfcvgq92vp0787lhqcdrvszp80wl3jp2-hook",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/5cg2x1q3h8c96aszgfxiw83wvw1rz574-docbook-xsl-nons-1.79.2.tar.bz2",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "1.79.2"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/0ywbllh59jw5dzf67yz9f5hqznzwa224-docbook-style-xsl-non-recursive-string-subst.patch.drv",
+                "digest": {
+                    "sha256": "e7aca29417104bb18b4ecb75a52a02ce04e4d623b88081c242c0343dfafd11a4"
+                }
+            },
+            {
+                "uri": "file:///nix/store/1sihf3w3kii9kmlllcfivn259fmdq0hw-catalog-legacy-uris.patch.drv",
+                "digest": {
+                    "sha256": "7dd6f9efac2ca2ee8df37b31eb031029fd812748e755b4e4844976b1478e7346"
+                }
+            },
+            {
+                "uri": "file:///nix/store/48xaf1r444393spc8vmz5gn1l5i5bimy-hook.drv",
+                "digest": {
+                    "sha256": "5b00f716663f81a1092e2d629c38c9bb6a1a4a3277dc08b26ad76e8b5b3359de"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ri4znd3c57mp4drimdnqpbshhzyyna7d-07631601e6602bc49b8eac3aab9d2b35968d3e7a.patch.drv",
+                "digest": {
+                    "sha256": "849813e323160b06637b9e831e8e0614e156b38f6029ff5c58757c5ea6012fd9"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ys84fj1ws9g83hp8vqm3c44604ga6ffg-docbook-xsl-nons-1.79.2.tar.bz2.drv",
+                "digest": {
+                    "sha256": "36b3368ecb1d7f47f7f776ba028631b9cf590f480ce327f38bbf1963cfa0737e"
+                }
+            }
+        ]
+    }
+}

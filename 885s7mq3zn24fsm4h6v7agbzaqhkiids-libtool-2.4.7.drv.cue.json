@@ -1,0 +1,122 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/zahcayqy4jr89g0dphqk5d0pk6f063rf-libtool-2.4.7",
+            "digest": {
+                "sha256": "5f987b438a16131e1c4b0ce99b8f5e4e8e9d30bdc7fe7e2d595b49d0ff38d2b8"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "FILECMD": "/nix/store/zlmvwvxlch83x09q2q3pqrx6pp8zdcyx-file-5.41/bin/file",
+                "buildInputs": "",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "dontPatchShebangs": "1",
+                "enableParallelBuilding": "1",
+                "enableParallelChecking": "1",
+                "lib": "/nix/store/znzafld4h58n4ds8w1q2jaaj4f2nljaw-libtool-2.4.7-lib",
+                "name": "libtool-2.4.7",
+                "nativeBuildInputs": "/nix/store/ndqivn28vbniwnz0k03sgga9z0zg2mdk-autoconf-2.71 /nix/store/s0bkddayvfc1snn8npz438dqb5zkbgzz-automake-1.16.5 /nix/store/gm7kyjm1gja1g03l6y7jl89c3ir3g399-help2man-1.49.1 /nix/store/b3lh7rgzizg9r1wl6mnyqy9fy7zyhfxf-gnum4-1.4.19 /nix/store/c34zmy26gc58bn7qbf4md2yh8vp133n6-perl-5.34.1",
+                "out": "/nix/store/zahcayqy4jr89g0dphqk5d0pk6f063rf-libtool-2.4.7",
+                "outputs": "out lib",
+                "patches": "",
+                "pname": "libtool",
+                "postPatch": "aclocal -I m4\nautomake\nautoconf\n\npushd libltdl\naclocal -I ../m4\nautomake\nautoconf\npopd\nsubstituteInPlace libtoolize.in       --replace '#! /usr/bin/env sh' '#!/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash'\nsubstituteInPlace build-aux/ltmain.in --replace '#! /usr/bin/env sh' '#!/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash'\n",
+                "propagatedBuildInputs": "/nix/store/b3lh7rgzizg9r1wl6mnyqy9fy7zyhfxf-gnum4-1.4.19 /nix/store/zlmvwvxlch83x09q2q3pqrx6pp8zdcyx-file-5.41",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/ck70x6hdl1kgqa4a9ps8spw6ph9mfcj8-libtool-2.4.7.tar.gz",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "2.4.7"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/17nffshcl6wpxd42kjf0lz9dkg1ci3wp-libtool-2.4.7.tar.gz.drv",
+                "digest": {
+                    "sha256": "655cf5ba3df0d9b6d710e92507ee93c239b3ce7e9642bd4164951a75e66efd98"
+                }
+            },
+            {
+                "uri": "file:///nix/store/2gbjgzr7b80dq0laix8952cr5n9mxhs2-gnum4-1.4.19.drv",
+                "digest": {
+                    "sha256": "4d2cae1b88da2b9c7a1c942cc96e7f8a258a9ce342502a5e83e79c1926c2e188"
+                }
+            },
+            {
+                "uri": "file:///nix/store/4vi6h5h4xb319c73j5jb907lz6nbrlmk-help2man-1.49.1.drv",
+                "digest": {
+                    "sha256": "5f30acb8303eb4f83004b288c5bb1f4dcfbc0b9b51fd31bd3de7f9ab2fe973c5"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/gl0dcpvnhvnnl0mqiw7phrida95lkvxg-autoconf-2.71.drv",
+                "digest": {
+                    "sha256": "f9e31747ea9138495bb268512b394006824b45ae8e7a565051766afef98176a8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ijbc1gw8zi8b4ja6dz4ilz5k267y3vz3-automake-1.16.5.drv",
+                "digest": {
+                    "sha256": "e1d0a5fba23e2b3cb4df295cab4345d1208f3880969e363740eb8b68997b0f93"
+                }
+            },
+            {
+                "uri": "file:///nix/store/jkn79jy5p1cdh953rsmnpadxk15jaili-perl-5.34.1.drv",
+                "digest": {
+                    "sha256": "87f4f98f9a11a87515771dacc6dcd294d640778e146d6119ee09b07f955a654e"
+                }
+            },
+            {
+                "uri": "file:///nix/store/n9vb505rl8q239rylasv7a14xypryrh3-file-5.41.drv",
+                "digest": {
+                    "sha256": "10f6dceae255b8a5474bfdfc1d26c3e4d3d32754a8a0583f3bf0ffee1c3df86c"
+                }
+            }
+        ]
+    }
+}

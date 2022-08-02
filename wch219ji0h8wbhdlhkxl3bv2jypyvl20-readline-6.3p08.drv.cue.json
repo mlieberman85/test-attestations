@@ -1,0 +1,151 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/c4yn5qhl6drp73mq0knbsr70wf9l6nys-readline-6.3p08",
+            "digest": {
+                "sha256": "7fedf913f6c3a776b0a03717342c89cdea79ec297c5ea79ec08ad4b380af5f29"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "dev": "/nix/store/33qxsnj4m4r8lmrn7fsajhlnlhcnj63g-readline-6.3p08-dev",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "doc": "/nix/store/qxjf2k9sw1cmzai91476w2bchaabd23d-readline-6.3p08-doc",
+                "info": "/nix/store/irhpvd1csjc2c1lacfag42j6g7fjpg9s-readline-6.3p08-info",
+                "man": "/nix/store/a2cqkfsp0v88gnrgxn9356dz5za45awq-readline-6.3p08-man",
+                "name": "readline-6.3p08",
+                "nativeBuildInputs": "",
+                "out": "/nix/store/c4yn5qhl6drp73mq0knbsr70wf9l6nys-readline-6.3p08",
+                "outputs": "out dev man doc info",
+                "patchFlags": "-p0",
+                "patches": "/nix/store/bw6aa38615ww5karcn8kslsf5hxgz412-link-against-ncurses.patch /nix/store/v3fnnlch7i18q6ga55dqc05ig9nry17r-no-arch_only-6.3.patch /nix/store/z9yns45gr3lag04330pj4f93yvavc10b-readline63-001 /nix/store/d45swm00n7hzd4lbsrgr7mbvpggp447c-readline63-002 /nix/store/g21ljc0vdfwd1ghbskl02gbvl3fix91q-readline63-003 /nix/store/rg0qgkpq25cvdl351k7k935npsrgp72d-readline63-004 /nix/store/yw6qjz5zvvl28jvlqmppsf2qkadwipq5-readline63-005 /nix/store/q2paclh2vvbnz8sz6rjxzq1gbxkz91gb-readline63-006 /nix/store/11s8h9krz4xbzxm8qrbszmk5snjlvfa6-readline63-007 /nix/store/qhylrz27y60rcivasp7frghy9j8ia2f4-readline63-008",
+                "pname": "readline",
+                "propagatedBuildInputs": "/nix/store/xfbflasrprwi6gavla92mn3b7s28g879-ncurses-6.3-dev",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/s6ywfm5da4ijphrjxcpfbnfa6dhpgk76-readline-6.3.tar.gz",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "6.3p08"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/bw6aa38615ww5karcn8kslsf5hxgz412-link-against-ncurses.patch",
+                "digest": {
+                    "sha256": "1f253e24ac61352b69f9570d15960738ed75e81514bb318c8e717492039234e9"
+                }
+            },
+            {
+                "uri": "file:///nix/store/v3fnnlch7i18q6ga55dqc05ig9nry17r-no-arch_only-6.3.patch",
+                "digest": {
+                    "sha256": "0a1bfb4b35613c1ce720ef8e172518f49a31505720e2058a3463b7be53a2c030"
+                }
+            },
+            {
+                "uri": "file:///nix/store/0bmsj1gwmcd6b50ydjdrz2lk1yfyffqg-readline63-007.drv",
+                "digest": {
+                    "sha256": "6cbcfcf9803c1d9aff978bc0aecc6bd60ebcf7dde8fd7d4ce985be0cd839b20b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/64xyfmcfn1d3vykpm5pjd22s4d8fx82y-readline63-002.drv",
+                "digest": {
+                    "sha256": "871650934bc105bc4c469dcd4d2db0674d259c8343455d0fe5fff8884f4f34f5"
+                }
+            },
+            {
+                "uri": "file:///nix/store/892dqy3mz674xw8h8q88fnpax4z11ggr-readline-6.3.tar.gz.drv",
+                "digest": {
+                    "sha256": "6e18de12413f52003ab3f83f5c08284b097db55e716e155b98c417db1dfbc4d6"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/gwjykalkkdv2gs1398c4smiikijnx2ni-readline63-001.drv",
+                "digest": {
+                    "sha256": "acec978b7747cd7a9ea0ed61c13743e73752f8c87e91bdc445dd21d8e86b95fd"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/j7kajxs94a4amzgyr6kj9ilmvy92720a-readline63-008.drv",
+                "digest": {
+                    "sha256": "342a2a353730a81c52048573a289817a79a42e0f8985ecb20437a91e8f1d90f1"
+                }
+            },
+            {
+                "uri": "file:///nix/store/l5y6ghs0kpvyrbsg99v56h1phd4lvpas-ncurses-6.3.drv",
+                "digest": {
+                    "sha256": "b04aaac5b9f13913712c318b35890248423d5cc4f96dbcd2df42d14210295a1d"
+                }
+            },
+            {
+                "uri": "file:///nix/store/nih3gqwmk32zjsrlpnfgvgxglcjsa6gc-readline63-004.drv",
+                "digest": {
+                    "sha256": "3438b504cdbebb6ea905f7170cb3bdd1aa7204665130a5fc8c4f0e2a5a85eee1"
+                }
+            },
+            {
+                "uri": "file:///nix/store/nmn5vxnqvaqilvicxiqfbmnydv5irzli-readline63-003.drv",
+                "digest": {
+                    "sha256": "cbcd7edf888c39b20490fbc322f9cc7e2b5f8a0192147de0ae66bfc5a37eb1c8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/pad5qr5cmdfnzy83ph9hg3rln17ikpwl-readline63-005.drv",
+                "digest": {
+                    "sha256": "dca58cc63163f83aa593af5ad9a31f9706037e8206001ba5f2c4ba6f08f0b0cd"
+                }
+            },
+            {
+                "uri": "file:///nix/store/pk6mnch8dac129lzj6jyk3si4klnj5yz-readline63-006.drv",
+                "digest": {
+                    "sha256": "6caa9d012295f168159c53b90830e53baf46f4a8a31cc15386ed6d591cfb48c4"
+                }
+            }
+        ]
+    }
+}

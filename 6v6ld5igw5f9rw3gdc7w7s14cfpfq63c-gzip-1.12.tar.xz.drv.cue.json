@@ -1,0 +1,39 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/5vr9y3ki4sd6lp4zd4w3dhbhsylpfrw3-gzip-1.12.tar.xz",
+            "digest": {
+                "sha256": "a80e613a21afcb83ac6f4ff2610a9d1000093af0940c71efbb7fc750f2450529"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://builtin:fetchurl"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {
+                "builder": "builtin:fetchurl",
+                "executable": "",
+                "impureEnvVars": "http_proxy https_proxy ftp_proxy all_proxy no_proxy",
+                "name": "gzip-1.12.tar.xz",
+                "out": "/nix/store/5vr9y3ki4sd6lp4zd4w3dhbhsylpfrw3-gzip-1.12.tar.xz",
+                "outputHash": "sha256-zl4D5Rn2N+H4FAEazjXE+HszwLur7sNbr1+9NHnpGVY=",
+                "outputHashAlgo": "sha256",
+                "outputHashMode": "flat",
+                "preferLocalBuild": "1",
+                "system": "builtin",
+                "unpack": "",
+                "url": "https://ftpmirror.gnu.org/gzip/gzip-1.12.tar.xz",
+                "urls": "https://ftpmirror.gnu.org/gzip/gzip-1.12.tar.xz"
+            }
+        },
+        "materials": []
+    }
+}

@@ -1,0 +1,130 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/p6i08spp74nsifyi17dzgfsj6p7yb5x4-unbound-1.14.0",
+            "digest": {
+                "sha256": "1ecae931c6a0acdd774196f34bf75851aa698f09c48094bf0e05ed8919d5e58d"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "PROTOC_C": "",
+                "buildInputs": "/nix/store/6na02j2cznbkwlis5h9837d96jlf4j5p-openssl-1.1.1o-dev /nix/store/7vlcbbd675g1f5ld0pz613msi1yqkdri-nettle-3.7.3-dev /nix/store/1lkgpvr8gzw4a13lx4792lny1aahnd35-expat-2.4.8-dev /nix/store/8m92aq02d42f5cmwjr4sval1g0a9ymgs-libevent-2.1.12-dev",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "--with-ssl=/nix/store/6na02j2cznbkwlis5h9837d96jlf4j5p-openssl-1.1.1o-dev --with-libexpat=/nix/store/1lkgpvr8gzw4a13lx4792lny1aahnd35-expat-2.4.8-dev --with-libevent=/nix/store/8m92aq02d42f5cmwjr4sval1g0a9ymgs-libevent-2.1.12-dev --localstatedir=/var --sysconfdir=/etc --sbindir=${out}/bin --with-rootkey-file=/nix/store/jjj1g5jbdkv9j7g235jbqm7vvrx7kqxa-dns-root-data-2019-01-11/root.key --enable-pie --enable-relro-now",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "1",
+                "doInstallCheck": "",
+                "installFlags": "configfile=${out}/etc/unbound/unbound.conf",
+                "lib": "/nix/store/iyb8z1n8ira0g78g324hf1kcps04swkf-unbound-1.14.0-lib",
+                "man": "/nix/store/65ajfkk7pd02lphz92r5d3d2kgm07jr3-unbound-1.14.0-man",
+                "name": "unbound-1.14.0",
+                "nativeBuildInputs": "/nix/store/h0gk57azya21q6acdl6g5m3qrkfn2f3s-hook /nix/store/sl630spd1c59jdb5wicj0pb4qf37gy8g-bison-3.8.2",
+                "out": "/nix/store/p6i08spp74nsifyi17dzgfsj6p7yb5x4-unbound-1.14.0",
+                "outputs": "out lib man",
+                "patches": "",
+                "pname": "unbound",
+                "postConfigure": "sed -E '/CONFCMDLINE/ s;/nix/store/[a-z0-9]{32}-;/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-;g' -i config.h\n",
+                "postInstall": "make unbound-event-install\nwrapProgram $out/bin/unbound-control-setup \\\n  --prefix PATH : /nix/store/0pkii60i2rppp8rvyy29njlbgd6rfgyn-openssl-1.1.1o-bin/bin\n",
+                "postPatch": "",
+                "preFixup": "configureFlags=\"$configureFlags --with-nettle=/nix/store/7vlcbbd675g1f5ld0pz613msi1yqkdri-nettle-3.7.3-dev --with-libunbound-only\"\nconfigurePhase\nbuildPhase\nif [ -n \"$doCheck\" ]; then\n    checkPhase\nfi\ninstallPhase\nsubstituteInPlace \"$lib/lib/libunbound.la\"  --replace '-L/nix/store/6na02j2cznbkwlis5h9837d96jlf4j5p-openssl-1.1.1o-dev/lib' '-L/nix/store/v71f11hrf2b8ga7gnl31h46sd7nky73l-openssl-1.1.1o/lib' --replace '-R/nix/store/6na02j2cznbkwlis5h9837d96jlf4j5p-openssl-1.1.1o-dev/lib' '-R/nix/store/v71f11hrf2b8ga7gnl31h46sd7nky73l-openssl-1.1.1o/lib' --replace '-L/nix/store/7vlcbbd675g1f5ld0pz613msi1yqkdri-nettle-3.7.3-dev/lib' '-L/nix/store/9xswcsvig930w9q3yb6fi18rlgq3dc8x-nettle-3.7.3/lib' --replace '-R/nix/store/7vlcbbd675g1f5ld0pz613msi1yqkdri-nettle-3.7.3-dev/lib' '-R/nix/store/9xswcsvig930w9q3yb6fi18rlgq3dc8x-nettle-3.7.3/lib' --replace '-L/nix/store/1lkgpvr8gzw4a13lx4792lny1aahnd35-expat-2.4.8-dev/lib' '-L/nix/store/aics4lx87xcgd2rybjs7qjf73lz5kkxv-expat-2.4.8/lib' --replace '-R/nix/store/1lkgpvr8gzw4a13lx4792lny1aahnd35-expat-2.4.8-dev/lib' '-R/nix/store/aics4lx87xcgd2rybjs7qjf73lz5kkxv-expat-2.4.8/lib' --replace '-L/nix/store/8m92aq02d42f5cmwjr4sval1g0a9ymgs-libevent-2.1.12-dev/lib' '-L/nix/store/k9p9n4gvf1m148fmp026xjcdczipll3c-libevent-2.1.12/lib' --replace '-R/nix/store/8m92aq02d42f5cmwjr4sval1g0a9ymgs-libevent-2.1.12-dev/lib' '-R/nix/store/k9p9n4gvf1m148fmp026xjcdczipll3c-libevent-2.1.12/lib'",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/8a8lmwjp8bcm06l4n1dizm89vpjwbi16-unbound-1.14.0.tar.gz",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "1.14.0"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/2cgx3iilncwfg3hqq117b958aj16v6k3-expat-2.4.8.drv",
+                "digest": {
+                    "sha256": "a50e7a731e594de8f8b8c7d73347ad29e01b684df855f484a66ab4ea8c1e67ef"
+                }
+            },
+            {
+                "uri": "file:///nix/store/4dn327ns19kr8fl6wdcy2k50vcsmrgrg-nettle-3.7.3.drv",
+                "digest": {
+                    "sha256": "10274454c8884bd6f4e24692d671515f16ac629a148f8931b7e6cf20d5dcc003"
+                }
+            },
+            {
+                "uri": "file:///nix/store/8vj7366gpda1g92rgry4h7qdjg2v0sb0-libevent-2.1.12.drv",
+                "digest": {
+                    "sha256": "f3f6aedb45a5314351f19a7b605bb1d7b36589d59398f52064dad7afd1b7e980"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/cd44h08a0mbg07qwpih5zd31nikks2f7-openssl-1.1.1o.drv",
+                "digest": {
+                    "sha256": "acdeaa5cdbfb13fd590a628dc0b6a07ee25c464bedec941bac90715cacc33c2e"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/i0yr1bacwckxg615rh11935ni79ymhmq-hook.drv",
+                "digest": {
+                    "sha256": "4a8785edbf8cb2dd72f43e6a676b71a1f12bdd277509d74f837e6b8a05ccd57d"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ic70qagv77gjbgci607i973xggv33931-bison-3.8.2.drv",
+                "digest": {
+                    "sha256": "86fac9c212c0643fde73b22ecf7c46f683936fd6711594c780cb0cea60b779ff"
+                }
+            },
+            {
+                "uri": "file:///nix/store/kaln1s4akjxb9p5csl075kp3q2z33sny-dns-root-data-2019-01-11.drv",
+                "digest": {
+                    "sha256": "bd169c87052267fa86105af318e3495e015cde7d99000a30c314320b0bd67a04"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ma250xf18w5nb2gvnxjkczg41chfw04k-unbound-1.14.0.tar.gz.drv",
+                "digest": {
+                    "sha256": "447496d1b651cf717f2ade08a9d35f7ff7d11a1301e676757f54dadc5d57ae4c"
+                }
+            }
+        ]
+    }
+}

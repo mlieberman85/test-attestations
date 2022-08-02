@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/r6dyl4579shy2xq92n6m21xgazn13zvy-02-fix-ftbfs-with-glibc-2.28.patch.drv",
+            "digest": {
+                "sha256": "3af1e0b7f1506b02a5bd3a6650920f92fc14f2523b82138b22ad7bf9da96e596"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/vdw2q3ik790cwfig6308knaxnixbgz74-02-fix-ftbfs-with-glibc-2.28.patch",
+                "digest": {
+                    "sha256": "3f85bc86671d5a36539bb8278c9ba3e9f447efc933418481440d2fe0fb510d67"
+                }
+            }
+        ]
+    }
+}

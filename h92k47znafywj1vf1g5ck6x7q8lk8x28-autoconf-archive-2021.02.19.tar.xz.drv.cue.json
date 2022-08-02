@@ -1,0 +1,39 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/45ibzx4gda0cr8isxb8wcbl9bljavman-autoconf-archive-2021.02.19.tar.xz",
+            "digest": {
+                "sha256": "4dd147de8dcc76242e4336ba3ba05808a361fb3d8a3a5821c6b3d6f024e7221b"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://builtin:fetchurl"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {
+                "builder": "builtin:fetchurl",
+                "executable": "",
+                "impureEnvVars": "http_proxy https_proxy ftp_proxy all_proxy no_proxy",
+                "name": "autoconf-archive-2021.02.19.tar.xz",
+                "out": "/nix/store/45ibzx4gda0cr8isxb8wcbl9bljavman-autoconf-archive-2021.02.19.tar.xz",
+                "outputHash": "sha256-6KbrnSjdy6j/7z+iEWUyOem/I5q6agGmt8/Hzq7GnL0=",
+                "outputHashAlgo": "sha256",
+                "outputHashMode": "flat",
+                "preferLocalBuild": "1",
+                "system": "builtin",
+                "unpack": "",
+                "url": "https://ftpmirror.gnu.org/autoconf-archive/autoconf-archive-2021.02.19.tar.xz",
+                "urls": "https://ftpmirror.gnu.org/autoconf-archive/autoconf-archive-2021.02.19.tar.xz"
+            }
+        },
+        "materials": []
+    }
+}

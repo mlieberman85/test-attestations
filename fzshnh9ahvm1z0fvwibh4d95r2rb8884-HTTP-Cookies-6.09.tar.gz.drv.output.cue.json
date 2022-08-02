@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/fzshnh9ahvm1z0fvwibh4d95r2rb8884-HTTP-Cookies-6.09.tar.gz.drv",
+            "digest": {
+                "sha256": "5416249e5ad2a183b23609c3520ce177cb761d093cf29a5c266d243ce8732ffc"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/52f44v74dahg23biv6y5xa26zsy1zxaw-HTTP-Cookies-6.09.tar.gz",
+                "digest": {
+                    "sha256": "e7dcd452df11b71ce063b192cf2362a07b291bc9959a4db19fe38420955f6f99"
+                }
+            }
+        ]
+    }
+}

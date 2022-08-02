@@ -1,0 +1,101 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/wnpghkqdq64hinv8v03h1p1i7nlhy6ls-cracklib-2.9.7",
+            "digest": {
+                "sha256": "32cfc11817ce1fae196e68f9f4a756588eaabea9577f118af81e5d5f6a0e9aba"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "/nix/store/38ryqbjx5i1hir1a3sfk4za1yq5fbkpd-zlib-1.2.12-dev /nix/store/vh0c05rc71vmbbicfrksjsvaj3qk92ak-gettext-0.21",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "1",
+                "installCheckTarget": "test",
+                "name": "cracklib-2.9.7",
+                "nativeBuildInputs": "",
+                "out": "/nix/store/wnpghkqdq64hinv8v03h1p1i7nlhy6ls-cracklib-2.9.7",
+                "outputs": "out",
+                "patches": "",
+                "pname": "cracklib",
+                "postInstall": "make dict-local\n",
+                "postPatch": "chmod +x util/cracklib-format\npatchShebangs util\n\nln -vs /nix/store/gx790ffsz8rnwhnnax4h75f344a4ddih-cracklib-words-2.9.7.gz dicts/\n",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/qp5bcvdq466xdz9vvawbzr6mwix5qsbs-cracklib-2.9.7.tar.bz2",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "2.9.7"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/4ps3shhk3a83nxw82pirrp84kjza42qr-zlib-1.2.12.drv",
+                "digest": {
+                    "sha256": "f1c161051f72552716fdcba6f78370a3f93dab26e28779bbb0002f809c502534"
+                }
+            },
+            {
+                "uri": "file:///nix/store/8vrndrblm5la36rzmbb2p7yyzp96431b-gettext-0.21.drv",
+                "digest": {
+                    "sha256": "0588a7500c6bc213d8667504ee8473358707f15b32decff365eb237f8f0ff25e"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/f8ghqfpcz0x834chn86p8w35p4c6mfns-cracklib-words-2.9.7.gz.drv",
+                "digest": {
+                    "sha256": "1028da678fdbf8d0f963b4d75ce4cfedf5b558ee9b7aa5c40aa8e9462b409a44"
+                }
+            },
+            {
+                "uri": "file:///nix/store/fdi8ynixs0nwcr8cpnymxl9h9xysjl9d-cracklib-2.9.7.tar.bz2.drv",
+                "digest": {
+                    "sha256": "cc6144bd9ff4deedd5fa3a8a37a91b25a5c4b9defcd65dfbddc257345cb158c8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            }
+        ]
+    }
+}

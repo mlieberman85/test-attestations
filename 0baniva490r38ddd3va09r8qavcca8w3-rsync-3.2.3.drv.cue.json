@@ -1,0 +1,148 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/mm1d43n18xb2hsp9hvvi0ab0f1r91v76-rsync-3.2.3",
+            "digest": {
+                "sha256": "621402bdc8273a09541ad411b84771c144483ee5f112d39a9838fd534dfbcda9"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "/nix/store/8ryxs8jjbziday24xdr7qkf7icj8vr1y-glibc-iconv-2.34 /nix/store/38ryqbjx5i1hir1a3sfk4za1yq5fbkpd-zlib-1.2.12-dev /nix/store/aminkrhxlrz4af7d4j62m4ymfpkpqk36-popt-1.18 /nix/store/p4khsvkzxlpvzhfgdssviv5lrzscx9vf-acl-2.3.1-dev /nix/store/jw0n8hhbwfqi7f67gh2nzsx22idfaapj-zstd-1.5.2-dev /nix/store/5i1dszhs83k0dlq9zb455ndpg1r5vw88-lz4-1.9.3-dev /nix/store/6na02j2cznbkwlis5h9837d96jlf4j5p-openssl-1.1.1o-dev /nix/store/inxkvxpmsmk2rr4zkj24pjrr37axfcif-xxHash-0.8.1-dev",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "--with-nobody-group=nogroup --with-included-zlib=no",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "mainSrc": "/nix/store/rf6p4jf51am0lq00cadh9idgn5zsjalz-rsync-3.2.3.tar.gz",
+                "name": "rsync-3.2.3",
+                "nativeBuildInputs": "/nix/store/c34zmy26gc58bn7qbf4md2yh8vp133n6-perl-5.34.1",
+                "out": "/nix/store/mm1d43n18xb2hsp9hvvi0ab0f1r91v76-rsync-3.2.3",
+                "outputs": "out",
+                "patches": "/nix/store/b848iglg01yhpaylgncfx7cv2bj9b8q4-CVE-2020-14387.patch",
+                "patchesSrc": "/nix/store/z06ahw83xjyvs5crmrj1j3scckl6n7lf-rsync-patches-3.2.3.tar.gz",
+                "pname": "rsync",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "srcs": "/nix/store/rf6p4jf51am0lq00cadh9idgn5zsjalz-rsync-3.2.3.tar.gz",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "3.2.3"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/1pyvkyqcllhgjaigg0vpgfc6wz7rlwp5-rsync-patches-3.2.3.tar.gz.drv",
+                "digest": {
+                    "sha256": "74a93c772aab077fc4b6f9d04d27002f393fffc1053e9479afa5064874d3fe52"
+                }
+            },
+            {
+                "uri": "file:///nix/store/3zhjaha6cla4i9z1x1pcmhz87b2hphds-lz4-1.9.3.drv",
+                "digest": {
+                    "sha256": "6a2467a03c3512a3a425e1b8964ef6c846ee71bd429e5d2ed8d75bce2a95617c"
+                }
+            },
+            {
+                "uri": "file:///nix/store/4ps3shhk3a83nxw82pirrp84kjza42qr-zlib-1.2.12.drv",
+                "digest": {
+                    "sha256": "f1c161051f72552716fdcba6f78370a3f93dab26e28779bbb0002f809c502534"
+                }
+            },
+            {
+                "uri": "file:///nix/store/7hilk6mkg3x3zfqdb74n70i82hz86qab-CVE-2020-14387.patch.drv",
+                "digest": {
+                    "sha256": "c7ec73f9e47d0f18e774c05dc3de8bf449536dcc62470fe1fa82810a5903a3b3"
+                }
+            },
+            {
+                "uri": "file:///nix/store/9qhb9kgh5c0dpipfjrfkq8hd8a1va1fb-acl-2.3.1.drv",
+                "digest": {
+                    "sha256": "5fbddf7c31ec335aed1b940f62f11743907e8e9d53d4f4d4da3c50077394dc70"
+                }
+            },
+            {
+                "uri": "file:///nix/store/a16gbn08izc3qa6yfrn6w3zvkqbmxg5z-zstd-1.5.2.drv",
+                "digest": {
+                    "sha256": "b37dfaf75fdd614ebb3fd36f8f17b9947a89ab94f696592e50b8a522b95b90fe"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/cd44h08a0mbg07qwpih5zd31nikks2f7-openssl-1.1.1o.drv",
+                "digest": {
+                    "sha256": "acdeaa5cdbfb13fd590a628dc0b6a07ee25c464bedec941bac90715cacc33c2e"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/jkkqlp9kn4sijb8gpb4iix5v0mqi5j1z-popt-1.18.drv",
+                "digest": {
+                    "sha256": "f1db9348ff7678c45d6b373d7af98fa89f424385f00ab0f94c385c8764f4159e"
+                }
+            },
+            {
+                "uri": "file:///nix/store/jkn79jy5p1cdh953rsmnpadxk15jaili-perl-5.34.1.drv",
+                "digest": {
+                    "sha256": "87f4f98f9a11a87515771dacc6dcd294d640778e146d6119ee09b07f955a654e"
+                }
+            },
+            {
+                "uri": "file:///nix/store/jy9zm9nmj7r19y2741wcvkc5wpdww61b-glibc-iconv-2.34.drv",
+                "digest": {
+                    "sha256": "082344439ef2b5523509fa4611ead6bbba6e8d855f32e4adc0a8e1de27eb6837"
+                }
+            },
+            {
+                "uri": "file:///nix/store/s519al7l2m50r45ycg6n00nm6gy0yzw6-xxHash-0.8.1.drv",
+                "digest": {
+                    "sha256": "c9e22ba077ac13054ca50c821e3e41f5cdf2893a51e90c6cd22e8dd5e7886d4e"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ycikzna4y6yx4nx48l6qy3b1zipl36s9-rsync-3.2.3.tar.gz.drv",
+                "digest": {
+                    "sha256": "15594cb1faa5ddcd05bdda15c035142a04fc443f0bff11ad44435c17c049aa3b"
+                }
+            }
+        ]
+    }
+}

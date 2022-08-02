@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/caaxgna99ysj8ikwyfhqnaqa1dxy1d58-go-1.16-linux-amd64-bootstrap.drv",
+            "digest": {
+                "sha256": "61a51e70dea147a6d1e1c3bd573599bc1539c578695b916850d4664f1ae8b0f0"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/i4af3sravx7dlxnmr3j0qnl9mc60qsl3-go-1.16-linux-amd64-bootstrap",
+                "digest": {
+                    "sha256": "5f448be03283c0cd2ba4443efce3c8d04bca7f22e3d1ecd7c922102945d330b6"
+                }
+            }
+        ]
+    }
+}

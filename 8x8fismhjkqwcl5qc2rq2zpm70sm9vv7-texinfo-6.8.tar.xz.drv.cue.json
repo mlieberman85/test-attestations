@@ -1,0 +1,39 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/ycj1q918l6852kndr75rlwmw43k5ybys-texinfo-6.8.tar.xz",
+            "digest": {
+                "sha256": "cb1334c309bbed4ed93800b7f904e8edc4dcf08c7b969c6ae96bb621b95dab79"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://builtin:fetchurl"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {
+                "builder": "builtin:fetchurl",
+                "executable": "",
+                "impureEnvVars": "http_proxy https_proxy ftp_proxy all_proxy no_proxy",
+                "name": "texinfo-6.8.tar.xz",
+                "out": "/nix/store/ycj1q918l6852kndr75rlwmw43k5ybys-texinfo-6.8.tar.xz",
+                "outputHash": "1i7yb7mrp3inz25zbzv2pllr4y7d58v818f1as7iz8mw53nm7dwf",
+                "outputHashAlgo": "sha256",
+                "outputHashMode": "flat",
+                "preferLocalBuild": "1",
+                "system": "builtin",
+                "unpack": "",
+                "url": "https://ftpmirror.gnu.org/texinfo/texinfo-6.8.tar.xz",
+                "urls": "https://ftpmirror.gnu.org/texinfo/texinfo-6.8.tar.xz"
+            }
+        },
+        "materials": []
+    }
+}

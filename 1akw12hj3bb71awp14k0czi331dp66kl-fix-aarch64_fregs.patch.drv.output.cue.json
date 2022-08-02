@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/1akw12hj3bb71awp14k0czi331dp66kl-fix-aarch64_fregs.patch.drv",
+            "digest": {
+                "sha256": "4d878eb3c13e56498190c63c8a1dd4fb33fecc14f28260f5ebaae9b915777811"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9lfh9b2b5x2wxscq0kw4k1m61p8yqn9w-fix-aarch64_fregs.patch",
+                "digest": {
+                    "sha256": "ca9aa8d089fefe85ff8f65b5797cf961388007c6b706d48a26acd7cf63807ce5"
+                }
+            }
+        ]
+    }
+}

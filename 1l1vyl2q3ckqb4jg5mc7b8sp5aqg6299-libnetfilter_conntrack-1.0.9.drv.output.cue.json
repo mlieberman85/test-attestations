@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/1l1vyl2q3ckqb4jg5mc7b8sp5aqg6299-libnetfilter_conntrack-1.0.9.drv",
+            "digest": {
+                "sha256": "025468ce0bf7a95096172587caf52b2728b2aabd39f7c66a70e6c43b80947346"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/4bxay0kk9p9dlgxraraa6lwvmp97r4k1-libnetfilter_conntrack-1.0.9",
+                "digest": {
+                    "sha256": "e863f8d562ef5cd3992b66b2d69aec964d3ed88eeb38d0ca3f95a717316df56b"
+                }
+            }
+        ]
+    }
+}

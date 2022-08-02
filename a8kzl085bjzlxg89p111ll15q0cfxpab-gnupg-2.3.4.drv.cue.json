@@ -1,0 +1,175 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/19qlpm0kjx1cavkz1j3yr491p432cbw4-gnupg-2.3.4",
+            "digest": {
+                "sha256": "3ba776fba57f92b093d176553731c43523a1b97a2384f37ec10c60375b6300b4"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "/nix/store/73084jz24c54jl383ffbhl75f7lmnqlj-libgcrypt-1.10.1-dev /nix/store/vw8h19hdaa6waaf767sjkc3plngfdp6c-libassuan-2.5.5-dev /nix/store/chfay609z7nynqfaxpb7w225gv2ry6xm-libksba-1.6.0-dev /nix/store/8ryxs8jjbziday24xdr7qkf7icj8vr1y-glibc-iconv-2.34 /nix/store/vy5lnnqm9bq102jgl56cxbi47cgv95gf-npth-1.6 /nix/store/vh0c05rc71vmbbicfrksjsvaj3qk92ak-gettext-0.21         /nix/store/0g9s646xr9b1pcq3pakjs2fdh22fi0sh-tpm2-tss-3.2.0",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "--with-libgpg-error-prefix=/nix/store/fwkkppass1im3aq4g9fxd7vcm43ji6vk-libgpg-error-1.42-dev --with-libgcrypt-prefix=/nix/store/73084jz24c54jl383ffbhl75f7lmnqlj-libgcrypt-1.10.1-dev --with-libassuan-prefix=/nix/store/vw8h19hdaa6waaf767sjkc3plngfdp6c-libassuan-2.5.5-dev --with-ksba-prefix=/nix/store/chfay609z7nynqfaxpb7w225gv2ry6xm-libksba-1.6.0-dev --with-npth-prefix=/nix/store/vy5lnnqm9bq102jgl56cxbi47cgv95gf-npth-1.6 --with-tss=intel",
+                "depsBuildBuild": "/nix/store/gfr4ljdlr1wplc01j4fchw4w9x3lfvv9-gcc-wrapper-11.3.0",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "enableParallelBuilding": "1",
+                "enableParallelChecking": "1",
+                "name": "gnupg-2.3.4",
+                "nativeBuildInputs": "/nix/store/prn4gvr4ljmrwnnm508i7m7qh7nfh7gz-pkg-config-wrapper-0.29.2 /nix/store/64rxzsclbkr98yhmkd2r1227ppr79dy2-texinfo-6.8",
+                "out": "/nix/store/19qlpm0kjx1cavkz1j3yr491p432cbw4-gnupg-2.3.4",
+                "outputs": "out",
+                "patches": "/nix/store/n14rxg9lby5gz2vr5q4y5nijv90cm9bv-fix-libusb-include-path.patch /nix/store/09ysgw8zj28zy31l02dcrjrvs9mibvav-tests-add-test-cases-for-import-without-uid.patch /nix/store/896ji3ynxi12mcn0rk85avsisjyzaw30-allow-import-of-previously-known-keys-even-without-UI.patch /nix/store/ml6k7sqh826hy2cilhq7n44fnbh0zbd9-accept-subkeys-with-a-good-revocation-but-no-self-sig.patch",
+                "pinentryBinaryPath": "bin/pinentry",
+                "pname": "gnupg",
+                "postInstall": "rm -r $out/{libexec,sbin,share}\nfor f in $(find $out/bin -type f -not -name gpg)\ndo\n  rm $f\ndone\n",
+                "postPatch": "sed -i 's,\\(hkps\\|https\\)://keyserver.ubuntu.com,hkps://keys.openpgp.org,g' configure configure.ac doc/dirmngr.texi doc/gnupg.info-1\n",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/gnrq7gcwpj6gv62n3ywjssj372ih40yx-gnupg-2.3.4.tar.bz2",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "2.3.4"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/09ysgw8zj28zy31l02dcrjrvs9mibvav-tests-add-test-cases-for-import-without-uid.patch",
+                "digest": {
+                    "sha256": "ff48c57d299d7243863cd9089cf009e8620fb0535e5a5d1741a71d4acbe77a7a"
+                }
+            },
+            {
+                "uri": "file:///nix/store/896ji3ynxi12mcn0rk85avsisjyzaw30-allow-import-of-previously-known-keys-even-without-UI.patch",
+                "digest": {
+                    "sha256": "25091e6907f8bdf980d5f317c471e77119df2198ab215185131c2e8f95db2c6d"
+                }
+            },
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ml6k7sqh826hy2cilhq7n44fnbh0zbd9-accept-subkeys-with-a-good-revocation-but-no-self-sig.patch",
+                "digest": {
+                    "sha256": "bf6c92cb56ff77c2503d4d68f99bade3c6fd85fd906ff971247cbfd82ce77a40"
+                }
+            },
+            {
+                "uri": "file:///nix/store/n14rxg9lby5gz2vr5q4y5nijv90cm9bv-fix-libusb-include-path.patch",
+                "digest": {
+                    "sha256": "98f88502f15c735ed189e3424f972c798ec95773944e09b6596ed638d1ed0933"
+                }
+            },
+            {
+                "uri": "file:///nix/store/1nwmh1gab2av96749j6abhgjy0dpbaq0-texinfo-6.8.drv",
+                "digest": {
+                    "sha256": "8e3ab6c4950da60585ea0065934dfb453ef449008f43f53feea3f2a0e40c0123"
+                }
+            },
+            {
+                "uri": "file:///nix/store/1v1lazzb2r2cg7a0vxv705jxyc8hidpn-pkg-config-wrapper-0.29.2.drv",
+                "digest": {
+                    "sha256": "d1c8e17a6c2ddf6900b817119c22f726a3a39af2ac395821e95d915fde3d9734"
+                }
+            },
+            {
+                "uri": "file:///nix/store/4285j6ampmzxx6sbxsp9fdlfal40s6cc-npth-1.6.drv",
+                "digest": {
+                    "sha256": "32b7526fea0c66cd8c7f6c7b22a70430621926f20a74cf36e6885be3cd8fdb7f"
+                }
+            },
+            {
+                "uri": "file:///nix/store/71bncxd36avc6np8z9vbcqfashmky5sj-libassuan-2.5.5.drv",
+                "digest": {
+                    "sha256": "97e4cd105e0c8d85cc7ac42fccb05304cf2717977483f759b2da09f0ce516fb4"
+                }
+            },
+            {
+                "uri": "file:///nix/store/8vrndrblm5la36rzmbb2p7yyzp96431b-gettext-0.21.drv",
+                "digest": {
+                    "sha256": "0588a7500c6bc213d8667504ee8473358707f15b32decff365eb237f8f0ff25e"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/hgi9979z6i6yzav843xkv5wj4qmp43xb-gcc-wrapper-11.3.0.drv",
+                "digest": {
+                    "sha256": "23daf1a1401858e4562e6aa61166712072a1f193942dd2478eef5513ddc9d2fb"
+                }
+            },
+            {
+                "uri": "file:///nix/store/jy9zm9nmj7r19y2741wcvkc5wpdww61b-glibc-iconv-2.34.drv",
+                "digest": {
+                    "sha256": "082344439ef2b5523509fa4611ead6bbba6e8d855f32e4adc0a8e1de27eb6837"
+                }
+            },
+            {
+                "uri": "file:///nix/store/py8pqw9fjgw9cgc6rx3p9jiqawbbk6i0-libgpg-error-1.42.drv",
+                "digest": {
+                    "sha256": "21432a897e5032d19788b01618e0ed87148265cdf49ed7ff8ceaaa21466555de"
+                }
+            },
+            {
+                "uri": "file:///nix/store/wvn0rd11rig64iy79s21vrmfkifx0nfj-libksba-1.6.0.drv",
+                "digest": {
+                    "sha256": "29cae9e87c5086d6b955fefb6bc9834ccdc0b120062bf9fdaeb556213649d143"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ybygd3l9qrrf90mclg738s7rjk1lr14k-libgcrypt-1.10.1.drv",
+                "digest": {
+                    "sha256": "677ea5f9b4e3e555a681373f534dd0fbab2bbad444f0bc9602eae112b4353e9f"
+                }
+            },
+            {
+                "uri": "file:///nix/store/z0bi1q6v002mgrbf4swbsq11969z9ndm-gnupg-2.3.4.tar.bz2.drv",
+                "digest": {
+                    "sha256": "143cfba12e799578b6c7a92755d5ec11b7a0709c99d9a09930170d12b6b657d8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/z15kizcqjclxrhswfbsmspiwzc8m5pys-tpm2-tss-3.2.0.drv",
+                "digest": {
+                    "sha256": "266274530a1440ce58e1690244c27388155e556551ea60d54f22e207b72cce02"
+                }
+            }
+        ]
+    }
+}

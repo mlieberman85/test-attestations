@@ -1,0 +1,159 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/wnim717k6bdx3kpli6djddp9x0j89flb-perl5.34.1-libwww-perl-6.49",
+            "digest": {
+                "sha256": "b8567df52c3357ee2a652ee057e08fc06776d73a8abe4443a80f250e43c5c0c0"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/qf3mzpvsmkrw963xchbivcci06078n13-builder.sh"
+                ]
+            },
+            "environment": {
+                "AUTOMATED_TESTING": "1",
+                "PERL_AUTOINSTALL": "--skipdeps",
+                "PERL_USE_UNSAFE_INC": "1",
+                "buildInputs": "/nix/store/2v8bj65l2yzn70wbcy442myh0r93k8a3-perl5.34.1-Test-Fatal-0.016 /nix/store/f31nw6f4b8yzjmvlmjps7vnpd5d663ll-perl5.34.1-Test-Needs-0.002006 /nix/store/s6548s35ra66sxvz3lknd03g2q13wk4s-perl5.34.1-Test-RequiresInternet-0.05 /nix/store/c34zmy26gc58bn7qbf4md2yh8vp133n6-perl-5.34.1",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "checkTarget": "test",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "devdoc": "/nix/store/2w5a7jrpb7vsig2cq1ki6svirz7r430p-perl5.34.1-libwww-perl-6.49-devdoc",
+                "doCheck": "1",
+                "doInstallCheck": "",
+                "fullperl": "/nix/store/c34zmy26gc58bn7qbf4md2yh8vp133n6-perl-5.34.1",
+                "name": "perl5.34.1-libwww-perl-6.49",
+                "nativeBuildInputs": "/nix/store/c34zmy26gc58bn7qbf4md2yh8vp133n6-perl-5.34.1",
+                "out": "/nix/store/wnim717k6bdx3kpli6djddp9x0j89flb-perl5.34.1-libwww-perl-6.49",
+                "outputs": "out devdoc",
+                "patches": "",
+                "pname": "perl5.34.1-libwww-perl",
+                "postPatch": "",
+                "propagatedBuildInputs": "/nix/store/kxads3h4d30w6baj09nky7mjbvngrwn2-perl5.34.1-File-Listing-6.14 /nix/store/nz14ka88yblk8zb1ibcq1pp5jqbcj9qd-perl5.34.1-HTML-Parser-3.75 /nix/store/vg7nl2ma1hpvyy6laqqvy7rfqj8dl2vz-perl5.34.1-HTTP-Cookies-6.09 /nix/store/i441r6rghhrx6maishr4y11ql2wym5c0-perl5.34.1-HTTP-Daemon-6.01 /nix/store/rr35zrj7w0rzq5yr85f0hc88fxg294r2-perl5.34.1-HTTP-Negotiate-6.01 /nix/store/wx6qg9qxdkdi3ac8a450gas72hkgf6n3-perl5.34.1-Net-HTTP-6.19 /nix/store/i8absq6s46b54z1nyk4sbz0kz40hzw2m-perl5.34.1-Try-Tiny-0.30 /nix/store/8hpmsi4jc9swsn5gmp5fysv7sazpgia6-perl5.34.1-WWW-RobotRules-6.02",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/208bzgsaazcspdl0ij873r2q2wgl6k3f-libwww-perl-6.49.tar.gz",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "6.49"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/qf3mzpvsmkrw963xchbivcci06078n13-builder.sh",
+                "digest": {
+                    "sha256": "3d93a1c4c99e05cc46b3f2121ff8ee2269d65693ae9555332a4b522202979a01"
+                }
+            },
+            {
+                "uri": "file:///nix/store/02ql9czblfk4igycgwpbdr55jifz7gmw-perl5.34.1-HTTP-Cookies-6.09.drv",
+                "digest": {
+                    "sha256": "929befe1c493575026724737cf2151092ec7b1e844a817f4c363014adfb5f35f"
+                }
+            },
+            {
+                "uri": "file:///nix/store/3fy8lw1ilg93xq6fnn8kwgkla0i03waj-libwww-perl-6.49.tar.gz.drv",
+                "digest": {
+                    "sha256": "3d50ae1958e3117182cd97fbe6437c958be2fe12c7374c27ce60839cca7466f6"
+                }
+            },
+            {
+                "uri": "file:///nix/store/40x2583j3sfb4r7drmz1y4kf6mzs8w6m-perl5.34.1-WWW-RobotRules-6.02.drv",
+                "digest": {
+                    "sha256": "802fb2e53b35de8fdd5e93256b31a2ff90293a02c7cf609c8d43f586067ca1c3"
+                }
+            },
+            {
+                "uri": "file:///nix/store/69701mjhcfxfba1lp15q06qkhjl8za7l-perl5.34.1-Net-HTTP-6.19.drv",
+                "digest": {
+                    "sha256": "e4ab8acd713818881629e794a4d2b31abfab14ea9968082a41e9ecbfca65b6ca"
+                }
+            },
+            {
+                "uri": "file:///nix/store/9yj9fn5dkaghrji3pp0drbzy1bl273s3-perl5.34.1-File-Listing-6.14.drv",
+                "digest": {
+                    "sha256": "7bc87fae572ef5716e1ba3b0cf6901f7cd691b9535f4cbba4165f0c1aa89e61c"
+                }
+            },
+            {
+                "uri": "file:///nix/store/akxb6jk7ljw4s1jpb9sv9fipmlxsx6p0-perl5.34.1-Test-Needs-0.002006.drv",
+                "digest": {
+                    "sha256": "3900d0b54eded6d362f445b8dd4ff98bdabe32139792148ccdbe8ff45574cceb"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/i5m603brvrr2whlcdvg194zlgsms3y6f-perl5.34.1-HTTP-Daemon-6.01.drv",
+                "digest": {
+                    "sha256": "9a0cd01fa9de3e1f3176685623bdd6ce18982f7acdc769b7881d225a9d742101"
+                }
+            },
+            {
+                "uri": "file:///nix/store/jkn79jy5p1cdh953rsmnpadxk15jaili-perl-5.34.1.drv",
+                "digest": {
+                    "sha256": "87f4f98f9a11a87515771dacc6dcd294d640778e146d6119ee09b07f955a654e"
+                }
+            },
+            {
+                "uri": "file:///nix/store/jmq47z1jpk3m4ia3smq6p3rc08f5a6yh-perl5.34.1-Test-RequiresInternet-0.05.drv",
+                "digest": {
+                    "sha256": "0936160269ca2f07a00c49071392b71377ffafa45b0fd5564f5300757cf069a1"
+                }
+            },
+            {
+                "uri": "file:///nix/store/lsf5msf1fzn2bxpxax62knbh6rvqhxk3-perl5.34.1-HTTP-Negotiate-6.01.drv",
+                "digest": {
+                    "sha256": "1cad93dc762f9c87d7ec7aca1d3b9073c20b546ce4700f511b22e26482843c21"
+                }
+            },
+            {
+                "uri": "file:///nix/store/q9g33xdsi5lpbgjpfhxnad6h4j4ry4cd-perl5.34.1-HTML-Parser-3.75.drv",
+                "digest": {
+                    "sha256": "5020b674656729268f6441b4e5b9870322a2fbd3667611be7abc6ec98d17f40d"
+                }
+            },
+            {
+                "uri": "file:///nix/store/rs46hx25f6ifm0990a1yr8vvmjb488r6-perl5.34.1-Test-Fatal-0.016.drv",
+                "digest": {
+                    "sha256": "a86696676cfb744907f5ddc9481883068a79ca208a1febd6f26a110d396ae85c"
+                }
+            },
+            {
+                "uri": "file:///nix/store/zp3jbjfika49jmb4177gpk6pfl1pkh34-perl5.34.1-Try-Tiny-0.30.drv",
+                "digest": {
+                    "sha256": "3078ea3b3312ba3425f7a4d6f3af42baa7dd412992af63c6c0c1eb875c9d57a9"
+                }
+            }
+        ]
+    }
+}

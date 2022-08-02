@@ -1,0 +1,84 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/rc08hwfck6rv1c4ji2qbvysmj4wc0sdy-ensure-newer-sources-hook.sh",
+            "digest": {
+                "sha256": "d88ebd40d1e1f6477080478aeaf9efd0340ad144ed44cf9a6c515303ccf9c13a"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "allowSubstitutes": "",
+                "buildCommand": "target=$out''\nmkdir -p \"$(dirname \"$target\")\"\n\nif [ -e \"$textPath\" ]; then\n  mv \"$textPath\" \"$target\"\nelse\n  echo -n \"$text\" \u003e \"$target\"\nfi\n\neval \"$checkPhase\"\n\n(test -n \"$executable\" \u0026\u0026 chmod +x \"$target\") || true\n",
+                "buildInputs": "",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "checkPhase": "",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "executable": "1",
+                "name": "ensure-newer-sources-hook.sh",
+                "nativeBuildInputs": "",
+                "out": "/nix/store/rc08hwfck6rv1c4ji2qbvysmj4wc0sdy-ensure-newer-sources-hook.sh",
+                "outputs": "out",
+                "passAsFile": "buildCommand text",
+                "patches": "",
+                "preferLocalBuild": "1",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "stdenv": "/nix/store/lmj98vlk5h0v1x5gzslxjnaj4m58dwxm-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "text": "postUnpackHooks+=(_ensureNewerSources)\n_ensureNewerSources() {\n  '/nix/store/aw9sfhxan3p1kzxrm5m413i9xrqh4885-findutils-4.9.0/bin/find' \"$sourceRoot\" \\\n    '!' -newermt '1980-01-01' -exec touch -h -d '1980-01-02' '{}' '+'\n}\n"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/3ga8qx6a74j26sy0yyvnqnxp6mva1b1z-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "f9bc13b9bdaa3cce0106294eeec282b55ca6f4f2d0b2d11e04685a22f7cb5170"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/r8v7awnfjv5g0zwiqs41ql8b4z5nmddz-findutils-4.9.0.drv",
+                "digest": {
+                    "sha256": "8bd622a9805f65bcf19134fc702d8bc75b732fdb5a3682cded746d13188b5855"
+                }
+            }
+        ]
+    }
+}

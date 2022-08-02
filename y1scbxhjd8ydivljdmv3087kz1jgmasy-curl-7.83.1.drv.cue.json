@@ -1,0 +1,153 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/vcqdywhapxf51fmgwlxmacnsaja2jipp-curl-7.83.1",
+            "digest": {
+                "sha256": "dad3c3d447d1558d79a1fa4c62b68f43078683f751987d9b8767b1294ce28f4c"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "CXX": "c++",
+                "CXXCPP": "c++ -E",
+                "bin": "/nix/store/1xf3xqgzjr4ywj6r8n01b22i14ndrfi2-curl-7.83.1-bin",
+                "buildInputs": "",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "--disable-manual --disable-ares --disable-ldap --disable-ldaps --with-ca-fallback --without-nghttp3 --without-ngtcp2 --without-librtmp --without-zstd --without-brotli --without-gnutls --without-libidn2 --with-openssl=/nix/store/04f6wxa0x2llhyjh9p5vb70rr63ck81a-openssl-1.1.1o-dev --with-libssh2=/nix/store/8b7mxfibq4850dnypiqm3x6sd7iaxvxv-libssh2-1.10.0-dev --without-wolfssl --with-gssapi=/nix/store/b8ymyr4m0xxn41czbcpi9z7nbh1npf3r-libkrb5-1.19.3-dev",
+                "debug": "/nix/store/lx13rh0sd0iks90padr2rfg9z3ls1cgw-curl-7.83.1-debug",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "dev": "/nix/store/d4cgk001fq0lsmfbz1a1dfgwlq4d62c8-curl-7.83.1-dev",
+                "devdoc": "/nix/store/0f0qvvy0jrkrq33rry7821fqakwmc70n-curl-7.83.1-devdoc",
+                "doCheck": "1",
+                "doInstallCheck": "",
+                "enableParallelBuilding": "1",
+                "enableParallelChecking": "1",
+                "man": "/nix/store/23rvza6ldhhyk8cd3xs2pyhgp1c1cizi-curl-7.83.1-man",
+                "name": "curl-7.83.1",
+                "nativeBuildInputs": "/nix/store/prn4gvr4ljmrwnnm508i7m7qh7nfh7gz-pkg-config-wrapper-0.29.2 /nix/store/c34zmy26gc58bn7qbf4md2yh8vp133n6-perl-5.34.1 /nix/store/ikmqczy0y20n04a2b8qfflzwihv8139g-separate-debug-info.sh",
+                "out": "/nix/store/vcqdywhapxf51fmgwlxmacnsaja2jipp-curl-7.83.1",
+                "outputs": "bin dev out man devdoc debug",
+                "patches": "/nix/store/gdqnvkbp6nnrvww108adb7nvjgrpdxzb-7.79.1-darwin-no-systemconfiguration.patch /nix/store/12ifkgi01pxy7cy5chndmwy73kacgd0m-7.83.1-quiche-support-ca-fallback.patch",
+                "pname": "curl",
+                "postInstall": "moveToOutput bin/curl-config \"$dev\"\n\n# Install completions\nmake -C scripts install\nsed '/^dependency_libs/s|/nix/store/8b7mxfibq4850dnypiqm3x6sd7iaxvxv-libssh2-1.10.0-dev|/nix/store/2f8dy122rqbzscciakzxa7dj5d7jznm4-libssh2-1.10.0|' -i \"$out\"/lib/*.la\n",
+                "preCheck": "patchShebangs tests/\n",
+                "preConfigure": "sed -e 's|/usr/bin|/no-such-path|g' -i.bak configure\nrm src/tool_hugehelp.c\n",
+                "propagatedBuildInputs": "/nix/store/b8ymyr4m0xxn41czbcpi9z7nbh1npf3r-libkrb5-1.19.3-dev /nix/store/zw8gkv54j59k6cy1g6pw90qf0sad99qy-nghttp2-1.47.0-dev /nix/store/04f6wxa0x2llhyjh9p5vb70rr63ck81a-openssl-1.1.1o-dev /nix/store/8b7mxfibq4850dnypiqm3x6sd7iaxvxv-libssh2-1.10.0-dev /nix/store/38ryqbjx5i1hir1a3sfk4za1yq5fbkpd-zlib-1.2.12-dev",
+                "propagatedNativeBuildInputs": "",
+                "separateDebugInfo": "1",
+                "src": "/nix/store/a2qkjmdx9rmmnmiy8gdiaihc605niink-curl-7.83.1.tar.bz2",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "1",
+                "system": "x86_64-linux",
+                "version": "7.83.1"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/12ifkgi01pxy7cy5chndmwy73kacgd0m-7.83.1-quiche-support-ca-fallback.patch",
+                "digest": {
+                    "sha256": "a056e0b7a455d1f96b42aa1bb91697674e2e3705fa7d4234745f03ca06796c28"
+                }
+            },
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/gdqnvkbp6nnrvww108adb7nvjgrpdxzb-7.79.1-darwin-no-systemconfiguration.patch",
+                "digest": {
+                    "sha256": "0bfc4840d22ddc0c021faaf56083f4f1f55ee09b623f7ab372c27ffa136c2956"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ikmqczy0y20n04a2b8qfflzwihv8139g-separate-debug-info.sh",
+                "digest": {
+                    "sha256": "6a9bffeef698bb4db776df8fdaaf2a4766c65c1a468204b9ae425eeaa4e961c7"
+                }
+            },
+            {
+                "uri": "file:///nix/store/4ps3shhk3a83nxw82pirrp84kjza42qr-zlib-1.2.12.drv",
+                "digest": {
+                    "sha256": "f1c161051f72552716fdcba6f78370a3f93dab26e28779bbb0002f809c502534"
+                }
+            },
+            {
+                "uri": "file:///nix/store/5sp63ahzdhy0gnda7jwpvf99kr7qmqfa-perl-5.34.1.drv",
+                "digest": {
+                    "sha256": "800d69380d04fda3959a8a719701d7bdc84e8f587722612ad045201887bb8b9f"
+                }
+            },
+            {
+                "uri": "file:///nix/store/66djnh37cxi54f6115qgvrw39141iiwg-libkrb5-1.19.3.drv",
+                "digest": {
+                    "sha256": "c22175893117cca0de39a6761a1fe18f9ecf0cbe85a9cb8812c6a374822360b3"
+                }
+            },
+            {
+                "uri": "file:///nix/store/73kqyk22vyxsq16bkj1h04sq23z97v1a-nghttp2-1.47.0.drv",
+                "digest": {
+                    "sha256": "563d23c1fbb23ae1286ee9d16f2c09c1d2315843c28e9efb44ba5fe036d6ff4a"
+                }
+            },
+            {
+                "uri": "file:///nix/store/7mqnv8rvvgnv2y8lhynmj8f88120wj3l-pkg-config-wrapper-0.29.2.drv",
+                "digest": {
+                    "sha256": "d8d3de1475e034bb3ad38e878acd66ee84da2d9feca55c29ac413756a3934d92"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/fwp19723jyva229wfsqfz3qv42bbnsck-openssl-1.1.1o.drv",
+                "digest": {
+                    "sha256": "36856ddd04e3f5beadf2a2b01d1a9a496eb63d5b7c2217462ed9f6adae5a1dd4"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/j10az7af9mwyqy20lldx1n258ig1drps-libssh2-1.10.0.drv",
+                "digest": {
+                    "sha256": "9f49843ef7ff155227633be5ad6f6b83cc2edea39e823fcf6fc56153bbff51f7"
+                }
+            },
+            {
+                "uri": "file:///nix/store/y3jr6xnfjncmgklis1lyrd08j9w46503-curl-7.83.1.tar.bz2.drv",
+                "digest": {
+                    "sha256": "282325c15f3f3a1e512a0219cd4dc582b9275d1339517041652c827b50138182"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/w0fk757xph2jz9n2hxg3n76fzsqrm3k6-setuptools_scm-6.4.2.tar.gz.drv",
+            "digest": {
+                "sha256": "9cefbd981bc8afb30413a00a04b875d841ab49a7909689dae3f8bdc5f779cce4"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/fm085mcyr34cx2539q02w3lvcswkhqzb-setuptools_scm-6.4.2.tar.gz",
+                "digest": {
+                    "sha256": "4e9c5aa24cbd3d80a05473045a95037e4a2decc5aa46053541044481e87b29ca"
+                }
+            }
+        ]
+    }
+}

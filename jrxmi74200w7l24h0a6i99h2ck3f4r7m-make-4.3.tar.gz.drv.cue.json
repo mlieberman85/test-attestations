@@ -1,0 +1,39 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/rdrb9ygp0naf6zil2lsqmbf1c6n40d8g-make-4.3.tar.gz",
+            "digest": {
+                "sha256": "f19c0c5bff7d406dc09c3ac2296a237ee42465bcb2372a8548c5f3a06c27ce6f"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://builtin:fetchurl"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {
+                "builder": "builtin:fetchurl",
+                "executable": "",
+                "impureEnvVars": "http_proxy https_proxy ftp_proxy all_proxy no_proxy",
+                "name": "make-4.3.tar.gz",
+                "out": "/nix/store/rdrb9ygp0naf6zil2lsqmbf1c6n40d8g-make-4.3.tar.gz",
+                "outputHash": "06cfqzpqsvdnsxbysl5p2fgdgxgl9y4p7scpnrfa8z2zgkjdspz0",
+                "outputHashAlgo": "sha256",
+                "outputHashMode": "flat",
+                "preferLocalBuild": "1",
+                "system": "builtin",
+                "unpack": "",
+                "url": "https://ftpmirror.gnu.org/make/make-4.3.tar.gz",
+                "urls": "https://ftpmirror.gnu.org/make/make-4.3.tar.gz"
+            }
+        },
+        "materials": []
+    }
+}

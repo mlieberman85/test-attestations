@@ -1,0 +1,92 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/jjj1g5jbdkv9j7g235jbqm7vvrx7kqxa-dns-root-data-2019-01-11",
+            "digest": {
+                "sha256": "7fffbe9363551f30b253de30749ee83605ced7c1e8cc2c3650950e9d0f51fc91"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildCommand": "mkdir $out\ncp /nix/store/b92zsq1s57g77wmzqvfy7pan5ya6xppc-root.hints $out/root.hints\ncp /nix/store/qj6g4vysva3jpvjaqx2h0dxgm237n7ld-root.key $out/root.key\ncp /nix/store/ngwyjjrxf58fpqyy6i3mjyc8nz65yalg-root.ds $out/root.ds\n",
+                "buildInputs": "",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "name": "dns-root-data-2019-01-11",
+                "nativeBuildInputs": "",
+                "out": "/nix/store/jjj1g5jbdkv9j7g235jbqm7vvrx7kqxa-dns-root-data-2019-01-11",
+                "outputs": "out",
+                "patches": "",
+                "pname": "dns-root-data",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "2019-01-11"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ngwyjjrxf58fpqyy6i3mjyc8nz65yalg-root.ds",
+                "digest": {
+                    "sha256": "e8599384d20aa2e4894d9edf60e153e7123e83a5ec30c1ec31ee9089ec2788e1"
+                }
+            },
+            {
+                "uri": "file:///nix/store/qj6g4vysva3jpvjaqx2h0dxgm237n7ld-root.key",
+                "digest": {
+                    "sha256": "6de02a032c7b79715699879b1254e59d319b564d7e13b692e6d71e9c7a82d88b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/xwcs5l9yld76jg5fphyxpgjxqvj8sjx1-root.hints.drv",
+                "digest": {
+                    "sha256": "8c6dee9301cd565ca8563757f23cfe873d41dd0d1fb00f85caa7c6623eba4b71"
+                }
+            }
+        ]
+    }
+}

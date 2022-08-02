@@ -1,0 +1,104 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/nz14ka88yblk8zb1ibcq1pp5jqbcj9qd-perl5.34.1-HTML-Parser-3.75",
+            "digest": {
+                "sha256": "ae9a13126eccc2149ff6a4a9ead2b0bf69c1fd1249697006cefa86c861a11cc7"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/qf3mzpvsmkrw963xchbivcci06078n13-builder.sh"
+                ]
+            },
+            "environment": {
+                "AUTOMATED_TESTING": "1",
+                "PERL_AUTOINSTALL": "--skipdeps",
+                "PERL_USE_UNSAFE_INC": "1",
+                "buildInputs": "/nix/store/c34zmy26gc58bn7qbf4md2yh8vp133n6-perl-5.34.1",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "checkTarget": "test",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "devdoc": "/nix/store/7c934xglrw7alasypp6f9wgq2bb57qs6-perl5.34.1-HTML-Parser-3.75-devdoc",
+                "doCheck": "1",
+                "doInstallCheck": "",
+                "fullperl": "/nix/store/c34zmy26gc58bn7qbf4md2yh8vp133n6-perl-5.34.1",
+                "name": "perl5.34.1-HTML-Parser-3.75",
+                "nativeBuildInputs": "/nix/store/c34zmy26gc58bn7qbf4md2yh8vp133n6-perl-5.34.1",
+                "out": "/nix/store/nz14ka88yblk8zb1ibcq1pp5jqbcj9qd-perl5.34.1-HTML-Parser-3.75",
+                "outputs": "out devdoc",
+                "patches": "",
+                "pname": "perl5.34.1-HTML-Parser",
+                "propagatedBuildInputs": "/nix/store/0lw7mc4vh2j5s6b16wgxi9n1hm67adar-perl5.34.1-HTML-Tagset-3.20 /nix/store/7wyh4qadpbfm7cih6rv6sy9kkzw45yby-perl5.34.1-HTTP-Message-6.26",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/b6dnpaj9rmgzrpc5mh69iw1y7wy7s1ww-HTML-Parser-3.75.tar.gz",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "3.75"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/qf3mzpvsmkrw963xchbivcci06078n13-builder.sh",
+                "digest": {
+                    "sha256": "3d93a1c4c99e05cc46b3f2121ff8ee2269d65693ae9555332a4b522202979a01"
+                }
+            },
+            {
+                "uri": "file:///nix/store/36n3dq3vq2vbr744k3v25la9x703jsh4-perl5.34.1-HTML-Tagset-3.20.drv",
+                "digest": {
+                    "sha256": "6eb2c6dd614978aa61a80151d47158ac57e05dd0748920c2ef33e0b1c3c75932"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/jkn79jy5p1cdh953rsmnpadxk15jaili-perl-5.34.1.drv",
+                "digest": {
+                    "sha256": "87f4f98f9a11a87515771dacc6dcd294d640778e146d6119ee09b07f955a654e"
+                }
+            },
+            {
+                "uri": "file:///nix/store/rfrznr1npd2v9q17gdbrrrh7n6fpdnay-HTML-Parser-3.75.tar.gz.drv",
+                "digest": {
+                    "sha256": "5f28c3afbd8b308a3b1c1a68e78625af6ab0bbdb97eae39ed2a31042eb98e247"
+                }
+            },
+            {
+                "uri": "file:///nix/store/rynqf7s6gbba2085c9fkv8a91z3ii9rp-perl5.34.1-HTTP-Message-6.26.drv",
+                "digest": {
+                    "sha256": "0492558168f2ef4d181ed5d70a9eb08657fc73ba7b0d8aaa736755381abcc4b1"
+                }
+            }
+        ]
+    }
+}

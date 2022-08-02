@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/nydhad0klfhl2z3rajds306dii6y8r36-libssh2-1.10.0.tar.gz.drv",
+            "digest": {
+                "sha256": "0279d778a9854df20fa1753bd58111f5f6a7c1ae4d297df8734eb452af653162"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/7ifrkfd7m64v1c6lcg346hs2vkkdvi1x-libssh2-1.10.0.tar.gz",
+                "digest": {
+                    "sha256": "3b5d2b2cd5a84d336aa9c1a3dbaf8b2234acd4fce9e743d28e018417ce96ffb2"
+                }
+            }
+        ]
+    }
+}

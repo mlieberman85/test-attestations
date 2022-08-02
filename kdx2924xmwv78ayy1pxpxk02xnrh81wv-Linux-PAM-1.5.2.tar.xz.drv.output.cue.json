@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/kdx2924xmwv78ayy1pxpxk02xnrh81wv-Linux-PAM-1.5.2.tar.xz.drv",
+            "digest": {
+                "sha256": "32eeb0ea1ddbeb68883508cb44ddaa8e98c5e184b38b1798e481a8bc23bcee88"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/45xn6fjnac1wvla5nha2kym12q0sd3x7-Linux-PAM-1.5.2.tar.xz",
+                "digest": {
+                    "sha256": "63b6f78212d0f2eb640e882814f7f28d145e81fce13a593bac3b746c8306a895"
+                }
+            }
+        ]
+    }
+}

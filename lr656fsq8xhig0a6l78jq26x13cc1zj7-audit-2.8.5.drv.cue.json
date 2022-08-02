@@ -1,0 +1,146 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/bpr7lsayz9jxdqp8ahbksvgxffb9lij5-audit-2.8.5",
+            "digest": {
+                "sha256": "472661ff0b77853c0f30c85c64e4771edec9d1140ac0f2260a18d5a3883da51b"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "bin": "/nix/store/d61shkvzgp5993cjrnq5rifb42n3rhwa-audit-2.8.5-bin",
+                "buildInputs": "/nix/store/gr0b8sadn3x65x1aadbsvrk4jy4rvq23-bash-5.1-p16-dev",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "--disable-zos-remote --with-python --with-arm --with-aarch64",
+                "depsBuildBuild": "/nix/store/gfr4ljdlr1wplc01j4fchw4w9x3lfvv9-gcc-wrapper-11.3.0",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "dev": "/nix/store/4my6ix0cgg8fk6jkn6qka4xxhpfxl49c-audit-2.8.5-dev",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "enableParallelBuilding": "1",
+                "enableParallelChecking": "1",
+                "man": "/nix/store/5rwcaqcz3wy2dakfp1q5qh1z7i07jkwv-audit-2.8.5-man",
+                "name": "audit-2.8.5",
+                "nativeBuildInputs": "/nix/store/35fvnsr5k0lwvpvp8dcl457vmc8cahib-hook /nix/store/wnrc4daqbd6v5ifqlxsj75ky8556zy0p-python3-3.9.12 /nix/store/4yddyqnc8z8r1npb2vbblp8ymf0km7xj-swig-3.0.12",
+                "out": "/nix/store/bpr7lsayz9jxdqp8ahbksvgxffb9lij5-audit-2.8.5",
+                "outputs": "bin dev out man",
+                "patches": "/nix/store/2zqk53fyirrj961nd06vnfb6p68dlqsv-weak-symbols.patch /nix/store/syv00zvl1k891qhcng9rllxn5rmmsxa5-017e6c6ab95df55f34e339d2139def83e5dada1f.patch /nix/store/8hn764pihi4dkpbx71skl1n2a9jd25h1-Add-substitue-functions-for-strndupa-rawmemchr.patch-fix-copyright-merge-conflict /nix/store/iv96dh81aj0alnaiym7amxvsbyxx6jkw-no-ipx.patch /nix/store/7k2xy61cjvn4n6mw98b4xiaqlqlfaqpa-ignore-flexible-array.patch",
+                "pname": "audit",
+                "postPatch": "sed -i 's,#include \u003csys/poll.h\u003e,#include \u003cpoll.h\u003e\\n#include \u003climits.h\u003e,' audisp/audispd.c\nsubstituteInPlace bindings/swig/src/auditswig.i \\\n  --replace \"/usr/include/linux/audit.h\" \\\n            \"/nix/store/54hg3i6wa7cbrmb99vm10zaba2mnw6pb-linux-headers-5.17/include/linux/audit.h\"\n",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/nbzjp4q72pb3rn4w03s6pwh2cqfyjvv1-audit-2.8.5.tar.gz",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "1",
+                "system": "x86_64-linux",
+                "version": "2.8.5"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/2zqk53fyirrj961nd06vnfb6p68dlqsv-weak-symbols.patch",
+                "digest": {
+                    "sha256": "4d7ed21f7f33b49b976aca4237471b8a94b02ad853f4595ca11005bf171c8558"
+                }
+            },
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/18zajbqg1isjsnq36dwkvs8fv5af7wkn-swig-3.0.12.drv",
+                "digest": {
+                    "sha256": "f0b469b2dfd745c041b4acc5ff3219b19ef92149c5c91fcbba04545cd399742b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/5k1sfc5qmzb93addcjxxnqcd5bpf2wlz-hook.drv",
+                "digest": {
+                    "sha256": "e2b0f8b1570352fccde979f3d8e4b70c5bbc8cce6a08b1f7fbfbafbf4b702445"
+                }
+            },
+            {
+                "uri": "file:///nix/store/b9z38fk5l4srghrdca7dzgs9634z3yl9-Add-substitue-functions-for-strndupa-rawmemchr.patch-fix-copyright-merge-conflict.drv",
+                "digest": {
+                    "sha256": "e2a98f06a8792b675377b77828e7a28267df886efc8e5b422679a968e7437db1"
+                }
+            },
+            {
+                "uri": "file:///nix/store/bxkv07fcj6i96f3lsi8bj3gnrzy4hxbg-linux-headers-5.17.drv",
+                "digest": {
+                    "sha256": "dfecb1eb3671e790e14110560dd3692d5c2c19e8d9d52a856576a384f00dbb00"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/czn0h5gfnwix4zzb2mjk6vv28wwzgpjr-017e6c6ab95df55f34e339d2139def83e5dada1f.patch.drv",
+                "digest": {
+                    "sha256": "680f284890af5861b61ff701030ca281166024af690c99e0e6a40bc57b80d9a5"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/hgi9979z6i6yzav843xkv5wj4qmp43xb-gcc-wrapper-11.3.0.drv",
+                "digest": {
+                    "sha256": "23daf1a1401858e4562e6aa61166712072a1f193942dd2478eef5513ddc9d2fb"
+                }
+            },
+            {
+                "uri": "file:///nix/store/hma91978pfxfzck8fiq27801n5y9hffg-no-ipx.patch.drv",
+                "digest": {
+                    "sha256": "d953e071c9ae30a6695841b1de93dc76a9a0a199095b08e7c967a790c54e5cde"
+                }
+            },
+            {
+                "uri": "file:///nix/store/p93l3rijm9pqi8gi2bh23ih6fyxrrw9h-audit-2.8.5.tar.gz.drv",
+                "digest": {
+                    "sha256": "a0d9ec6cb297e8f58b32d334b3b78eef1215de7dda40a00761fe73c51f823a64"
+                }
+            },
+            {
+                "uri": "file:///nix/store/sqnwpw3g6d83bs7016kjs5l4pdcwn4fx-ignore-flexible-array.patch.drv",
+                "digest": {
+                    "sha256": "4b5eca9758855bba90b95e33a7c9e54a5562a26741d6303dac618943ac4a445e"
+                }
+            },
+            {
+                "uri": "file:///nix/store/vdgkm605ayapf245hc17239qfpvivxfy-python3-3.9.12.drv",
+                "digest": {
+                    "sha256": "6684eb57aec053d7baf339e95827a8b7670f5709da588ab2576f58eb3be31ea6"
+                }
+            }
+        ]
+    }
+}

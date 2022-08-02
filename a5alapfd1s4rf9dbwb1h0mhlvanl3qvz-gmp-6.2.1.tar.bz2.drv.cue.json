@@ -1,0 +1,39 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/mw1rz69y1gm0504mnziij4n51993zi74-gmp-6.2.1.tar.bz2",
+            "digest": {
+                "sha256": "12e4fd9a9bff4ee270fa0a84061cb25c1beee960460441d13f2e9390d6e35b12"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://builtin:fetchurl"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {
+                "builder": "builtin:fetchurl",
+                "executable": "",
+                "impureEnvVars": "http_proxy https_proxy ftp_proxy all_proxy no_proxy",
+                "name": "gmp-6.2.1.tar.bz2",
+                "out": "/nix/store/mw1rz69y1gm0504mnziij4n51993zi74-gmp-6.2.1.tar.bz2",
+                "outputHash": "0z2ddfiwgi0xbf65z4fg4hqqzlhv0cc6hdcswf3c6n21xdmk5sga",
+                "outputHashAlgo": "sha256",
+                "outputHashMode": "flat",
+                "preferLocalBuild": "1",
+                "system": "builtin",
+                "unpack": "",
+                "url": "https://ftpmirror.gnu.org/gmp/gmp-6.2.1.tar.bz2",
+                "urls": "https://ftpmirror.gnu.org/gmp/gmp-6.2.1.tar.bz2"
+            }
+        },
+        "materials": []
+    }
+}

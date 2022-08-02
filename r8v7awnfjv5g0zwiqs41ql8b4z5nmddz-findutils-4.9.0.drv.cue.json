@@ -1,0 +1,100 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/aw9sfhxan3p1kzxrm5m413i9xrqh4885-findutils-4.9.0",
+            "digest": {
+                "sha256": "74fa17263d56a994767c33c2d7de72e1b66c2587ab55250e2a3b6a53448ec16f"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "CFLAGS": "",
+                "buildInputs": "/nix/store/a99i3wf2ig85clra7rs5kgi46s46xvwc-coreutils-9.0",
+                "builder": "/nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash",
+                "configureFlags": "SORT=/nix/store/a99i3wf2ig85clra7rs5kgi46s46xvwc-coreutils-9.0/bin/sort --localstatedir=/var/cache",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "1",
+                "doInstallCheck": "",
+                "enableParallelBuilding": "1",
+                "enableParallelChecking": "1",
+                "info": "/nix/store/c5v7kd9qizpvjnzv0y2k10ya0ln67nks-findutils-4.9.0-info",
+                "locate": "/nix/store/5gifk01j743ifxzfz89f0s7mjkd2lfcp-findutils-4.9.0-locate",
+                "name": "findutils-4.9.0",
+                "nativeBuildInputs": "",
+                "out": "/nix/store/aw9sfhxan3p1kzxrm5m413i9xrqh4885-findutils-4.9.0",
+                "outputs": "out info locate",
+                "patches": "/nix/store/4r8s8hcwyvvvnpcncps09zscqkh5qapx-no-install-statedir.patch",
+                "pname": "findutils",
+                "postFixup": "moveToOutput share/man/man5 $locate\nmoveToOutput share/man/man1/locate.1.gz $locate\nmoveToOutput share/man/man1/updatedb.1.gz $locate\n",
+                "postInstall": "moveToOutput bin/locate $locate\nmoveToOutput bin/updatedb $locate\n",
+                "postPatch": "substituteInPlace xargs/xargs.c --replace 'char default_cmd[] = \"echo\";' 'char default_cmd[] = \"/nix/store/a99i3wf2ig85clra7rs5kgi46s46xvwc-coreutils-9.0/bin/echo\";'\n",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/y954pl28vm03qfhvqrgyspwwv28b5lyi-findutils-4.9.0.tar.xz",
+                "stdenv": "/nix/store/mhhmr6r7852384nmlpplxm23la0l68cs-bootstrap-stage4-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "4.9.0"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/4r8s8hcwyvvvnpcncps09zscqkh5qapx-no-install-statedir.patch",
+                "digest": {
+                    "sha256": "6c7201549e666b523365ebf8004b9bff5e80e38562ee5ecdd48ed6b63e3197a4"
+                }
+            },
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/0zhkga32apid60mm7nh92z2970im5837-bootstrap-tools.drv",
+                "digest": {
+                    "sha256": "f91ccdc44b609d5a97b27804be2daa58b61d51b82caa7e9e765db4ad4180098a"
+                }
+            },
+            {
+                "uri": "file:///nix/store/5n7j0l13pmshd0ibl1is5yq4cx3yfgrk-bootstrap-stage4-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "8e185e061d88ebd2426602e337b5fcbf1def9e959c2ede344c2c5c662836b0b1"
+                }
+            },
+            {
+                "uri": "file:///nix/store/9rzzcygmd3nhbwp4nzq55wpv8mp503kq-coreutils-9.0.drv",
+                "digest": {
+                    "sha256": "0745b28317369571fc337984bf894091825689ee8e9a3fcf0d1f83b27ffaba14"
+                }
+            },
+            {
+                "uri": "file:///nix/store/jxhwnvkpxrbl5rrf01zf3cf2p7v215pb-findutils-4.9.0.tar.xz.drv",
+                "digest": {
+                    "sha256": "c019d8f47c891bbbb91b24c20e55af3b102617b94c2750ba87b3d57d3d7b40a5"
+                }
+            }
+        ]
+    }
+}

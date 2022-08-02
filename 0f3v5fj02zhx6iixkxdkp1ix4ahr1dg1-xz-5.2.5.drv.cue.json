@@ -1,0 +1,87 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/nv5kf5mv092rh51aiv3hc86karxas0dc-xz-5.2.5",
+            "digest": {
+                "sha256": "08130854c72262dcfaa87ef1651c35dbbe0fd5c5b313d24859c14001c45bdc3e"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "bin": "/nix/store/mznb04ggbmn6vpbq07v686chklk4ya7g-xz-5.2.5-bin",
+                "buildInputs": "",
+                "builder": "/nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "dev": "/nix/store/nypkzkwla4vfyyghy8aq5vfw506a9q2w-xz-5.2.5-dev",
+                "doCheck": "1",
+                "doInstallCheck": "",
+                "doc": "/nix/store/b2fgrryw51qhdl9b37x4bp2jvm75f8bd-xz-5.2.5-doc",
+                "man": "/nix/store/1qz2a7ck11bb9ik6dxa7lahanrr31hra-xz-5.2.5-man",
+                "name": "xz-5.2.5",
+                "nativeBuildInputs": "",
+                "out": "/nix/store/nv5kf5mv092rh51aiv3hc86karxas0dc-xz-5.2.5",
+                "outputs": "bin dev out man doc",
+                "patches": "",
+                "pname": "xz",
+                "postInstall": "rm -rf $out/share/doc",
+                "preCheck": "# Tests have a /bin/sh dependency...\npatchShebangs tests\n",
+                "preConfigure": "CONFIG_SHELL=/bin/sh",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/540m10fmc7qss0kgm9xszs6na2piw3pr-xz-5.2.5.tar.bz2",
+                "stdenv": "/nix/store/5czbabv4k1k7hp42g1l9z1843ars1q8k-bootstrap-stage1-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "5.2.5"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/0zhkga32apid60mm7nh92z2970im5837-bootstrap-tools.drv",
+                "digest": {
+                    "sha256": "f91ccdc44b609d5a97b27804be2daa58b61d51b82caa7e9e765db4ad4180098a"
+                }
+            },
+            {
+                "uri": "file:///nix/store/42wll5sgz4fgz9yixldzxz3l5yqffcp1-bootstrap-stage1-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "610de2128c333117f4ef32721c24c05358447d29c6ed3031063b1f7253385f1b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/8mg6zjhc5fbms6nm3snd41galx63ijhw-xz-5.2.5.tar.bz2.drv",
+                "digest": {
+                    "sha256": "62d1043a4099ae8ed28b1d553204c7f11b6b4a5ada544a28a574f53c9a2cda9a"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,213 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/29ydm3z8g87m80m6f6q9k4ddhx39pdcs-glibc-locales-2.34-210",
+            "digest": {
+                "sha256": "6b61b0caa7a8238da32297c5cfab4167fbaad16e4c9e9938557484175f51742b"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/gm1vihrf3d8hks2fgjfgfyn5wm2rs49a-locales-builder.sh"
+                ]
+            },
+            "environment": {
+                "BASH_SHELL": "/bin/sh",
+                "buildInputs": "/nix/store/54hg3i6wa7cbrmb99vm10zaba2mnw6pb-linux-headers-5.17",
+                "buildPhase": "mkdir -p $TMPDIR/\"/nix/store/bvy2z17rzlvkx2sj7fy99ajm853yv898-glibc-2.34-210/lib/locale\"\n\necho 'C.UTF-8/UTF-8 \\' \u003e\u003e ../glibc-2*/localedata/SUPPORTED\n\n# Hack to allow building of the locales (needed since glibc-2.12)\nsed -i -e 's,^$(rtld-prefix) $(common-objpfx)locale/localedef,localedef --prefix='$TMPDIR',' ../glibc-2*/localedata/Makefile\nmake localedata/install-locales \\\n    localedir=$out/lib/locale \\\n",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "-C --enable-add-ons --sysconfdir=/etc --enable-stackguard-randomization --enable-bind-now --without-headers --disable-profile --enable-static-pie",
+                "depsBuildBuild": "/nix/store/gfr4ljdlr1wplc01j4fchw4w9x3lfvv9-gcc-wrapper-11.3.0",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "enableParallelBuilding": "1",
+                "enableParallelChecking": "1",
+                "extraNativeBuildInputs": "/nix/store/bvy2z17rzlvkx2sj7fy99ajm853yv898-glibc-2.34-210",
+                "installFlags": "sysconfdir=$(out)/etc",
+                "installPhase": "mkdir -p \"$out/lib/locale\"\ncp -v \"$TMPDIR/$NIX_STORE/\"*\"/lib/locale/locale-archive\" \"$out/lib/locale\"\n",
+                "is64bit": "1",
+                "makeFlags": "OBJCOPY=objcopy",
+                "name": "glibc-locales-2.34-210",
+                "nativeBuildInputs": "/nix/store/sl630spd1c59jdb5wicj0pb4qf37gy8g-bison-3.8.2 /nix/store/q1qbkcnjfc3l8qv0x1bf343ai72lkawq-python3-minimal-3.9.12 /nix/store/hd3j5xfvffs4vaa74l1har94q10fpnm5-glibc-2.34-210-dev",
+                "out": "/nix/store/29ydm3z8g87m80m6f6q9k4ddhx39pdcs-glibc-locales-2.34-210",
+                "outputs": "out",
+                "patches": "/nix/store/mgx19wbmgrh3rblbxhs6vi47sha15n11-2.34-master.patch.gz /nix/store/8haph3ng4mgsqr6p4024vj8k6kg3mqc4-nix-locale-archive.patch /nix/store/b1w7zbvm39ff1i52iyjggyvw2rdxz104-dont-use-system-ld-so-cache.patch /nix/store/mnglr8rr7nl444h7p50ysyq8qd0fm1lm-dont-use-system-ld-so-preload.patch /nix/store/za0pg7fmysrcwrqcal26fnmzw6vycgdn-fix_path_attribute_in_getconf.patch /nix/store/xkd50xxii6k7l1kmw4l5x6xzbhamcs87-allow-kernel-2.6.32.patch /nix/store/3l70d7kcfsh91w6792h4fqs4kjbq17py-glibc-reinstate-prlimit64-fallback.patch?id=eab07e78b691ae7866267fc04d31c7c3ad6b0eeb /nix/store/nqa9d4yxz1l2cgswzqr1pkm4jfrksm0q-locale-C.diff /nix/store/7kw224hdyxd7115lrqh9a4dv2x8msq2s-fix-x64-abi.patch /nix/store/001gp43bjqzx60cg345n2slzg7131za8-nix-nss-open-files.patch /nix/store/95hp6hs9g73h93safadb8x6vajyqkv6q-0001-Revert-Remove-all-usage-of-BASH-or-BASH-in-installed.patch /nix/store/qhlivc5m9wh8pq93v1smplibyxakbjby-raw",
+                "pname": "glibc-locales",
+                "postPatch": "# Needed for glibc to build with the gnumake 3.82\n# http://comments.gmane.org/gmane.linux.lfs.support/31227\nsed -i 's/ot \\$/ot:\\n\\ttouch $@\\n$/' manual/Makefile\n\n# nscd needs libgcc, and we don't want it dynamically linked\n# because we don't want it to depend on bootstrap-tools libs.\necho \"LDFLAGS-nscd += -static-libgcc\" \u003e\u003e nscd/Makefile\n\n# Ensure that `__nss_files_fopen` can still be wrapped by `libredirect`.\nsed -i -e '/libc_hidden_def (__nss_files_fopen)/d' nss/nss_files_fopen.c\nsed -i -e '/libc_hidden_proto (__nss_files_fopen)/d' include/nss_files.h\n\n# Ensure that libidn2 is found.\npatch -p 1 \u003c\u003cEOF\n--- a/inet/idna.c\n+++ b/inet/idna.c\n@@ -25,1 +25,1 @@\n-#define LIBIDN2_SONAME \"libidn2.so.0\"\n+#define LIBIDN2_SONAME \"/nix/store/d1gzs0dk0y7wyvy8ymzis1hq9x3w2zv0-libidn2-2.3.2/lib/libidn2.so.0\"\nEOF\n",
+                "preBuild": "",
+                "preConfigure": "export PWD_P=$(type -tP pwd)\nfor i in configure io/ftwtest-sh; do\n    # Can't use substituteInPlace here because replace hasn't been\n    # built yet in the bootstrap.\n    sed -i \"$i\" -e \"s^/bin/pwd^$PWD_P^g\"\ndone\n\nmkdir ../build\ncd ../build\n\nconfigureScript=\"`pwd`/../$sourceRoot/configure\"\n\nmakeFlags=\"$makeFlags BUILD_LDFLAGS=-Wl,-rpath,/nix/store/bvy2z17rzlvkx2sj7fy99ajm853yv898-glibc-2.34-210/lib OBJDUMP=/nix/store/3fqi6nigj8dkbvjnw8y4dy59gkq8vsj4-binutils-2.38/bin/objdump\"\n\n\n",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "setupHook": "/nix/store/axlgjkw98060f3pgq0g8abh9nwr6qzq6-locales-setup-hook.sh",
+                "src": "/nix/store/wjbv1k6yigmb280wrvc1gkv8cnrsacij-glibc-2.34.tar.xz",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "2.34-210"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/001gp43bjqzx60cg345n2slzg7131za8-nix-nss-open-files.patch",
+                "digest": {
+                    "sha256": "22d2d6bf720bb8445fcbf4be6e0dbe82e01f1d7c6075685d9ef686cc58148083"
+                }
+            },
+            {
+                "uri": "file:///nix/store/7kw224hdyxd7115lrqh9a4dv2x8msq2s-fix-x64-abi.patch",
+                "digest": {
+                    "sha256": "736dfb5fd706e0a993476f44f0c345e5e4c494e76c3c5e90730f9da23bcdca3d"
+                }
+            },
+            {
+                "uri": "file:///nix/store/8haph3ng4mgsqr6p4024vj8k6kg3mqc4-nix-locale-archive.patch",
+                "digest": {
+                    "sha256": "f339a2cb8dfd663d8385870f3d540f4bfbd906035100bdd258db73fab51b91b5"
+                }
+            },
+            {
+                "uri": "file:///nix/store/95hp6hs9g73h93safadb8x6vajyqkv6q-0001-Revert-Remove-all-usage-of-BASH-or-BASH-in-installed.patch",
+                "digest": {
+                    "sha256": "cf86c9c3a9a814411635dd38f26ed2d73f643202dae4cbfb1927b002e9c30072"
+                }
+            },
+            {
+                "uri": "file:///nix/store/b1w7zbvm39ff1i52iyjggyvw2rdxz104-dont-use-system-ld-so-cache.patch",
+                "digest": {
+                    "sha256": "2e35c8e6370d4a0d324f4aa3cc94eac9b9ca73f7d93ae1f090661f41e692b506"
+                }
+            },
+            {
+                "uri": "file:///nix/store/gm1vihrf3d8hks2fgjfgfyn5wm2rs49a-locales-builder.sh",
+                "digest": {
+                    "sha256": "3793d8f3a453e9a90f5261d133e4d43c7a9963b96f55fc2a2490cf9f10a318d5"
+                }
+            },
+            {
+                "uri": "file:///nix/store/mgx19wbmgrh3rblbxhs6vi47sha15n11-2.34-master.patch.gz",
+                "digest": {
+                    "sha256": "9ed46d476bd8497b239b79f958effb24bb2931d68b7eb6e4d98767d225a8918f"
+                }
+            },
+            {
+                "uri": "file:///nix/store/mnglr8rr7nl444h7p50ysyq8qd0fm1lm-dont-use-system-ld-so-preload.patch",
+                "digest": {
+                    "sha256": "430f6205d9ad0d5045a86085d7e50f669f67a11cda957d71d2d86d86a3e35bae"
+                }
+            },
+            {
+                "uri": "file:///nix/store/xkd50xxii6k7l1kmw4l5x6xzbhamcs87-allow-kernel-2.6.32.patch",
+                "digest": {
+                    "sha256": "22e6f1f0250b2b36bc4530ddb78ef5a6468654332c04274e5c2bc7bdc2ed2977"
+                }
+            },
+            {
+                "uri": "file:///nix/store/za0pg7fmysrcwrqcal26fnmzw6vycgdn-fix_path_attribute_in_getconf.patch",
+                "digest": {
+                    "sha256": "291171c2d057f2e9167cb12aff564f0ed202ca3d1199c6c42ae41d9ab71df88e"
+                }
+            },
+            {
+                "uri": "file:///nix/store/3nwsld4ci0dkiml6igwmh2dgmgmg231h-locale-C.diff.drv",
+                "digest": {
+                    "sha256": "c9a1ed5dfb0c7766cbde1489f5cdf170a3ea488aaa18cc5f8bfcdafdd7a9f6f7"
+                }
+            },
+            {
+                "uri": "file:///nix/store/6j9yh41lpmdpcviqkchirpbgjdcj0783-libidn2-2.3.2.drv",
+                "digest": {
+                    "sha256": "2f0df7fb6558be26ec4058d5d85ed5c07ceb4d1dd86c91e9337f989d5884d419"
+                }
+            },
+            {
+                "uri": "file:///nix/store/715zjvc2bwrgvrq1pv32jhyi4pj2vy96-locales-setup-hook.sh.drv",
+                "digest": {
+                    "sha256": "3d466f3c1943464c14b3636927008067d7af8880ef965ac164e8ef2940f92bcf"
+                }
+            },
+            {
+                "uri": "file:///nix/store/bxkv07fcj6i96f3lsi8bj3gnrzy4hxbg-linux-headers-5.17.drv",
+                "digest": {
+                    "sha256": "dfecb1eb3671e790e14110560dd3692d5c2c19e8d9d52a856576a384f00dbb00"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/dc7ibim6y5yyg8dlxyjy1xaijxypn1c7-glibc-2.34.tar.xz.drv",
+                "digest": {
+                    "sha256": "ee06537334211d733e1a598e78b080e3d91392447cc2c97cc40fbe825da4098a"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h1andq5yxjvcd5pdfl1l4gxlfshshwb9-glibc-reinstate-prlimit64-fallback.patch?id=eab07e78b691ae7866267fc04d31c7c3ad6b0eeb.drv",
+                "digest": {
+                    "sha256": "a1e677e577cba8352406642ec000c1d2d901fb9814206acd4293d19c370123c2"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/hgi9979z6i6yzav843xkv5wj4qmp43xb-gcc-wrapper-11.3.0.drv",
+                "digest": {
+                    "sha256": "23daf1a1401858e4562e6aa61166712072a1f193942dd2478eef5513ddc9d2fb"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ic70qagv77gjbgci607i973xggv33931-bison-3.8.2.drv",
+                "digest": {
+                    "sha256": "86fac9c212c0643fde73b22ecf7c46f683936fd6711594c780cb0cea60b779ff"
+                }
+            },
+            {
+                "uri": "file:///nix/store/khvnzp1m7450zl05hry8rab5v3afnhc9-binutils-2.38.drv",
+                "digest": {
+                    "sha256": "3529742a1af1b2b243a2a9f8ab5eaee46bfeedfcddd7f0bfbdb6d54b4cfc8adb"
+                }
+            },
+            {
+                "uri": "file:///nix/store/slh6i99w5w5vppjcxi6ksxh56yw87xq6-glibc-2.34-210.drv",
+                "digest": {
+                    "sha256": "e77e6d503666f4a073d742a97b9a1ecb2ce20311289fec458e531677d7ac7fdb"
+                }
+            },
+            {
+                "uri": "file:///nix/store/vgjl5jd85fzq22xnd1pc27ri0slrk70j-python3-minimal-3.9.12.drv",
+                "digest": {
+                    "sha256": "146ec27b1be33c156dc1c32e762840873af7674f6aba1fa42c402da6c9ef47ad"
+                }
+            },
+            {
+                "uri": "file:///nix/store/w1igcbdzk5sbl66hj50h8dxr97a0i0md-raw.drv",
+                "digest": {
+                    "sha256": "d8bda3b618c1a622a052d18364d92d3f9162fae4963a3a34590ed0f9ffc25adc"
+                }
+            }
+        ]
+    }
+}

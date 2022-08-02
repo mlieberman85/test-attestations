@@ -1,0 +1,91 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/zgzyyxi1c8ix73l6imar5mvpjxkgv8qd-attr-2.5.1",
+            "digest": {
+                "sha256": "883adebe07e5042a4db308a2d1a04002630d7b53ab77480e1ee1d8b46c26ed79"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "bin": "/nix/store/yxlk2qdlygjsbck85i6dlvcz0ssfyvpa-attr-2.5.1-bin",
+                "buildInputs": "",
+                "builder": "/nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "dev": "/nix/store/rgh1pl3wrl9qlkdizi58bj7g42ch5rbs-attr-2.5.1-dev",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "doc": "/nix/store/fn853fpgagay7w2631pvss2wm77i77b7-attr-2.5.1-doc",
+                "man": "/nix/store/6408k05007vwqh9aw7hh9w8qpjgignll-attr-2.5.1-man",
+                "name": "attr-2.5.1",
+                "nativeBuildInputs": "/nix/store/bwmdwrkrmflp1jny62a7wgbgymiwnsmn-gettext-0.21",
+                "out": "/nix/store/zgzyyxi1c8ix73l6imar5mvpjxkgv8qd-attr-2.5.1",
+                "outputs": "bin dev out man doc",
+                "patches": "",
+                "pname": "attr",
+                "postPatch": "for script in install-sh include/install-sh; do\n  patchShebangs $script\ndone\n",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/mz6mc8s7mrvvzjpl9322agmsq00cyrw5-attr-2.5.1.tar.gz",
+                "stdenv": "/nix/store/mhhmr6r7852384nmlpplxm23la0l68cs-bootstrap-stage4-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "2.5.1"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/0zhkga32apid60mm7nh92z2970im5837-bootstrap-tools.drv",
+                "digest": {
+                    "sha256": "f91ccdc44b609d5a97b27804be2daa58b61d51b82caa7e9e765db4ad4180098a"
+                }
+            },
+            {
+                "uri": "file:///nix/store/5n7j0l13pmshd0ibl1is5yq4cx3yfgrk-bootstrap-stage4-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "8e185e061d88ebd2426602e337b5fcbf1def9e959c2ede344c2c5c662836b0b1"
+                }
+            },
+            {
+                "uri": "file:///nix/store/hbd9bkhy0x7qfnl8p85793hh45yzdzsy-attr-2.5.1.tar.gz.drv",
+                "digest": {
+                    "sha256": "895bee12c50568a85d7376602e9d1dcef3e773e78dd470878ff3dc2ab490c4e7"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ra40fnjajddf7vd0h8ssp2j99n2d3k75-gettext-0.21.drv",
+                "digest": {
+                    "sha256": "8d2de9fdbc4955a81f7eccbeebd6bacca598ba1ebb5a17eefcc0ffe6a993f47c"
+                }
+            }
+        ]
+    }
+}

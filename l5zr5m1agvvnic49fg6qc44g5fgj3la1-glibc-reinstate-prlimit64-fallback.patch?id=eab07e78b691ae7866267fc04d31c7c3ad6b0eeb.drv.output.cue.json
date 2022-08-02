@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/l5zr5m1agvvnic49fg6qc44g5fgj3la1-glibc-reinstate-prlimit64-fallback.patch?id=eab07e78b691ae7866267fc04d31c7c3ad6b0eeb.drv",
+            "digest": {
+                "sha256": "7c9635fb261815cba0ff00523fc5ca41c377bb5ac5a4401ae016c342bf8e4f4c"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/3l70d7kcfsh91w6792h4fqs4kjbq17py-glibc-reinstate-prlimit64-fallback.patch?id=eab07e78b691ae7866267fc04d31c7c3ad6b0eeb",
+                "digest": {
+                    "sha256": "d40dff74a187aa5bf8ffed4b39c9a7a6e02b0e25feef15eac5fe22999b3fcdc5"
+                }
+            }
+        ]
+    }
+}

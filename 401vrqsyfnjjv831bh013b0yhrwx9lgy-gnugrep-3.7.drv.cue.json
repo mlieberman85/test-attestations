@@ -1,0 +1,101 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/9hnir0nnhgr01nprclv5c1fjzl43kxmh-gnugrep-3.7",
+            "digest": {
+                "sha256": "6a60865b02de4e0675229712972c08aff58c56a2460ee1a433fea07263d73b99"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "/nix/store/psizgq9cjgl18bkwmhxj8ma5ak791qwa-pcre-8.45-dev /nix/store/j22f87xsvbqcxqanpaxyv7ra3xh325s3-glibc-iconv-2.34",
+                "builder": "/nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "info": "/nix/store/z7h5bids08x7xz3iadfra38b0s9h861w-gnugrep-3.7-info",
+                "name": "gnugrep-3.7",
+                "nativeBuildInputs": "/nix/store/nwd35shggdjdbb5xgx8dhbcjnmx23706-perl-5.34.1",
+                "out": "/nix/store/9hnir0nnhgr01nprclv5c1fjzl43kxmh-gnugrep-3.7",
+                "outputs": "out info",
+                "patches": "",
+                "pname": "gnugrep",
+                "postInstall": "rm $out/bin/egrep $out/bin/fgrep\necho \"#! /bin/sh\" \u003e $out/bin/egrep\necho \"exec $out/bin/grep -E \\\"\\$@\\\"\" \u003e\u003e $out/bin/egrep\necho \"#! /bin/sh\" \u003e $out/bin/fgrep\necho \"exec $out/bin/grep -F \\\"\\$@\\\"\" \u003e\u003e $out/bin/fgrep\nchmod +x $out/bin/egrep $out/bin/fgrep\n",
+                "preConfigure": "export MKDIR_P=\"mkdir -p\"\n",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/g13116b7w29kavi52p9mk6p02xq9k1lx-grep-3.7.tar.xz",
+                "stdenv": "/nix/store/mhhmr6r7852384nmlpplxm23la0l68cs-bootstrap-stage4-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "3.7"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/0zhkga32apid60mm7nh92z2970im5837-bootstrap-tools.drv",
+                "digest": {
+                    "sha256": "f91ccdc44b609d5a97b27804be2daa58b61d51b82caa7e9e765db4ad4180098a"
+                }
+            },
+            {
+                "uri": "file:///nix/store/2b1109cj54rcyl6gn58qygi30qqdhgl4-pcre-8.45.drv",
+                "digest": {
+                    "sha256": "7e19ac2ddc0b1e8f12e6b17560671cf4ab0a97a6f8d5a02cf321813423115060"
+                }
+            },
+            {
+                "uri": "file:///nix/store/2bgknc6ism1p2wx0k88nz7g16i4zsqf0-grep-3.7.tar.xz.drv",
+                "digest": {
+                    "sha256": "b6182a441f6e2d76352db9da899dd1c7c017bc757e49a0f56d1c00ef60539fa6"
+                }
+            },
+            {
+                "uri": "file:///nix/store/5n7j0l13pmshd0ibl1is5yq4cx3yfgrk-bootstrap-stage4-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "8e185e061d88ebd2426602e337b5fcbf1def9e959c2ede344c2c5c662836b0b1"
+                }
+            },
+            {
+                "uri": "file:///nix/store/akih5xr8l36ikf7a33j9i5i92zmz5kad-glibc-iconv-2.34.drv",
+                "digest": {
+                    "sha256": "280fdd45eccc8d313fcf7146733e8c0025bc22f1ea0622ae6d743a526983ad89"
+                }
+            },
+            {
+                "uri": "file:///nix/store/qzqv7h1dawzyxy361i4ml6307mgxk6kv-perl-5.34.1.drv",
+                "digest": {
+                    "sha256": "b761478df955663544c8c5cff482bcb1a997516b62e88a0854f1e251c5833b09"
+                }
+            }
+        ]
+    }
+}

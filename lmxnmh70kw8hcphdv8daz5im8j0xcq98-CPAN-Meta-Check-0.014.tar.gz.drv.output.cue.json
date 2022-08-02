@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/lmxnmh70kw8hcphdv8daz5im8j0xcq98-CPAN-Meta-Check-0.014.tar.gz.drv",
+            "digest": {
+                "sha256": "4a595fccec2323de34d3fcf36314aa1f561d833528966ef5efc48d93cb6f4c98"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/2n4mggkqv4jhc5bp5mis1mzss4q1z8bw-CPAN-Meta-Check-0.014.tar.gz",
+                "digest": {
+                    "sha256": "087296c096bd6e44fe7579aada8e66705c4c94a604547708ad65188d693ce236"
+                }
+            }
+        ]
+    }
+}

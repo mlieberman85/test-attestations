@@ -1,0 +1,39 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/yvmxwjqla2q9xrk3m9fhx7xfbci44cfz-sed-4.8.tar.xz",
+            "digest": {
+                "sha256": "e4ab78cdd0e1c406d44b387d7b4fa5a157004e6907a75eb9e614a3d73f46837e"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://builtin:fetchurl"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {
+                "builder": "builtin:fetchurl",
+                "executable": "",
+                "impureEnvVars": "http_proxy https_proxy ftp_proxy all_proxy no_proxy",
+                "name": "sed-4.8.tar.xz",
+                "out": "/nix/store/yvmxwjqla2q9xrk3m9fhx7xfbci44cfz-sed-4.8.tar.xz",
+                "outputHash": "0cznxw73fzv1n3nj2zsq6nf73rvsbxndp444xkpahdqvlzz0r6zp",
+                "outputHashAlgo": "sha256",
+                "outputHashMode": "flat",
+                "preferLocalBuild": "1",
+                "system": "builtin",
+                "unpack": "",
+                "url": "https://ftpmirror.gnu.org/sed/sed-4.8.tar.xz",
+                "urls": "https://ftpmirror.gnu.org/sed/sed-4.8.tar.xz"
+            }
+        },
+        "materials": []
+    }
+}

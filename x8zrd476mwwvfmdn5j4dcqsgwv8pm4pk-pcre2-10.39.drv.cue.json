@@ -1,0 +1,86 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/6aswh0qmsr3hrj3ivm731860d7jwv39p-pcre2-10.39",
+            "digest": {
+                "sha256": "6424de9c1a381d27dec30624b1d4f723e00f7b5b4fbfa3f317799c30f6133247"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "bin": "/nix/store/i0cyy198xax001kshsqpgr1mgg6vpg1a-pcre2-10.39-bin",
+                "buildInputs": "",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "--enable-pcre2-16 --enable-pcre2-32 --enable-jit=auto",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "dev": "/nix/store/w8vq284w1b1dbpd3psmnj3pskmdw2w9i-pcre2-10.39-dev",
+                "devdoc": "/nix/store/chqpri1naiivfd1wy71qib0vfv3dgsrb-pcre2-10.39-devdoc",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "doc": "/nix/store/crlfhyqal7r4d4aw04qinjqlmqbs88j4-pcre2-10.39-doc",
+                "man": "/nix/store/2mba0yakwrzbqr1700z2h7hfi0wahaa6-pcre2-10.39-man",
+                "name": "pcre2-10.39",
+                "nativeBuildInputs": "",
+                "out": "/nix/store/6aswh0qmsr3hrj3ivm731860d7jwv39p-pcre2-10.39",
+                "outputs": "bin dev out doc man devdoc",
+                "patches": "",
+                "pname": "pcre2",
+                "postFixup": "moveToOutput bin/pcre2-config \"$dev\"\n",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/x9vlazniwl7mq061z29r63i8v1idpq6i-pcre2-10.39.tar.bz2",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "10.39"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/8kg0138q7x1mw98nqhhdx7g4bv13m4ff-pcre2-10.39.tar.bz2.drv",
+                "digest": {
+                    "sha256": "c4463c59308796432656db2708af86e9d7e006b0b90ddcab6cd612ec1d3ecee9"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            }
+        ]
+    }
+}

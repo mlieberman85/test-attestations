@@ -1,0 +1,87 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/ibb2bhi5by0vlkj2lfc3f0rklaf36692-patchelf-0.14.5",
+            "digest": {
+                "sha256": "ad77cda9ddf9c618ea43a49a62b24bd99a37eff31477c4ea58bf587bdd9e2a6b"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "",
+                "builder": "/nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "name": "patchelf-0.14.5",
+                "nativeBuildInputs": "",
+                "out": "/nix/store/ibb2bhi5by0vlkj2lfc3f0rklaf36692-patchelf-0.14.5",
+                "outputs": "out",
+                "patches": "",
+                "pname": "patchelf",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "setupHook": "/nix/store/03f77phmfdmsbfpcc6mspjfff3yc9fdj-setup-hook.sh",
+                "src": "/nix/store/fw24yjv6q6xll0q05ysiixxj46cxnixy-patchelf-0.14.5.tar.bz2",
+                "stdenv": "/nix/store/mhhmr6r7852384nmlpplxm23la0l68cs-bootstrap-stage4-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "0.14.5"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/03f77phmfdmsbfpcc6mspjfff3yc9fdj-setup-hook.sh",
+                "digest": {
+                    "sha256": "89ad77e125c2832f9a4531b2afdf6beb46856312d56faa2d1a64e6b92f5aa40a"
+                }
+            },
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/0zhkga32apid60mm7nh92z2970im5837-bootstrap-tools.drv",
+                "digest": {
+                    "sha256": "f91ccdc44b609d5a97b27804be2daa58b61d51b82caa7e9e765db4ad4180098a"
+                }
+            },
+            {
+                "uri": "file:///nix/store/5n7j0l13pmshd0ibl1is5yq4cx3yfgrk-bootstrap-stage4-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "8e185e061d88ebd2426602e337b5fcbf1def9e959c2ede344c2c5c662836b0b1"
+                }
+            },
+            {
+                "uri": "file:///nix/store/bmjrxb250i7jhhzz8gfmrprnaj6h0zp5-patchelf-0.14.5.tar.bz2.drv",
+                "digest": {
+                    "sha256": "cafcd4862a313bfa1ac1d501a8edf597734355f1d4299a4814b4d35fe551b8c2"
+                }
+            }
+        ]
+    }
+}

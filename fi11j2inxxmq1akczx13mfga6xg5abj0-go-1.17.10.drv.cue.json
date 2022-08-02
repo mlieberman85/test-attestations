@@ -1,0 +1,232 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/kdry395jlhj9pz97l0d71fmjqn2karbd-go-1.17.10",
+            "digest": {
+                "sha256": "177a9ebb2930bb6ad37f227d8c31290066697f21bca18701edf4499a68e2254a"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "CGO_ENABLED": "1",
+                "GO386": "softfloat",
+                "GOARCH": "amd64",
+                "GOARM": "",
+                "GOHOSTARCH": "amd64",
+                "GOHOSTOS": "linux",
+                "GOOS": "linux",
+                "GOROOT_BOOTSTRAP": "/nix/store/xmyr6x9bd3brnn01am6caw8m3m3js8c9-go-bootstrap/share/go",
+                "GO_BUILDER_NAME": "nix",
+                "GO_TEST_TIMEOUT_SCALE": "3",
+                "NIX_HARDENING_ENABLE": "",
+                "buildInputs": "/nix/store/73lwnsr46pfn9wwrh32s8hlv457433xg-nss-cacert-3.77 /nix/store/psizgq9cjgl18bkwmhxj8ma5ak791qwa-pcre-8.45-dev /nix/store/bvy2z17rzlvkx2sj7fy99ajm853yv898-glibc-2.34-210 /nix/store/5v40r4vq2gh5ss6pkg22v81maa38hl8i-glibc-2.34-210-static",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "checkPhase": "runHook preCheck\n(cd src \u0026\u0026 HOME=$TMPDIR GOCACHE=$TMPDIR/go-cache ./run.bash --no-rebuild)\nrunHook postCheck\n",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "disallowedReferences": "/nix/store/xmyr6x9bd3brnn01am6caw8m3m3js8c9-go-bootstrap",
+                "doCheck": "1",
+                "doInstallCheck": "",
+                "hardeningDisable": "all",
+                "installPhase": "runHook preInstall\nmkdir -p $GOROOT_FINAL\ncp -a bin pkg src lib misc api doc $GOROOT_FINAL\nln -s $GOROOT_FINAL/bin $out/bin\nrunHook postInstall\n",
+                "name": "go-1.17.10",
+                "nativeBuildInputs": "/nix/store/c34zmy26gc58bn7qbf4md2yh8vp133n6-perl-5.34.1 /nix/store/q196i8jk4d2abxqlc88ai5a6fsxnnzk4-which-2.21 /nix/store/prn4gvr4ljmrwnnm508i7m7qh7nfh7gz-pkg-config-wrapper-0.29.2 /nix/store/yjg0fl2288v6rcs79clz1rsrs2grj2x2-procps-3.3.16",
+                "out": "/nix/store/kdry395jlhj9pz97l0d71fmjqn2karbd-go-1.17.10",
+                "outputs": "out",
+                "patches": "/nix/store/x48d0s4gns4jrck6qkwrpqn7nh9ygpx6-remove-tools-1.11.patch /nix/store/1wxnz5npl05sahb5iv5q4azg2rk59kz5-ssl-cert-file-1.16.patch /nix/store/hyif3rqf4kgbzbqkrv3bjspn0r8s5pl6-remove-test-pie-1.15.patch /nix/store/39bjxj20rygi2zlx6zscv38jxh2k7nkl-creds-test.patch /nix/store/bb1yc64b2c5pdnd2bgfzxccvzh0svz9f-go-1.9-skip-flaky-19608.patch /nix/store/ddg24v72gz6vk7h9lvq1baz30bq1r777-skip-chown-tests-1.16.patch /nix/store/4vqgx07v9xywvmgmdzk87561y734vm8n-skip-external-network-tests-1.16.patch /nix/store/hm2jzy93m5sl48alp2dhklz2b592dn9b-skip-nohup-tests.patch /nix/store/92qy0wn9289a1id4c5byc2mqc6v6xas2-skip-cgo-tests-1.15.patch /nix/store/1cwv8hmzzn9s9b7rcvpymk6z6gm0c64p-go_no_vendor_checks-1.16.patch /nix/store/amwcfcjv3bnmrfnfchhf8n60f93irkr9-skip-test-extra-files-on-386-1.14.patch",
+                "pname": "go",
+                "postBuild": "(cd src \u0026\u0026 ./make.bash)\n",
+                "postConfigure": "export GOCACHE=$TMPDIR/go-cache\n# this is compiled into the binary\nexport GOROOT_FINAL=$out/share/go\n\nexport PATH=$(pwd)/bin:$PATH\n\n\nulimit -a\n",
+                "postPatch": "find . -name '*.orig' -exec rm {} ';'\n",
+                "preInstall": "rm -r pkg/obj\n# Contains the wrong perl shebang when cross compiling,\n# since it is not used for anything we can deleted as well.\nrm src/regexp/syntax/make_perl_groups.pl\n",
+                "prePatch": "patchShebangs ./ # replace /bin/bash\n\n# This source produces shell script at run time,\n# and thus it is not corrected by patchShebangs.\nsubstituteInPlace misc/cgo/testcarchive/carchive_test.go \\\n  --replace '#!/usr/bin/env bash' '#!/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash'\n\n# Patch the mimetype database location which is missing on NixOS.\n# but also allow static binaries built with NixOS to run outside nix\nsed -i 's,\\\"/etc/mime.types,\"/nix/store/qd3g8rk5hx5zkb70idjh6fa12sh6bipg-mailcap-2.1.53/etc/mime.types\\\"\\,\\n\\t\u0026,' src/mime/type_unix.go\n\n# Disabling the 'os/http/net' tests (they want files not available in\n# chroot builds)\nrm src/net/{listen,parse}_test.go\nrm src/syscall/exec_linux_test.go\n\n# !!! substituteInPlace does not seems to be effective.\n# The os test wants to read files in an existing path. Just don't let it be /usr/bin.\nsed -i 's,/usr/bin,'\"`pwd`\", src/os/os_test.go\nsed -i 's,/bin/pwd,'\"`type -P pwd`\", src/os/os_test.go\n# Fails on aarch64\nsed -i '/TestFallocate/aif true \\{ return\\; \\}' src/cmd/link/internal/ld/fallocate_test.go\n# Skip this test since ssl patches mess it up.\nsed -i '/TestLoadSystemCertsLoadColonSeparatedDirs/aif true \\{ return\\; \\}' src/crypto/x509/root_unix_test.go\n# Disable another PIE test which breaks.\nsed -i '/TestTrivialPIE/aif true \\{ return\\; \\}' misc/cgo/testshared/shared_test.go\n# Disable the BuildModePie test\nsed -i '/TestBuildmodePIE/aif true \\{ return\\; \\}' src/cmd/go/go_test.go\n# Disable the unix socket test\nsed -i '/TestShutdownUnix/aif true \\{ return\\; \\}' src/net/net_test.go\n# Disable the hostname test\nsed -i '/TestHostname/aif true \\{ return\\; \\}' src/os/os_test.go\n# ParseInLocation fails the test\nsed -i '/TestParseInSydney/aif true \\{ return\\; \\}' src/time/format_test.go\n# Remove the api check as it never worked\nsed -i '/src\\/cmd\\/api\\/run.go/ireturn nil' src/cmd/dist/test.go\n# Remove the coverage test as we have removed this utility\nsed -i '/TestCoverageWithCgo/aif true \\{ return\\; \\}' src/cmd/go/go_test.go\n# Remove the timezone naming test\nsed -i '/TestLoadFixed/aif true \\{ return\\; \\}' src/time/time_test.go\n# Remove disable setgid test\nsed -i '/TestRespectSetgidDir/aif true \\{ return\\; \\}' src/cmd/go/internal/work/build_test.go\n# Remove cert tests that conflict with NixOS's cert resolution\nsed -i '/TestEnvVars/aif true \\{ return\\; \\}' src/crypto/x509/root_unix_test.go\n# TestWritevError hangs sometimes\nsed -i '/TestWritevError/aif true \\{ return\\; \\}' src/net/writev_test.go\n# TestVariousDeadlines fails sometimes\nsed -i '/TestVariousDeadlines/aif true \\{ return\\; \\}' src/net/timeout_test.go\n\nsed -i 's,/etc/protocols,/nix/store/597a5092jhvwjpw9lxpgbq0fzx0xpz1x-iana-etc-20211124/etc/protocols,' src/net/lookup_unix.go\nsed -i 's,/etc/services,/nix/store/597a5092jhvwjpw9lxpgbq0fzx0xpz1x-iana-etc-20211124/etc/services,' src/net/port_unix.go\n\n# Disable cgo lookup tests not works, they depend on resolver\nrm src/net/cgo_unix_test.go\n\n# prepend the nix path to the zoneinfo files but also leave the original value for static binaries\n# that run outside a nix server\nsed -i 's,\\\"/usr/share/zoneinfo/,\"/nix/store/57ggjgs9z8s711b875v3707739frnnlc-tzdata-2022a/share/zoneinfo/\\\"\\,\\n\\t\u0026,' src/time/zoneinfo_unix.go\n\n",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/5vsadcpvc4a7s1hlf52b1iwk4snkaj05-go1.17.10.src.tar.gz",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "1.17.10"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/1cwv8hmzzn9s9b7rcvpymk6z6gm0c64p-go_no_vendor_checks-1.16.patch",
+                "digest": {
+                    "sha256": "148505996a76d4116dfff12db9ecd5b9b6e2d7a2da20361b85bc94572beb3ae7"
+                }
+            },
+            {
+                "uri": "file:///nix/store/1wxnz5npl05sahb5iv5q4azg2rk59kz5-ssl-cert-file-1.16.patch",
+                "digest": {
+                    "sha256": "3b3e008250d052579a2a8f31d55e0c03aaa35ddfb0077853ff9a2d5b45208569"
+                }
+            },
+            {
+                "uri": "file:///nix/store/39bjxj20rygi2zlx6zscv38jxh2k7nkl-creds-test.patch",
+                "digest": {
+                    "sha256": "e29340b879245f69c30e8e248dc59a939725192f73a8265328f988ca9a20e35e"
+                }
+            },
+            {
+                "uri": "file:///nix/store/4vqgx07v9xywvmgmdzk87561y734vm8n-skip-external-network-tests-1.16.patch",
+                "digest": {
+                    "sha256": "b6f7c896c8dda4262c604347895fdc29100f169e9700a23df5639747ac04c9c8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/92qy0wn9289a1id4c5byc2mqc6v6xas2-skip-cgo-tests-1.15.patch",
+                "digest": {
+                    "sha256": "940d860c051bd380ce0129652a2d54f0cf31504c4e8407f546275a199640035f"
+                }
+            },
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/amwcfcjv3bnmrfnfchhf8n60f93irkr9-skip-test-extra-files-on-386-1.14.patch",
+                "digest": {
+                    "sha256": "be1d1fe7adb763e9528e223cd13e4e2a8d426b49e55d0db2e9a2f425e297fafd"
+                }
+            },
+            {
+                "uri": "file:///nix/store/bb1yc64b2c5pdnd2bgfzxccvzh0svz9f-go-1.9-skip-flaky-19608.patch",
+                "digest": {
+                    "sha256": "26f6f5eb21faaf12fe004b82d6ce53a5ad0d2135d2e86cfaa3b48543469d81ca"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ddg24v72gz6vk7h9lvq1baz30bq1r777-skip-chown-tests-1.16.patch",
+                "digest": {
+                    "sha256": "2c40982e34753c3ac7aa027b5a4dc96d84d28a342350f882e91ff45749cb139e"
+                }
+            },
+            {
+                "uri": "file:///nix/store/hm2jzy93m5sl48alp2dhklz2b592dn9b-skip-nohup-tests.patch",
+                "digest": {
+                    "sha256": "38b2a6ddbe411001f6b158e6f1d7b43f09fa05a4ebbcf040d9a019e0c836f989"
+                }
+            },
+            {
+                "uri": "file:///nix/store/hyif3rqf4kgbzbqkrv3bjspn0r8s5pl6-remove-test-pie-1.15.patch",
+                "digest": {
+                    "sha256": "125c70ad534fc4854bcdca985eb987721b510ba1ea3bc198ac718cd647cb1fc6"
+                }
+            },
+            {
+                "uri": "file:///nix/store/x48d0s4gns4jrck6qkwrpqn7nh9ygpx6-remove-tools-1.11.patch",
+                "digest": {
+                    "sha256": "1412c677035dbe2dd05e50acd03b2fd6d211b0abbc563fe13cc8a1a3bc949dcb"
+                }
+            },
+            {
+                "uri": "file:///nix/store/1v1lazzb2r2cg7a0vxv705jxyc8hidpn-pkg-config-wrapper-0.29.2.drv",
+                "digest": {
+                    "sha256": "d1c8e17a6c2ddf6900b817119c22f726a3a39af2ac395821e95d915fde3d9734"
+                }
+            },
+            {
+                "uri": "file:///nix/store/2b1109cj54rcyl6gn58qygi30qqdhgl4-pcre-8.45.drv",
+                "digest": {
+                    "sha256": "7e19ac2ddc0b1e8f12e6b17560671cf4ab0a97a6f8d5a02cf321813423115060"
+                }
+            },
+            {
+                "uri": "file:///nix/store/59qlyx4r3hnbaybx0wg5k4449ka6imly-go1.17.10.src.tar.gz.drv",
+                "digest": {
+                    "sha256": "9e837a3f4bc9dc406398528ea8ea6a6a37f61938fdeb273b35c6c766f7b65f6d"
+                }
+            },
+            {
+                "uri": "file:///nix/store/7r97fpjiq60h2aqxknp8h9p7z8sww58b-mailcap-2.1.53.drv",
+                "digest": {
+                    "sha256": "7436f28b23a16a0a6f4cad2fa0752df7cbbc0e789ab89a7dc73f1a8465d7f2b9"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/fcw1qvjmkj3bwpz4wn27n26ngrcxpqs2-go-bootstrap.drv",
+                "digest": {
+                    "sha256": "91de45ae01b0064c808ec052b69b456b39eaa0b30dcffcfb40bf78b5d55f856a"
+                }
+            },
+            {
+                "uri": "file:///nix/store/gb73vgm21sz1m2b62cf2d5cbr3rqzgmx-iana-etc-20211124.drv",
+                "digest": {
+                    "sha256": "f4cfeaa29298f2d486a5942f7adac3ff6f6b1cd834a6b25d82b57412fc24a65c"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/hkqcpkazxh4pj2dfx0m8g7wk5csidcid-procps-3.3.16.drv",
+                "digest": {
+                    "sha256": "9814911456c4e609d5f8aab0c6fdac4ee5bc4ae9d75fe51a38c166e722605d16"
+                }
+            },
+            {
+                "uri": "file:///nix/store/jkn79jy5p1cdh953rsmnpadxk15jaili-perl-5.34.1.drv",
+                "digest": {
+                    "sha256": "87f4f98f9a11a87515771dacc6dcd294d640778e146d6119ee09b07f955a654e"
+                }
+            },
+            {
+                "uri": "file:///nix/store/jp3jd6zxaf70ls5w2w7589jha2fz7bm5-tzdata-2022a.drv",
+                "digest": {
+                    "sha256": "2f07baed867640897274b264bd5c3ece5d2486056ca000beb545307698fabe5c"
+                }
+            },
+            {
+                "uri": "file:///nix/store/qs54xdmhz6a31lpf7lkdjxn2vrhqgl48-nss-cacert-3.77.drv",
+                "digest": {
+                    "sha256": "f524782b7d36b440a7d294a378e349b6fa2a1644640140342ed013cf845c8483"
+                }
+            },
+            {
+                "uri": "file:///nix/store/slh6i99w5w5vppjcxi6ksxh56yw87xq6-glibc-2.34-210.drv",
+                "digest": {
+                    "sha256": "e77e6d503666f4a073d742a97b9a1ecb2ce20311289fec458e531677d7ac7fdb"
+                }
+            },
+            {
+                "uri": "file:///nix/store/zp8a14dsgrgavjrvmidh908jp1kwxvsx-which-2.21.drv",
+                "digest": {
+                    "sha256": "130f29ea5771798b19124b358db75fae1c6ab914424b56c3449f2d04452e7efc"
+                }
+            }
+        ]
+    }
+}

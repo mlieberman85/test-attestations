@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/21l24iglvgjw8xx9ki34sjkx3ll79kdg-HTTP-Negotiate-6.01.tar.gz.drv",
+            "digest": {
+                "sha256": "7132ebed4d84866a3d0e6cad48cad9c169c473222d4511b7b0b3565328de28b0"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/diklqmca00f1q5wxss1i113vsrq1p3kj-HTTP-Negotiate-6.01.tar.gz",
+                "digest": {
+                    "sha256": "1acac6342666db594cb1745282363c1e2935279a02eb93fcb6d50b26829dcbea"
+                }
+            }
+        ]
+    }
+}

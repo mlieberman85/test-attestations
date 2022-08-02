@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/v05abkcxgdzdl6qfqv02qqi05843s3cd-ibm-sw-tpm2-1661.drv",
+            "digest": {
+                "sha256": "2818102db159b48d18bbea306cd4463c1b4be6701d220e359f021f23ad62454b"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/6n3chwi4wcw2zq8wkpy1i1cy4ib20mlw-ibm-sw-tpm2-1661",
+                "digest": {
+                    "sha256": "007cf2405a4e987bad136cbf2b1e3882c28768562a29628c070e4d57f560f517"
+                }
+            }
+        ]
+    }
+}

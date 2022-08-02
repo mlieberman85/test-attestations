@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/q949bcb36xj572im3zp610nygkwzysvr-0001-Fix-ARCH-on-armv6-and-other-32-bit-ARM-platforms.patch.drv",
+            "digest": {
+                "sha256": "c6e27f0b7f5adec3dad2066d2981e9f27b26b2bda0322da6994994ea98b9d6a6"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9xfvg1gdy5wmsbssdww5yvx6lba0xhzn-0001-Fix-ARCH-on-armv6-and-other-32-bit-ARM-platforms.patch",
+                "digest": {
+                    "sha256": "5d93220352c7bcb8d2ca15aad623494a75792fd86aa3b550cd7f6d594f4ff0f0"
+                }
+            }
+        ]
+    }
+}

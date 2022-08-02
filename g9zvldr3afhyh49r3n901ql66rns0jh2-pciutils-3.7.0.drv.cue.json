@@ -1,0 +1,113 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/ccbya0p618bgv70y1899s5kwcmr08jds-pciutils-3.7.0",
+            "digest": {
+                "sha256": "d24b89a1897d60b69f78667dfd573bb39990ed2859b5f58e257a7c031201d412"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "/nix/store/38ryqbjx5i1hir1a3sfk4za1yq5fbkpd-zlib-1.2.12-dev /nix/store/9g3581ivc7bx1mf332nppqrm5g7cc5x0-kmod-29-dev /nix/store/q196i8jk4d2abxqlc88ai5a6fsxnnzk4-which-2.21",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "installTargets": "install install-lib",
+                "makeFlags": "SHARED=yes PREFIX=${out} STRIP= HOST=x86_64-linux CROSS_COMPILE= DNS=yes",
+                "name": "pciutils-3.7.0",
+                "nativeBuildInputs": "/nix/store/prn4gvr4ljmrwnnm508i7m7qh7nfh7gz-pkg-config-wrapper-0.29.2",
+                "out": "/nix/store/ccbya0p618bgv70y1899s5kwcmr08jds-pciutils-3.7.0",
+                "outputs": "out",
+                "patches": "",
+                "pname": "pciutils",
+                "postInstall": "# Remove update-pciids as it won't work on nixos\nrm $out/sbin/update-pciids $out/man/man8/update-pciids.8\n\n# use database from hwdata instead\n# (we don't create a symbolic link because we do not want to pull in the\n# full closure of hwdata)\ncp --reflink=auto /nix/store/rb2idnbk0ni2f58z11hc370w2iy60x0n-hwdata-0.347/share/hwdata/pci.ids $out/share/pci.ids\n",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/h9bwb7lapn8vqjqwvy5gi89sfhw72ldw-pciutils-3.7.0.tar.xz",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "3.7.0"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/1v1lazzb2r2cg7a0vxv705jxyc8hidpn-pkg-config-wrapper-0.29.2.drv",
+                "digest": {
+                    "sha256": "d1c8e17a6c2ddf6900b817119c22f726a3a39af2ac395821e95d915fde3d9734"
+                }
+            },
+            {
+                "uri": "file:///nix/store/4ps3shhk3a83nxw82pirrp84kjza42qr-zlib-1.2.12.drv",
+                "digest": {
+                    "sha256": "f1c161051f72552716fdcba6f78370a3f93dab26e28779bbb0002f809c502534"
+                }
+            },
+            {
+                "uri": "file:///nix/store/8nbb870aq3micrr2dmbrs2kmxryis5fy-hwdata-0.347.drv",
+                "digest": {
+                    "sha256": "099db764c230096e9c5b6327577a9a6e7b682403538bcd806fc4e14fbe1feda8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/jx3csj1sfplhr5pdjyjr95jvfi4ffj2w-kmod-29.drv",
+                "digest": {
+                    "sha256": "e00cc5e57f4563017a9ce6d43bac9c0d9f3b914d258ac6805960099ecb9aa223"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ysy9hvppkn7bbl5q4ipz2ryhgnpn0ww8-pciutils-3.7.0.tar.xz.drv",
+                "digest": {
+                    "sha256": "462f790037d787ed8bb8389a8ccce42d19df7f7c31982d739766ef513f2d3e18"
+                }
+            },
+            {
+                "uri": "file:///nix/store/zp8a14dsgrgavjrvmidh908jp1kwxvsx-which-2.21.drv",
+                "digest": {
+                    "sha256": "130f29ea5771798b19124b358db75fae1c6ab914424b56c3449f2d04452e7efc"
+                }
+            }
+        ]
+    }
+}

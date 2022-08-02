@@ -1,0 +1,102 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/pi4miqrq2gpcs8qs9wp6vcsm4i6j514b-gnumake-4.3",
+            "digest": {
+                "sha256": "33c9acbe55cc3f81560e9668a5e363cdddb929bcd3c296d4f4f4a4e6f45ed25b"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "",
+                "builder": "/nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash",
+                "configureFlags": "",
+                "debug": "/nix/store/yb7vdrhsh2pjs13zk3m74d2cd82chpvw-gnumake-4.3-debug",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "info": "/nix/store/ygmcfg6qnrs52w589i3w1car4aal8qzy-gnumake-4.3-info",
+                "man": "/nix/store/nq5z14bpp16qs0vgzivqak20pfng4wkn-gnumake-4.3-man",
+                "name": "gnumake-4.3",
+                "nativeBuildInputs": "/nix/store/ikmqczy0y20n04a2b8qfflzwihv8139g-separate-debug-info.sh",
+                "out": "/nix/store/pi4miqrq2gpcs8qs9wp6vcsm4i6j514b-gnumake-4.3",
+                "outputs": "out man info debug",
+                "patches": "/nix/store/2k52bklbjhhq47dn35gm833vlh06fgfn-0001-No-impure-bin-sh.patch /nix/store/6cc64ayl3fd2nc28ffw47cqsqi2bg1sn-0002-remove-impure-dirs.patch",
+                "pname": "gnumake",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "separateDebugInfo": "1",
+                "src": "/nix/store/rdrb9ygp0naf6zil2lsqmbf1c6n40d8g-make-4.3.tar.gz",
+                "stdenv": "/nix/store/mhhmr6r7852384nmlpplxm23la0l68cs-bootstrap-stage4-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "4.3"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/2k52bklbjhhq47dn35gm833vlh06fgfn-0001-No-impure-bin-sh.patch",
+                "digest": {
+                    "sha256": "acfaf4a6e396afc5b6575406de2d61d9b3ea02bab23e04ad869a34160f230710"
+                }
+            },
+            {
+                "uri": "file:///nix/store/6cc64ayl3fd2nc28ffw47cqsqi2bg1sn-0002-remove-impure-dirs.patch",
+                "digest": {
+                    "sha256": "c0abe8de6ac30ef658a0220dc0cb064b692ccdf55cb2c092df81540f1f613daf"
+                }
+            },
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ikmqczy0y20n04a2b8qfflzwihv8139g-separate-debug-info.sh",
+                "digest": {
+                    "sha256": "6a9bffeef698bb4db776df8fdaaf2a4766c65c1a468204b9ae425eeaa4e961c7"
+                }
+            },
+            {
+                "uri": "file:///nix/store/0zhkga32apid60mm7nh92z2970im5837-bootstrap-tools.drv",
+                "digest": {
+                    "sha256": "f91ccdc44b609d5a97b27804be2daa58b61d51b82caa7e9e765db4ad4180098a"
+                }
+            },
+            {
+                "uri": "file:///nix/store/5n7j0l13pmshd0ibl1is5yq4cx3yfgrk-bootstrap-stage4-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "8e185e061d88ebd2426602e337b5fcbf1def9e959c2ede344c2c5c662836b0b1"
+                }
+            },
+            {
+                "uri": "file:///nix/store/jrxmi74200w7l24h0a6i99h2ck3f4r7m-make-4.3.tar.gz.drv",
+                "digest": {
+                    "sha256": "1af187fe539e4a78db94c2902f720984514c50fadc8c58c90f6df62a92417f22"
+                }
+            }
+        ]
+    }
+}

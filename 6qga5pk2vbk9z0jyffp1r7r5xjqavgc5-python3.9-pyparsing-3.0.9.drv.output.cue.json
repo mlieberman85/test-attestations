@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/6qga5pk2vbk9z0jyffp1r7r5xjqavgc5-python3.9-pyparsing-3.0.9.drv",
+            "digest": {
+                "sha256": "67778cc50faa82b1c6cc6af81e154172ab03dd341504264bc2679f8cfd170749"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/s4kh530nx3a5jbxrzc4pxymplc401k0d-python3.9-pyparsing-3.0.9",
+                "digest": {
+                    "sha256": "efac96434602223a9621c348d73c5a761dad011b108acb1c71bc7b3daf4086e3"
+                }
+            }
+        ]
+    }
+}

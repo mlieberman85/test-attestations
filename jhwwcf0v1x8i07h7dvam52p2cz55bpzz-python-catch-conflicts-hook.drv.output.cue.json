@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/jhwwcf0v1x8i07h7dvam52p2cz55bpzz-python-catch-conflicts-hook.drv",
+            "digest": {
+                "sha256": "179a0e252dff9eae2c5045496dd14360ee8d8bd6665ebbecafbf88e8efdce1a3"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9pmg0ash9q107ghc9nqggqv9mawy1j06-python-catch-conflicts-hook",
+                "digest": {
+                    "sha256": "b5b9c4daaecc9b504f67d746050817880713d1677c925e7ada1ff008894f1a60"
+                }
+            }
+        ]
+    }
+}

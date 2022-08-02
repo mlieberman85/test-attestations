@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/qs54xdmhz6a31lpf7lkdjxn2vrhqgl48-nss-cacert-3.77.drv",
+            "digest": {
+                "sha256": "f524782b7d36b440a7d294a378e349b6fa2a1644640140342ed013cf845c8483"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/73lwnsr46pfn9wwrh32s8hlv457433xg-nss-cacert-3.77",
+                "digest": {
+                    "sha256": "16c5e748f66fca10f7731f2e7a0065367523c6945e8f63d5f0c44cdd2572e1b6"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/0mvm2iflnlh5b9fd91bscwk2fpnvnizb-Capture-Tiny-0.48.tar.gz.drv",
+            "digest": {
+                "sha256": "98c72d4cf66f99e1cd0f11cc286ffc53743539c91cadcf9840edc87c4ca5ede5"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/z3jdxfwink3jaigp5ygpa628y57gk8xf-Capture-Tiny-0.48.tar.gz",
+                "digest": {
+                    "sha256": "60793188bc6057871f4baec0728af81f26696a1e8143930f70b03243c126f44c"
+                }
+            }
+        ]
+    }
+}

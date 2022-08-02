@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/xm7mca0ig5lgd2xr0nq18g8pxzyqgn3g-Pygments-2.12.0.tar.gz.drv",
+            "digest": {
+                "sha256": "add39dd3d157019a10242e9ec95fb985c2fd3c364806afdd38b761ccab696e43"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/0bpvgd7dzxc1x85pqmsqa6m67gf1wfrx-Pygments-2.12.0.tar.gz",
+                "digest": {
+                    "sha256": "c7d130a403118460c74e2e3fd447fd8b61fbd0c64b5d429ae1777692c3324773"
+                }
+            }
+        ]
+    }
+}

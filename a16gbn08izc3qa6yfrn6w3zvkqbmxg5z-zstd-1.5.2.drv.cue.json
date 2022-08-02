@@ -1,0 +1,114 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/vy8jq485bximbdw03hxyfx10mr51l0vd-zstd-1.5.2",
+            "digest": {
+                "sha256": "92abc253e4aa1e596bd9ef2847552e2df3e0f14e948e27814db2ded64a0e044b"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "bin": "/nix/store/psjnfk1zm7nc2ma4gd2h5m6yv6xl5kn6-zstd-1.5.2-bin",
+                "buildInputs": "/nix/store/gr0b8sadn3x65x1aadbsvrk4jy4rvq23-bash-5.1-p16-dev",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "checkPhase": "runHook preCheck\n# Patch shebangs for playTests\npatchShebangs ../programs/zstdgrep\nctest -R playTests # The only relatively fast test.\nrunHook postCheck\n",
+                "cmakeDir": "../build/cmake",
+                "cmakeFlags": "-DZSTD_BUILD_CONTRIB:BOOL=ON -DZSTD_BUILD_SHARED:BOOL=ON -DZSTD_BUILD_STATIC:BOOL=OFF -DZSTD_BUILD_TESTS:BOOL=ON -DZSTD_LEGACY_SUPPORT:BOOL=OFF -DZSTD_PROGRAMS_LINK_SHARED:BOOL=ON",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "dev": "/nix/store/jw0n8hhbwfqi7f67gh2nzsx22idfaapj-zstd-1.5.2-dev",
+                "doCheck": "1",
+                "doInstallCheck": "",
+                "dontUseCmakeBuildDir": "1",
+                "man": "/nix/store/k7vfgq5knn0ra66yjhja0lj2ipcj2kyz-zstd-1.5.2-man",
+                "name": "zstd-1.5.2",
+                "nativeBuildInputs": "/nix/store/in00j2345mdb7svs7mspky910697dh12-cmake-boot-3.22.3 /nix/store/zlmvwvxlch83x09q2q3pqrx6pp8zdcyx-file-5.41",
+                "out": "/nix/store/vy8jq485bximbdw03hxyfx10mr51l0vd-zstd-1.5.2",
+                "outputs": "bin dev man out",
+                "patches": "/nix/store/n91acyjrlchm0snw0w16i4683pf788ax-playtests-darwin.patch",
+                "pname": "zstd",
+                "postPatch": "substituteInPlace build/cmake/CMakeLists.txt \\\n  --replace 'message(SEND_ERROR \"You need to build static library to build tests\")' \"\"\nsubstituteInPlace build/cmake/tests/CMakeLists.txt \\\n  --replace 'libzstd_static' 'libzstd_shared'\nsed -i \\\n  \"1aexport LD_LIBRARY_PATH=$PWD/build_/lib\" \\\n  tests/playTests.sh\n",
+                "preConfigure": "mkdir -p build_ \u0026\u0026 cd $_\n",
+                "preInstall": "mkdir -p $bin/bin\nsubstituteInPlace ../programs/zstdgrep \\\n  --replace \":-grep\" \":-/nix/store/9hnir0nnhgr01nprclv5c1fjzl43kxmh-gnugrep-3.7/bin/grep\" \\\n  --replace \":-zstdcat\" \":-$bin/bin/zstdcat\"\n\nsubstituteInPlace ../programs/zstdless \\\n  --replace \"zstdcat\" \"$bin/bin/zstdcat\"\ncp contrib/pzstd/pzstd $bin/bin/pzstd\n",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/2ac7jy5m3cvwkc7k8x04r3l55mh9qffx-source",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "1.5.2"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/n91acyjrlchm0snw0w16i4683pf788ax-playtests-darwin.patch",
+                "digest": {
+                    "sha256": "1a69775fc3c24d0befc0a6d3f56119828158b5264865796c17aba7775626b97f"
+                }
+            },
+            {
+                "uri": "file:///nix/store/401vrqsyfnjjv831bh013b0yhrwx9lgy-gnugrep-3.7.drv",
+                "digest": {
+                    "sha256": "eecc7a4338a2c320ce1b8a47201039f8cf2c1f6d632125ba482ccd59911ed380"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/imbvw4qk303vxiy0jh7mw4f3mp89505l-cmake-boot-3.22.3.drv",
+                "digest": {
+                    "sha256": "cfe3396778d80b2d754d616ae6dd958deec942efdec88bf66dde79cf5cabf9ac"
+                }
+            },
+            {
+                "uri": "file:///nix/store/l5ybgj90pdjdqb5d7n62cw260pyys037-source.drv",
+                "digest": {
+                    "sha256": "28b2fd8cda14807a8d8dfe2d8bec80bc56c4692ac5bd4d0fcb0e54ffb4458b2e"
+                }
+            },
+            {
+                "uri": "file:///nix/store/n9vb505rl8q239rylasv7a14xypryrh3-file-5.41.drv",
+                "digest": {
+                    "sha256": "10f6dceae255b8a5474bfdfc1d26c3e4d3d32754a8a0583f3bf0ffee1c3df86c"
+                }
+            }
+        ]
+    }
+}

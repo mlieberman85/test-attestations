@@ -1,0 +1,127 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/hij9pfd1j98dvra232ypfsvjs5w7yk8m-fuse-2.9.9",
+            "digest": {
+                "sha256": "a479cefbc91da62b4f24194da82e30df9a0d21e0ff998a9d467cb1339f35d364"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "checkPhase": "python3 -m pytest test/\n",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "mesonFlags": "",
+                "name": "fuse-2.9.9",
+                "nativeBuildInputs": "/nix/store/35fvnsr5k0lwvpvp8dcl457vmc8cahib-hook /nix/store/vh0c05rc71vmbbicfrksjsvaj3qk92ak-gettext-0.21",
+                "out": "/nix/store/hij9pfd1j98dvra232ypfsvjs5w7yk8m-fuse-2.9.9",
+                "outputs": "out",
+                "patches": "/nix/store/q20d6d6lkd6b58r5ncg5398cn8vr7nqr-fuse2-Do-not-set-FUSERMOUNT_DIR.patch /nix/store/mpn2y03smmrymy9y66af5kaib9bvfpai-fuse-2.9.9-closefrom-glibc-2-34.patch?id=8a970396fca7aca2d5a761b8e7a8242f1eef14c9",
+                "pname": "fuse",
+                "postFixup": "cd $out\ncp /nix/store/2my301a5vhrsczqnyzbr90ps4pbd69xg-fuse-3.10.5-common/etc/fuse.conf etc/fuse.conf\ncp /nix/store/2my301a5vhrsczqnyzbr90ps4pbd69xg-fuse-3.10.5-common/etc/udev/rules.d/99-fuse.rules etc/udev/rules.d/99-fuse.rules\n",
+                "preAutoreconf": "touch config.rpath",
+                "preConfigure": "export MOUNT_FUSE_PATH=$out/sbin\nexport INIT_D_PATH=$TMPDIR/etc/init.d\nexport UDEV_RULES_PATH=$out/etc/udev/rules.d\n\n# Ensure that FUSE calls the setuid wrapper, not\n# $out/bin/fusermount. It falls back to calling fusermount in\n# $PATH, so it should also work on non-NixOS systems.\nexport NIX_CFLAGS_COMPILE=\"-DFUSERMOUNT_DIR=\\\"/run/wrappers/bin\\\"\"\n\nsubstituteInPlace lib/mount_util.c --replace \"/bin/\" \"/nix/store/5s6hfy8823ikf2arwlrkyjw96yyxg0rd-util-linux-minimal-2.37.4-bin/bin/\"\nsubstituteInPlace util/mount.fuse.c --replace '\"su\"' '\"/nix/store/p40gi7zajjfx3dwk6jdxkkz2ifql3aza-shadow-4.11.1-su/bin/su\"'\nsed -e 's@CONFIG_RPATH=/usr/share/gettext/config.rpath@CONFIG_RPATH=/nix/store/vh0c05rc71vmbbicfrksjsvaj3qk92ak-gettext-0.21/share/gettext/config.rpath@' -i makeconf.sh\n./makeconf.sh\n",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/9ddl0gpd6blir4axhsj8wdzv00w4fwk5-source",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "2.9.9"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/q20d6d6lkd6b58r5ncg5398cn8vr7nqr-fuse2-Do-not-set-FUSERMOUNT_DIR.patch",
+                "digest": {
+                    "sha256": "969282e4be5719a2faee37705ff10799a392f746d6cc95497592ffbbb7fbb54d"
+                }
+            },
+            {
+                "uri": "file:///nix/store/4qfdgih9j05ry3j2lz8pzv0446zlyhii-source.drv",
+                "digest": {
+                    "sha256": "6b8124a0bdfbfebcdea3bf8e97548700065e1ae62b08f2b07a91f9ecfd4af408"
+                }
+            },
+            {
+                "uri": "file:///nix/store/5k1sfc5qmzb93addcjxxnqcd5bpf2wlz-hook.drv",
+                "digest": {
+                    "sha256": "e2b0f8b1570352fccde979f3d8e4b70c5bbc8cce6a08b1f7fbfbafbf4b702445"
+                }
+            },
+            {
+                "uri": "file:///nix/store/8vrndrblm5la36rzmbb2p7yyzp96431b-gettext-0.21.drv",
+                "digest": {
+                    "sha256": "0588a7500c6bc213d8667504ee8473358707f15b32decff365eb237f8f0ff25e"
+                }
+            },
+            {
+                "uri": "file:///nix/store/b6iw7q7lzs8vh24wd8hmlf2jl7dc9ql1-util-linux-minimal-2.37.4.drv",
+                "digest": {
+                    "sha256": "868639b6f595cc1e6e039a1eff44fa4d04edd6def9cb2b1b7e75d1648a035b06"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/dr6g7cw362c2030xb68398ap5cl5mj2y-shadow-4.11.1.drv",
+                "digest": {
+                    "sha256": "841e7ebcccf5a900e93673679fc9486250a919c89a4465767c9eec20793eb5dd"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/jrjhsl2idxifrkcrmh5xjj1jrcgpdq9a-fuse-2.9.9-closefrom-glibc-2-34.patch?id=8a970396fca7aca2d5a761b8e7a8242f1eef14c9.drv",
+                "digest": {
+                    "sha256": "413344d981308c973739fc6ea1947cd733ce8047e467200a45cb6b3ca76d794d"
+                }
+            },
+            {
+                "uri": "file:///nix/store/nwyhk7fbqbiqh9pznihw54lvvzp6xdk3-fuse-3.10.5.drv",
+                "digest": {
+                    "sha256": "1563ea71dc88b6f2eac5771317d2964817150a4aa40fbbd46195f8edb1f7b973"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,108 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/57ggjgs9z8s711b875v3707739frnnlc-tzdata-2022a",
+            "digest": {
+                "sha256": "3875d67e1bcbefce94f821e88f0de4a35958f548cfb3cdf162ec0924297076eb"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "bin": "/nix/store/q800g40vi5z1hizbs6c854wd5ca9srki-tzdata-2022a-bin",
+                "buildInputs": "",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "/nix/store/gfr4ljdlr1wplc01j4fchw4w9x3lfvv9-gcc-wrapper-11.3.0",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "dev": "/nix/store/0ljx1nv1j54sxsh14cg8qpb2d141i5rk-tzdata-2022a-dev",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "installFlags": "ZIC=./zic-native",
+                "makeFlags": "TOPDIR=$(out) TZDIR=$(out)/share/zoneinfo BINDIR=$(bin)/bin ZICDIR=$(bin)/bin ETCDIR=$(TMPDIR)/etc TZDEFAULT=tzdefault-to-remove LIBDIR=$(dev)/lib MANDIR=$(man)/share/man AWK=awk CFLAGS=-DHAVE_LINK=0 CFLAGS+=-DZIC_BLOAT_DEFAULT=\\\"fat\\\" cc=cc AR=ar",
+                "man": "/nix/store/s5ziyni71wm3lpsfpfayfxrn4rbdlyd9-tzdata-2022a-man",
+                "name": "tzdata-2022a",
+                "nativeBuildInputs": "",
+                "out": "/nix/store/57ggjgs9z8s711b875v3707739frnnlc-tzdata-2022a",
+                "outputs": "out bin man dev",
+                "patches": "",
+                "pname": "tzdata",
+                "postInstall": "rm $out/share/zoneinfo-posix\nrm $out/share/zoneinfo/tzdefault-to-remove\nmkdir $out/share/zoneinfo/posix\n( cd $out/share/zoneinfo/posix; ln -s ../* .; rm posix )\nmv $out/share/zoneinfo-leaps $out/share/zoneinfo/right\n\nmkdir -p \"$dev/include\"\ncp tzfile.h \"$dev/include/tzfile.h\"\n",
+                "preInstall": "mv zic.o zic.o.orig\nmv zic zic.orig\nmake $makeFlags cc=cc AR=ar zic\nmv zic zic-native\nmv zic.o.orig zic.o\nmv zic.orig zic\n",
+                "propagatedBuildInputs": "",
+                "propagatedBuildOutputs": "",
+                "propagatedNativeBuildInputs": "",
+                "setupHook": "/nix/store/3q9vpdf0bqlbqr3s867nisz8phx4c9kb-tzdata-setup-hook.sh",
+                "sourceRoot": ".",
+                "srcs": "/nix/store/ca32r5jpr2x2r5d0fpkmiycvfs3vq2rk-tzdata2022a.tar.gz /nix/store/pkhmyjk24xvzdj6hw15kgbswqvmnqzm4-tzcode2022a.tar.gz",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "2022a"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/3q9vpdf0bqlbqr3s867nisz8phx4c9kb-tzdata-setup-hook.sh",
+                "digest": {
+                    "sha256": "68caed5268cb45024472e497aaa023e505000c1235a0f10547d0adb3564203bc"
+                }
+            },
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/14s9q1rq795bl9kj2mdwqnamax58gkfg-tzcode2022a.tar.gz.drv",
+                "digest": {
+                    "sha256": "d43d8e1c774136e5d998f47fce9e6233f6dba55cf8b4b500c99bb0d57725179c"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ajlmjqxbyxkx6sd9vwckxki6z78bzhrw-tzdata2022a.tar.gz.drv",
+                "digest": {
+                    "sha256": "b80c50ebfd72268ee70b4d9502c381a736651d36a8c1402fe850e84bd1ede8ae"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/hgi9979z6i6yzav843xkv5wj4qmp43xb-gcc-wrapper-11.3.0.drv",
+                "digest": {
+                    "sha256": "23daf1a1401858e4562e6aa61166712072a1f193942dd2478eef5513ddc9d2fb"
+                }
+            }
+        ]
+    }
+}

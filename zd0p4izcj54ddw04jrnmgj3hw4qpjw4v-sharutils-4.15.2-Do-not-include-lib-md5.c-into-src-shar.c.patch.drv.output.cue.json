@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/zd0p4izcj54ddw04jrnmgj3hw4qpjw4v-sharutils-4.15.2-Do-not-include-lib-md5.c-into-src-shar.c.patch.drv",
+            "digest": {
+                "sha256": "62593fcfda940fedd11cdb1158defa8410140250b29cb753e6f78ceb20bab671"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/zm66z7hl0wksvn2a37vm21nxj90ssvi9-sharutils-4.15.2-Do-not-include-lib-md5.c-into-src-shar.c.patch",
+                "digest": {
+                    "sha256": "6f13bfc154ce4c913076b825a9bba29d3901d6b7e9c6c39984850e32fbcb2fea"
+                }
+            }
+        ]
+    }
+}

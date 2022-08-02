@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/hvh9lcsyavzr7j7l2ihwnnplpcpvmab6-fix-blkdeactivate.patch.drv",
+            "digest": {
+                "sha256": "c26991508a77464d7e233044fa86a2c8c3ad1677f6694daa907d9a8ae1d89b35"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/dqa3gycxy1sifkl7shh8gny3hjh7pw07-fix-blkdeactivate.patch",
+                "digest": {
+                    "sha256": "d4e9af5922cd1ee944349b7bf1dc9268e6220adfd08eeb57358a21c26ec668fc"
+                }
+            }
+        ]
+    }
+}

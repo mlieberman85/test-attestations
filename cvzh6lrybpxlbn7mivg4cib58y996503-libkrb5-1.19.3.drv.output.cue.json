@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/cvzh6lrybpxlbn7mivg4cib58y996503-libkrb5-1.19.3.drv",
+            "digest": {
+                "sha256": "6802f980094055ad46c734a018f9157e055e39abbbff9655639123ff93209c10"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/1rs4wiaa9mwi2g1477dphc6pm9w14732-libkrb5-1.19.3",
+                "digest": {
+                    "sha256": "4d9d181dd3d6b6c158c5943834522579922715d2a1cf147817a11ce4f7bc4710"
+                }
+            }
+        ]
+    }
+}

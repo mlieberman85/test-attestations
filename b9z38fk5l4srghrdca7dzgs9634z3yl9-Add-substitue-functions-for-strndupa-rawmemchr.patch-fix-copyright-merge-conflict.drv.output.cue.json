@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/b9z38fk5l4srghrdca7dzgs9634z3yl9-Add-substitue-functions-for-strndupa-rawmemchr.patch-fix-copyright-merge-conflict.drv",
+            "digest": {
+                "sha256": "e2a98f06a8792b675377b77828e7a28267df886efc8e5b422679a968e7437db1"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/8hn764pihi4dkpbx71skl1n2a9jd25h1-Add-substitue-functions-for-strndupa-rawmemchr.patch-fix-copyright-merge-conflict",
+                "digest": {
+                    "sha256": "c9d386dedddabc9bc8d821a0e1a55171ffa3d6e4b960a464716d2e379eb63d61"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,85 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/114kl9r7ykajlvcj21if80r3xqalssn9-libffi-3.4.2",
+            "digest": {
+                "sha256": "ef00741da5ab459707960be0a794457ef6a2ad52f91ccd681e03030329bb6a95"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "--with-gcc-arch=generic --enable-pax_emutramp --disable-exec-static-tramp",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "dev": "/nix/store/2p3jvnsr09dncpwb5b6z2nicd2sywp27-libffi-3.4.2-dev",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "dontStrip": "",
+                "info": "/nix/store/00g2i2id82d9p95arjanc1bfmlicg3p9-libffi-3.4.2-info",
+                "man": "/nix/store/crba93m1kzanl0xf5w9q67q9fdsszscl-libffi-3.4.2-man",
+                "name": "libffi-3.4.2",
+                "nativeBuildInputs": "",
+                "out": "/nix/store/114kl9r7ykajlvcj21if80r3xqalssn9-libffi-3.4.2",
+                "outputs": "out dev man info",
+                "patches": "",
+                "pname": "libffi",
+                "preCheck": "# The tests use -O0 which is not compatible with -D_FORTIFY_SOURCE.\nNIX_HARDENING_ENABLE=${NIX_HARDENING_ENABLE/fortify/}\n",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/m5yq1p3wcz5b77dc72ylmpfbs2yfmq8j-libffi-3.4.2.tar.gz",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "3.4.2"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/1jyns5j198ccpab923sx655x00i0q7hc-libffi-3.4.2.tar.gz.drv",
+                "digest": {
+                    "sha256": "4c688fb5d2dac0a257e678e14c0e7366f7d9fb908b26a08da218397f7c545065"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            }
+        ]
+    }
+}

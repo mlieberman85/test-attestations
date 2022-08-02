@@ -1,0 +1,97 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/xdn57xm5rmnrq6n7zkf2yb6jxfll5nji-lzip-1.23",
+            "digest": {
+                "sha256": "7791a179a22a863425ac5bb099b2c90fc223c047eacfecbbd55045434dc0f5bb"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "CPPFLAGS=-DNDEBUG CFLAGS=-O3 CXXFLAGS=-O3 CXX=c++",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "1",
+                "doInstallCheck": "",
+                "enableParallelBuilding": "1",
+                "enableParallelChecking": "1",
+                "info": "/nix/store/05nag2gwp5cbc6hx01s77d1nxjzaakiv-lzip-1.23-info",
+                "man": "/nix/store/fn7yfqwsy9gryjc20gkznr1xp0cllb4y-lzip-1.23-man",
+                "name": "lzip-1.23",
+                "nativeBuildInputs": "/nix/store/64rxzsclbkr98yhmkd2r1227ppr79dy2-texinfo-6.8",
+                "out": "/nix/store/xdn57xm5rmnrq6n7zkf2yb6jxfll5nji-lzip-1.23",
+                "outputs": "out man info",
+                "patches": "",
+                "pname": "lzip",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "setupHook": "/nix/store/h2fcbw7ghgn3i4qadszdp272w4dab7ln-lzip-setup-hook.sh",
+                "src": "/nix/store/fim96i2pigbmdkkc2rf34f71g9v50i5x-lzip-1.23.tar.gz",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "1.23"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2fcbw7ghgn3i4qadszdp272w4dab7ln-lzip-setup-hook.sh",
+                "digest": {
+                    "sha256": "1b7be7e5afdf38bdc24262f7f2c9a58e088d978428966f105883b1e9614ff979"
+                }
+            },
+            {
+                "uri": "file:///nix/store/1nwmh1gab2av96749j6abhgjy0dpbaq0-texinfo-6.8.drv",
+                "digest": {
+                    "sha256": "8e3ab6c4950da60585ea0065934dfb453ef449008f43f53feea3f2a0e40c0123"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/pllsvq9y0wz7vf37n5v4bl1kga8v6iyf-lzip-1.23.tar.gz.drv",
+                "digest": {
+                    "sha256": "df479995e8e2e298411fc0240ca034f411f5dcd0fe6e596f05ff88f53f88ee8c"
+                }
+            }
+        ]
+    }
+}

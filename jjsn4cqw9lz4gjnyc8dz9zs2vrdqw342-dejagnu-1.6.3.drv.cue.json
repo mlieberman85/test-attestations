@@ -1,0 +1,96 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/grpbz577hfchp23z0dncxfsk88mfsi5r-dejagnu-1.6.3",
+            "digest": {
+                "sha256": "2b2b77efa1271a7d743f9d9b562b871b20c863984cb1ec31910c3cd75cffb6ea"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "/nix/store/h4zcr3jp60cnslhjl6asjmv1mmq7hp1s-expect-5.45.4-dev",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "checkPhase": "# Provide `runtest' with a log name, otherwise it tries to run\n# `whoami', which fails when in a chroot.\nLOGNAME=\"nix-build-daemon\" make check \u003c /dev/zero\n",
+                "configureFlags": "",
+                "configureScript": "../configure",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "1",
+                "doInstallCheck": "",
+                "name": "dejagnu-1.6.3",
+                "nativeBuildInputs": "/nix/store/h0gk57azya21q6acdl6g5m3qrkfn2f3s-hook",
+                "out": "/nix/store/grpbz577hfchp23z0dncxfsk88mfsi5r-dejagnu-1.6.3",
+                "outputs": "out",
+                "patches": "",
+                "pname": "dejagnu",
+                "postInstall": "wrapProgram \"$out/bin/runtest\" \\\n  --prefix PATH \":\" \"/nix/store/dg0z2bnr9wy4r3sc2c6y6b4jap0237cs-expect-5.45.4/bin\"\n",
+                "preConfigure": "mkdir build\ncd build\n",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/lhfgbqdaizrv41549mm458r900qqya8r-dejagnu-1.6.3.tar.gz",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "1.6.3"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/g6cpnzdd579sf7pz2xspcwg95zqjdhh2-expect-5.45.4.drv",
+                "digest": {
+                    "sha256": "96f1ca8ac5bd3af3ae727cf4634cb86a1aab34bb037afc89f2c45891e541685d"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/i0yr1bacwckxg615rh11935ni79ymhmq-hook.drv",
+                "digest": {
+                    "sha256": "4a8785edbf8cb2dd72f43e6a676b71a1f12bdd277509d74f837e6b8a05ccd57d"
+                }
+            },
+            {
+                "uri": "file:///nix/store/rl9cwwl72dcdj4md46nhi6jbkbwvn3md-dejagnu-1.6.3.tar.gz.drv",
+                "digest": {
+                    "sha256": "87e77e4b2e3c2402c0757f487430ea4b76732583e77de835d672bc1e2726312e"
+                }
+            }
+        ]
+    }
+}

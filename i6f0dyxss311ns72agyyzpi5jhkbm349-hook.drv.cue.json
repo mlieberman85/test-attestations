@@ -1,0 +1,103 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/zjngfrvcprndncqp8zy8m2lcyrrl7mjg-hook",
+            "digest": {
+                "sha256": "f07f9453fc79a1a6f921faa6c497e9a7c8bfcdd609d97adece91a09e5bb5b7c9"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildCommand": "mkdir -p $out/nix-support\ncp /nix/store/ghdamd4hl6yi7jysh1x3436fj1v9yvjb-autoreconf.sh $out/nix-support/setup-hook\nprintWords /nix/store/8ph192qyza62ph9lk7razkwnaal0fqkv-autoconf-2.71 /nix/store/8x5423bmnryck989p3y5rjnbm0izm8p2-automake-1.16.5 /nix/store/miqy5dyczzm85rypvqk09zpa3h4vmjqh-gettext-0.21 /nix/store/4jjhqqg4w9qrhvykdc8d0j60drdl6pwi-libtool-2.4.7 \u003e $out/nix-support/propagated-build-inputs\n",
+                "buildInputs": "",
+                "builder": "/nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "name": "hook",
+                "nativeBuildInputs": "",
+                "out": "/nix/store/zjngfrvcprndncqp8zy8m2lcyrrl7mjg-hook",
+                "outputs": "out",
+                "passAsFile": "buildCommand",
+                "patches": "",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "stdenv": "/nix/store/dyi81yq7jl1ga3qjkja55gfjzhv6k0nc-bootstrap-stage2-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ghdamd4hl6yi7jysh1x3436fj1v9yvjb-autoreconf.sh",
+                "digest": {
+                    "sha256": "83f98fd382f6d9bc160bf21e3d9cecebac0f645b33b1c5a4dcc9f5b57b1a1cbf"
+                }
+            },
+            {
+                "uri": "file:///nix/store/0zhkga32apid60mm7nh92z2970im5837-bootstrap-tools.drv",
+                "digest": {
+                    "sha256": "f91ccdc44b609d5a97b27804be2daa58b61d51b82caa7e9e765db4ad4180098a"
+                }
+            },
+            {
+                "uri": "file:///nix/store/9fpkh8r3f44vka98v82nx549ihskix2q-autoconf-2.71.drv",
+                "digest": {
+                    "sha256": "24f4179f12a438084a54bd28b566e809d9c95ab363f685503c1913bf48ebc036"
+                }
+            },
+            {
+                "uri": "file:///nix/store/f2wkk86pwbxfns7zgh35sa4gwrqknini-automake-1.16.5.drv",
+                "digest": {
+                    "sha256": "5df8a81a3b9268ab515d5308e09c042dc7d551dce361f35e28cfa95fb0304620"
+                }
+            },
+            {
+                "uri": "file:///nix/store/nss8h36ng82mdccag1q198damq06i0wg-libtool-2.4.7.drv",
+                "digest": {
+                    "sha256": "b4dc4462a4e5e1ed5ceba4a7e4728c5d9bc110def8fd718a89cd9a517900613e"
+                }
+            },
+            {
+                "uri": "file:///nix/store/vk6d0wmdh0ll5ww7xbv08mnjmgvsngjq-bootstrap-stage2-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "c20c20054502ac1a9d9f17fc5a09094ac74b39ac8b9cc945d47a46f65f31844c"
+                }
+            },
+            {
+                "uri": "file:///nix/store/x17a04w953z2gynh6kh7i67il2hcv5z7-gettext-0.21.drv",
+                "digest": {
+                    "sha256": "028a17047d128adea9cf98cf66cccc7b54966a632f84852eb28914c2b09b88d2"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/vblhkd6k8ri0ixcag1l460wc4c3ps2gb-CUnit-2.1-3.tar.bz2.drv",
+            "digest": {
+                "sha256": "ccb18338b613249c28155235bba2f943b03cc06facec6d7407ae1676c5b5d055"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/4zasdvbbqdw4h44302ai76v0i7wczzg6-CUnit-2.1-3.tar.bz2",
+                "digest": {
+                    "sha256": "e43f69a91121906009e06c974d19f7c1bb5f8d8fd35c15e0e7f721eef1cf1740"
+                }
+            }
+        ]
+    }
+}

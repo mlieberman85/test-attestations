@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/6ch34hgn48q2sh4brsl59khz0sa573ii-systemd-minimal-250.4.drv",
+            "digest": {
+                "sha256": "a268b37735a408cdf156ccea5a23139c2b0a8eadd1684535590383ef6d330f6b"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/d78fqlhcpijn7d8v8fz2mmjm4s3lmbv5-systemd-minimal-250.4",
+                "digest": {
+                    "sha256": "71273a5ee90787982a736ceb216b3e66b75c409887a18caa26380fd0f6ca6e66"
+                }
+            }
+        ]
+    }
+}

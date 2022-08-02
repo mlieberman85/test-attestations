@@ -1,0 +1,87 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/87xr2gb16v48s2abb34h5663icpdhhjk-cmocka-1.1.5",
+            "digest": {
+                "sha256": "5aebbc4f23b4c20c4a8f4a11ae4415bf22bf5ef3348e3901d7bf571d763cf336"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "majorVersion": "1.1",
+                "name": "cmocka-1.1.5",
+                "nativeBuildInputs": "/nix/store/pg9xkxbscvfybwha04s118j9gikws31q-cmake-3.22.3",
+                "out": "/nix/store/87xr2gb16v48s2abb34h5663icpdhhjk-cmocka-1.1.5",
+                "outputs": "out",
+                "patches": "",
+                "pname": "cmocka",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/yq87i4jl10z1pgy5mw0qkndx2lbrmy5q-cmocka-1.1.5.tar.xz",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "1.1.5"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/1c2ac0dpcl5ds1rdi1vx9a9rnrwnhafg-cmocka-1.1.5.tar.xz.drv",
+                "digest": {
+                    "sha256": "6b7aa846970dc4937879e8b1c174dbd84ddfacddc993eccc6af10b7260ac853c"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/nj4w8zvk7k9kvf0ix9mchpbp6rfmp0bb-cmake-3.22.3.drv",
+                "digest": {
+                    "sha256": "0a2302cad5dd9254d110b42dd970ed43dea603462c7e90c933051c37f98ef3b5"
+                }
+            }
+        ]
+    }
+}

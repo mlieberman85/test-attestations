@@ -1,0 +1,98 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/rr35zrj7w0rzq5yr85f0hc88fxg294r2-perl5.34.1-HTTP-Negotiate-6.01",
+            "digest": {
+                "sha256": "11240cca0a0874d12022799743f06e17e83d1fb8a219af449c9d37e50d1d1565"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/qf3mzpvsmkrw963xchbivcci06078n13-builder.sh"
+                ]
+            },
+            "environment": {
+                "AUTOMATED_TESTING": "1",
+                "PERL_AUTOINSTALL": "--skipdeps",
+                "PERL_USE_UNSAFE_INC": "1",
+                "buildInputs": "/nix/store/c34zmy26gc58bn7qbf4md2yh8vp133n6-perl-5.34.1",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "checkTarget": "test",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "devdoc": "/nix/store/8ak7gpgq3kzqkx5gdb4r9zrlwlgnid3p-perl5.34.1-HTTP-Negotiate-6.01-devdoc",
+                "doCheck": "1",
+                "doInstallCheck": "",
+                "fullperl": "/nix/store/c34zmy26gc58bn7qbf4md2yh8vp133n6-perl-5.34.1",
+                "name": "perl5.34.1-HTTP-Negotiate-6.01",
+                "nativeBuildInputs": "/nix/store/c34zmy26gc58bn7qbf4md2yh8vp133n6-perl-5.34.1",
+                "out": "/nix/store/rr35zrj7w0rzq5yr85f0hc88fxg294r2-perl5.34.1-HTTP-Negotiate-6.01",
+                "outputs": "out devdoc",
+                "patches": "",
+                "pname": "perl5.34.1-HTTP-Negotiate",
+                "propagatedBuildInputs": "/nix/store/7wyh4qadpbfm7cih6rv6sy9kkzw45yby-perl5.34.1-HTTP-Message-6.26",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/diklqmca00f1q5wxss1i113vsrq1p3kj-HTTP-Negotiate-6.01.tar.gz",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "6.01"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/qf3mzpvsmkrw963xchbivcci06078n13-builder.sh",
+                "digest": {
+                    "sha256": "3d93a1c4c99e05cc46b3f2121ff8ee2269d65693ae9555332a4b522202979a01"
+                }
+            },
+            {
+                "uri": "file:///nix/store/21l24iglvgjw8xx9ki34sjkx3ll79kdg-HTTP-Negotiate-6.01.tar.gz.drv",
+                "digest": {
+                    "sha256": "7132ebed4d84866a3d0e6cad48cad9c169c473222d4511b7b0b3565328de28b0"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/jkn79jy5p1cdh953rsmnpadxk15jaili-perl-5.34.1.drv",
+                "digest": {
+                    "sha256": "87f4f98f9a11a87515771dacc6dcd294d640778e146d6119ee09b07f955a654e"
+                }
+            },
+            {
+                "uri": "file:///nix/store/rynqf7s6gbba2085c9fkv8a91z3ii9rp-perl5.34.1-HTTP-Message-6.26.drv",
+                "digest": {
+                    "sha256": "0492558168f2ef4d181ed5d70a9eb08657fc73ba7b0d8aaa736755381abcc4b1"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,87 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/ygxk1ramy7gwsj93qz5bha18nl5dkp8z-python-namespaces-hook.sh",
+            "digest": {
+                "sha256": "da221c1dfc65b5dedeeba912b663c527fae39fc8fca4b2e960194e2a0cede146"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildCommand": "mkdir -p $out/nix-support\ncp /nix/store/ga8k6dwwpvsgglv8gdlqnjlxlm288ma0-python-namespaces-hook.sh $out/nix-support/setup-hook\nsubstituteAll /nix/store/ga8k6dwwpvsgglv8gdlqnjlxlm288ma0-python-namespaces-hook.sh $out/nix-support/setup-hook\n",
+                "buildInputs": "",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "findutils": "/nix/store/aw9sfhxan3p1kzxrm5m413i9xrqh4885-findutils-4.9.0",
+                "name": "python-namespaces-hook.sh",
+                "nativeBuildInputs": "",
+                "out": "/nix/store/ygxk1ramy7gwsj93qz5bha18nl5dkp8z-python-namespaces-hook.sh",
+                "outputs": "out",
+                "passAsFile": "buildCommand",
+                "patches": "",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "pythonSitePackages": "lib/python3.9/site-packages",
+                "stdenv": "/nix/store/lmj98vlk5h0v1x5gzslxjnaj4m58dwxm-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ga8k6dwwpvsgglv8gdlqnjlxlm288ma0-python-namespaces-hook.sh",
+                "digest": {
+                    "sha256": "7f3af2d8c41430dbc2130e6c8764629eb678ca5e596d015dbac777ff04e53105"
+                }
+            },
+            {
+                "uri": "file:///nix/store/3ga8qx6a74j26sy0yyvnqnxp6mva1b1z-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "f9bc13b9bdaa3cce0106294eeec282b55ca6f4f2d0b2d11e04685a22f7cb5170"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/r8v7awnfjv5g0zwiqs41ql8b4z5nmddz-findutils-4.9.0.drv",
+                "digest": {
+                    "sha256": "8bd622a9805f65bcf19134fc702d8bc75b732fdb5a3682cded746d13188b5855"
+                }
+            }
+        ]
+    }
+}

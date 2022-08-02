@@ -1,0 +1,39 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/fw24yjv6q6xll0q05ysiixxj46cxnixy-patchelf-0.14.5.tar.bz2",
+            "digest": {
+                "sha256": "4ca9f09bf2be0265a4f5ba0224bd1dcc3975b036b1c43c1f0d219cea6c25e4b0"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://builtin:fetchurl"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {
+                "builder": "builtin:fetchurl",
+                "executable": "",
+                "impureEnvVars": "http_proxy https_proxy ftp_proxy all_proxy no_proxy",
+                "name": "patchelf-0.14.5.tar.bz2",
+                "out": "/nix/store/fw24yjv6q6xll0q05ysiixxj46cxnixy-patchelf-0.14.5.tar.bz2",
+                "outputHash": "sha256-uaRvKYkyLrifpPYjfiCDbFe0VapDoyVF6gk7Qx2YL1w=",
+                "outputHashAlgo": "sha256",
+                "outputHashMode": "flat",
+                "preferLocalBuild": "1",
+                "system": "builtin",
+                "unpack": "",
+                "url": "https://github.com/NixOS/patchelf/releases/download/0.14.5/patchelf-0.14.5.tar.bz2",
+                "urls": "https://github.com/NixOS/patchelf/releases/download/0.14.5/patchelf-0.14.5.tar.bz2"
+            }
+        },
+        "materials": []
+    }
+}

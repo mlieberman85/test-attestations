@@ -1,0 +1,39 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/fim96i2pigbmdkkc2rf34f71g9v50i5x-lzip-1.23.tar.gz",
+            "digest": {
+                "sha256": "90f1848a7d02ad0c4e46ecbbcb35822d60773648d93e5a931d2ad2c1b81db989"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://builtin:fetchurl"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {
+                "builder": "builtin:fetchurl",
+                "executable": "",
+                "impureEnvVars": "http_proxy https_proxy ftp_proxy all_proxy no_proxy",
+                "name": "lzip-1.23.tar.gz",
+                "out": "/nix/store/fim96i2pigbmdkkc2rf34f71g9v50i5x-lzip-1.23.tar.gz",
+                "outputHash": "sha256-R5LAR93xXvKdVbqOaKGiHgy3aS2H7N9yBEGYZFgvKA0=",
+                "outputHashAlgo": "sha256",
+                "outputHashMode": "flat",
+                "preferLocalBuild": "1",
+                "system": "builtin",
+                "unpack": "",
+                "url": "https://mirror.easyname.at/nongnu/lzip/lzip-1.23.tar.gz",
+                "urls": "https://mirror.easyname.at/nongnu/lzip/lzip-1.23.tar.gz"
+            }
+        },
+        "materials": []
+    }
+}

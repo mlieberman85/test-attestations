@@ -1,0 +1,92 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/2p0qgqpai61dysqmpm65f632czyr0mq5-pkg-config-0.29.2",
+            "digest": {
+                "sha256": "e8f6b1ddd25447c848511623de4d011118b86a812501b16ef629bcf353c62f1b"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "",
+                "builder": "/nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash",
+                "configureFlags": "--with-internal-glib",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "1",
+                "doInstallCheck": "",
+                "doc": "/nix/store/x6gpjmniqfz7ddiz6vc01j3ix211pn4m-pkg-config-0.29.2-doc",
+                "enableParallelBuilding": "1",
+                "enableParallelChecking": "1",
+                "man": "/nix/store/wv6a67w116jn9dmqd56k262154pf79si-pkg-config-0.29.2-man",
+                "name": "pkg-config-0.29.2",
+                "nativeBuildInputs": "",
+                "out": "/nix/store/2p0qgqpai61dysqmpm65f632czyr0mq5-pkg-config-0.29.2",
+                "outputs": "out man doc",
+                "patches": "/nix/store/f4bvwqvj0y3z6blvh0knz71a8yq1c45p-requires-private.patch",
+                "pname": "pkg-config",
+                "postInstall": "rm -f \"$out\"/bin/*-pkg-config",
+                "postPatch": "rm -f check/check-requires-private check/check-gtk check/missing\n",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/83haczzqmdmjjaf73y4fnk1zkcfai9zf-pkg-config-0.29.2.tar.gz",
+                "stdenv": "/nix/store/00ryhc0rgjvcaigxans5ph4q3j8jm6c6-bootstrap-stage2-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "0.29.2"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/f4bvwqvj0y3z6blvh0knz71a8yq1c45p-requires-private.patch",
+                "digest": {
+                    "sha256": "33e63e77ecfce467072d227427c322936fff8b11726aa7b4c4c7f4a40c381bed"
+                }
+            },
+            {
+                "uri": "file:///nix/store/0zhkga32apid60mm7nh92z2970im5837-bootstrap-tools.drv",
+                "digest": {
+                    "sha256": "f91ccdc44b609d5a97b27804be2daa58b61d51b82caa7e9e765db4ad4180098a"
+                }
+            },
+            {
+                "uri": "file:///nix/store/2qklysz0hj51z8fq5qsj152c2crnghhg-bootstrap-stage2-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "847747fb7f255141ddd9ed26c9cbf707bf272d147ef5104268a8fd5c51c090af"
+                }
+            },
+            {
+                "uri": "file:///nix/store/6b29gjz7rj4mw0ch0vy2m6qrqipz2bbb-pkg-config-0.29.2.tar.gz.drv",
+                "digest": {
+                    "sha256": "fbfe3deb7eeee1617690c2b8d9e3d1093e1ce9d3137903f37bee843b80870c93"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,112 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/2gzlh8lbh85vjr6dv7nbav034s7vq971-python3-3.9.12-env",
+            "digest": {
+                "sha256": "d6e0f57547acd5db3821bb361984fb93d9bcb18b73803fc9ab6093a94c5d28ac"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "allowSubstitutes": "",
+                "buildCommand": "/nix/store/c34zmy26gc58bn7qbf4md2yh8vp133n6-perl-5.34.1/bin/perl -w /nix/store/y0xrf3pbq56jyrahpfn3skb4vliamnfq-builder.pl\neval \"$postBuild\"\n",
+                "buildInputs": "",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "checkCollisionContents": "1",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "extraPrefix": "",
+                "ignoreCollisions": "",
+                "manifest": "",
+                "name": "python3-3.9.12-env",
+                "nativeBuildInputs": "/nix/store/53yjsi8nq6s1cchh7a0mg3javrn6qj8x-hook",
+                "out": "/nix/store/2gzlh8lbh85vjr6dv7nbav034s7vq971-python3-3.9.12-env",
+                "outputs": "out",
+                "passAsFile": "buildCommand",
+                "patches": "",
+                "pathsToLink": "/",
+                "pkgs": "[{\"paths\":[\"/nix/store/wnrc4daqbd6v5ifqlxsj75ky8556zy0p-python3-3.9.12\",\"/nix/store/wnrc4daqbd6v5ifqlxsj75ky8556zy0p-python3-3.9.12\"],\"priority\":5},{\"paths\":[\"/nix/store/yxl1d0sa5a8a4gz6qn4529w5ijxvh7fd-python3.9-setuptools-61.2.0\",\"/nix/store/yxl1d0sa5a8a4gz6qn4529w5ijxvh7fd-python3.9-setuptools-61.2.0\"],\"priority\":10}]",
+                "postBuild": "if [ -L \"$out/bin\" ]; then\n    unlink \"$out/bin\"\nfi\nmkdir -p \"$out/bin\"\n\nfor path in /nix/store/wnrc4daqbd6v5ifqlxsj75ky8556zy0p-python3-3.9.12 /nix/store/yxl1d0sa5a8a4gz6qn4529w5ijxvh7fd-python3.9-setuptools-61.2.0; do\n  if [ -d \"$path/bin\" ]; then\n    cd \"$path/bin\"\n    for prg in *; do\n      if [ -f \"$prg\" ]; then\n        rm -f \"$out/bin/$prg\"\n        if [ -x \"$prg\" ]; then\n          makeWrapper \"$path/bin/$prg\" \"$out/bin/$prg\" --set NIX_PYTHONPREFIX \"$out\" --set NIX_PYTHONEXECUTABLE /1rz4g4znpzjwh1xymhjpm42vipw92pr73vdgl6xs1hycac8kf2n9/bin/python3.9 --set NIX_PYTHONPATH /1rz4g4znpzjwh1xymhjpm42vipw92pr73vdgl6xs1hycac8kf2n9/lib/python3.9/site-packages --set PYTHONNOUSERSITE \"true\" \n        fi\n      fi\n    done\n  fi\ndone\n",
+                "preferLocalBuild": "1",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "stdenv": "/nix/store/lmj98vlk5h0v1x5gzslxjnaj4m58dwxm-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/3ga8qx6a74j26sy0yyvnqnxp6mva1b1z-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "f9bc13b9bdaa3cce0106294eeec282b55ca6f4f2d0b2d11e04685a22f7cb5170"
+                }
+            },
+            {
+                "uri": "file:///nix/store/92hafjin8pmidmi5hmnlsp38aqsfrs6l-hook.drv",
+                "digest": {
+                    "sha256": "309b35c6b5862c9e52e67ca1acb60bc60be9d77000b0c743c3f51d94815b0d23"
+                }
+            },
+            {
+                "uri": "file:///nix/store/arfv2q0kv93dzmqwkrlhl02ifvf1xyk1-python3.9-setuptools-61.2.0.drv",
+                "digest": {
+                    "sha256": "4b2d7711d84f357c9fa5449872a2a2b21f471cfd9cdb4b69ff2923762c7e18ef"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/jkn79jy5p1cdh953rsmnpadxk15jaili-perl-5.34.1.drv",
+                "digest": {
+                    "sha256": "87f4f98f9a11a87515771dacc6dcd294d640778e146d6119ee09b07f955a654e"
+                }
+            },
+            {
+                "uri": "file:///nix/store/r158cn0qgxqraj9g8hnnx4knrynm0732-builder.pl.drv",
+                "digest": {
+                    "sha256": "843f67bcf0f0db2569b0396ee967b9efe68a0b05dd13f9fb7f024dea42d922b5"
+                }
+            },
+            {
+                "uri": "file:///nix/store/vdgkm605ayapf245hc17239qfpvivxfy-python3-3.9.12.drv",
+                "digest": {
+                    "sha256": "6684eb57aec053d7baf339e95827a8b7670f5709da588ab2576f58eb3be31ea6"
+                }
+            }
+        ]
+    }
+}

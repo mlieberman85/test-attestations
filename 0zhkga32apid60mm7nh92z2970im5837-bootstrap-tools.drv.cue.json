@@ -1,0 +1,57 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools",
+            "digest": {
+                "sha256": "e86076eaa241fc78bb46b743b5c08643643d7c640f0e85804a19d8f5ea21d249"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/lan2w3ab1mvpxj3ppiw2sizh8i7rpz7s-busybox"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "ash",
+                    "-e",
+                    "/nix/store/wzdwpgqf2384hr2npma78mqillg5lv08-unpack-bootstrap-tools.sh"
+                ]
+            },
+            "environment": {
+                "builder": "/nix/store/lan2w3ab1mvpxj3ppiw2sizh8i7rpz7s-busybox",
+                "isGNU": "1",
+                "langC": "1",
+                "langCC": "1",
+                "name": "bootstrap-tools",
+                "out": "/nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools",
+                "system": "x86_64-linux",
+                "tarball": "/nix/store/cijs9ypwccmdfjhkq9a35nin7qizg6jm-bootstrap-tools.tar.xz"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/wzdwpgqf2384hr2npma78mqillg5lv08-unpack-bootstrap-tools.sh",
+                "digest": {
+                    "sha256": "14cdf465e9eb9f3f6819e038ec9fcb911d5f2f69cb5db19a07a0112b636217ce"
+                }
+            },
+            {
+                "uri": "file:///nix/store/b7irlwi2wjlx5aj1dghx4c8k3ax6m56q-busybox.drv",
+                "digest": {
+                    "sha256": "c78e41e7376422b995880019debcd48f3d0df29309494221ef739dd6a8ca3819"
+                }
+            },
+            {
+                "uri": "file:///nix/store/bzq60ip2z5xgi7jk6jgdw8cngfiwjrcm-bootstrap-tools.tar.xz.drv",
+                "digest": {
+                    "sha256": "5530d78ac1104839ad604dcdbcad3dd15c5705a696d86b251c323ead365a6dd5"
+                }
+            }
+        ]
+    }
+}

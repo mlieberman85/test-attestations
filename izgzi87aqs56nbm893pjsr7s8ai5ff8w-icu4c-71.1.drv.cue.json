@@ -1,0 +1,87 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/mfdj497ffw719h02bvm29bkfsg2jqakw-icu4c-71.1",
+            "digest": {
+                "sha256": "70ac70374c8a5c5c682ce8f7455379d8359d747d9113ec06c7d31eb5e3ff9d89"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "--disable-debug",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "dev": "/nix/store/84zp7p2i2jv7r32c8g9zj2ks7yw35yqb-icu4c-71.1-dev",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "enableParallelBuilding": "1",
+                "enableParallelChecking": "1",
+                "name": "icu4c-71.1",
+                "nativeBuildInputs": "",
+                "out": "/nix/store/mfdj497ffw719h02bvm29bkfsg2jqakw-icu4c-71.1",
+                "outputBin": "dev",
+                "outputs": "out dev",
+                "patchFlags": "",
+                "patches": "",
+                "postFixup": "moveToOutput lib/icu \"$dev\" ",
+                "postInstall": "substituteInPlace \"$dev/bin/icu-config\" \\\n  --replace '${prefix}/include' '/02qcpld1y6xhs5gz9bchpxaw0xdhmsp5dv88lh25r2ss44kh8dxz/include' --replace '${pkglibdir}/Makefile.inc' '/02qcpld1y6xhs5gz9bchpxaw0xdhmsp5dv88lh25r2ss44kh8dxz/lib/icu/Makefile.inc' --replace '${pkglibdir}/pkgdata.inc' '/02qcpld1y6xhs5gz9bchpxaw0xdhmsp5dv88lh25r2ss44kh8dxz/lib/icu/pkgdata.inc'\n",
+                "postUnpack": "sourceRoot=${sourceRoot}/source\necho Source root reset to ${sourceRoot}\n",
+                "preConfigure": "sed -i -e \"s|/bin/sh|/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash|\" configure\n\n# $(includedir) is different from $(prefix)/include due to multiple outputs\nsed -i -e 's|^\\(CPPFLAGS = .*\\) -I\\$(prefix)/include|\\1 -I$(includedir)|' config/Makefile.inc.in\n",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/yxvd6g8y5326fqnsz4a1ykzkmjjlxzzq-icu4c-71_1-src.tgz",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/mfggphbq2r5x62jx2msbls3icpc4890a-icu4c-71_1-src.tgz.drv",
+                "digest": {
+                    "sha256": "393663fc621e2742672ca73d018fe56a28d5f4c7d3ec122ea85497ca76920cf6"
+                }
+            }
+        ]
+    }
+}

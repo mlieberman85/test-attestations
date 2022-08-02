@@ -1,0 +1,124 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/nwd35shggdjdbb5xgx8dhbcjnmx23706-perl-5.34.1",
+            "digest": {
+                "sha256": "3674abcdbe4455f2a1ce7dda560d5ac269484b50ff3c8c732c2183c981fcb705"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "",
+                "builder": "/nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash",
+                "configureFlags": "-de -Dcc=cc -Uinstallusrbinperl -Dinstallstyle=lib/perl5 -Duseshrplib -Dlocincpth=/nix/store/k2w9nmcz5rvnq5xrxlsgmypqvr8qqc57-bootstrap-stage0-glibc-bootstrap/include -Dloclibpth=/nix/store/k2w9nmcz5rvnq5xrxlsgmypqvr8qqc57-bootstrap-stage0-glibc-bootstrap/lib -Dprefix=/1rz4g4znpzjwh1xymhjpm42vipw92pr73vdgl6xs1hycac8kf2n9 -Dman1dir=/1rz4g4znpzjwh1xymhjpm42vipw92pr73vdgl6xs1hycac8kf2n9/share/man/man1 -Dman3dir=/1rz4g4znpzjwh1xymhjpm42vipw92pr73vdgl6xs1hycac8kf2n9/share/man/man3",
+                "configurePlatforms": "",
+                "configureScript": "/nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash ./Configure",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "devdoc": "/nix/store/vcrpb336mwxszz6517dhjnalyfi2gnfg-perl-5.34.1-devdoc",
+                "disallowedReferences": "/nix/store/xaw7xcs6slb5kigfdbzg3bsiksqx26wa-bootstrap-stage1-gcc-wrapper-",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "dontAddPrefix": "1",
+                "dontAddStaticConfigureFlags": "1",
+                "enableParallelBuilding": "1",
+                "enableParallelChecking": "1",
+                "man": "/nix/store/psl80y3l8kmvamqysq20jxpbfwr928m6-perl-5.34.1-man",
+                "name": "perl-5.34.1",
+                "nativeBuildInputs": "",
+                "out": "/nix/store/nwd35shggdjdbb5xgx8dhbcjnmx23706-perl-5.34.1",
+                "outputs": "out man devdoc",
+                "patches": "/nix/store/mb381gpm9k5wdl37l5ad5pp8w11qzhjg-no-sys-dirs-5.31.patch",
+                "pname": "perl",
+                "postInstall": "# Remove dependency between \"out\" and \"man\" outputs.\nrm \"$out\"/lib/perl5/*/*/.packlist\n\n# Remove dependencies on glibc and gcc\nsed \"/ *libpth =\u003e/c    libpth =\u003e ' ',\" \\\n  -i \"$out\"/lib/perl5/*/*/Config.pm\n# TODO: removing those paths would be cleaner than overwriting with nonsense.\nsubstituteInPlace \"$out\"/lib/perl5/*/*/Config_heavy.pl \\\n  --replace \"/nix/store/k2w9nmcz5rvnq5xrxlsgmypqvr8qqc57-bootstrap-stage0-glibc-bootstrap\" /no-such-path \\\n  --replace \"/nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools\" /no-such-path \\\n  --replace \"/nix/store/xaw7xcs6slb5kigfdbzg3bsiksqx26wa-bootstrap-stage1-gcc-wrapper-\" /no-such-path \\\n  --replace \"$man\" /no-such-path\n",
+                "postPatch": "substituteInPlace dist/PathTools/Cwd.pm \\\n  --replace \"/bin/pwd\" \"$(type -P pwd)\"\nunset src\n",
+                "preConfigure": "cat \u003e config.over \u003c\u003cEOF\nosvers=\"gnulinux\"\nmyuname=\"nixpkgs\"\nmyhostname=\"nixpkgs\"\ncf_by=\"nixpkgs\"\ncf_time=\"$(date -d \"@$SOURCE_DATE_EPOCH\")\"\nEOF\n\n# Compress::Raw::Zlib should use our zlib package instead of the one\n# included with the distribution\ncat \u003e ./cpan/Compress-Raw-Zlib/config.in \u003c\u003cEOF\nBUILD_ZLIB   = False\nINCLUDE      = /nix/store/yhqjmzp0gcn8b61fjri4vbdvki6jm95z-zlib-1.2.12-dev/include\nLIB          = /nix/store/ikcc8dpw8gni89k0c89jpna43f201qjl-zlib-1.2.12/lib\nOLD_ZLIB     = False\nGZIP_OS_CODE = AUTO_DETECT\nEOF\n# We need to do this because the bootstrap doesn't have a static libpthread\nsed -i 's,\\(libswanted.*\\)pthread,\\1,g' Configure\n",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "setOutputFlags": "",
+                "setupHook": "/nix/store/dm81j9qdcdr4c458pqbc9wvq9ymgzk4m-setup-hook.sh",
+                "src": "/nix/store/k8h7cf8id214i47c28i2ls0hnn5ampb1-perl-5.34.1.tar.gz",
+                "stdenv": "/nix/store/5czbabv4k1k7hp42g1l9z1843ars1q8k-bootstrap-stage1-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "5.34.1"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/dm81j9qdcdr4c458pqbc9wvq9ymgzk4m-setup-hook.sh",
+                "digest": {
+                    "sha256": "dc259d7662203923e4557ef141c00c235314e6404bb8239b8ebedd51acd0dfa7"
+                }
+            },
+            {
+                "uri": "file:///nix/store/mb381gpm9k5wdl37l5ad5pp8w11qzhjg-no-sys-dirs-5.31.patch",
+                "digest": {
+                    "sha256": "a5c5c3935d4ef951123456a74ed91bfeb8ebc345a5e46a4ea0456964d31e6780"
+                }
+            },
+            {
+                "uri": "file:///nix/store/0zhkga32apid60mm7nh92z2970im5837-bootstrap-tools.drv",
+                "digest": {
+                    "sha256": "f91ccdc44b609d5a97b27804be2daa58b61d51b82caa7e9e765db4ad4180098a"
+                }
+            },
+            {
+                "uri": "file:///nix/store/3lfrb1yzfwvf8437nvlwfj0cj525psyy-zlib-1.2.12.drv",
+                "digest": {
+                    "sha256": "84449a50fad84f65113d9b7a33c5f0a6856ed00eac82e2f2e7bb6f385372aa11"
+                }
+            },
+            {
+                "uri": "file:///nix/store/42wll5sgz4fgz9yixldzxz3l5yqffcp1-bootstrap-stage1-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "610de2128c333117f4ef32721c24c05358447d29c6ed3031063b1f7253385f1b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/fikh2j3gvszxm4qv1qxqxajxd5ws94iw-bootstrap-stage1-gcc-wrapper-.drv",
+                "digest": {
+                    "sha256": "a95709715362e1518d8a8cb450d2a75b6e83ea95578621516042c64b847a31b1"
+                }
+            },
+            {
+                "uri": "file:///nix/store/r1daaldgc14159w4ffzlz3fdi9p0qqq0-bootstrap-stage0-glibc-bootstrap.drv",
+                "digest": {
+                    "sha256": "2a727f630d7b0d12bebd53604aedb40c3f7bcbfd7eff0e885cac2adc9088eb7f"
+                }
+            },
+            {
+                "uri": "file:///nix/store/srr6xmjy79z5cn06mr7sx51p4hz8sv58-perl-5.34.1.tar.gz.drv",
+                "digest": {
+                    "sha256": "c012c5c734451da8b74ce08542d402edc5e4fb88eef3ef41406830d4bf95b79a"
+                }
+            }
+        ]
+    }
+}

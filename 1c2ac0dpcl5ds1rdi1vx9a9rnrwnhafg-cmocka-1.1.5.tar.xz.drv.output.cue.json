@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/1c2ac0dpcl5ds1rdi1vx9a9rnrwnhafg-cmocka-1.1.5.tar.xz.drv",
+            "digest": {
+                "sha256": "6b7aa846970dc4937879e8b1c174dbd84ddfacddc993eccc6af10b7260ac853c"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/yq87i4jl10z1pgy5mw0qkndx2lbrmy5q-cmocka-1.1.5.tar.xz",
+                "digest": {
+                    "sha256": "084202100d447b011a9ed05a0983a679cd656fd6ca6f3b611889392e1a216e47"
+                }
+            }
+        ]
+    }
+}

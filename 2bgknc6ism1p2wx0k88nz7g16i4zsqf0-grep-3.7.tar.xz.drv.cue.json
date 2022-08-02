@@ -1,0 +1,39 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/g13116b7w29kavi52p9mk6p02xq9k1lx-grep-3.7.tar.xz",
+            "digest": {
+                "sha256": "eb46683a6e441ded64a9916dd9fb349aa44d9ea47b85bdddcd6c267e5fc3d7a6"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://builtin:fetchurl"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {
+                "builder": "builtin:fetchurl",
+                "executable": "",
+                "impureEnvVars": "http_proxy https_proxy ftp_proxy all_proxy no_proxy",
+                "name": "grep-3.7.tar.xz",
+                "out": "/nix/store/g13116b7w29kavi52p9mk6p02xq9k1lx-grep-3.7.tar.xz",
+                "outputHash": "0g42svbc1nq5bamxfj6x7320wli4dlj86padk0hwgbk04hqxl42w",
+                "outputHashAlgo": "sha256",
+                "outputHashMode": "flat",
+                "preferLocalBuild": "1",
+                "system": "builtin",
+                "unpack": "",
+                "url": "https://ftpmirror.gnu.org/grep/grep-3.7.tar.xz",
+                "urls": "https://ftpmirror.gnu.org/grep/grep-3.7.tar.xz"
+            }
+        },
+        "materials": []
+    }
+}

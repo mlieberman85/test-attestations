@@ -1,0 +1,117 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/hr8k6cfqmsh93n9s7kmxig1896as3wzq-kubectl-1.23.5",
+            "digest": {
+                "sha256": "97012c66e9fe3de86e81446fc88801317a3af53d698adffba6efe1b3e151d1fb"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "GOFLAGS": "-trimpath",
+                "WHAT": "cmd/kubectl",
+                "buildInputs": "",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "disallowedReferences": "/nix/store/kdry395jlhj9pz97l0d71fmjqn2karbd-go-1.17.10",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "installPhase": "runHook preInstall\ninstall -D _output/local/go/bin/kubectl -t $out/bin\n\ninstallManPage docs/man/man1/kubectl*\n\ninstallShellCompletion --cmd kubectl \\\n  --bash \u003c($out/bin/kubectl completion bash) \\\n  --fish \u003c($out/bin/kubectl completion fish) \\\n  --zsh \u003c($out/bin/kubectl completion zsh)\nrunHook postInstall\n",
+                "man": "/nix/store/3113fna22rngbqxfsbhipk7ax07pcabm-kubectl-1.23.5-man",
+                "name": "kubectl-1.23.5",
+                "nativeBuildInputs": "/nix/store/h0gk57azya21q6acdl6g5m3qrkfn2f3s-hook /nix/store/q196i8jk4d2abxqlc88ai5a6fsxnnzk4-which-2.21 /nix/store/kdry395jlhj9pz97l0d71fmjqn2karbd-go-1.17.10 /nix/store/mm1d43n18xb2hsp9hvvi0ab0f1r91v76-rsync-3.2.3 /nix/store/lza91r981dvgasj4xws0mnw9jsdqwdra-install-shell-files",
+                "out": "/nix/store/hr8k6cfqmsh93n9s7kmxig1896as3wzq-kubectl-1.23.5",
+                "outputs": "out man",
+                "patches": "",
+                "pname": "kubectl",
+                "postBuild": "./hack/update-generated-docs.sh\n",
+                "postPatch": "# go env breaks the sandbox\nsubstituteInPlace \"hack/lib/golang.sh\" \\\n  --replace 'echo \"$(go env GOHOSTOS)/$(go env GOHOSTARCH)\"' 'echo \"linux/amd64\"'\n\nsubstituteInPlace \"hack/update-generated-docs.sh\" --replace \"make\" \"make SHELL=/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash\"\n# hack/update-munge-docs.sh only performs some tests on the documentation.\n# They broke building k8s; disabled for now.\necho \"true\" \u003e \"hack/update-munge-docs.sh\"\n\npatchShebangs ./hack\n",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/irnk31syhc8q9npcrdxrnzvgxfxn4hr1-source",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "1.23.5"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/0baniva490r38ddd3va09r8qavcca8w3-rsync-3.2.3.drv",
+                "digest": {
+                    "sha256": "cae02b363a7513bf0fea79c0dd3f1afb77b94d4b81a6ed844627328696a6abe7"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/dmqm37ka1g9lwn8dz80nmcnksljp459n-source.drv",
+                "digest": {
+                    "sha256": "a6b4a777474f26f1006c25fedbf1c297ae2fdeb4eee34583af53a44776a0f2d5"
+                }
+            },
+            {
+                "uri": "file:///nix/store/fi11j2inxxmq1akczx13mfga6xg5abj0-go-1.17.10.drv",
+                "digest": {
+                    "sha256": "8d7cde5584c8bae4860ea6b0fd2e9dbcee72e6aa837a4cbd99c7d3dff73fa82c"
+                }
+            },
+            {
+                "uri": "file:///nix/store/gnzjdjc8hs9z4cwcq60if36khz3f8hj3-install-shell-files.drv",
+                "digest": {
+                    "sha256": "1a94ca039dd3a56d8736e87423c551d65bcadf6a86fbe3e4389904564748263d"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/i0yr1bacwckxg615rh11935ni79ymhmq-hook.drv",
+                "digest": {
+                    "sha256": "4a8785edbf8cb2dd72f43e6a676b71a1f12bdd277509d74f837e6b8a05ccd57d"
+                }
+            },
+            {
+                "uri": "file:///nix/store/zp8a14dsgrgavjrvmidh908jp1kwxvsx-which-2.21.drv",
+                "digest": {
+                    "sha256": "130f29ea5771798b19124b358db75fae1c6ab914424b56c3449f2d04452e7efc"
+                }
+            }
+        ]
+    }
+}

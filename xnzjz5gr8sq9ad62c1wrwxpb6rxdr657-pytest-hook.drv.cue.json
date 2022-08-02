@@ -1,0 +1,78 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/w6jvbnq71i5y85cy9fy9kd1wxjlk34p0-pytest-hook",
+            "digest": {
+                "sha256": "267ef045067341462a0dca8c7c9104fab9c413a6997480c77399191bd6408ff0"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "allowSubstitutes": "",
+                "buildCommand": "target=$out''\nmkdir -p \"$(dirname \"$target\")\"\n\nif [ -e \"$textPath\" ]; then\n  mv \"$textPath\" \"$target\"\nelse\n  echo -n \"$text\" \u003e \"$target\"\nfi\n\neval \"$checkPhase\"\n\n(test -n \"$executable\" \u0026\u0026 chmod +x \"$target\") || true\n",
+                "buildInputs": "",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "checkPhase": "",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "executable": "",
+                "name": "pytest-hook",
+                "nativeBuildInputs": "",
+                "out": "/nix/store/w6jvbnq71i5y85cy9fy9kd1wxjlk34p0-pytest-hook",
+                "outputs": "out",
+                "passAsFile": "buildCommand text",
+                "patches": "",
+                "preferLocalBuild": "1",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "stdenv": "/nix/store/lmj98vlk5h0v1x5gzslxjnaj4m58dwxm-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "text": "pytestcachePhase() {\n    find $out -name .pytest_cache -type d -exec rm -rf {} +\n}\npreDistPhases+=\" pytestcachePhase\"\n\n# pytest generates it's own bytecode files to improve assertion messages.\n# These files similar to cpython's bytecode files but are never laoded\n# by python interpreter directly. We remove them for a few reasons:\n# - files are non-deterministic: https://github.com/NixOS/nixpkgs/issues/139292\n#   (file headers are generatedt by pytest directly and contain timestamps)\n# - files are not needed after tests are finished\npytestRemoveBytecodePhase () {\n    # suffix is defined at:\n    #    https://github.com/pytest-dev/pytest/blob/7.1.1/src/_pytest/assertion/rewrite.py#L51-L53\n    find $out -name \"*-pytest-*.py[co]\" -delete\n}\npreDistPhases+=\" pytestRemoveBytecodePhase\"\n"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/3ga8qx6a74j26sy0yyvnqnxp6mva1b1z-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "f9bc13b9bdaa3cce0106294eeec282b55ca6f4f2d0b2d11e04685a22f7cb5170"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            }
+        ]
+    }
+}

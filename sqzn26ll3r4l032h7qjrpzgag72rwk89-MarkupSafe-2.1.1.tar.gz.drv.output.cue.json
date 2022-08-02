@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/sqzn26ll3r4l032h7qjrpzgag72rwk89-MarkupSafe-2.1.1.tar.gz.drv",
+            "digest": {
+                "sha256": "89d0c820ca949094619e09c68f44e1b606238d546130d91f000c2f975bd4e568"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/j2r84x3vgmvn346iz0h9fg9f9vb1hpkz-MarkupSafe-2.1.1.tar.gz",
+                "digest": {
+                    "sha256": "8cd56111327e7c6c5b55a928b75bb1721524a75d3fb178c0d6dba4e9f8b200f0"
+                }
+            }
+        ]
+    }
+}

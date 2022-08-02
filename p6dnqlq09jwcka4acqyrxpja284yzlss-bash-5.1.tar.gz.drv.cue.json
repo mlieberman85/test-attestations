@@ -1,0 +1,39 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/5sgii519481kdsdg9kk027jlr7z641wd-bash-5.1.tar.gz",
+            "digest": {
+                "sha256": "91ef9f6d40920de7f3faf272724203c16598b4ee807d2d2043a049f83a9c8744"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://builtin:fetchurl"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {
+                "builder": "builtin:fetchurl",
+                "executable": "",
+                "impureEnvVars": "http_proxy https_proxy ftp_proxy all_proxy no_proxy",
+                "name": "bash-5.1.tar.gz",
+                "out": "/nix/store/5sgii519481kdsdg9kk027jlr7z641wd-bash-5.1.tar.gz",
+                "outputHash": "1alv68wplnfdm6mh39hm57060xgssb9vqca4yr1cyva0c342n0fc",
+                "outputHashAlgo": "sha256",
+                "outputHashMode": "flat",
+                "preferLocalBuild": "1",
+                "system": "builtin",
+                "unpack": "",
+                "url": "https://ftpmirror.gnu.org/bash/bash-5.1.tar.gz",
+                "urls": "https://ftpmirror.gnu.org/bash/bash-5.1.tar.gz"
+            }
+        },
+        "materials": []
+    }
+}

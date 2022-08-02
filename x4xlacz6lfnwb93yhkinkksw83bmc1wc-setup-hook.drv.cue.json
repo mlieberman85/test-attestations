@@ -1,0 +1,78 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/4ch4rngsakk09af24dp686rcds7q7r6l-setup-hook",
+            "digest": {
+                "sha256": "4091a70c308fd5daef2310cdbcbe883308953efcca903325db1c2dfa70d73d95"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "allowSubstitutes": "",
+                "buildCommand": "target=$out''\nmkdir -p \"$(dirname \"$target\")\"\n\nif [ -e \"$textPath\" ]; then\n  mv \"$textPath\" \"$target\"\nelse\n  echo -n \"$text\" \u003e \"$target\"\nfi\n\neval \"$checkPhase\"\n\n(test -n \"$executable\" \u0026\u0026 chmod +x \"$target\") || true\n",
+                "buildInputs": "",
+                "builder": "/nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash",
+                "checkPhase": "",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "executable": "",
+                "name": "setup-hook",
+                "nativeBuildInputs": "",
+                "out": "/nix/store/4ch4rngsakk09af24dp686rcds7q7r6l-setup-hook",
+                "outputs": "out",
+                "passAsFile": "buildCommand text",
+                "patches": "",
+                "preferLocalBuild": "1",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "stdenv": "/nix/store/j2m243dydb0nc77xw2vmkfb8lcc2gji8-bootstrap-stage4-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "text": "export GZIP=\"-n\"\n"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/0zhkga32apid60mm7nh92z2970im5837-bootstrap-tools.drv",
+                "digest": {
+                    "sha256": "f91ccdc44b609d5a97b27804be2daa58b61d51b82caa7e9e765db4ad4180098a"
+                }
+            },
+            {
+                "uri": "file:///nix/store/dg6l2chz77caipgfd7ndmpwfgs342nwn-bootstrap-stage4-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "b45e27fa41151e20470c91ef53c082c35801c3414e2d810e296f16c0d9e7f8c8"
+                }
+            }
+        ]
+    }
+}

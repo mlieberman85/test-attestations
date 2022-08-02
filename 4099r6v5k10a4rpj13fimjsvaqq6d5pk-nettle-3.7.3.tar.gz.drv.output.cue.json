@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/4099r6v5k10a4rpj13fimjsvaqq6d5pk-nettle-3.7.3.tar.gz.drv",
+            "digest": {
+                "sha256": "698afb7b9d00dce53de62584edc83934bf902a0a2574e258ee4e196717683685"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/5w02r3ah42m79fgfzbad3v4gxb124h5w-nettle-3.7.3.tar.gz",
+                "digest": {
+                    "sha256": "3defd221310dde11411ce7529b609b624ee7f412d0692eb02e9d35893fb7b839"
+                }
+            }
+        ]
+    }
+}

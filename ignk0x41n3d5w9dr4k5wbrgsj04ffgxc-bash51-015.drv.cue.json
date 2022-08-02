@@ -1,0 +1,39 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/k3hwb5acr6xjycj853fczqby0c9d6mmq-bash51-015",
+            "digest": {
+                "sha256": "99fe33a69ef7edfe9b0a7a13bb818fe8a12ad08a5c6c040487777fd0850608e6"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://builtin:fetchurl"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {
+                "builder": "builtin:fetchurl",
+                "executable": "",
+                "impureEnvVars": "http_proxy https_proxy ftp_proxy all_proxy no_proxy",
+                "name": "bash51-015",
+                "out": "/nix/store/k3hwb5acr6xjycj853fczqby0c9d6mmq-bash51-015",
+                "outputHash": "1w40vzadzx019v0zhs4q6yqycrk04x1k8xs6qb73vk7ny4p6jdqv",
+                "outputHashAlgo": "sha256",
+                "outputHashMode": "flat",
+                "preferLocalBuild": "1",
+                "system": "builtin",
+                "unpack": "",
+                "url": "https://ftpmirror.gnu.org/bash/bash-5.1-patches/bash51-015",
+                "urls": "https://ftpmirror.gnu.org/bash/bash-5.1-patches/bash51-015"
+            }
+        },
+        "materials": []
+    }
+}

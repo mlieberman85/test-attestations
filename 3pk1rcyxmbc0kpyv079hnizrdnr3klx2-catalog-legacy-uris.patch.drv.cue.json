@@ -1,0 +1,83 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/f3kvmbj3nbrmyfm0nag0mxdyg9x6ga6v-catalog-legacy-uris.patch",
+            "digest": {
+                "sha256": "0cb528529a66fcc64b940bc5327ab01e58a35112dc72956aa43213385ecadb0c"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/4vq3350zc6sqnibkqpgic2d6cvi1r9hq-substitute-all.sh"
+                ]
+            },
+            "environment": {
+                "allowSubstitutes": "",
+                "buildInputs": "",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "legacySuffix": "-ns",
+                "name": "catalog-legacy-uris.patch",
+                "nativeBuildInputs": "",
+                "out": "/nix/store/f3kvmbj3nbrmyfm0nag0mxdyg9x6ga6v-catalog-legacy-uris.patch",
+                "outputs": "out",
+                "patches": "",
+                "preferLocalBuild": "1",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/5fsvq785lgmmx884r4g83a2mywgfh7vb-catalog-legacy-uris.patch",
+                "stdenv": "/nix/store/lmj98vlk5h0v1x5gzslxjnaj4m58dwxm-stdenv-linux",
+                "strictDeps": "",
+                "suffix": "",
+                "system": "x86_64-linux",
+                "version": "1.79.2"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/4vq3350zc6sqnibkqpgic2d6cvi1r9hq-substitute-all.sh",
+                "digest": {
+                    "sha256": "967161c878c5af3be6c90e05b3de737814a7b647637c7b37eaedbe294da69717"
+                }
+            },
+            {
+                "uri": "file:///nix/store/5fsvq785lgmmx884r4g83a2mywgfh7vb-catalog-legacy-uris.patch",
+                "digest": {
+                    "sha256": "f02cfb8a8919f13fbf140955df1e3c73932b7f6c0e1e38507adfbfdd1ee796ca"
+                }
+            },
+            {
+                "uri": "file:///nix/store/3ga8qx6a74j26sy0yyvnqnxp6mva1b1z-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "f9bc13b9bdaa3cce0106294eeec282b55ca6f4f2d0b2d11e04685a22f7cb5170"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            }
+        ]
+    }
+}

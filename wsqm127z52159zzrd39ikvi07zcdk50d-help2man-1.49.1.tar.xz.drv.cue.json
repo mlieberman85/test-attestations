@@ -1,0 +1,39 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/h6h408vg3amy4pmjv95w0vb1czy0i7b4-help2man-1.49.1.tar.xz",
+            "digest": {
+                "sha256": "f5a46086d8ee9894c4d0e370816e2b2abee9aaa82f1ab252a44285bd231f5587"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://builtin:fetchurl"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {
+                "builder": "builtin:fetchurl",
+                "executable": "",
+                "impureEnvVars": "http_proxy https_proxy ftp_proxy all_proxy no_proxy",
+                "name": "help2man-1.49.1.tar.xz",
+                "out": "/nix/store/h6h408vg3amy4pmjv95w0vb1czy0i7b4-help2man-1.49.1.tar.xz",
+                "outputHash": "sha256-/ZmmZOxL6ahqDdiXGZifFPNnqcB5110OHXHhinu1GwM=",
+                "outputHashAlgo": "sha256",
+                "outputHashMode": "flat",
+                "preferLocalBuild": "1",
+                "system": "builtin",
+                "unpack": "",
+                "url": "https://ftpmirror.gnu.org/help2man/help2man-1.49.1.tar.xz",
+                "urls": "https://ftpmirror.gnu.org/help2man/help2man-1.49.1.tar.xz"
+            }
+        },
+        "materials": []
+    }
+}

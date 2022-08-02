@@ -1,0 +1,97 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/mgywrfzxlw8vyv1k5pqz72j67s61ix5s-acl-2.3.1",
+            "digest": {
+                "sha256": "056d9a29e65f706c00bfd99731efd15c1ceaafad9a6bbebdeea95b4d4de17009"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "bin": "/nix/store/xzm6mvay1mj0yvqgylf198cbrs2qcjdw-acl-2.3.1-bin",
+                "buildInputs": "/nix/store/rgh1pl3wrl9qlkdizi58bj7g42ch5rbs-attr-2.5.1-dev",
+                "builder": "/nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "dev": "/nix/store/p4khsvkzxlpvzhfgdssviv5lrzscx9vf-acl-2.3.1-dev",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "doc": "/nix/store/bbjm8n6lw3i4n2fmijbg095x8ij85g47-acl-2.3.1-doc",
+                "man": "/nix/store/7hngp6nhzbw02rnf5b4q7mk0zp2lfw5w-acl-2.3.1-man",
+                "name": "acl-2.3.1",
+                "nativeBuildInputs": "/nix/store/bwmdwrkrmflp1jny62a7wgbgymiwnsmn-gettext-0.21",
+                "out": "/nix/store/mgywrfzxlw8vyv1k5pqz72j67s61ix5s-acl-2.3.1",
+                "outputs": "bin dev out man doc",
+                "patchPhase": "echo \"Removing C++-style comments from include/acl.h\"\nsed -e '/^\\/\\//d' -i include/acl.h\n\npatchShebangs .\n",
+                "patches": "",
+                "pname": "acl",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/y3yiminrckvhf35fh9q42vjwi0npznji-acl-2.3.1.tar.gz",
+                "stdenv": "/nix/store/mhhmr6r7852384nmlpplxm23la0l68cs-bootstrap-stage4-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "2.3.1"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/0zhkga32apid60mm7nh92z2970im5837-bootstrap-tools.drv",
+                "digest": {
+                    "sha256": "f91ccdc44b609d5a97b27804be2daa58b61d51b82caa7e9e765db4ad4180098a"
+                }
+            },
+            {
+                "uri": "file:///nix/store/5n7j0l13pmshd0ibl1is5yq4cx3yfgrk-bootstrap-stage4-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "8e185e061d88ebd2426602e337b5fcbf1def9e959c2ede344c2c5c662836b0b1"
+                }
+            },
+            {
+                "uri": "file:///nix/store/6b5lfbz59zhk0lli1m2xbb1z1bj2n6f5-attr-2.5.1.drv",
+                "digest": {
+                    "sha256": "8317e1f0e86a1c452326ba2db0077ebded4b0ca784d704d93d4cc1772db451b7"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ra40fnjajddf7vd0h8ssp2j99n2d3k75-gettext-0.21.drv",
+                "digest": {
+                    "sha256": "8d2de9fdbc4955a81f7eccbeebd6bacca598ba1ebb5a17eefcc0ffe6a993f47c"
+                }
+            },
+            {
+                "uri": "file:///nix/store/x30m3rvz7j39imcm6i25mf444kiavlbp-acl-2.3.1.tar.gz.drv",
+                "digest": {
+                    "sha256": "2da427e2737fbd6588e09bc63ac90f845e635a05f269f3b71951796939b3f766"
+                }
+            }
+        ]
+    }
+}

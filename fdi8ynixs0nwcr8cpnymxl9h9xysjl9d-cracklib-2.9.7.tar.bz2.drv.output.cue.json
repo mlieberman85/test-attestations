@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/fdi8ynixs0nwcr8cpnymxl9h9xysjl9d-cracklib-2.9.7.tar.bz2.drv",
+            "digest": {
+                "sha256": "cc6144bd9ff4deedd5fa3a8a37a91b25a5c4b9defcd65dfbddc257345cb158c8"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/qp5bcvdq466xdz9vvawbzr6mwix5qsbs-cracklib-2.9.7.tar.bz2",
+                "digest": {
+                    "sha256": "30148996d823b6b04f57a6647a0cdd6cf67d88c8c25c11a767bba207752b06ef"
+                }
+            }
+        ]
+    }
+}

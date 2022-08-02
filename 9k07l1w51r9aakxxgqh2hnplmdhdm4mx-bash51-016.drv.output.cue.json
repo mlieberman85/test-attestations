@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/9k07l1w51r9aakxxgqh2hnplmdhdm4mx-bash51-016.drv",
+            "digest": {
+                "sha256": "9b54b88c07e4cda4fcac0fd5b66673a2554538a7b676481628484d7b8d68acc7"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/526apfg6pqnq86vflaiv4j2hikl8cjyx-bash51-016",
+                "digest": {
+                    "sha256": "24256910a5da536bf59052431c480c3f28e12d96b338ab93500bdb12f737454b"
+                }
+            }
+        ]
+    }
+}

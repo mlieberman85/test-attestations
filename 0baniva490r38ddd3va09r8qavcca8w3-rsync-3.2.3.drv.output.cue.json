@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/0baniva490r38ddd3va09r8qavcca8w3-rsync-3.2.3.drv",
+            "digest": {
+                "sha256": "cae02b363a7513bf0fea79c0dd3f1afb77b94d4b81a6ed844627328696a6abe7"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/mm1d43n18xb2hsp9hvvi0ab0f1r91v76-rsync-3.2.3",
+                "digest": {
+                    "sha256": "621402bdc8273a09541ad411b84771c144483ee5f112d39a9838fd534dfbcda9"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/6a1rrgj5v9jgkva1z251aqkgvpgkwb2b-iproute2-5.17.0.drv",
+            "digest": {
+                "sha256": "148c61c8dfcff66ffe684ce8faf7fa7e93adede949fc9614efe442df87a947b0"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/im1sk27gxj8lgcmc1piv7ff8i3pxl8mk-iproute2-5.17.0",
+                "digest": {
+                    "sha256": "18dcfcd54a3d92a01ed23d7bb4d2d0324c863e0a268efd1a1d2bc6b93f914ef8"
+                }
+            }
+        ]
+    }
+}

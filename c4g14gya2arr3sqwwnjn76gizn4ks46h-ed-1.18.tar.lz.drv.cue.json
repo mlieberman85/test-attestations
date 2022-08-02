@@ -1,0 +1,39 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/qjp5wz88la5dkrqm6dylqv6dnip8sxss-ed-1.18.tar.lz",
+            "digest": {
+                "sha256": "f7cf7e7c25eef0f1d66320f2e01eda2772cfaa05451a74e5cb796be03da43fe0"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://builtin:fetchurl"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {
+                "builder": "builtin:fetchurl",
+                "executable": "",
+                "impureEnvVars": "http_proxy https_proxy ftp_proxy all_proxy no_proxy",
+                "name": "ed-1.18.tar.lz",
+                "out": "/nix/store/qjp5wz88la5dkrqm6dylqv6dnip8sxss-ed-1.18.tar.lz",
+                "outputHash": "sha256-rKjvrZgAxYdySiC5eqj8R+a1pH34Fgb+q6gxsHRGK08=",
+                "outputHashAlgo": "sha256",
+                "outputHashMode": "flat",
+                "preferLocalBuild": "1",
+                "system": "builtin",
+                "unpack": "",
+                "url": "https://ftpmirror.gnu.org/ed/ed-1.18.tar.lz",
+                "urls": "https://ftpmirror.gnu.org/ed/ed-1.18.tar.lz"
+            }
+        },
+        "materials": []
+    }
+}

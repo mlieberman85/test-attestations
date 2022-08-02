@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/swb9divmm5n1qxcsx4v9qbwxfv6s4qrf-HTTP-Daemon-6.01.tar.gz.drv",
+            "digest": {
+                "sha256": "77c26efad0d299dc9d40e1964074139e16c8fabf024f39a38e1d1a80f038ef89"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/jsbpj10ymcgdmd7rz8ls35m5750cfkf8-HTTP-Daemon-6.01.tar.gz",
+                "digest": {
+                    "sha256": "6bd07e6c5b62106afc1c3cefab322f952ab7cb8390d74f42a2a09132a6dccddd"
+                }
+            }
+        ]
+    }
+}

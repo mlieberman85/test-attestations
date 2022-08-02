@@ -1,0 +1,39 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/hl7wxzav5znk5wxfqncdrzpcb3hqy0y0-patch-2.7.6.tar.xz",
+            "digest": {
+                "sha256": "b038c2c1c96f8b5c81ea850d8a7e6a2d2b5103d9c3edc857f8ccb6f3adff946c"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://builtin:fetchurl"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {
+                "builder": "builtin:fetchurl",
+                "executable": "",
+                "impureEnvVars": "http_proxy https_proxy ftp_proxy all_proxy no_proxy",
+                "name": "patch-2.7.6.tar.xz",
+                "out": "/nix/store/hl7wxzav5znk5wxfqncdrzpcb3hqy0y0-patch-2.7.6.tar.xz",
+                "outputHash": "1zfqy4rdcy279vwn2z1kbv19dcfw25d2aqy9nzvdkq5bjzd0nqdc",
+                "outputHashAlgo": "sha256",
+                "outputHashMode": "flat",
+                "preferLocalBuild": "1",
+                "system": "builtin",
+                "unpack": "",
+                "url": "https://ftpmirror.gnu.org/patch/patch-2.7.6.tar.xz",
+                "urls": "https://ftpmirror.gnu.org/patch/patch-2.7.6.tar.xz"
+            }
+        },
+        "materials": []
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/p7j3qgh0i6s6icsq00fdgv7fzsj45n1p-linux-5.17.tar.xz",
+            "digest": {
+                "sha256": "8fb4fffbc1d6e2968a487a6151bd40dc88fc2066a0a1c5ee78dd157b2cd3233a"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://builtin:fetchurl"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {
+                "builder": "builtin:fetchurl",
+                "executable": "",
+                "impureEnvVars": "http_proxy https_proxy ftp_proxy all_proxy no_proxy",
+                "name": "linux-5.17.tar.xz",
+                "out": "/nix/store/p7j3qgh0i6s6icsq00fdgv7fzsj45n1p-linux-5.17.tar.xz",
+                "outputHash": "1cdi43x4c3l4chznh57gm55szycj4wjlxl1dss1ilnfvvmhyypsm",
+                "outputHashAlgo": "sha256",
+                "outputHashMode": "flat",
+                "preferLocalBuild": "1",
+                "system": "builtin",
+                "unpack": "",
+                "url": "https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.17.tar.xz",
+                "urls": "https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.17.tar.xz"
+            }
+        },
+        "materials": []
+    }
+}

@@ -1,0 +1,107 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/8zlkijzw3782rxr1dzcsd7nnh1crhra2-libcap-2.63",
+            "digest": {
+                "sha256": "a20c18d6430117e7334a04ccbc061836c4a9d1cbed812d22ed879fdc61c32ad8"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "/nix/store/rnxbdkmbizkllhr0vbmk9611psd7vrmz-linux-pam-1.5.2",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "/nix/store/gfr4ljdlr1wplc01j4fchw4w9x3lfvv9-gcc-wrapper-11.3.0",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "dev": "/nix/store/1vi2ix3xfpqrbr7xp8qmkjcq5i4zi2h1-libcap-2.63-dev",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "doc": "/nix/store/92fbivf52a4mgmmz6fq8jpg6nwi9y7v5-libcap-2.63-doc",
+                "installFlags": "RAISE_SETFCAP=no",
+                "lib": "/nix/store/lb7l2ib6b7nrw5silgvqhi6nxvvpc2dp-libcap-2.63-lib",
+                "makeFlags": "lib=lib PAM_CAP=yes BUILD_CC=$(CC_FOR_BUILD) CC:=$(CC) CROSS_COMPILE=",
+                "man": "/nix/store/9jris5f1fdd7b5fscwsrwfibjpcrcbvm-libcap-2.63-man",
+                "name": "libcap-2.63",
+                "nativeBuildInputs": "",
+                "out": "/nix/store/8zlkijzw3782rxr1dzcsd7nnh1crhra2-libcap-2.63",
+                "outputs": "out dev lib man doc pam",
+                "pam": "/nix/store/svz2y9djm6kwpz6nq98z2cps4rgpn5yq-libcap-2.63-pam",
+                "patches": "",
+                "pname": "libcap",
+                "postInstall": "rm \"$lib\"/lib/*.a\nmkdir -p \"$doc/share/doc/libcap-2.63\"\ncp License \"$doc/share/doc/libcap-2.63/\"\nmkdir -p \"$pam/lib/security\"\nmv \"$lib\"/lib/security \"$pam/lib\"\n",
+                "postPatch": "patchShebangs ./progs/mkcapshdoc.sh\n\n# use full path to bash\nsubstituteInPlace progs/capsh.c --replace \"/bin/bash\" \"/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash\"\n\n# set prefixes\nsubstituteInPlace Make.Rules \\\n  --replace 'prefix=/usr' \"prefix=$lib\" \\\n  --replace 'exec_prefix=' \"exec_prefix=$out\" \\\n  --replace 'lib_prefix=$(exec_prefix)' \"lib_prefix=$lib\" \\\n  --replace 'inc_prefix=$(prefix)' \"inc_prefix=$dev\" \\\n  --replace 'man_prefix=$(prefix)' \"man_prefix=$doc\"\n",
+                "propagatedBuildInputs": "/nix/store/rgh1pl3wrl9qlkdizi58bj7g42ch5rbs-attr-2.5.1-dev",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/aiy19m5vjgwn7djzqy5mq8700cp41wy9-libcap-2.63.tar.xz",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "2.63"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/6b5lfbz59zhk0lli1m2xbb1z1bj2n6f5-attr-2.5.1.drv",
+                "digest": {
+                    "sha256": "8317e1f0e86a1c452326ba2db0077ebded4b0ca784d704d93d4cc1772db451b7"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/hgi9979z6i6yzav843xkv5wj4qmp43xb-gcc-wrapper-11.3.0.drv",
+                "digest": {
+                    "sha256": "23daf1a1401858e4562e6aa61166712072a1f193942dd2478eef5513ddc9d2fb"
+                }
+            },
+            {
+                "uri": "file:///nix/store/qzkxqg511vw1bx497q819nkf2s0v4b30-linux-pam-1.5.2.drv",
+                "digest": {
+                    "sha256": "b5cf1dce4b5a12c1a8dbafb345a1a74ac6551e5809ed7090726041af78041a60"
+                }
+            },
+            {
+                "uri": "file:///nix/store/zjyw1sik6fhkk6jxv3j7bdyjcd5cwslj-libcap-2.63.tar.xz.drv",
+                "digest": {
+                    "sha256": "13a4ed4f0533769b18546411007f52c05d96e5173ef85a9cc80fa4e884c83a1b"
+                }
+            }
+        ]
+    }
+}

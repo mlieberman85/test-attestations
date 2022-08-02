@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/rlpvzyfhjvmha56japz77hxch03f1f1a-sharutils-4.15.2-Fix-building-with-GCC-10.patch.drv",
+            "digest": {
+                "sha256": "d8f1b5da9e4da4a45f80cd2b8322fce77d3c31731de2c1c80d27e31265a69406"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/49a35gy6z5ycf099iwimbnzmlaif9i0a-sharutils-4.15.2-Fix-building-with-GCC-10.patch",
+                "digest": {
+                    "sha256": "217e695aa99efa5ebdd74ac420a63070967d7ee73b9c004d58870668e7dee7ab"
+                }
+            }
+        ]
+    }
+}

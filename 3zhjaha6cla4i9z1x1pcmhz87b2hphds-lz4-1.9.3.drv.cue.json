@@ -1,0 +1,99 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/ng1yspzycykdxjr30j4j9z094db06fnl-lz4-1.9.3",
+            "digest": {
+                "sha256": "61af59b6637bdafb41b75da6f94d502886c1ae6bb35944da23371ecba073417f"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "bin": "/nix/store/h5l1l7bq7xywvf0wbfa9w9mq1lg10673-lz4-1.9.3-bin",
+                "buildInputs": "",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "checkTarget": "test",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "dev": "/nix/store/5i1dszhs83k0dlq9zb455ndpg1r5vw88-lz4-1.9.3-dev",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "enableParallelBuilding": "1",
+                "enableParallelChecking": "1",
+                "makeFlags": "PREFIX=$(out) INCLUDEDIR=$(dev)/include BUILD_STATIC=no BUILD_SHARED=yes WINDRES:=windres",
+                "name": "lz4-1.9.3",
+                "nativeBuildInputs": "",
+                "out": "/nix/store/ng1yspzycykdxjr30j4j9z094db06fnl-lz4-1.9.3",
+                "outputs": "bin out dev",
+                "patches": "/nix/store/bzklsphl932kh7y0j6v998gsnn2qjgc6-CVE-2021-3520.patch /nix/store/x0bfl5z1qbmgp02ds2a0wmsr53p25spp-avoid-null-pointer-dereference.patch",
+                "pname": "lz4",
+                "postInstall": "moveToOutput bin \"$bin\"\n",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/xms7aknn28b3304491mqillyrsn8ipgp-source",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "1.9.3"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/771h2gi42sxwgmnd7qnlp4fsy0qvaqkp-avoid-null-pointer-dereference.patch.drv",
+                "digest": {
+                    "sha256": "bc6af1da853cd669257588c1408c30c18e50ec0b97c46d705f308578344a3532"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/p9p9djibsqx5gxg1v5nj8nprpr2n1qc0-CVE-2021-3520.patch.drv",
+                "digest": {
+                    "sha256": "a73c804526dcc8a2f3038e5306c2f8702ae5d07dbed101073b20c3bf2c4cfcb0"
+                }
+            },
+            {
+                "uri": "file:///nix/store/zp5c3v988kk4hldpw3nn3fyjqwdc0i5l-source.drv",
+                "digest": {
+                    "sha256": "5524037e725ff1c770587d1625fab769331a255d8b2b791a98029d0229341647"
+                }
+            }
+        ]
+    }
+}

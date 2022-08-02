@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/b7irlwi2wjlx5aj1dghx4c8k3ax6m56q-busybox.drv",
+            "digest": {
+                "sha256": "c78e41e7376422b995880019debcd48f3d0df29309494221ef739dd6a8ca3819"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/lan2w3ab1mvpxj3ppiw2sizh8i7rpz7s-busybox",
+                "digest": {
+                    "sha256": "ef4c1be6c7ae57e4f654efd90ae2d2e204d6769364c46469fa9ff3761195cba1"
+                }
+            }
+        ]
+    }
+}

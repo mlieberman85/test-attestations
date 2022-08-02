@@ -1,0 +1,81 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/55v31ixplmp0bgw560bz3yl2fmnicmz7-libcap-ng-0.8.3",
+            "digest": {
+                "sha256": "571a334cca0ed65efec90a7b707cd8531d79389f388a4ea0ae26799bea2d4b73"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": " ",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "--without-python --without-python3",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "name": "libcap-ng-0.8.3",
+                "nativeBuildInputs": "",
+                "out": "/nix/store/55v31ixplmp0bgw560bz3yl2fmnicmz7-libcap-ng-0.8.3",
+                "outputs": "out",
+                "patches": "",
+                "pname": "libcap-ng",
+                "postPatch": "function get_header() {\n  echo -e \"#include \u003c$1\u003e\" | gcc -M -xc - | tr ' ' '\\n' | grep \"$1\" | head -n 1\n}\n\n# Fix some hardcoding of header paths\nsed -i \"s,/usr/include/linux/capability.h,$(get_header linux/capability.h),g\" bindings/python{,3}/Makefile.in\n",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/0fl8sk00qqn5ym20wafraizmjxzzpm9c-libcap-ng-0.8.3.tar.gz",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "0.8.3"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/grh9jp1g12q83y3wfn2ssb10sf87hibz-libcap-ng-0.8.3.tar.gz.drv",
+                "digest": {
+                    "sha256": "0282af77fb7ff8788a8cd4712240d616407302b886c116ea6bf23493e74f8de7"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            }
+        ]
+    }
+}

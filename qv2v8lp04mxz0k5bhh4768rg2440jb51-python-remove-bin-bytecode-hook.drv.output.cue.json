@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/qv2v8lp04mxz0k5bhh4768rg2440jb51-python-remove-bin-bytecode-hook.drv",
+            "digest": {
+                "sha256": "215f59f08a999cd28675f3840bcf9cfe5a5f499ba717eb66e9b824e459268f13"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/zavasignqz13213kxfl6ngdbwbz2hhg2-python-remove-bin-bytecode-hook",
+                "digest": {
+                    "sha256": "e0936862c26c871951f7140889aebbdd2a2c4e070a183bae5a92ee4c5d4720e7"
+                }
+            }
+        ]
+    }
+}

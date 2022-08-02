@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/lqrq7kvkyh8kd7ili7ncq0f81py5wrf9-itstool-2.0.6.tar.bz2.drv",
+            "digest": {
+                "sha256": "0139bdba6e8f213c6572c75c8a3b2c49a5f36377525c11eafb873821cb3eb69e"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/javq8bvmpkd3w3qvwpyaip8r17hiavy4-itstool-2.0.6.tar.bz2",
+                "digest": {
+                    "sha256": "214ef684403ccb4c6d73dde4e7d648af604fc5f7115ed7c694cefab033568102"
+                }
+            }
+        ]
+    }
+}

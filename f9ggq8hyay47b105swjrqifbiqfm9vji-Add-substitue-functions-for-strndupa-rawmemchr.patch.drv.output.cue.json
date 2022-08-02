@@ -1,0 +1,32 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/f9ggq8hyay47b105swjrqifbiqfm9vji-Add-substitue-functions-for-strndupa-rawmemchr.patch.drv",
+            "digest": {
+                "sha256": "93b66d945547b6e0efabda604781ae52776d86542073eb6a3ca74ba42693201a"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://http://nixos.org/drv/0.1"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {}
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/dymdcffp81zm9ra5nj4728yclr6a0nny-Add-substitue-functions-for-strndupa-rawmemchr.patch",
+                "digest": {
+                    "sha256": "f6a2c8796206547b5ebfcd363e6fcdbc0f0cf5440c67eef2ff75190c219e479b"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,148 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/9zsyvv4fp7hj9jd11dimj0lxy74pv6m4-bootstrap-stage3-stdenv-linux",
+            "digest": {
+                "sha256": "2ad2c731fb6fbf8d8b14251ba3e5fac950fe9194451e3162d0f6b50992462f66"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/ckzrg0f0bdyx8rf703nc61r3hz5yys9q-builder.sh"
+                ]
+            },
+            "environment": {
+                "builder": "/nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash",
+                "defaultBuildInputs": "",
+                "defaultNativeBuildInputs": "/nix/store/s1dsj16dncj1cxhvxq4fpdy6flhy4b6f-patchelf-0.14.5 /nix/store/59jmzisg8fkm9c125fw384dqq1np602l-move-docs.sh /nix/store/kxw6q8v6isaqjm702d71n2421cxamq68-make-symlinks-relative.sh /nix/store/m54bmrhj6fqz8nds5zcj97w9s9bckc9v-compress-man-pages.sh /nix/store/bkxq1nfi6grmww5756ynr1aph7w04lkk-strip.sh /nix/store/bnj8d7mvbkg3vdb07yz74yhl3g107qq5-patch-shebangs.sh /nix/store/cickvswrvann041nqxb0rxilc46svw1n-prune-libtool-files.sh /nix/store/8zxndz5ag0p6s526c2xyllhk1nrn4c3i-audit-tmpdir.sh /nix/store/c8n9kcdddp9np665xz6ri61b383nxvz8-move-systemd-user-units.sh /nix/store/1i5y55x4b4m9qkx5dqbmr1r6bvrqbanw-multiple-outputs.sh /nix/store/kd4xwxjpjxi71jkm6ka0np72if9rm3y0-move-sbin.sh /nix/store/fyaryjvghbkpfnsyw97hb3lyb37s1pd6-move-lib64.sh /nix/store/ngg1cv31c8c7bcm2n8ww4g06nq7s4zhm-set-source-date-epoch-to-latest.sh /nix/store/wlwcf1nw2b21m4gghj70hbg1v7x53ld8-reproducible-builds.sh /nix/store/4g09m1rwmifjdvcxa4zd418bbsxdyl6b-bootstrap-stage3-gcc-wrapper-",
+                "initialPath": "/nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools",
+                "name": "bootstrap-stage3-stdenv-linux",
+                "out": "/nix/store/9zsyvv4fp7hj9jd11dimj0lxy74pv6m4-bootstrap-stage3-stdenv-linux",
+                "preHook": "# Don't patch #!/interpreter because it leads to retained\n# dependencies on the bootstrapTools in the final stdenv.\ndontPatchShebangs=1\nexport NIX_ENFORCE_PURITY=\"${NIX_ENFORCE_PURITY-1}\"\nexport NIX_ENFORCE_NO_NATIVE=\"${NIX_ENFORCE_NO_NATIVE-1}\"\nNIX_LIB64_IN_SELF_RPATH=1\n\n\n",
+                "setup": "/nix/store/55szi95529di53hsb4n39svvzmgr63hg-setup.sh",
+                "shell": "/nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash",
+                "system": "x86_64-linux"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/1i5y55x4b4m9qkx5dqbmr1r6bvrqbanw-multiple-outputs.sh",
+                "digest": {
+                    "sha256": "9078d920147bb7f7a75702b046076a2569042c642f6372cc6db21442434f4f96"
+                }
+            },
+            {
+                "uri": "file:///nix/store/55szi95529di53hsb4n39svvzmgr63hg-setup.sh",
+                "digest": {
+                    "sha256": "2e9e007c38e31458fe454cf9544188ad69a88781f1e2e8faab6612f9ff6c1b03"
+                }
+            },
+            {
+                "uri": "file:///nix/store/59jmzisg8fkm9c125fw384dqq1np602l-move-docs.sh",
+                "digest": {
+                    "sha256": "a9442bbb28c08e2f8bf1086465b95b42d59dd61447f89511eb5b32dcabfd5932"
+                }
+            },
+            {
+                "uri": "file:///nix/store/8zxndz5ag0p6s526c2xyllhk1nrn4c3i-audit-tmpdir.sh",
+                "digest": {
+                    "sha256": "37d113c745a0a2f889a1d102631c9fe4f2ac1c3cbba670e0636e3a04bbf8c62d"
+                }
+            },
+            {
+                "uri": "file:///nix/store/bkxq1nfi6grmww5756ynr1aph7w04lkk-strip.sh",
+                "digest": {
+                    "sha256": "49c58fa818ebabc8f21c619da49abc77ba6a077819c54aa70707277a4c6614cb"
+                }
+            },
+            {
+                "uri": "file:///nix/store/bnj8d7mvbkg3vdb07yz74yhl3g107qq5-patch-shebangs.sh",
+                "digest": {
+                    "sha256": "12ec3f9126958e7bd7f9a38b930f8f449b2d9432bb1354de821aa7870bc1c4d4"
+                }
+            },
+            {
+                "uri": "file:///nix/store/c8n9kcdddp9np665xz6ri61b383nxvz8-move-systemd-user-units.sh",
+                "digest": {
+                    "sha256": "b51228165d4436108bc2058f16631896a58c64982e2389410ed707624c7c248d"
+                }
+            },
+            {
+                "uri": "file:///nix/store/cickvswrvann041nqxb0rxilc46svw1n-prune-libtool-files.sh",
+                "digest": {
+                    "sha256": "d030b83f8fe823b176009ffd2ba31430d3fcd7c3a5e22f9fbe926ddc3d87c89b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ckzrg0f0bdyx8rf703nc61r3hz5yys9q-builder.sh",
+                "digest": {
+                    "sha256": "898ad3535c28c9279ec0296665ac80a5997194c3d36413f2d9d0ee6fdb3131ee"
+                }
+            },
+            {
+                "uri": "file:///nix/store/fyaryjvghbkpfnsyw97hb3lyb37s1pd6-move-lib64.sh",
+                "digest": {
+                    "sha256": "4834112624b601f5a538d47c5bc7441ae34f78b113ec8b8f2ce9b9bd0061d82d"
+                }
+            },
+            {
+                "uri": "file:///nix/store/kd4xwxjpjxi71jkm6ka0np72if9rm3y0-move-sbin.sh",
+                "digest": {
+                    "sha256": "7b1403b9eda85cb0ca56b87b0a23e98fb5a3039aa165fb24acbce96240058b2d"
+                }
+            },
+            {
+                "uri": "file:///nix/store/kxw6q8v6isaqjm702d71n2421cxamq68-make-symlinks-relative.sh",
+                "digest": {
+                    "sha256": "181864c68fd26555546b131232da93f8e1adde2113b335a01efcad1b4aa3436b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/m54bmrhj6fqz8nds5zcj97w9s9bckc9v-compress-man-pages.sh",
+                "digest": {
+                    "sha256": "9ef929bb1d5705103a2675de129841db9c556c7293cf56e4045dff2bb1c66d4d"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ngg1cv31c8c7bcm2n8ww4g06nq7s4zhm-set-source-date-epoch-to-latest.sh",
+                "digest": {
+                    "sha256": "d3cfc79ea56eb87328a0339978447ef215f802eeb0015870690962fa8bdfa076"
+                }
+            },
+            {
+                "uri": "file:///nix/store/wlwcf1nw2b21m4gghj70hbg1v7x53ld8-reproducible-builds.sh",
+                "digest": {
+                    "sha256": "be862d6cce841985b713bb60a80767da96c68e261fcda535cd3680a37a834d06"
+                }
+            },
+            {
+                "uri": "file:///nix/store/0zhkga32apid60mm7nh92z2970im5837-bootstrap-tools.drv",
+                "digest": {
+                    "sha256": "f91ccdc44b609d5a97b27804be2daa58b61d51b82caa7e9e765db4ad4180098a"
+                }
+            },
+            {
+                "uri": "file:///nix/store/wq1118wfwp1ks507sk1ag3s9aq8s7a61-bootstrap-stage3-gcc-wrapper-.drv",
+                "digest": {
+                    "sha256": "88ac253f4ec991bb5754956b9f73c719009880682131685ed5bfd8537867fc17"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ya7mg21ryf419c5c5vj18da19krpvkh1-patchelf-0.14.5.drv",
+                "digest": {
+                    "sha256": "bc6229839c6ce0b76810975701a3de21eb526708005a8f3ee195a8c89d37e84f"
+                }
+            }
+        ]
+    }
+}

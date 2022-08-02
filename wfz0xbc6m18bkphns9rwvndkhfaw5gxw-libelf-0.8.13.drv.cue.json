@@ -1,0 +1,98 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/m0vif06f5bssp4f553r6ia5rwjkssq6q-libelf-0.8.13",
+            "digest": {
+                "sha256": "8baa9f5c5073424c4308826c914d44f39d34e68c7df03f20acd19c09a30d85d5"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "",
+                "builder": "/nix/store/p4s4jf7aq6v6z9iazll1aiqwb34aqxq9-bootstrap-tools/bin/bash",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "1",
+                "doInstallCheck": "",
+                "name": "libelf-0.8.13",
+                "nativeBuildInputs": "/nix/store/bwmdwrkrmflp1jny62a7wgbgymiwnsmn-gettext-0.21",
+                "out": "/nix/store/m0vif06f5bssp4f553r6ia5rwjkssq6q-libelf-0.8.13",
+                "outputs": "out",
+                "patches": "/nix/store/lzmxj8jf7dsy73injx2q3x6j329fjlk2-dont-hardcode-ar.patch /nix/store/21qssx8jl5688qmn5qnyrihfw9fibqv5-preprocessor-warnings.patch",
+                "pname": "libelf",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/ggpgsklddx6h8dk0wkmlnk4brcxdb0jh-libelf-0.8.13.tar.gz",
+                "stdenv": "/nix/store/9zsyvv4fp7hj9jd11dimj0lxy74pv6m4-bootstrap-stage3-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "0.8.13"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/21qssx8jl5688qmn5qnyrihfw9fibqv5-preprocessor-warnings.patch",
+                "digest": {
+                    "sha256": "a71fa25626674e89019a417414fabbbe9985246b2b4e4a8ab74b72d858b4b80a"
+                }
+            },
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/lzmxj8jf7dsy73injx2q3x6j329fjlk2-dont-hardcode-ar.patch",
+                "digest": {
+                    "sha256": "2ea9af407c5855443dbd1d59a8774ec4eb1120fa9a52e516205b3565f8075833"
+                }
+            },
+            {
+                "uri": "file:///nix/store/0zhkga32apid60mm7nh92z2970im5837-bootstrap-tools.drv",
+                "digest": {
+                    "sha256": "f91ccdc44b609d5a97b27804be2daa58b61d51b82caa7e9e765db4ad4180098a"
+                }
+            },
+            {
+                "uri": "file:///nix/store/5s87b3i5xfdd1mrl2haavfjrzfp4w4zf-libelf-0.8.13.tar.gz.drv",
+                "digest": {
+                    "sha256": "6aba77d70fb216d69b737015f5be9c42b2cd5358a4ce143b84a828c982f8ff8b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/f5qhpix26la3hi87z96fvcv11dj5cdpm-bootstrap-stage3-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "7d7584971c870ee114dfc4fa772287e316b9de662a9a99784f96380215448c9a"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ra40fnjajddf7vd0h8ssp2j99n2d3k75-gettext-0.21.drv",
+                "digest": {
+                    "sha256": "8d2de9fdbc4955a81f7eccbeebd6bacca598ba1ebb5a17eefcc0ffe6a993f47c"
+                }
+            }
+        ]
+    }
+}

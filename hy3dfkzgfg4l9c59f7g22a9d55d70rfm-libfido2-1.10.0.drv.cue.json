@@ -1,0 +1,117 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/prmnr9km5qi6b5b4f4izhb7v4gc8kn6k-libfido2-1.10.0",
+            "digest": {
+                "sha256": "abf9f1a98832c43fa5b8a9cd1684b0decb6f255a754b5b636bd0f89a70c8ff6c"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "/nix/store/m96xzrzj96dmj1v3cm2674cj7grdwxb2-libcbor-0.9.0 /nix/store/6na02j2cznbkwlis5h9837d96jlf4j5p-openssl-1.1.1o-dev /nix/store/38ryqbjx5i1hir1a3sfk4za1yq5fbkpd-zlib-1.2.12-dev /nix/store/0ghkx0adxyblvdgd4qpzcpciwhi9j440-systemd-minimal-250.4-dev",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "cmakeFlags": "-DUDEV_RULES_DIR=/1rz4g4znpzjwh1xymhjpm42vipw92pr73vdgl6xs1hycac8kf2n9/etc/udev/rules.d -DCMAKE_INSTALL_LIBDIR=lib -DNFC_LINUX=1",
+                "configureFlags": "",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "name": "libfido2-1.10.0",
+                "nativeBuildInputs": "/nix/store/pg9xkxbscvfybwha04s118j9gikws31q-cmake-3.22.3 /nix/store/prn4gvr4ljmrwnnm508i7m7qh7nfh7gz-pkg-config-wrapper-0.29.2",
+                "out": "/nix/store/prmnr9km5qi6b5b4f4izhb7v4gc8kn6k-libfido2-1.10.0",
+                "outputs": "out",
+                "patches": "",
+                "pname": "libfido2",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/qn285yv7q5gb4kaprixngchpdnh5jdxl-libfido2-1.10.0.tar.gz",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "1.10.0"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/1v1lazzb2r2cg7a0vxv705jxyc8hidpn-pkg-config-wrapper-0.29.2.drv",
+                "digest": {
+                    "sha256": "d1c8e17a6c2ddf6900b817119c22f726a3a39af2ac395821e95d915fde3d9734"
+                }
+            },
+            {
+                "uri": "file:///nix/store/4ps3shhk3a83nxw82pirrp84kjza42qr-zlib-1.2.12.drv",
+                "digest": {
+                    "sha256": "f1c161051f72552716fdcba6f78370a3f93dab26e28779bbb0002f809c502534"
+                }
+            },
+            {
+                "uri": "file:///nix/store/6095z1jm9pfjqpbc50vsrrd610jgyj3x-libcbor-0.9.0.drv",
+                "digest": {
+                    "sha256": "ec5041a3189330694d8caf546cd63feeef005bb00e73b34c33e2a62326e70e5c"
+                }
+            },
+            {
+                "uri": "file:///nix/store/6ch34hgn48q2sh4brsl59khz0sa573ii-systemd-minimal-250.4.drv",
+                "digest": {
+                    "sha256": "a268b37735a408cdf156ccea5a23139c2b0a8eadd1684535590383ef6d330f6b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/cd44h08a0mbg07qwpih5zd31nikks2f7-openssl-1.1.1o.drv",
+                "digest": {
+                    "sha256": "acdeaa5cdbfb13fd590a628dc0b6a07ee25c464bedec941bac90715cacc33c2e"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/nj4w8zvk7k9kvf0ix9mchpbp6rfmp0bb-cmake-3.22.3.drv",
+                "digest": {
+                    "sha256": "0a2302cad5dd9254d110b42dd970ed43dea603462c7e90c933051c37f98ef3b5"
+                }
+            },
+            {
+                "uri": "file:///nix/store/p0npysapwgmxkdclxgjy1nzv0bgdbmvw-libfido2-1.10.0.tar.gz.drv",
+                "digest": {
+                    "sha256": "19747f1a3ac0c575b89f1014c9ba5af4ec445de713372f7d8d11256e76dc597a"
+                }
+            }
+        ]
+    }
+}

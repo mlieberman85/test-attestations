@@ -1,0 +1,137 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/lmjiwldfmc929kqkbm959fjd0sq7qhkv-iptables-1.8.7",
+            "digest": {
+                "sha256": "3f16ce5f1f446282346a4eb752582c9c10401b10d336df6f3b5588d272f9aab8"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file:///nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": [
+                    "-e",
+                    "/nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh"
+                ]
+            },
+            "environment": {
+                "buildInputs": "/nix/store/x3qmg7anmgkpkd29rkjhw80f2al42bcg-libmnl-1.0.5 /nix/store/4bxay0kk9p9dlgxraraa6lwvmp97r4k1-libnetfilter_conntrack-1.0.9 /nix/store/6x1vg93jysnkgbp8zrn850xhiy60bn3q-libnfnetlink-1.0.2 /nix/store/fx8sxdh9yrf1fgbjipm62vxdiv1d5iz2-libnftnl-1.2.1 /nix/store/5khbqx9653sak9wf385zf7vqi89qniz2-libpcap-1.10.1",
+                "builder": "/nix/store/14lypyys4gfcl982rjddxa6jg7msqz9q-bash-5.1-p16/bin/bash",
+                "configureFlags": "--enable-bpf-compiler --enable-devel --enable-libipq --enable-nfsynproxy --enable-shared",
+                "depsBuildBuild": "",
+                "depsBuildBuildPropagated": "",
+                "depsBuildTarget": "",
+                "depsBuildTargetPropagated": "",
+                "depsHostHost": "",
+                "depsHostHostPropagated": "",
+                "depsTargetTarget": "",
+                "depsTargetTargetPropagated": "",
+                "dev": "/nix/store/41y66v1vphwp04hlv7gqi6cvsq39sfxi-iptables-1.8.7-dev",
+                "doCheck": "",
+                "doInstallCheck": "",
+                "name": "iptables-1.8.7",
+                "nativeBuildInputs": "/nix/store/prn4gvr4ljmrwnnm508i7m7qh7nfh7gz-pkg-config-wrapper-0.29.2 /nix/store/y2a5797qv845kyshd1svy0yp5fgmai62-prune-libtool-files /nix/store/24w1xck3h95vi3l5qx2zm4d8rwpy8am0-flex-2.6.4 /nix/store/sl630spd1c59jdb5wicj0pb4qf37gy8g-bison-3.8.2",
+                "out": "/nix/store/lmjiwldfmc929kqkbm959fjd0sq7qhkv-iptables-1.8.7",
+                "outputs": "out dev",
+                "patches": "",
+                "pname": "iptables",
+                "postInstall": "rm $out/sbin/{iptables,iptables-restore,iptables-save,ip6tables,ip6tables-restore,ip6tables-save}\nln -sv xtables-nft-multi $out/bin/iptables\nln -sv xtables-nft-multi $out/bin/iptables-restore\nln -sv xtables-nft-multi $out/bin/iptables-save\nln -sv xtables-nft-multi $out/bin/ip6tables\nln -sv xtables-nft-multi $out/bin/ip6tables-restore\nln -sv xtables-nft-multi $out/bin/ip6tables-save\n",
+                "preConfigure": "export NIX_LDFLAGS=\"$NIX_LDFLAGS -lmnl -lnftnl\"\n",
+                "propagatedBuildInputs": "",
+                "propagatedNativeBuildInputs": "",
+                "src": "/nix/store/53m4x7xsyjks5w5rrslnfpm1x78d1w95-iptables-1.8.7.tar.bz2",
+                "stdenv": "/nix/store/lsqncfa1i0h87s0y8v5xsj415vcb337x-stdenv-linux",
+                "strictDeps": "",
+                "system": "x86_64-linux",
+                "version": "1.8.7"
+            }
+        },
+        "materials": [
+            {
+                "uri": "file:///nix/store/9krlzvny65gdc8s7kpb6lkx8cd02c25b-default-builder.sh",
+                "digest": {
+                    "sha256": "51858393c5698aba2e7c4e2832054a6985ab3eeda5db7373db5627d0acceefa8"
+                }
+            },
+            {
+                "uri": "file:///nix/store/1l1vyl2q3ckqb4jg5mc7b8sp5aqg6299-libnetfilter_conntrack-1.0.9.drv",
+                "digest": {
+                    "sha256": "025468ce0bf7a95096172587caf52b2728b2aabd39f7c66a70e6c43b80947346"
+                }
+            },
+            {
+                "uri": "file:///nix/store/1v1lazzb2r2cg7a0vxv705jxyc8hidpn-pkg-config-wrapper-0.29.2.drv",
+                "digest": {
+                    "sha256": "d1c8e17a6c2ddf6900b817119c22f726a3a39af2ac395821e95d915fde3d9734"
+                }
+            },
+            {
+                "uri": "file:///nix/store/a57rnyp3n61ib0bnmw8c8ibm91zipb78-prune-libtool-files.drv",
+                "digest": {
+                    "sha256": "2091ceefb77652a0611d2e3c52dc5ab4bfb1c9630896cb3fe3d21f30a63f2d0d"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ca2xf2s9avpcazfqinrqk9fjh64rjyjs-stdenv-linux.drv",
+                "digest": {
+                    "sha256": "616f319fa34b40faf4dab6566abd3adc69fa1d79c7f96e2ed7b9cbda1ac61d2b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/cix41bwwbck1liyrnyx1x0f8wwfin6pf-libmnl-1.0.5.drv",
+                "digest": {
+                    "sha256": "b5404e15b76e7ea15144eed9d384ac43d0e12af01f326c4810b7719db008199b"
+                }
+            },
+            {
+                "uri": "file:///nix/store/di8i9qc6sr5x00wwzpnkqnbkawr6y45d-libnfnetlink-1.0.2.drv",
+                "digest": {
+                    "sha256": "6dd558052e4921bce4ae9ac12a6b7816e656e2d30a97bf75e3005c50fc538ad7"
+                }
+            },
+            {
+                "uri": "file:///nix/store/f7pd672msda6cgg9kmzmbg1hghghxaz6-flex-2.6.4.drv",
+                "digest": {
+                    "sha256": "05ff8b10bc22aee839b288a3fec3b3b4b847bff6e7e2174735975d9dcd6624c2"
+                }
+            },
+            {
+                "uri": "file:///nix/store/h2zp5pvdyc2d9rv97fgs1y20rbly70cm-bash-5.1-p16.drv",
+                "digest": {
+                    "sha256": "2a32dcb5fac84e74f5bb62a9e8f7698e9367fd00e3a2b8b82163309c2025c049"
+                }
+            },
+            {
+                "uri": "file:///nix/store/ic70qagv77gjbgci607i973xggv33931-bison-3.8.2.drv",
+                "digest": {
+                    "sha256": "86fac9c212c0643fde73b22ecf7c46f683936fd6711594c780cb0cea60b779ff"
+                }
+            },
+            {
+                "uri": "file:///nix/store/na7fll54hiwmmksxl6bnc3cjf64mx69k-libpcap-1.10.1.drv",
+                "digest": {
+                    "sha256": "da800b232a3d7eb78679d6e5d2029cf79d4407bd0716476d2763c47ac4ccca05"
+                }
+            },
+            {
+                "uri": "file:///nix/store/q2mlhin8s0asb7gs41nmhsrcbjpm8mi4-libnftnl-1.2.1.drv",
+                "digest": {
+                    "sha256": "3f9f06bfc09aac4230b12ab8422d585ff6b26802ffb654ad0941a849e599aec9"
+                }
+            },
+            {
+                "uri": "file:///nix/store/y6fw4g0w6sm46fq7ln5fzsnlqbqm6cvi-iptables-1.8.7.tar.bz2.drv",
+                "digest": {
+                    "sha256": "aab2b9343f52fee60b73f86c4cb82cddfef712ec62b3726205ea3b94d21ba57a"
+                }
+            }
+        ]
+    }
+}

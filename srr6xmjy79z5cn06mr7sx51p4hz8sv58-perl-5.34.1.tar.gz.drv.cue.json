@@ -1,0 +1,39 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/k8h7cf8id214i47c28i2ls0hnn5ampb1-perl-5.34.1.tar.gz",
+            "digest": {
+                "sha256": "296976af966f9d0627da626655eeddde2c2cdc7bb45faf5ae3060350b2cea7bf"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://builtin:fetchurl"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {
+                "builder": "builtin:fetchurl",
+                "executable": "",
+                "impureEnvVars": "http_proxy https_proxy ftp_proxy all_proxy no_proxy",
+                "name": "perl-5.34.1.tar.gz",
+                "out": "/nix/store/k8h7cf8id214i47c28i2ls0hnn5ampb1-perl-5.34.1.tar.gz",
+                "outputHash": "sha256-NXlRpJGwuhzjYRJjki/ux4zNWB3dwkpEawM+JazyQqE=",
+                "outputHashAlgo": "sha256",
+                "outputHashMode": "flat",
+                "preferLocalBuild": "1",
+                "system": "builtin",
+                "unpack": "",
+                "url": "https://cpan.metacpan.org/src/5.0/perl-5.34.1.tar.gz",
+                "urls": "https://cpan.metacpan.org/src/5.0/perl-5.34.1.tar.gz"
+            }
+        },
+        "materials": []
+    }
+}

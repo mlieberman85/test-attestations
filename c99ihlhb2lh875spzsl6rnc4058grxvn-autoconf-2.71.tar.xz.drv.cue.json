@@ -1,0 +1,39 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+        {
+            "name": "/nix/store/g3pzpdicszf700d5xffyk939jzxa4r2k-autoconf-2.71.tar.xz",
+            "digest": {
+                "sha256": "78838978b55ca1ef016497147a58872de00e96336c1dc7ee95c7539ddc0b0705"
+            }
+        }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "predicate": {
+        "builder": {
+            "id": "file://builtin:fetchurl"
+        },
+        "buildType": "https://nixos.org/build/0.1",
+        "invocation": {
+            "parameters": {
+                "args": []
+            },
+            "environment": {
+                "builder": "builtin:fetchurl",
+                "executable": "",
+                "impureEnvVars": "http_proxy https_proxy ftp_proxy all_proxy no_proxy",
+                "name": "autoconf-2.71.tar.xz",
+                "out": "/nix/store/g3pzpdicszf700d5xffyk939jzxa4r2k-autoconf-2.71.tar.xz",
+                "outputHash": "197sl23irn6s9pd54rxj5vcp5y8dv65jb9yfqgr2g56cxg7q6k7i",
+                "outputHashAlgo": "sha256",
+                "outputHashMode": "flat",
+                "preferLocalBuild": "1",
+                "system": "builtin",
+                "unpack": "",
+                "url": "https://ftpmirror.gnu.org/autoconf/autoconf-2.71.tar.xz",
+                "urls": "https://ftpmirror.gnu.org/autoconf/autoconf-2.71.tar.xz"
+            }
+        },
+        "materials": []
+    }
+}
